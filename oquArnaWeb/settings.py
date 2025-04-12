@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,18 +26,24 @@ SECRET_KEY = "django-insecure-!gl^*jwgi=zm$%gwxdb01e1dqt08xdld&=%xu^u=2rdb*jpp-h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
+AUTH_USER_MODEL = 'users.CustomUser'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'noreply@example.com'
 
 # Application definition
 
 INSTALLED_APPS = [
+    "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "users",
 ]
 
 MIDDLEWARE = [
@@ -53,14 +60,15 @@ ROOT_URLCONF = "oquArnaWeb.urls"
 
 TEMPLATES = [
     {
-        "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
-        "APP_DIRS": True,
-        "OPTIONS": {
-            "context_processors": [
-                "django.template.context_processors.request",
-                "django.contrib.auth.context_processors.auth",
-                "django.contrib.messages.context_processors.messages",
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [BASE_DIR / 'templates'],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
             ],
         },
     },
@@ -72,10 +80,21 @@ WSGI_APPLICATION = "oquArnaWeb.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'oquarna',
+        'USER': 'oquarnauser',
+        'PASSWORD': './xX2nF>2Y16',
+        'HOST': '185.22.67.9',
+        'PORT': '5432',
     }
 }
 
@@ -104,7 +123,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "ru-ru"
 
 TIME_ZONE = "UTC"
 
@@ -122,3 +141,114 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Настройки логов
+LOG_DIR = os.path.join(BASE_DIR, 'django_logs')
+os.makedirs(LOG_DIR, exist_ok=True)
+
+# 15 MB на файл, 3 бэкапа - 4 итог
+MAX_LOG_SIZE = 15 * 1024 * 1024  
+LOG_BACKUPS = 3
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+
+    'formatters': {
+        'verbose': {
+            'format': '%(asctime)s [%(levelname)s] %(name)s %(pathname)s:%(lineno)d\n%(message)s'
+        },
+        'simple': {
+            'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
+        },
+        'django_simple': {
+            'format': '[%(levelname)s] %(message)s'
+        },
+        'sql_formatter': {
+            'format': '%(asctime)s [SQL] %(message)s'
+        },
+    },
+
+    'handlers': {
+        # Файл ошибок (только WARNING и выше)
+        'error_file': {
+            'level': 'WARNING',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(LOG_DIR, 'errors.log'),
+            'formatter': 'verbose',
+            'maxBytes': MAX_LOG_SIZE,
+            'backupCount': LOG_BACKUPS,
+            'encoding': 'utf-8',
+        },
+        # Основной файловый лог (INFO и выше)
+        'info_file': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(LOG_DIR, 'info.log'),
+            'formatter': 'simple',
+            'maxBytes': MAX_LOG_SIZE,
+            'backupCount': LOG_BACKUPS,
+            'encoding': 'utf-8',
+        },
+        # Файл для SQL запросов
+        'db_file': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(LOG_DIR, 'db.log'),
+            'formatter': 'sql_formatter',
+            'maxBytes': MAX_LOG_SIZE,
+            'backupCount': LOG_BACKUPS,
+            'encoding': 'utf-8',
+        },
+        # Консоль для Django (только INFO)
+        'django_console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'django_simple',
+        },
+        # Консоль для debug (только в DEBUG режиме)
+        'debug_console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+            'filters': ['require_debug_true'],
+        },
+    },
+
+    'loggers': {
+        # Логгер Django по умолчанию
+        'django': {
+            'handlers': ['info_file', 'error_file', 'django_console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        # Ошибки запросов
+        'django.request': {
+            'handlers': ['info_file', 'error_file', 'django_console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        # SQL запросы (пишем только в файл)
+        'django.db.backends': {
+            'handlers': ['db_file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+        # Логи сервера разработки
+        'django.server': {
+            'handlers': ['django_console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    },
+
+    'root': {
+        'handlers': ['info_file', 'error_file', 'debug_console'],
+        'level': 'DEBUG',
+    },
+}
