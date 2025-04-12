@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Привет!</h2>
+<p class="subtitle">Введите ваши данные, чтобы продолжить</p>
+
+{% include 'errors.html' with messages=messages %}
+
+ <form method="post">
+
+     <div class="form-group">
+      <label for="email">Почта</label>
+      <input type="email" id="email" name="email" placeholder="Введите почту" required />
+    </div>
+
+    {% csrf_token %}
+    <button type="submit" class="btn">Продолжить</button>
+
+ </form>
+
+{% endblock %}
