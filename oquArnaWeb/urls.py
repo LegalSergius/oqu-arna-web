@@ -20,7 +20,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("account/", include("accounts.urls")),
-    path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/', include('users.urls', namespace='users')), # кастомная ссылка для активации
+    path("account/", include("account.urls")),
+    path('account/', include('django.contrib.auth.urls')),
+    path('account/', include('users.urls', namespace='users')), # кастомная ссылка для активации
 ]
