@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block scripts %}
+<script>
+    const navbar = new Navbar(menuItems);
+    navbar.setActive("authors_works");
+    navbar.create();
+</script>
+{% endblock %}

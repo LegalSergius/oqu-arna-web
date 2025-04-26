@@ -1,0 +1,32 @@
+{% load static %}
+
+<script>
+    const menuItems = [
+        {
+            name: 'personal_account',
+            title : 'Личный кабинет',
+            icon: '{% static "icons/personal_account.svg" %}',
+            href: ""
+        },
+        {
+            name: 'authors_works',
+            title : 'Авторские работы',
+            icon: '{% static "icons/authors_works.svg" %}',
+            href: ""
+        },
+        {
+            name: 'course',
+            title : 'Учебные курсы',
+            icon: '{% static "icons/course.svg" %}',
+            href: ""
+        },
+        {
+            name: 'create_entry',
+            title : 'Создать запись',
+            icon: '{% static "icons/create_entry.svg" %}',
+            href: ""
+        }
+    ];
+</script>
+
+<script src="{% static 'js/navbar.js' %}"></script>
