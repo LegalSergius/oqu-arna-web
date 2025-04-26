@@ -1,7 +1,7 @@
 {% if messages %}
     {% for message in messages %}
-    <div class="error-container">
-        {{ message }}
-    </div>
+    <span class="text-danger mt-2">
+      {{ message }}
+    </span>
     {% endfor %}
 {% endif %}

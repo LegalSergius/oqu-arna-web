@@ -12,6 +12,27 @@ from oquArnaWeb import settings
 
 User = get_user_model()
 
+class SendCodeToEmailView(View):
+    def get(self, request):
+
+        email=request.session.get('email')
+
+        code = generate_code()
+        save_code(f"register-code:{email}", code)
+
+        request.session['email'] = email
+
+        # email
+        title = "Oqu Arna код :)"
+        message = f"Ваш код - {code} Никому его не говорите."
+        from_email = settings.EMAIL_HOST_USER
+        recipient_list = [email]
+
+        send_mail(title, message, from_email, recipient_list, fail_silently=False)
+
+        return redirect('verification-code')
+
+
 class HomeView(View):
     def get(self, request):
         return render(request, 'index.html')
@@ -40,9 +61,9 @@ class LogoutView(View):
         logout(request)
         return redirect('login')
 
-class RegisterView(View):
+class RegistrationView(View):
     def get(self, request):
-        return render(request, 'register.html')
+        return render(request, 'registration_email.html')
 
     def post(self, request):
         email = request.POST.get('email')
@@ -53,73 +74,83 @@ class RegisterView(View):
             users_list = list(users)
             user = users_list[0]
 
-            user_email = user.username
+            request.session['email'] = email
+            #
+            # code = generate_code()
+            # save_code(f"register-code:{user_email}", code)
+            #
+            #
+            #
+            # #email
+            # title = "Oqu Arna код :)"
+            # message = f"Ваш код - {code} Никому его не говорите."
+            # from_email = settings.EMAIL_HOST_USER
+            # recipient_list = [email]
+            #
+            # number_of_email_sent = send_mail(title, message, from_email, recipient_list, fail_silently=False)
+            #
+            # print(number_of_email_sent)
 
-            code = generate_code()
-            save_code(f"register-code:{user_email}", code)
+            # if number_of_email_sent < 1:
+            #     messages.error(request, "Введенный email не существует")
+            # else:
 
-            request.session['user_email'] = user_email
+            request.session['page_to_go_after_confirmation'] = 'register-set-password'
 
-            #email
-            title = "Oqu Arna код :)"
-            message = f"Ваш код - {code} Никому его не говорите."
-            from_email = settings.EMAIL_HOST_USER
-            recipient_list = [email]
-
-            number_of_email_sent = send_mail(title, message, from_email, recipient_list, fail_silently=False)
-
-            print(number_of_email_sent)
-
-            if number_of_email_sent < 1:
-                messages.error(request, "Введенный email не существует")
-            else:
-                return redirect('register-code')
+            return redirect('send-code')
         else:
             messages.error(request, "Пользователь с данным email не зарегистрирован")
 
-        return render(request, 'register.html')
+        return render(request, 'registration_email.html')
 
-class RegisterCodeView(View):
+class VerificationCodeView(View):
     def get(self, request):
-        return render(request, 'register_code.html')
+        return render(request, 'registration_code.html')
 
     def post(self, request):
         code = request.POST.get('code')
 
-        user_email = request.session.get('user_email')
+        user_email = request.session.get('email')
+
 
         if user_email:
             key = f"register-code:{user_email}"
             code_in_cache = get_code(key)
+
+            page_to_after_confirmation = request.session.get('page_to_go_after_confirmation')
+
+            print(page_to_after_confirmation)
 
             if code_in_cache:
                 if code != code_in_cache:
                     messages.error(request, "Неверный код")
                 else:
                     delete_code(key)
-                    del request.session['user_email']
+                    del request.session['email']
 
                     request.session['verified_email'] = user_email
-                    return redirect('register-set-password')
+                    return redirect(page_to_after_confirmation)
 
 
-        return render(request, 'register_code.html')
+        return render(request, 'registration_code.html')
 
-class RegisterSetPasswordView(View):
+class RegistrationSetPasswordView(View):
     def get(self, request):
-        return render(request, 'register_set_password.html')
+        return render(request, 'registration_password.html')
 
     def post(self, request):
 
         email = request.session.get('verified_email')
 
         if not email:
-            return redirect('register')
+            return redirect('registration')
 
         password = request.POST.get('password')
-        password2 = request.POST.get('password2')
+        password_repeat = request.POST.get('password_repeat')
 
-        if password != password2:
+        print(password + " " + password_repeat)
+
+        if password != password_repeat:
             messages.error(request, "Пароли не совпадают")
         else:
             del request.session['verified_email']
@@ -129,4 +160,4 @@ class RegisterSetPasswordView(View):
 
             return redirect('login')
 
-        return render(request, 'register_set_password.html')
+        return render(request, 'registration_password.html')
