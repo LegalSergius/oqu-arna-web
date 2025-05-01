@@ -31,13 +31,14 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "accounts",
+    "users",
     "authors_works",
 ]
 
@@ -254,6 +255,10 @@ LOGGING = {
         'level': 'DEBUG',
     },
 }
+
+#User
+
+AUTH_USER_MODEL = "users.CustomUser"
 
 # SMTP
 

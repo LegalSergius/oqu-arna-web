@@ -68,7 +68,7 @@
 <p class="mt-4 fw-bold">Отправить код повторно</p>
 <div id="link-with-timer">Через <a id="timer">00:59</a></div>
 
-<a href="{% url 'send-code' %}" class="log-link align-self-center" id="resend-link">Отправить</a>
+<a href="{% url 'users:send-code' %}" class="log-link align-self-center" id="resend-link">Отправить</a>
 
 {{ block.super }}
 
