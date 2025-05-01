@@ -7,7 +7,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views import View
 
-from accounts.register_code import generate_code, save_code, get_code, delete_code
+from account.register_code import generate_code, save_code, get_code, delete_code
 from oquArnaWeb import settings
 
 User = get_user_model()
