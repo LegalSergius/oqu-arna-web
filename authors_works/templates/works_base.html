@@ -1,9 +1,3 @@
 {% extends 'base.html' %}
 
-{% block scripts %}
-<script>
-    const navbar = new Navbar(menuItems);
-    navbar.setActive("authors_works");
-    navbar.create();
-</script>
-{% endblock %}
+{% include 'create_navbar.html' with name="author_works" %}

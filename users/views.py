@@ -152,7 +152,8 @@ class RegistrationSetPasswordView(View):
         else:
             del request.session['verified_email']
             user = User.objects.get(email=email)
-            user.is_active = True;
+            print(user)
+            user.is_active = True
             user.set_password(password)
             user.save()
 
