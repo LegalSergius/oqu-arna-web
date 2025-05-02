@@ -1,0 +1,113 @@
+:root {
+    --background-page-color : #EAEAEA;
+    --primary-color: #605BCD;
+    --secondary-color: #4b47a1;
+    --dark-green: #398F68;
+
+    --font-family-headlines: "Krona One" Inter;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-base {
+
+    --bs-btn-color: white;
+    --bs-btn-bg: var(--primary-color);
+    --bs-btn-border-color: var(--primary-color);
+
+    --bs-btn-hover-color: white;
+    --bs-btn-hover-bg: var(--secondary-color);
+    --bs-btn-hover-border-color: var(--secondary-color);
+
+    width: 50%;
+}
+
+.header {
+    background-color: var(--primary-color);
+    border-radius: 0 0 64px 64px;
+    padding-bottom: 130px;
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.navbar-container {
+
+    display: flex;
+
+    gap: 40px;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--primary-color);
+    border-radius: 64px 64px 0 0;
+
+    position: fixed;
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    padding: 10px;
+
+}
+
+
+.navbar-element {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    padding: 5px 1px;
+
+    border-radius: 14px;
+
+    transition: background-color 0.3s ease-in-out 0s,
+                opacity   0.3s ease-in-out 0s;
+}
+
+.navbar-element:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-element p{
+    color: white;
+    text-decoration: none;
+
+    font-size: 12px;
+
+    text-align: center;
+
+    margin-top: 2px;
+    margin-bottom: 0;
+
+    width: 80px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.navbar-element-active {
+    background-color: white;
+}
+
+.navbar-element-active p {
+    color: var(--primary-color);
+}

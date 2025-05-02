@@ -9,22 +9,27 @@ from .forms  import CustomUserCreationForm, CustomUserChangeForm, CustomPassword
 @admin.register(CustomUser)
 class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
-    form     = CustomUserChangeForm
-    model    = CustomUser
+    form = CustomUserChangeForm
+    model = CustomUser
 
     list_display = (
         'email', 'full_name', 'phone_number',
         'organization', 'country', 'city',
-        'is_educator', 'is_active', 'is_staff'
+        'is_educator', 'is_active', 'is_staff', 'date_joined'
     )
     search_fields = (
         'email', 'full_name', 'phone_number',
         'organization', 'country', 'city'
     )
     ordering = ('email',)
+    list_filter = ('is_active', 'is_staff', 'is_superuser', 'is_educator', 'country')
+
+    readonly_fields = ('last_login', 'date_joined')
 
     fieldsets = (
-        (None, {'fields': ('email',)}),
+        (_('Основная информация'), {
+            'fields': ('username', 'email', 'password')
+        }),
         (_('Личная информация'), {
             'fields': (
                 'full_name', 'phone_number', 'organization',
@@ -37,14 +42,16 @@ class CustomUserAdmin(UserAdmin):
                 'is_educator', 'groups', 'user_permissions'
             )
         }),
-        (_('Важные даты'), {'fields': ('last_login', 'date_joined')}),
+        (_('Важные даты'), {
+            'fields': ('last_login', 'date_joined')
+        }),
     )
 
     add_fieldsets = (
-        (None, {
+        (_('Регистрация нового пользователя'), {
             'classes': ('wide',),
             'fields': (
-                'email', 'full_name', 'phone_number',
+                'username', 'email', 'full_name', 'phone_number',
                 'organization', 'country', 'city', 'is_educator'
             ),
         }),

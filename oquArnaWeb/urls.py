@@ -16,10 +16,13 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
+    path("users/", include("users.urls")),
+    path("works/", include("authors_works.urls")),
+
     path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/', include('users.urls', namespace='users')), # кастомная ссылка для активации
+    path('accounts/', include('users.urls', namespace='users')),
 ]
