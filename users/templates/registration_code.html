@@ -1,0 +1,76 @@
+{% extends "registration_base.html" %}
+
+
+{% block log_post_content %}
+
+{{ block.super }}
+
+<script>
+  const resendLink = document.getElementById("resend-link");
+  const linkWithTimer = document.getElementById("link-with-timer");
+
+  const timerEl = document.getElementById("timer");
+
+  resendLink.style.display = 'none';
+
+  let remaining = 59;
+
+  const intervalId = setInterval(() => {
+    const minutes = Math.floor(remaining / 60);
+    const seconds = remaining % 60;
+
+    const mm = minutes < 10 ? "0" + minutes : minutes;
+    const ss = seconds < 10 ? "0" + seconds : seconds;
+
+    remaining--;
+    if (remaining <= 0) {
+      clearInterval(intervalId);
+      linkWithTimer.style.display = 'none';
+      resendLink.style.display = 'block';
+      return;
+    }
+    timerEl.textContent = mm + ":" + ss;
+  }, 1000);
+
+</script>
+
+{% endblock %}
+
+{% block log_form_content %}
+
+<div class="role-toggle mb-3">
+  <label>
+    <input type="radio" name="role" value="student" checked>
+    <span>Обучающийся</span>
+  </label>
+  <label>
+    <input type="radio" name="role" value="teacher">
+    <span>Обучающий</span>
+  </label>
+</div>
+
+<label for="code" class="fs-5 align-self-stretch">Код</label>
+
+<div class="input-group">
+  <input type="number" name="code" min="0" id="code"  class="log-input rounded-end mt-1">
+
+  {% if messages %}
+    {% for message in messages %}
+    <span class="text-danger position-absolute top-50 end-0 translate-middle-y me-3">
+      {{ message }}
+    </span>
+    {% endfor %}
+  {% endif %}
+
+</div>
+
+<p class="mt-2">Введите код, который пришел на почту</p>
+<p class="mt-4 fw-bold">Отправить код повторно</p>
+<div id="link-with-timer">Через <a id="timer">00:59</a></div>
+
+<a href="{% url 'users:send-code' %}" class="log-link align-self-center" id="resend-link">Отправить</a>
+
+{{ block.super }}
+
+{% endblock %}
+

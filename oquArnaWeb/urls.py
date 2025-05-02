@@ -21,8 +21,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/', include('users.urls', namespace='users')), # кастомная ссылка для активации
+    path("admin/", admin.site.urls),
+    path("users/", include("users.urls")),
+    path("works/", include("authors_works.urls")),
+
+    path('accounts/', include('django.contrib.auth.urls')),# кастомная ссылка для активации
     path('courses/', include('courses.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
