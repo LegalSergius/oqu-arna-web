@@ -4,8 +4,6 @@ from django.views.generic import ListView
 
 from authors_works.models import AuthorWork
 
-
-
 class TestView(View):
     def get(self, request):
         return render(request, 'category.html')
