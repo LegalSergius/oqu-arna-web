@@ -1,0 +1,76 @@
+{%load static%}
+{%get_media_prefix as MEDIA_PREFIX%}
+<html>
+    <head>
+        <title>
+            Курсы
+        </title>
+        <script src="{%static 'js/bootstrap.min.js' %}">
+        </script>
+        <link
+            rel="stylesheet"
+            href="{%static 'css/bootstrap.min.css'%}" />
+        <style>
+            @font-face {
+                font-family: 'DroidSansMono';
+                src: url("{%static 'fonts/DroidSansMono.ttf'%}") format('truetype');
+            }
+            body {
+                background-color: #EAEAEA;
+                font-family: 'DroidSansMono', serif;
+            }
+            .appGrayColorBackground {
+                background-color: #EAEAEA;
+            }
+            .appThemeBorderColor {
+                border: #605BCD solid 5px;
+            }
+            .appThemeColorBackground {
+                background-color: #605BCD;
+            }
+            .card {
+                border: #605BCD solid 5px;
+                height: 240px;
+            }
+            .cardContainer {
+                max-height: 85%;
+                overflow-y: auto;
+                scrollbar-width: thin;
+                scrollbar-color: #605BCD #BAB8D7;
+            }
+            .cardShadow {
+                box-shadow: 0 4px 0 #605BCD;
+            }
+            .categoryName {
+                font-size: 1.25em;
+            }
+            .coursePeriodBadge {
+                font-size: 1em;
+            }
+            .coursePeriodDate {
+                font-size: 0.8em;
+            }
+            .cardIconContainer {
+                height: 85%;
+            }
+            .modalBodyCell {
+                height: 60px;
+            }
+            .modalBodyCellValue {
+                color: #605BCD;
+            }
+            .modalBodyCellDownload {
+                color: #398F68;
+            }
+            .pageHeader {
+                font-size: 1.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="overflow-hidden">
+            {%include "components/entitiesTabs.html"%}
+            {%include "components/entities_or_categories_list.html" with template_name="components/courseCard.html"%}
+        </div>
+    </body>
+</html>
