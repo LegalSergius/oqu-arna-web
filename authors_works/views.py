@@ -8,10 +8,10 @@ class TestView(View):
     def get(self, request):
         return render(request, 'category.html')
 
-class CategoriesListView(ListView):
-    model = models.Category
-    template_name = "category.html"
-    context_object_name = "categories"
-
-class AuthorWorksListView(ListView):
-    model = AuthorWork
+# class CategoriesListView(ListView):
+#     model = models.Category
+#     template_name = "category.html"
+#     context_object_name = "categories"
+#
+# class AuthorWorksListView(ListView):
+#     model = AuthorWork
