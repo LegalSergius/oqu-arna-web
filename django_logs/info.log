@@ -1847,3 +1847,83 @@ django.template.exceptions.TemplateDoesNotExist: registration/login.html
 2025-05-02 18:01:18,842 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
 2025-05-02 18:01:23,035 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\users\views.py changed, reloading.
 2025-05-02 18:01:23,461 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 16:18:24,705 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 16:20:54,311 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 16:21:35,472 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 16:21:38,202 [WARNING] django.request: Not Found: /
+2025-05-03 16:21:38,207 [WARNING] django.request: Not Found: /
+2025-05-03 16:21:38,284 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-03 16:21:47,449 [WARNING] django.request: Not Found: /works/author_works/
+2025-05-03 16:22:33,118 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:23:56,495 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:23:57,115 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:23:57,490 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:23:57,801 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:23:58,012 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:23:58,330 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:24:28,886 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:24:29,421 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:24:29,698 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:24:29,900 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:24:30,208 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:26:02,072 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:27:28,656 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 16:27:30,590 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:27:31,144 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:27:32,342 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:28:01,869 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:28:05,421 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 16:28:07,581 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:28:40,106 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:29:05,572 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:30:59,534 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\oquArnaWeb\urls.py changed, reloading.
+2025-05-03 16:30:59,998 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 16:31:24,501 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\oquArnaWeb\urls.py changed, reloading.
+2025-05-03 16:31:24,976 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 16:31:25,192 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:34:21,281 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:34:21,926 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:34:22,548 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:34:39,041 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:34:39,957 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:34:40,370 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:34:49,174 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:13,551 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:14,056 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:14,356 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:14,639 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:14,893 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:15,237 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:15,435 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:20,867 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:21,318 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:21,647 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:25,765 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 16:35:27,558 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:27,964 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:28,291 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:49,346 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:49,834 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:50,182 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:50,510 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:50,798 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:51,143 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:51,754 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:35:52,204 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:36:13,156 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:36:33,970 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:36:34,627 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:36:35,162 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:36:35,508 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:36:35,884 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:37:14,327 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 16:45:13,996 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 16:46:26,803 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 16:47:07,006 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 16:47:10,477 [WARNING] django.request: Not Found: /works/author_works/
+2025-05-03 16:47:20,427 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\urls.py changed, reloading.
+2025-05-03 16:47:20,957 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 16:47:21,091 [WARNING] django.request: Not Found: /works/author_works/
+2025-05-03 16:47:21,833 [WARNING] django.request: Not Found: /works/author_works/
+2025-05-03 16:50:45,959 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\admin.py changed, reloading.
+2025-05-03 16:50:46,424 [INFO] django.utils.autoreload: Watching for file changes with StatReloader

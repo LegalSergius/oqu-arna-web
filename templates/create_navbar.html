@@ -1,7 +1,12 @@
-{% block scripts %}
+
+
 <script>
-    const navbar = new Navbar(menuItems);
-    navbar.setActive({{name}});
-    navbar.create();
+    (function (){
+        const navbar = new Navbar(menuItems);
+        navbar.setActive("{{ name_active_element }}");
+        navbar.create();
+    })();
 </script>
-{% endblock %}
+
+
+

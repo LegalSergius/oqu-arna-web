@@ -88,3 +88,8 @@ class Navbar{
         });
     }
 }
+
+
+function createNavbar(name_active_element){
+
+}

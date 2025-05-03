@@ -1,3 +1,7 @@
 {% extends 'base.html' %}
 
-{% include 'create_navbar.html' with name="author_works" %}
+
+{% block scripts %}
+{% include 'create_navbar.html' with name_active_element="author_works" %}
+{% endblock %}
+
