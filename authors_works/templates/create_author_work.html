@@ -1,0 +1,25 @@
+{% extends 'works_base.html' %}
+
+{% block header %}
+    {% include 'components/name_page.html' with name="Создание работы" href="javascript:history.back()" %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="author-work-content mt-4">
+        <form method="post" class="d-flex flex-column align-items-center">
+            {% csrf_token %}
+            <div class="form-work">
+
+            {% for field in form %}
+                {{ field.error }}
+                {{ field }}
+            {% endfor %}
+
+            </div>
+
+            <button type="submit" class="btn btn-base mt-3">Сохранить</button>
+        </form>
+    </div>
+
+{% endblock %}

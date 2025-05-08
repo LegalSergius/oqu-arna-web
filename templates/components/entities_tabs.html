@@ -1,0 +1,12 @@
+<div class="d-flex flex-row w-50 m-auto justify-content-evenly">
+
+    {% if active_table_name == "one_table" %}
+        {%include 'components/entity_header.html' with entity_name=tab_name_one is_active=True url=url_one%}
+        {%include 'components/entity_header.html' with entity_name=tab_name_two is_active=false url=url_two%}
+    {% elif active_table_name == "two_table" %}
+        {%include 'components/entity_header.html' with entity_name=tab_name_one is_active=False url=url_one%}
+        {%include 'components/entity_header.html' with entity_name=tab_name_two is_active=True url=url_two%}
+    {% endif %}
+
+
+</div>

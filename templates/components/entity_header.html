@@ -1,0 +1,17 @@
+<h1 class="text-center  my-2">
+    {%if is_active%}
+        <a
+            class="pageHeader text-decoration-none appThemeColorBackground px-5 d-inline-block border border-white badge text-white rounded-3"
+            data-active="{{ is_active }}"
+            href={{ url }}>
+            {{ entity_name }}
+        </a>
+    {%else%}
+        <a
+            class="pageHeader text-decoration-none d-inline-block px-5 border border-white badge text-bg-light text-dark rounded-3 shadow"
+            data-active="{{ is_active }}"
+            href={{ url }}>
+            {{ entity_name }}
+        </a>
+    {%endif%}
+</h1>

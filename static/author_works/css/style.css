@@ -1,0 +1,170 @@
+.author-work-content {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100%;
+    padding: 0 25% 0 25%;
+}
+
+.description {
+    width: 100%;
+
+    min-height: 150px;
+}
+
+.style-input-primary {
+    padding: 20px;
+    background-color: white;
+    border: 3px solid var(--primary-color);
+    border-radius: 12px;
+}
+
+.info-title {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 14px;
+
+    background-color: white;
+}
+
+
+.info {
+    padding: 10px 20px 10px 20px;
+    background-color: white;
+    border: 3px solid var(--primary-color);
+    border-radius: 12px;
+}
+
+.info-down {
+    width: 45%;
+}
+
+.info-price {
+    width: 30%;
+    padding: 10px 20px 10px 20px;
+}
+
+.info-price-text {
+    font-weight: bold;
+    font-size: 20px;
+
+    color: var(--primary-color);
+}
+
+.status-title {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.status {
+    background-color: var(--primary-color);
+    border-radius: 35px;
+
+    color: white;
+    font-weight: bold;
+
+    padding: 7px 95px
+}
+
+.file {
+    display: flex;
+
+    background-color: var(--primary-color);
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+    border-radius: 5px;
+
+    width: 45%;
+}
+
+.download-btn {
+    background-color: var(--dark-green);
+
+    color: white;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+
+    text-decoration: none;
+}
+
+
+/*-----------create work--------------*/
+
+.form-work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px 40px 20px 40px;
+}
+
+.input-info * {
+    border: 0 solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+}
+
+.input-info {
+    border: 3px solid var(--primary-color);
+    border-radius: 20px;
+}
+
+.input-info-title {
+    padding-right: 5px;
+}
+
+.input-info input {
+    padding-left: 0;
+}
+
+.input-info:focus {
+    outline: none;
+    box-shadow: none;
+    border: 3px solid var(--primary-color);
+}
+
+.input-textarea {
+    padding: 10px;
+    resize: none;
+    width: 100%;
+    height: 100px;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    outline: none !important;
+    border-color: white;
+}
+
+#file {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.file-btn {
+    padding: 5px 15px;
+    background-color: var(--dark-green);
+    cursor: pointer;
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    color: white;
+}
+
+.file-name {
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    color: white;
+    padding: 5px 20px;
+}
