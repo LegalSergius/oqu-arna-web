@@ -61,6 +61,9 @@ class CategoriesListView(ListView):
         queryset = self.model.objects.filter(**kw)
         return queryset
 
+class Category(CategoriesListView):
+    template_name = 'category.html'
+
 
 class AuthorWorksListView(ListView):
     model = models.AuthorWork
