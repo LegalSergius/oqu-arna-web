@@ -1,11 +1,14 @@
-<div class="card cardShadow col d-flex flex-column p-0 border border-dark rounded-3 overflow-hidden">
+<a class="card btn cardShadow col d-flex flex-column p-0 border border-dark rounded-3 overflow-visible"
+   href="{% url href item.pk %}">
+
     <div class="imageContainer">
         <img
             class="w-100 h-100 border rounded-3 object-fit-cover shadow"
-            src="{{ MEDIA_PREFIX }}category1.png"
+            src="{{ item.image.file.url }}"
             alt="Картинка 1"/>
     </div>
     <p class="categoryName my-auto px-2 fw-bold">
-        Колонка 1
+        {{ item.name }}
     </p>
-</div>
+
+</a>

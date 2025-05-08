@@ -21,7 +21,7 @@ from django.views.generic import TemplateView
 from courses import views
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='courses/categories.html'), name='courses_categories'),
-    path('entities/', TemplateView.as_view(template_name='courses/entities.html'), name='entities')
+    path('', TemplateView.as_view(template_name='courses/../templates/categories/categories.html'), name='courses_categories'),
+    path('entities/', TemplateView.as_view(template_name='courses/../authors_works/templates/entities.html'), name='entities')
 
 ]
