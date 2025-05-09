@@ -2779,3 +2779,415 @@
 2025-05-02 18:01:27,249 [SQL] (0.002) COMMIT; args=None; alias=default
 2025-05-02 18:01:27,262 [SQL] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-05-02 13:01:27.261410' AND "django_session"."session_key" = 'ldw5iuuexianl857l3cs6b5qo7hrn1q8') LIMIT 21; args=('2025-05-02 13:01:27.261410', 'ldw5iuuexianl857l3cs6b5qo7hrn1q8'); alias=default
 2025-05-02 18:01:27,263 [SQL] (0.000) SELECT "users_customuser"."id", "users_customuser"."password", "users_customuser"."last_login", "users_customuser"."is_superuser", "users_customuser"."username", "users_customuser"."first_name", "users_customuser"."last_name", "users_customuser"."is_staff", "users_customuser"."is_active", "users_customuser"."date_joined", "users_customuser"."email", "users_customuser"."full_name", "users_customuser"."phone_number", "users_customuser"."organization", "users_customuser"."country", "users_customuser"."city", "users_customuser"."is_educator" FROM "users_customuser" WHERE "users_customuser"."id" = 6 LIMIT 21; args=(6,); alias=default
+2025-05-03 00:09:34,065 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-03 00:10:20,936 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-03 00:10:33,160 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-03 00:10:33,163 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-03 00:10:33,167 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-03 00:10:33,168 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,169 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,170 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,171 [SQL] CREATE TABLE "django_migrations" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "applied" datetime NOT NULL); (params None)
+2025-05-03 00:10:33,173 [SQL] (0.000) CREATE TABLE "django_migrations" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "applied" datetime NOT NULL); args=None; alias=default
+2025-05-03 00:10:33,174 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,180 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,181 [SQL] (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,182 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,183 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,184 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,187 [SQL] CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); (params None)
+2025-05-03 00:10:33,190 [SQL] (0.000) CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); args=None; alias=default
+2025-05-03 00:10:33,199 [SQL] CREATE UNIQUE INDEX "django_content_type_app_label_model_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); (params ())
+2025-05-03 00:10:33,201 [SQL] (0.000) CREATE UNIQUE INDEX "django_content_type_app_label_model_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); args=(); alias=default
+2025-05-03 00:10:33,203 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-03 00:10:33,207 [SQL] (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('contenttypes', '0001_initial', '2025-05-02 19:10:33.205044') RETURNING "django_migrations"."id"; args=('contenttypes', '0001_initial', '2025-05-02 19:10:33.205044'); alias=default
+2025-05-03 00:10:33,209 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,216 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,218 [SQL] (0.016) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,221 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,221 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,222 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,226 [SQL] CREATE TABLE "new__django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL, "name" varchar(100) NULL); (params None)
+2025-05-03 00:10:33,228 [SQL] (0.000) CREATE TABLE "new__django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL, "name" varchar(100) NULL); args=None; alias=default
+2025-05-03 00:10:33,230 [SQL] INSERT INTO "new__django_content_type" ("id", "app_label", "model", "name") SELECT "id", "app_label", "model", "name" FROM "django_content_type"; (params ())
+2025-05-03 00:10:33,231 [SQL] (0.000) INSERT INTO "new__django_content_type" ("id", "app_label", "model", "name") SELECT "id", "app_label", "model", "name" FROM "django_content_type"; args=(); alias=default
+2025-05-03 00:10:33,232 [SQL] DROP TABLE "django_content_type"; (params ())
+2025-05-03 00:10:33,233 [SQL] (0.000) DROP TABLE "django_content_type"; args=(); alias=default
+2025-05-03 00:10:33,233 [SQL] ALTER TABLE "new__django_content_type" RENAME TO "django_content_type"; (params ())
+2025-05-03 00:10:33,236 [SQL] (0.000) ALTER TABLE "new__django_content_type" RENAME TO "django_content_type"; args=(); alias=default
+2025-05-03 00:10:33,237 [SQL] CREATE UNIQUE INDEX "django_content_type_app_label_model_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); (params ())
+2025-05-03 00:10:33,240 [SQL] (0.000) CREATE UNIQUE INDEX "django_content_type_app_label_model_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); args=(); alias=default
+2025-05-03 00:10:33,246 [SQL] ALTER TABLE "django_content_type" DROP COLUMN "name"; (params ())
+2025-05-03 00:10:33,248 [SQL] (0.000) ALTER TABLE "django_content_type" DROP COLUMN "name"; args=(); alias=default
+2025-05-03 00:10:33,249 [SQL] (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('contenttypes', '0002_remove_content_type_name', '2025-05-02 19:10:33.248590') RETURNING "django_migrations"."id"; args=('contenttypes', '0002_remove_content_type_name', '2025-05-02 19:10:33.248590'); alias=default
+2025-05-03 00:10:33,249 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,254 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,256 [SQL] (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,258 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,259 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,260 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,263 [SQL] CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(50) NOT NULL, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED, "codename" varchar(100) NOT NULL); (params None)
+2025-05-03 00:10:33,265 [SQL] (0.016) CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(50) NOT NULL, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED, "codename" varchar(100) NOT NULL); args=None; alias=default
+2025-05-03 00:10:33,278 [SQL] CREATE TABLE "auth_group" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(80) NOT NULL UNIQUE); (params None)
+2025-05-03 00:10:33,279 [SQL] (0.000) CREATE TABLE "auth_group" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(80) NOT NULL UNIQUE); args=None; alias=default
+2025-05-03 00:10:33,280 [SQL] CREATE TABLE "auth_group_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "group_id" integer NOT NULL REFERENCES "auth_group" ("id") DEFERRABLE INITIALLY DEFERRED, "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id") DEFERRABLE INITIALLY DEFERRED); (params None)
+2025-05-03 00:10:33,281 [SQL] (0.016) CREATE TABLE "auth_group_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "group_id" integer NOT NULL REFERENCES "auth_group" ("id") DEFERRABLE INITIALLY DEFERRED, "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id") DEFERRABLE INITIALLY DEFERRED); args=None; alias=default
+2025-05-03 00:10:33,297 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,298 [SQL] CREATE UNIQUE INDEX "auth_permission_content_type_id_codename_01ab375a_uniq" ON "auth_permission" ("content_type_id", "codename"); (params None)
+2025-05-03 00:10:33,298 [SQL] (0.000) CREATE UNIQUE INDEX "auth_permission_content_type_id_codename_01ab375a_uniq" ON "auth_permission" ("content_type_id", "codename"); args=None; alias=default
+2025-05-03 00:10:33,299 [SQL] CREATE INDEX "auth_permission_content_type_id_2f476e4b" ON "auth_permission" ("content_type_id"); (params None)
+2025-05-03 00:10:33,300 [SQL] (0.000) CREATE INDEX "auth_permission_content_type_id_2f476e4b" ON "auth_permission" ("content_type_id"); args=None; alias=default
+2025-05-03 00:10:33,302 [SQL] CREATE UNIQUE INDEX "auth_group_permissions_group_id_permission_id_0cd325b0_uniq" ON "auth_group_permissions" ("group_id", "permission_id"); (params None)
+2025-05-03 00:10:33,305 [SQL] (0.000) CREATE UNIQUE INDEX "auth_group_permissions_group_id_permission_id_0cd325b0_uniq" ON "auth_group_permissions" ("group_id", "permission_id"); args=None; alias=default
+2025-05-03 00:10:33,307 [SQL] CREATE INDEX "auth_group_permissions_group_id_b120cbf9" ON "auth_group_permissions" ("group_id"); (params None)
+2025-05-03 00:10:33,308 [SQL] (0.000) CREATE INDEX "auth_group_permissions_group_id_b120cbf9" ON "auth_group_permissions" ("group_id"); args=None; alias=default
+2025-05-03 00:10:33,309 [SQL] CREATE INDEX "auth_group_permissions_permission_id_84c5c92e" ON "auth_group_permissions" ("permission_id"); (params None)
+2025-05-03 00:10:33,310 [SQL] (0.000) CREATE INDEX "auth_group_permissions_permission_id_84c5c92e" ON "auth_group_permissions" ("permission_id"); args=None; alias=default
+2025-05-03 00:10:33,316 [SQL] (0.016) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,316 [SQL] (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,320 [SQL] (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0001_initial', '2025-05-02 19:10:33.317398') RETURNING "django_migrations"."id"; args=('auth', '0001_initial', '2025-05-02 19:10:33.317398'); alias=default
+2025-05-03 00:10:33,326 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,326 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,326 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,334 [SQL] CREATE TABLE "new__auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED, "codename" varchar(100) NOT NULL, "name" varchar(255) NOT NULL); (params None)
+2025-05-03 00:10:33,336 [SQL] (0.000) CREATE TABLE "new__auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED, "codename" varchar(100) NOT NULL, "name" varchar(255) NOT NULL); args=None; alias=default
+2025-05-03 00:10:33,337 [SQL] INSERT INTO "new__auth_permission" ("id", "content_type_id", "codename", "name") SELECT "id", "content_type_id", "codename", "name" FROM "auth_permission"; (params ())
+2025-05-03 00:10:33,339 [SQL] (0.000) INSERT INTO "new__auth_permission" ("id", "content_type_id", "codename", "name") SELECT "id", "content_type_id", "codename", "name" FROM "auth_permission"; args=(); alias=default
+2025-05-03 00:10:33,340 [SQL] DROP TABLE "auth_permission"; (params ())
+2025-05-03 00:10:33,341 [SQL] (0.000) DROP TABLE "auth_permission"; args=(); alias=default
+2025-05-03 00:10:33,342 [SQL] ALTER TABLE "new__auth_permission" RENAME TO "auth_permission"; (params ())
+2025-05-03 00:10:33,343 [SQL] (0.016) ALTER TABLE "new__auth_permission" RENAME TO "auth_permission"; args=(); alias=default
+2025-05-03 00:10:33,344 [SQL] CREATE UNIQUE INDEX "auth_permission_content_type_id_codename_01ab375a_uniq" ON "auth_permission" ("content_type_id", "codename"); (params ())
+2025-05-03 00:10:33,345 [SQL] (0.000) CREATE UNIQUE INDEX "auth_permission_content_type_id_codename_01ab375a_uniq" ON "auth_permission" ("content_type_id", "codename"); args=(); alias=default
+2025-05-03 00:10:33,346 [SQL] CREATE INDEX "auth_permission_content_type_id_2f476e4b" ON "auth_permission" ("content_type_id"); (params ())
+2025-05-03 00:10:33,347 [SQL] (0.000) CREATE INDEX "auth_permission_content_type_id_2f476e4b" ON "auth_permission" ("content_type_id"); args=(); alias=default
+2025-05-03 00:10:33,348 [SQL] (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0002_alter_permission_name_max_length', '2025-05-02 19:10:33.348150') RETURNING "django_migrations"."id"; args=('auth', '0002_alter_permission_name_max_length', '2025-05-02 19:10:33.348150'); alias=default
+2025-05-03 00:10:33,349 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,355 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,357 [SQL] (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,358 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,359 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,359 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,368 [SQL] (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0003_alter_user_email_max_length', '2025-05-02 19:10:33.366710') RETURNING "django_migrations"."id"; args=('auth', '0003_alter_user_email_max_length', '2025-05-02 19:10:33.366710'); alias=default
+2025-05-03 00:10:33,370 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,375 [SQL] (0.015) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,376 [SQL] (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,376 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,377 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,377 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,385 [SQL] (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0004_alter_user_username_opts', '2025-05-02 19:10:33.383291') RETURNING "django_migrations"."id"; args=('auth', '0004_alter_user_username_opts', '2025-05-02 19:10:33.383291'); alias=default
+2025-05-03 00:10:33,386 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,391 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,391 [SQL] (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,392 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,392 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,393 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,401 [SQL] (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0005_alter_user_last_login_null', '2025-05-02 19:10:33.399085') RETURNING "django_migrations"."id"; args=('auth', '0005_alter_user_last_login_null', '2025-05-02 19:10:33.399085'); alias=default
+2025-05-03 00:10:33,402 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,407 [SQL] (0.016) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,408 [SQL] (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,409 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,409 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,410 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,412 [SQL] (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0006_require_contenttypes_0002', '2025-05-02 19:10:33.410822') RETURNING "django_migrations"."id"; args=('auth', '0006_require_contenttypes_0002', '2025-05-02 19:10:33.410822'); alias=default
+2025-05-03 00:10:33,413 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,417 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,417 [SQL] (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,419 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,419 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,420 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,428 [SQL] (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0007_alter_validators_add_error_messages', '2025-05-02 19:10:33.426824') RETURNING "django_migrations"."id"; args=('auth', '0007_alter_validators_add_error_messages', '2025-05-02 19:10:33.426824'); alias=default
+2025-05-03 00:10:33,429 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,433 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,433 [SQL] (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,434 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,435 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,436 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,446 [SQL] (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0008_alter_user_username_max_length', '2025-05-02 19:10:33.444824') RETURNING "django_migrations"."id"; args=('auth', '0008_alter_user_username_max_length', '2025-05-02 19:10:33.444824'); alias=default
+2025-05-03 00:10:33,447 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,452 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,453 [SQL] (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,456 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,458 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,458 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,467 [SQL] (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0009_alter_user_last_name_max_length', '2025-05-02 19:10:33.465817') RETURNING "django_migrations"."id"; args=('auth', '0009_alter_user_last_name_max_length', '2025-05-02 19:10:33.465817'); alias=default
+2025-05-03 00:10:33,469 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,473 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,474 [SQL] (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,475 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,475 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,476 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,480 [SQL] CREATE TABLE "new__auth_group" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(150) NOT NULL UNIQUE); (params None)
+2025-05-03 00:10:33,483 [SQL] (0.000) CREATE TABLE "new__auth_group" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(150) NOT NULL UNIQUE); args=None; alias=default
+2025-05-03 00:10:33,483 [SQL] INSERT INTO "new__auth_group" ("id", "name") SELECT "id", "name" FROM "auth_group"; (params ())
+2025-05-03 00:10:33,484 [SQL] (0.000) INSERT INTO "new__auth_group" ("id", "name") SELECT "id", "name" FROM "auth_group"; args=(); alias=default
+2025-05-03 00:10:33,484 [SQL] DROP TABLE "auth_group"; (params ())
+2025-05-03 00:10:33,486 [SQL] (0.000) DROP TABLE "auth_group"; args=(); alias=default
+2025-05-03 00:10:33,488 [SQL] ALTER TABLE "new__auth_group" RENAME TO "auth_group"; (params ())
+2025-05-03 00:10:33,490 [SQL] (0.000) ALTER TABLE "new__auth_group" RENAME TO "auth_group"; args=(); alias=default
+2025-05-03 00:10:33,492 [SQL] (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0010_alter_group_name_max_length', '2025-05-02 19:10:33.491820') RETURNING "django_migrations"."id"; args=('auth', '0010_alter_group_name_max_length', '2025-05-02 19:10:33.491820'); alias=default
+2025-05-03 00:10:33,493 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,496 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,498 [SQL] (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,499 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,500 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,501 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,509 [SQL] (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0011_update_proxy_permissions', '2025-05-02 19:10:33.508817') RETURNING "django_migrations"."id"; args=('auth', '0011_update_proxy_permissions', '2025-05-02 19:10:33.508817'); alias=default
+2025-05-03 00:10:33,510 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,514 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,515 [SQL] (0.016) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,515 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,516 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,517 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,526 [SQL] (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0012_alter_user_first_name_max_length', '2025-05-02 19:10:33.524823') RETURNING "django_migrations"."id"; args=('auth', '0012_alter_user_first_name_max_length', '2025-05-02 19:10:33.524823'); alias=default
+2025-05-03 00:10:33,526 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,530 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,531 [SQL] (0.016) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,531 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,532 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,533 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,540 [SQL] CREATE TABLE "users_customuser" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NULL, "is_superuser" bool NOT NULL, "username" varchar(150) NOT NULL UNIQUE, "first_name" varchar(150) NOT NULL, "last_name" varchar(150) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "email" varchar(254) NOT NULL UNIQUE, "full_name" varchar(255) NOT NULL, "phone_number" varchar(20) NOT NULL, "organization" varchar(255) NOT NULL, "country" varchar(100) NOT NULL, "city" varchar(100) NOT NULL, "is_educator" bool NOT NULL); (params None)
+2025-05-03 00:10:33,542 [SQL] (0.000) CREATE TABLE "users_customuser" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NULL, "is_superuser" bool NOT NULL, "username" varchar(150) NOT NULL UNIQUE, "first_name" varchar(150) NOT NULL, "last_name" varchar(150) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "email" varchar(254) NOT NULL UNIQUE, "full_name" varchar(255) NOT NULL, "phone_number" varchar(20) NOT NULL, "organization" varchar(255) NOT NULL, "country" varchar(100) NOT NULL, "city" varchar(100) NOT NULL, "is_educator" bool NOT NULL); args=None; alias=default
+2025-05-03 00:10:33,544 [SQL] CREATE TABLE "users_customuser_groups" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "customuser_id" bigint NOT NULL REFERENCES "users_customuser" ("id") DEFERRABLE INITIALLY DEFERRED, "group_id" integer NOT NULL REFERENCES "auth_group" ("id") DEFERRABLE INITIALLY DEFERRED); (params None)
+2025-05-03 00:10:33,545 [SQL] (0.000) CREATE TABLE "users_customuser_groups" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "customuser_id" bigint NOT NULL REFERENCES "users_customuser" ("id") DEFERRABLE INITIALLY DEFERRED, "group_id" integer NOT NULL REFERENCES "auth_group" ("id") DEFERRABLE INITIALLY DEFERRED); args=None; alias=default
+2025-05-03 00:10:33,547 [SQL] CREATE TABLE "users_customuser_user_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "customuser_id" bigint NOT NULL REFERENCES "users_customuser" ("id") DEFERRABLE INITIALLY DEFERRED, "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id") DEFERRABLE INITIALLY DEFERRED); (params None)
+2025-05-03 00:10:33,548 [SQL] (0.000) CREATE TABLE "users_customuser_user_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "customuser_id" bigint NOT NULL REFERENCES "users_customuser" ("id") DEFERRABLE INITIALLY DEFERRED, "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id") DEFERRABLE INITIALLY DEFERRED); args=None; alias=default
+2025-05-03 00:10:33,549 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,549 [SQL] CREATE UNIQUE INDEX "users_customuser_groups_customuser_id_group_id_76b619e3_uniq" ON "users_customuser_groups" ("customuser_id", "group_id"); (params None)
+2025-05-03 00:10:33,550 [SQL] (0.000) CREATE UNIQUE INDEX "users_customuser_groups_customuser_id_group_id_76b619e3_uniq" ON "users_customuser_groups" ("customuser_id", "group_id"); args=None; alias=default
+2025-05-03 00:10:33,550 [SQL] CREATE INDEX "users_customuser_groups_customuser_id_958147bf" ON "users_customuser_groups" ("customuser_id"); (params None)
+2025-05-03 00:10:33,551 [SQL] (0.000) CREATE INDEX "users_customuser_groups_customuser_id_958147bf" ON "users_customuser_groups" ("customuser_id"); args=None; alias=default
+2025-05-03 00:10:33,552 [SQL] CREATE INDEX "users_customuser_groups_group_id_01390b14" ON "users_customuser_groups" ("group_id"); (params None)
+2025-05-03 00:10:33,554 [SQL] (0.000) CREATE INDEX "users_customuser_groups_group_id_01390b14" ON "users_customuser_groups" ("group_id"); args=None; alias=default
+2025-05-03 00:10:33,556 [SQL] CREATE UNIQUE INDEX "users_customuser_user_permissions_customuser_id_permission_id_7a7debf6_uniq" ON "users_customuser_user_permissions" ("customuser_id", "permission_id"); (params None)
+2025-05-03 00:10:33,556 [SQL] (0.000) CREATE UNIQUE INDEX "users_customuser_user_permissions_customuser_id_permission_id_7a7debf6_uniq" ON "users_customuser_user_permissions" ("customuser_id", "permission_id"); args=None; alias=default
+2025-05-03 00:10:33,557 [SQL] CREATE INDEX "users_customuser_user_permissions_customuser_id_5771478b" ON "users_customuser_user_permissions" ("customuser_id"); (params None)
+2025-05-03 00:10:33,557 [SQL] (0.000) CREATE INDEX "users_customuser_user_permissions_customuser_id_5771478b" ON "users_customuser_user_permissions" ("customuser_id"); args=None; alias=default
+2025-05-03 00:10:33,558 [SQL] CREATE INDEX "users_customuser_user_permissions_permission_id_baaa2f74" ON "users_customuser_user_permissions" ("permission_id"); (params None)
+2025-05-03 00:10:33,558 [SQL] (0.000) CREATE INDEX "users_customuser_user_permissions_permission_id_baaa2f74" ON "users_customuser_user_permissions" ("permission_id"); args=None; alias=default
+2025-05-03 00:10:33,564 [SQL] (0.016) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,566 [SQL] (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,568 [SQL] (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('users', '0001_initial', '2025-05-02 19:10:33.566779') RETURNING "django_migrations"."id"; args=('users', '0001_initial', '2025-05-02 19:10:33.566779'); alias=default
+2025-05-03 00:10:33,575 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,576 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,576 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,583 [SQL] CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "action_time" datetime NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL CHECK ("action_flag" >= 0), "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED, "user_id" bigint NOT NULL REFERENCES "users_customuser" ("id") DEFERRABLE INITIALLY DEFERRED); (params None)
+2025-05-03 00:10:33,586 [SQL] (0.000) CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "action_time" datetime NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL CHECK ("action_flag" >= 0), "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED, "user_id" bigint NOT NULL REFERENCES "users_customuser" ("id") DEFERRABLE INITIALLY DEFERRED); args=None; alias=default
+2025-05-03 00:10:33,587 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,588 [SQL] CREATE INDEX "django_admin_log_content_type_id_c4bce8eb" ON "django_admin_log" ("content_type_id"); (params None)
+2025-05-03 00:10:33,589 [SQL] (0.000) CREATE INDEX "django_admin_log_content_type_id_c4bce8eb" ON "django_admin_log" ("content_type_id"); args=None; alias=default
+2025-05-03 00:10:33,589 [SQL] CREATE INDEX "django_admin_log_user_id_c564eba6" ON "django_admin_log" ("user_id"); (params None)
+2025-05-03 00:10:33,590 [SQL] (0.000) CREATE INDEX "django_admin_log_user_id_c564eba6" ON "django_admin_log" ("user_id"); args=None; alias=default
+2025-05-03 00:10:33,593 [SQL] (0.016) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,594 [SQL] (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,596 [SQL] (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('admin', '0001_initial', '2025-05-02 19:10:33.595745') RETURNING "django_migrations"."id"; args=('admin', '0001_initial', '2025-05-02 19:10:33.595745'); alias=default
+2025-05-03 00:10:33,600 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,601 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,602 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,614 [SQL] CREATE TABLE "new__django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL CHECK ("action_flag" >= 0), "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED, "user_id" bigint NOT NULL REFERENCES "users_customuser" ("id") DEFERRABLE INITIALLY DEFERRED, "action_time" datetime NOT NULL); (params None)
+2025-05-03 00:10:33,617 [SQL] (0.000) CREATE TABLE "new__django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL CHECK ("action_flag" >= 0), "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED, "user_id" bigint NOT NULL REFERENCES "users_customuser" ("id") DEFERRABLE INITIALLY DEFERRED, "action_time" datetime NOT NULL); args=None; alias=default
+2025-05-03 00:10:33,617 [SQL] INSERT INTO "new__django_admin_log" ("id", "object_id", "object_repr", "action_flag", "change_message", "content_type_id", "user_id", "action_time") SELECT "id", "object_id", "object_repr", "action_flag", "change_message", "content_type_id", "user_id", "action_time" FROM "django_admin_log"; (params ())
+2025-05-03 00:10:33,618 [SQL] (0.000) INSERT INTO "new__django_admin_log" ("id", "object_id", "object_repr", "action_flag", "change_message", "content_type_id", "user_id", "action_time") SELECT "id", "object_id", "object_repr", "action_flag", "change_message", "content_type_id", "user_id", "action_time" FROM "django_admin_log"; args=(); alias=default
+2025-05-03 00:10:33,619 [SQL] DROP TABLE "django_admin_log"; (params ())
+2025-05-03 00:10:33,621 [SQL] (0.000) DROP TABLE "django_admin_log"; args=(); alias=default
+2025-05-03 00:10:33,622 [SQL] ALTER TABLE "new__django_admin_log" RENAME TO "django_admin_log"; (params ())
+2025-05-03 00:10:33,624 [SQL] (0.015) ALTER TABLE "new__django_admin_log" RENAME TO "django_admin_log"; args=(); alias=default
+2025-05-03 00:10:33,625 [SQL] CREATE INDEX "django_admin_log_content_type_id_c4bce8eb" ON "django_admin_log" ("content_type_id"); (params ())
+2025-05-03 00:10:33,625 [SQL] (0.000) CREATE INDEX "django_admin_log_content_type_id_c4bce8eb" ON "django_admin_log" ("content_type_id"); args=(); alias=default
+2025-05-03 00:10:33,625 [SQL] CREATE INDEX "django_admin_log_user_id_c564eba6" ON "django_admin_log" ("user_id"); (params ())
+2025-05-03 00:10:33,626 [SQL] (0.000) CREATE INDEX "django_admin_log_user_id_c564eba6" ON "django_admin_log" ("user_id"); args=(); alias=default
+2025-05-03 00:10:33,627 [SQL] (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('admin', '0002_logentry_remove_auto_add', '2025-05-02 19:10:33.626740') RETURNING "django_migrations"."id"; args=('admin', '0002_logentry_remove_auto_add', '2025-05-02 19:10:33.626740'); alias=default
+2025-05-03 00:10:33,628 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,631 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,632 [SQL] (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,633 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,633 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,634 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,644 [SQL] (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('admin', '0003_logentry_add_action_flag_choices', '2025-05-02 19:10:33.642737') RETURNING "django_migrations"."id"; args=('admin', '0003_logentry_add_action_flag_choices', '2025-05-02 19:10:33.642737'); alias=default
+2025-05-03 00:10:33,646 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,650 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,651 [SQL] (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,653 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,654 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,655 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,657 [SQL] CREATE TABLE "common_content" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "file" varchar(512) NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL); (params None)
+2025-05-03 00:10:33,659 [SQL] (0.000) CREATE TABLE "common_content" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "file" varchar(512) NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL); args=None; alias=default
+2025-05-03 00:10:33,662 [SQL] CREATE TABLE "common_category" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "created_at" datetime NOT NULL, "image_id" bigint NOT NULL REFERENCES "common_content" ("id") DEFERRABLE INITIALLY DEFERRED); (params None)
+2025-05-03 00:10:33,663 [SQL] (0.000) CREATE TABLE "common_category" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "created_at" datetime NOT NULL, "image_id" bigint NOT NULL REFERENCES "common_content" ("id") DEFERRABLE INITIALLY DEFERRED); args=None; alias=default
+2025-05-03 00:10:33,664 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,664 [SQL] CREATE INDEX "common_category_image_id_5f46a713" ON "common_category" ("image_id"); (params None)
+2025-05-03 00:10:33,665 [SQL] (0.000) CREATE INDEX "common_category_image_id_5f46a713" ON "common_category" ("image_id"); args=None; alias=default
+2025-05-03 00:10:33,668 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,669 [SQL] (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,672 [SQL] (0.015) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('common', '0001_initial', '2025-05-02 19:10:33.670933') RETURNING "django_migrations"."id"; args=('common', '0001_initial', '2025-05-02 19:10:33.670933'); alias=default
+2025-05-03 00:10:33,677 [SQL] (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2025-05-03 00:10:33,677 [SQL] (0.000) PRAGMA foreign_keys; args=None; alias=default
+2025-05-03 00:10:33,678 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,681 [SQL] CREATE TABLE "django_session" ("session_key" varchar(40) NOT NULL PRIMARY KEY, "session_data" text NOT NULL, "expire_date" datetime NOT NULL); (params None)
+2025-05-03 00:10:33,684 [SQL] (0.000) CREATE TABLE "django_session" ("session_key" varchar(40) NOT NULL PRIMARY KEY, "session_data" text NOT NULL, "expire_date" datetime NOT NULL); args=None; alias=default
+2025-05-03 00:10:33,686 [SQL] (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2025-05-03 00:10:33,687 [SQL] CREATE INDEX "django_session_expire_date_a5c62663" ON "django_session" ("expire_date"); (params None)
+2025-05-03 00:10:33,688 [SQL] (0.000) CREATE INDEX "django_session_expire_date_a5c62663" ON "django_session" ("expire_date"); args=None; alias=default
+2025-05-03 00:10:33,691 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,692 [SQL] (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2025-05-03 00:10:33,694 [SQL] (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('sessions', '0001_initial', '2025-05-02 19:10:33.693931') RETURNING "django_migrations"."id"; args=('sessions', '0001_initial', '2025-05-02 19:10:33.693931'); alias=default
+2025-05-03 00:10:33,701 [SQL] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-05-03 00:10:33,719 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+2025-05-03 00:10:33,720 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,723 [SQL] (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('admin', 'logentry') RETURNING "django_content_type"."id"; args=('admin', 'logentry'); alias=default
+2025-05-03 00:10:33,727 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,731 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" IN ('logentry')); args=('admin', 'logentry'); alias=default
+2025-05-03 00:10:33,734 [SQL] (0.016) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(1,); alias=default
+2025-05-03 00:10:33,735 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,739 [SQL] (0.000) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") VALUES ('Can add log entry', 1, 'add_logentry'), ('Can change log entry', 1, 'change_logentry'), ('Can delete log entry', 1, 'delete_logentry'), ('Can view log entry', 1, 'view_logentry') RETURNING "auth_permission"."id"; args=('Can add log entry', 1, 'add_logentry', 'Can change log entry', 1, 'change_logentry', 'Can delete log entry', 1, 'delete_logentry', 'Can view log entry', 1, 'view_logentry'); alias=default
+2025-05-03 00:10:33,743 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,745 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+2025-05-03 00:10:33,747 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+2025-05-03 00:10:33,748 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,752 [SQL] (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('auth', 'permission'), ('auth', 'group') RETURNING "django_content_type"."id"; args=('auth', 'permission', 'auth', 'group'); alias=default
+2025-05-03 00:10:33,757 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,758 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" IN ('permission', 'group')); args=('auth', 'permission', 'group'); alias=default
+2025-05-03 00:10:33,761 [SQL] (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(2, 3); alias=default
+2025-05-03 00:10:33,761 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,764 [SQL] (0.000) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") VALUES ('Can add permission', 2, 'add_permission'), ('Can change permission', 2, 'change_permission'), ('Can delete permission', 2, 'delete_permission'), ('Can view permission', 2, 'view_permission'), ('Can add group', 3, 'add_group'), ('Can change group', 3, 'change_group'), ('Can delete group', 3, 'delete_group'), ('Can view group', 3, 'view_group') RETURNING "auth_permission"."id"; args=('Can add permission', 2, 'add_permission', 'Can change permission', 2, 'change_permission', 'Can delete permission', 2, 'delete_permission', 'Can view permission', 2, 'view_permission', 'Can add group', 3, 'add_group', 'Can change group', 3, 'change_group', 'Can delete group', 3, 'delete_group', 'Can view group', 3, 'view_group'); alias=default
+2025-05-03 00:10:33,769 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,771 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+2025-05-03 00:10:33,773 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+2025-05-03 00:10:33,773 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,775 [SQL] (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('contenttypes', 'contenttype') RETURNING "django_content_type"."id"; args=('contenttypes', 'contenttype'); alias=default
+2025-05-03 00:10:33,780 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,781 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" IN ('contenttype')); args=('contenttypes', 'contenttype'); alias=default
+2025-05-03 00:10:33,784 [SQL] (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(4,); alias=default
+2025-05-03 00:10:33,785 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,789 [SQL] (0.000) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") VALUES ('Can add content type', 4, 'add_contenttype'), ('Can change content type', 4, 'change_contenttype'), ('Can delete content type', 4, 'delete_contenttype'), ('Can view content type', 4, 'view_contenttype') RETURNING "auth_permission"."id"; args=('Can add content type', 4, 'add_contenttype', 'Can change content type', 4, 'change_contenttype', 'Can delete content type', 4, 'delete_contenttype', 'Can view content type', 4, 'view_contenttype'); alias=default
+2025-05-03 00:10:33,794 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,795 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+2025-05-03 00:10:33,795 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+2025-05-03 00:10:33,795 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,801 [SQL] (0.015) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('sessions', 'session') RETURNING "django_content_type"."id"; args=('sessions', 'session'); alias=default
+2025-05-03 00:10:33,805 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,806 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" IN ('session')); args=('sessions', 'session'); alias=default
+2025-05-03 00:10:33,809 [SQL] (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(5,); alias=default
+2025-05-03 00:10:33,810 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,812 [SQL] (0.016) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") VALUES ('Can add session', 5, 'add_session'), ('Can change session', 5, 'change_session'), ('Can delete session', 5, 'delete_session'), ('Can view session', 5, 'view_session') RETURNING "auth_permission"."id"; args=('Can add session', 5, 'add_session', 'Can change session', 5, 'change_session', 'Can delete session', 5, 'delete_session', 'Can view session', 5, 'view_session'); alias=default
+2025-05-03 00:10:33,817 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,818 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+2025-05-03 00:10:33,819 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'users'; args=('users',); alias=default
+2025-05-03 00:10:33,820 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,823 [SQL] (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('users', 'customuser') RETURNING "django_content_type"."id"; args=('users', 'customuser'); alias=default
+2025-05-03 00:10:33,827 [SQL] (0.015) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,828 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'users' AND "django_content_type"."model" IN ('customuser')); args=('users', 'customuser'); alias=default
+2025-05-03 00:10:33,830 [SQL] (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(6,); alias=default
+2025-05-03 00:10:33,830 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,832 [SQL] (0.000) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") VALUES ('Can add пользователь', 6, 'add_customuser'), ('Can change пользователь', 6, 'change_customuser'), ('Can delete пользователь', 6, 'delete_customuser'), ('Can view пользователь', 6, 'view_customuser') RETURNING "auth_permission"."id"; args=('Can add пользователь', 6, 'add_customuser', 'Can change пользователь', 6, 'change_customuser', 'Can delete пользователь', 6, 'delete_customuser', 'Can view пользователь', 6, 'view_customuser'); alias=default
+2025-05-03 00:10:33,836 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,838 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'users'; args=('users',); alias=default
+2025-05-03 00:10:33,839 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'authors_works'; args=('authors_works',); alias=default
+2025-05-03 00:10:33,839 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,841 [SQL] (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('authors_works', 'authorwork') RETURNING "django_content_type"."id"; args=('authors_works', 'authorwork'); alias=default
+2025-05-03 00:10:33,845 [SQL] (0.016) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,846 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'authors_works' AND "django_content_type"."model" IN ('authorwork')); args=('authors_works', 'authorwork'); alias=default
+2025-05-03 00:10:33,848 [SQL] (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(7,); alias=default
+2025-05-03 00:10:33,848 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,850 [SQL] (0.000) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") VALUES ('Can add author work', 7, 'add_authorwork'), ('Can change author work', 7, 'change_authorwork'), ('Can delete author work', 7, 'delete_authorwork'), ('Can view author work', 7, 'view_authorwork') RETURNING "auth_permission"."id"; args=('Can add author work', 7, 'add_authorwork', 'Can change author work', 7, 'change_authorwork', 'Can delete author work', 7, 'delete_authorwork', 'Can view author work', 7, 'view_authorwork'); alias=default
+2025-05-03 00:10:33,855 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,856 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'authors_works'; args=('authors_works',); alias=default
+2025-05-03 00:10:33,858 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'common'; args=('common',); alias=default
+2025-05-03 00:10:33,858 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,861 [SQL] (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('common', 'content'), ('common', 'category') RETURNING "django_content_type"."id"; args=('common', 'content', 'common', 'category'); alias=default
+2025-05-03 00:10:33,864 [SQL] (0.000) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,866 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'common' AND "django_content_type"."model" IN ('category', 'content')); args=('common', 'category', 'content'); alias=default
+2025-05-03 00:10:33,868 [SQL] (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(8, 9); alias=default
+2025-05-03 00:10:33,869 [SQL] (0.000) BEGIN; args=None; alias=default
+2025-05-03 00:10:33,871 [SQL] (0.000) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") VALUES ('Can add content', 8, 'add_content'), ('Can change content', 8, 'change_content'), ('Can delete content', 8, 'delete_content'), ('Can view content', 8, 'view_content'), ('Can add category', 9, 'add_category'), ('Can change category', 9, 'change_category'), ('Can delete category', 9, 'delete_category'), ('Can view category', 9, 'view_category') RETURNING "auth_permission"."id"; args=('Can add content', 8, 'add_content', 'Can change content', 8, 'change_content', 'Can delete content', 8, 'delete_content', 'Can view content', 8, 'view_content', 'Can add category', 9, 'add_category', 'Can change category', 9, 'change_category', 'Can delete category', 9, 'delete_category', 'Can view category', 9, 'view_category'); alias=default
+2025-05-03 00:10:33,875 [SQL] (0.015) COMMIT; args=None; alias=default
+2025-05-03 00:10:33,876 [SQL] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'common'; args=('common',); alias=default
+2025-05-03 00:12:22,881 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-03 00:12:22,889 [SQL] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-05-03 00:32:19,495 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-03 00:32:19,503 [SQL] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-05-03 09:16:31,604 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-03 09:16:31,610 [SQL] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-05-04 00:08:30,982 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-04 00:08:30,988 [SQL] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-05-04 00:09:49,005 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-04 00:09:49,011 [SQL] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-05-04 00:43:44,790 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-04 00:43:44,796 [SQL] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-05-04 01:19:21,330 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-04 01:19:21,337 [SQL] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-05-04 09:51:06,584 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-04 09:51:06,590 [SQL] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-05-04 11:58:16,767 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-04 11:58:16,773 [SQL] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-05-04 17:44:36,678 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-04 17:44:36,683 [SQL] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-05-08 10:35:13,897 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-08 10:35:13,904 [SQL] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-05-08 13:58:38,110 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-08 13:58:38,117 [SQL] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-05-09 14:11:28,499 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-09 14:11:28,506 [SQL] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-05-09 15:11:43,077 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-09 15:11:43,084 [SQL] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-05-09 16:56:06,337 [SQL] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-05-09 11:56:06.295559' AND "django_session"."session_key" = 'itefdqrwqfdzyx3lrcazvwi6sm3zj85q') LIMIT 21; args=('2025-05-09 11:56:06.295559', 'itefdqrwqfdzyx3lrcazvwi6sm3zj85q'); alias=default

@@ -22,6 +22,10 @@ from courses import views
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='courses/categories.html'), name='courses_categories'),
-    path('entities/', TemplateView.as_view(template_name='courses/entities.html'), name='entities')
-
+    path('entities/', TemplateView.as_view(template_name='courses/entities.html'), name='entities'),
+    path('lessons/', TemplateView.as_view(template_name='courses/lessons.html'), name='lessons'),
+    path('lessonActions/', TemplateView.as_view(template_name='courses/lessonActions.html'), name='lesson_actions'),
+    path('lessonStats/', TemplateView.as_view(template_name='courses/lessonStats.html'), name='lesson_stats'),
+    path('content/', TemplateView.as_view(template_name='courses/content.html'), name='content'),
+    path('schedule/', TemplateView.as_view(template_name='courses/schedule.html'), name='schedule')
 ]

@@ -1,0 +1,213 @@
+{%load static%}
+{%get_media_prefix as MEDIA_PREFIX%}
+<html>
+    <head>
+        <title>
+            Занятия
+        </title>
+        <script src="{%static 'js/bootstrap.min.js' %}">
+        </script>
+        <link
+            rel="stylesheet"
+            href="{%static 'css/bootstrap.min.css'%}" />
+        <style>
+            @font-face {
+                font-family: 'Inter';
+                src: url("{%static 'fonts/Inter.ttf'%}") format('truetype');
+            }
+            body {
+                background-color: #EAEAEA;
+                font-family: 'Inter', serif;
+            }
+            .appGrayColorBackground {
+                background-color: #EAEAEA;
+            }
+            .editCellBackground {
+                background-color: #D99A44;
+            }
+            .appThemeBorderColor {
+                border: #605BCD solid 5px;
+            }
+            .appThemeColorBackground {
+                background-color: #605BCD;
+            }
+            .card {
+                border: #605BCD solid 5px;
+                height: 240px;
+            }
+            .editIcon {
+                width: 60%;
+                height: 60%;
+            }
+            .lessonBox {
+                width: 90%;
+            }
+            .lessonContainer {
+                scrollbar-width: thin;
+                scrollbar-color: #605BCD #BAB8D7;
+            }
+            .cardShadow {
+                box-shadow: 0 4px 0 #605BCD;
+            }
+            .categoryName {
+                font-size: 1.25em;
+            }
+            .coursePeriodBadge {
+                font-size: 1em;
+            }
+            .coursePeriodDate {
+                font-size: 0.8em;
+            }
+            .cardIconContainer {
+                height: 85%;
+            }
+            .modalBodyCell {
+                height: 60px;
+            }
+            .modalBodyCellValue {
+                color: #605BCD;
+            }
+            .addLessonBackground {
+                background-color: #398F68;
+            }
+            .pageHeader {
+                font-size: 1.5rem;
+            }
+            .date {
+                font-size: 0.9rem;
+                color: #EDEBFA;
+            }  
+            .edit-btn {
+                background-color: #d4923a;
+                max-width: 72px;
+                max-height: 64px;
+            }  
+            .edit-icon {
+                width: 70%;
+                height: 70%;
+            }
+        </style>
+    </head>
+    <body>
+        <div
+          style="padding-right: 1rem;"
+          class="d-flex-column justify-content-center align-items-center h-100 m-auto p-5">
+          <div class="lessonContainer w-50 h-75 m-auto my-5 bg-white rounded-5 overflow-y-auto">
+            <div сlass="d-flex-column">
+                <div 
+                  class="container lessonBox h-25 my-4 p-3 rounded-4 appThemeColorBackground text-white d-flex flex-column justify-content-between"
+                  data-bs-toggle="modal"
+                  data-bs-target="#lessonModal">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <strong>Первое занятие:</strong>
+                    <span class="date">10.04.25</span>
+                  </div>
+                  <div class="d-flex flex-grow-1 align-items-stretch bg-light-subtle rounded-3 p-2">
+                    <div class="flex-grow-1 text-dark px-2 d-flex align-items-center">
+                      <strong>Описание занятия</strong>
+                    </div>
+                    <div class="edit-btn d-flex justify-content-center align-items-center rounded-3 ms-2">
+                      <svg viewBox="0 0 39 41" fill="none" xmlns="http://www.w3.org/2000/svg" class="edit-icon m-auto">
+                        <path d="M27.2861 0.617127C27.671 0.221981 28.193 0 28.7373 0C29.2816 0 29.8036 0.221981 30.1886 0.617127L38.3992 9.04821C38.784 9.44348 39.0002 9.9795 39.0002 10.5384C39.0002 11.0973 38.784 11.6333 38.3992 12.0286L11.7146 39.4296C11.3297 39.8249 10.8077 40.0471 10.2633 40.0472H2.05267C1.50827 40.0472 0.986161 39.8251 0.601212 39.4299C0.216262 39.0346 0 38.4984 0 37.9394V29.5083C0.000116258 28.9494 0.216455 28.4133 0.601431 28.0182L21.1281 6.94044L27.2861 0.617127ZM22.5793 11.411L4.10533 30.381V35.8317H9.41353L27.8875 16.8617L22.5793 11.411ZM30.79 13.8813L34.0455 10.5384L28.7373 5.08771L25.4818 8.43063L30.79 13.8813Z" fill="white"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="container lessonBox h-25 my-4 p-3 rounded-4 appThemeColorBackground text-white d-flex flex-column justify-content-between"
+                  data-bs-toggle="modal"
+                  data-bs-target="#lessonModal">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <strong>Первое занятие:</strong>
+                    <span class="date">10.04.25</span>
+                  </div>
+                  <div class="d-flex flex-grow-1 align-items-stretch bg-light-subtle rounded-3 p-2">
+                    <div class="flex-grow-1 text-dark px-2 d-flex align-items-center">
+                      <strong>Описание занятия</strong>
+                    </div>
+                    <div class="edit-btn d-flex justify-content-center align-items-center rounded-3 ms-2">
+                      <svg viewBox="0 0 39 41" fill="none" xmlns="http://www.w3.org/2000/svg" class="edit-icon m-auto">
+                        <path d="M27.2861 0.617127C27.671 0.221981 28.193 0 28.7373 0C29.2816 0 29.8036 0.221981 30.1886 0.617127L38.3992 9.04821C38.784 9.44348 39.0002 9.9795 39.0002 10.5384C39.0002 11.0973 38.784 11.6333 38.3992 12.0286L11.7146 39.4296C11.3297 39.8249 10.8077 40.0471 10.2633 40.0472H2.05267C1.50827 40.0472 0.986161 39.8251 0.601212 39.4299C0.216262 39.0346 0 38.4984 0 37.9394V29.5083C0.000116258 28.9494 0.216455 28.4133 0.601431 28.0182L21.1281 6.94044L27.2861 0.617127ZM22.5793 11.411L4.10533 30.381V35.8317H9.41353L27.8875 16.8617L22.5793 11.411ZM30.79 13.8813L34.0455 10.5384L28.7373 5.08771L25.4818 8.43063L30.79 13.8813Z" fill="white"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="container lessonBox h-25 my-4 p-3 rounded-4 appThemeColorBackground text-white d-flex flex-column justify-content-between"
+                  data-bs-toggle="modal"
+                  data-bs-target="#lessonModal">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <strong>Первое занятие:</strong>
+                    <span class="date">10.04.25</span>
+                  </div>
+                  <div class="d-flex flex-grow-1 align-items-stretch bg-light-subtle rounded-3 p-2">
+                    <div class="flex-grow-1 text-dark px-2 d-flex align-items-center">
+                      <strong>Описание занятия</strong>
+                    </div>
+                    <div class="edit-btn d-flex justify-content-center align-items-center rounded-3 ms-2">
+                      <svg viewBox="0 0 39 41" fill="none" xmlns="http://www.w3.org/2000/svg" class="edit-icon m-auto">
+                        <path d="M27.2861 0.617127C27.671 0.221981 28.193 0 28.7373 0C29.2816 0 29.8036 0.221981 30.1886 0.617127L38.3992 9.04821C38.784 9.44348 39.0002 9.9795 39.0002 10.5384C39.0002 11.0973 38.784 11.6333 38.3992 12.0286L11.7146 39.4296C11.3297 39.8249 10.8077 40.0471 10.2633 40.0472H2.05267C1.50827 40.0472 0.986161 39.8251 0.601212 39.4299C0.216262 39.0346 0 38.4984 0 37.9394V29.5083C0.000116258 28.9494 0.216455 28.4133 0.601431 28.0182L21.1281 6.94044L27.2861 0.617127ZM22.5793 11.411L4.10533 30.381V35.8317H9.41353L27.8875 16.8617L22.5793 11.411ZM30.79 13.8813L34.0455 10.5384L28.7373 5.08771L25.4818 8.43063L30.79 13.8813Z" fill="white"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="container lessonBox h-25 my-4 p-3 rounded-4 appThemeColorBackground text-white d-flex flex-column justify-content-between"
+                  data-bs-toggle="modal"
+                  data-bs-target="#lessonModal">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <strong>Первое занятие:</strong>
+                    <span class="date">10.04.25</span>
+                  </div>
+                  <div class="d-flex flex-grow-1 align-items-stretch bg-light-subtle rounded-3 p-2">
+                    <div class="flex-grow-1 text-dark px-2 d-flex align-items-center">
+                      <strong>Описание занятия</strong>
+                    </div>
+                    <div class="edit-btn d-flex justify-content-center align-items-center rounded-3 ms-2">
+                      <svg viewBox="0 0 39 41" fill="none" xmlns="http://www.w3.org/2000/svg" class="edit-icon m-auto">
+                        <path d="M27.2861 0.617127C27.671 0.221981 28.193 0 28.7373 0C29.2816 0 29.8036 0.221981 30.1886 0.617127L38.3992 9.04821C38.784 9.44348 39.0002 9.9795 39.0002 10.5384C39.0002 11.0973 38.784 11.6333 38.3992 12.0286L11.7146 39.4296C11.3297 39.8249 10.8077 40.0471 10.2633 40.0472H2.05267C1.50827 40.0472 0.986161 39.8251 0.601212 39.4299C0.216262 39.0346 0 38.4984 0 37.9394V29.5083C0.000116258 28.9494 0.216455 28.4133 0.601431 28.0182L21.1281 6.94044L27.2861 0.617127ZM22.5793 11.411L4.10533 30.381V35.8317H9.41353L27.8875 16.8617L22.5793 11.411ZM30.79 13.8813L34.0455 10.5384L28.7373 5.08771L25.4818 8.43063L30.79 13.8813Z" fill="white"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <button class="d-block btn text-light m-auto fs-4 fw-bold addLessonBackground">
+            Добавить занятие
+        </button>
+        </div>
+        <div 
+          id="lessonModal"
+          class="modal fade"
+          tabindex="-1"
+          aria-labelledby="entityModal"
+          aria-hidden="true">
+          <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content appThemeColorBackground fw-bold rounded-4">
+              <div class="modal-header border-0">
+                <p class="modal-title m-auto text-light fs-4" id="entityModalLabel">
+                  Первое занятие
+                </p>
+              </div>
+              <div class="modal-body d-flex flex-column justify-content-center p-5 rounded-bottom-4">
+                <a
+                  class="btn btn-success mb-3"
+                  href="#">
+                  Настроить курс
+                </a>
+                <a
+                  class="btn bg-light my-3 text-success"
+                  href="#">
+                  Статистика курса
+                </a>
+                <a
+                  class="btn bg-light text-dark my-3 w-50 d-block m-auto rounded-3"
+                  href="#">
+                  Отмена
+                </a>
+              </div>   
+            </div>
+          </div>
+        </div>
+    </body>
+</html>

@@ -1847,3 +1847,398 @@ django.template.exceptions.TemplateDoesNotExist: registration/login.html
 2025-05-02 18:01:18,842 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
 2025-05-02 18:01:23,035 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\users\views.py changed, reloading.
 2025-05-02 18:01:23,461 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-02 23:58:07,588 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 00:01:39,280 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 00:02:09,854 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\oquArnaWeb\settings.py changed, reloading.
+2025-05-03 00:02:13,547 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 00:02:23,706 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\oquArnaWeb\settings.py changed, reloading.
+2025-05-03 00:02:25,085 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 00:06:18,083 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 00:06:52,681 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 00:07:08,043 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\authors_works\models.py changed, reloading.
+2025-05-03 00:07:09,342 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 00:07:20,064 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\authors_works\models.py changed, reloading.
+2025-05-03 00:07:21,112 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 00:07:23,865 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\models.py changed, reloading.
+2025-05-03 00:07:24,951 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 00:07:27,592 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\oquArnaWeb\settings.py changed, reloading.
+2025-05-03 00:07:28,805 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 00:09:32,465 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\oquArnaWeb\settings.py changed, reloading.
+2025-05-03 00:09:33,871 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 00:12:22,691 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 00:12:24,320 [WARNING] django.request: Not Found: /
+2025-05-03 00:12:33,314 [WARNING] django.request: Not Found: /
+2025-05-03 00:12:33,455 [WARNING] django.request: Not Found: /
+2025-05-03 00:15:40,524 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 00:17:07,098 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 00:32:17,292 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-03 00:32:19,272 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 00:33:09,595 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-03 00:33:16,168 [WARNING] django.request: Not Found: /
+2025-05-03 00:48:24,024 [WARNING] django.request: Not Found: /
+2025-05-03 09:16:31,412 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-03 09:16:34,138 [WARNING] django.request: Not Found: /
+2025-05-03 09:16:34,313 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-03 10:13:51,824 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 13:40:05,467 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 13:49:28,083 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 13:49:59,802 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-03 13:52:26,041 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 00:08:30,771 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-04 00:08:39,581 [WARNING] django.request: Not Found: /
+2025-05-04 00:08:39,747 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-04 00:09:47,714 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-04 00:09:48,820 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-04 00:15:44,043 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 00:16:02,891 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 00:16:19,554 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 00:17:22,157 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 00:17:22,763 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 00:37:59,756 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 00:39:02,911 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-04 00:39:04,139 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-04 00:39:18,775 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-04 00:39:20,228 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-04 00:43:43,510 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-04 00:43:44,611 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-04 01:19:21,112 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-04 01:19:24,183 [WARNING] django.request: Not Found: /
+2025-05-04 01:19:24,220 [WARNING] django.request: Not Found: /
+2025-05-04 01:19:24,457 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-04 09:51:06,363 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-04 09:51:12,890 [WARNING] django.request: Not Found: /
+2025-05-04 09:51:13,354 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-04 10:06:14,073 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:38:15,044 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:39:03,446 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:39:57,107 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:40:16,834 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:40:29,348 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:40:40,673 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:41:33,249 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:42:11,154 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:42:24,327 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:43:38,363 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:44:02,074 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:44:58,200 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:45:19,015 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:45:29,061 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:46:05,091 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:46:33,026 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:47:10,823 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:47:21,153 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:47:44,601 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:48:21,474 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:48:31,980 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:48:56,682 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:49:52,377 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:50:01,676 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:50:07,618 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:50:12,418 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:50:28,196 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:50:58,884 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:52:54,321 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:53:15,605 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:54:39,913 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 10:56:05,864 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 11:00:44,080 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 11:02:13,934 [WARNING] django.request: Not Found: /courses/lessonsStats/
+2025-05-04 11:58:14,964 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-04 11:58:16,576 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-04 17:44:36,453 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-04 17:44:56,093 [WARNING] django.request: Not Found: /
+2025-05-04 18:07:46,148 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:08:06,871 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:11:00,674 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:11:01,408 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:11:01,585 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:11:01,750 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:11:01,902 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:11:50,191 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:11:59,491 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:12:06,737 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:12:08,479 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:12:30,530 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:12:31,251 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:12:52,185 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:13:13,950 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:20:27,741 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:21:09,421 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:21:09,845 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:21:10,133 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:21:22,766 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:21:23,210 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:21:23,464 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:21:23,674 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:21:23,834 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:22:29,734 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:22:40,135 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:22:40,627 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 18:24:13,607 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 19:00:20,933 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-04 20:50:44,529 [WARNING] django.request: Not Found: /
+2025-05-08 10:35:13,649 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-08 10:35:15,825 [WARNING] django.request: Not Found: /
+2025-05-08 10:35:16,142 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-08 11:33:08,053 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 11:40:29,287 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 11:40:34,458 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 13:58:37,761 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-08 15:08:45,272 [WARNING] django.request: Not Found: /
+2025-05-08 15:08:46,217 [WARNING] django.request: Not Found: /
+2025-05-08 15:13:14,075 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:25:41,125 [WARNING] django.request: Not Found: /courses/lessonStats/your-image.jpg
+2025-05-08 15:25:41,141 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:27:47,499 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:28:02,722 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:28:45,926 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:31:43,861 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:32:54,402 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:33:09,031 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:33:21,250 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:33:42,722 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:33:46,909 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:34:13,029 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:34:30,518 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:34:44,094 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:35:13,245 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:35:45,298 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:35:54,096 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:36:12,893 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:36:35,719 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:37:28,256 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:38:30,392 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:38:56,127 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:39:13,632 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:40:27,385 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:42:23,761 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:43:09,931 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:43:19,272 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:43:27,872 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:44:07,578 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:44:30,280 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-08 15:44:53,032 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 00:54:04,756 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 00:54:40,708 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 00:54:53,621 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 00:55:07,276 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 00:55:47,495 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 00:56:20,187 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:00:20,542 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:01:25,782 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:02:03,769 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:02:14,128 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:02:28,908 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:02:38,704 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:02:43,326 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:04:15,634 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:04:39,902 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:10:45,525 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:11:29,280 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:12:00,189 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:12:17,208 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:12:26,891 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:12:42,927 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:13:38,594 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:13:57,786 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:14:36,656 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:15:17,593 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:18:43,402 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:19:18,740 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:19:48,437 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:20:42,353 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:20:51,809 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:21:29,796 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:21:53,316 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:22:07,808 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:22:35,240 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:23:30,499 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:23:55,153 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:25:33,031 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:26:17,156 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:26:53,962 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:27:07,400 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:27:51,364 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:27:59,089 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:28:15,691 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:29:46,958 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:30:00,088 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:30:10,429 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:35:58,531 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:38:33,457 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 01:39:08,691 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 14:11:28,242 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-09 14:12:31,407 [WARNING] django.request: Not Found: /
+2025-05-09 14:12:31,624 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-09 14:19:18,209 [WARNING] django.request: Not Found: /courses/lesson/
+2025-05-09 14:19:23,015 [WARNING] django.request: Not Found: /courses/lessonы/
+2025-05-09 14:19:28,889 [WARNING] django.request: Not Found: /courses/lessos/
+2025-05-09 15:11:41,303 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-09 15:11:42,874 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-09 15:27:19,265 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 15:31:35,730 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 16:09:10,372 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 16:09:42,249 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 16:09:49,761 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 16:56:06,390 [ERROR] django.request: Internal Server Error: /courses/schedule/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 204, in select_template
+    raise TemplateDoesNotExist("No template names provided")
+django.template.exceptions.TemplateDoesNotExist: No template names provided
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: No template names provided
+2025-05-09 17:33:30,212 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 17:33:51,515 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 17:34:29,553 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 17:34:29,785 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 17:34:47,725 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 17:34:47,907 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 17:34:48,055 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 17:35:22,022 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-09 17:38:11,202 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 00:06:31,805 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 00:53:22,266 [ERROR] django.request: Internal Server Error: /courses/entities/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 347, in do_include
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Unknown argument for 'include' tag: "'icons/plus_icon.svg'".
+2025-05-10 00:53:33,049 [WARNING] django.request: Not Found: /
+2025-05-10 00:53:33,268 [WARNING] django.request: Not Found: /
+2025-05-10 00:53:43,504 [ERROR] django.request: Internal Server Error: /courses/entities/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 347, in do_include
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Unknown argument for 'include' tag: "'icons/plus_icon.svg'".

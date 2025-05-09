@@ -1,0 +1,767 @@
+{%load static%}
+{%get_media_prefix as MEDIA_PREFIX%}
+<html>
+    <head>
+        <title>
+            Занятия
+        </title>
+        <script src="{%static 'js/bootstrap.min.js' %}">
+        </script>
+        <link
+            rel="stylesheet"
+            href="{%static 'css/bootstrap.min.css'%}" />
+        <style>
+            @font-face {
+                font-family: 'Inter';
+                src: url("{%static 'fonts/Inter.ttf'%}") format('truetype');
+            }
+            body {
+                background-color: #EAEAEA;
+                font-family: 'Inter', serif;
+            }
+            .appGrayColorBackground {
+                background-color: #EAEAEA;
+            }
+            .editCellBackground {
+                background-color: #D99A44;
+            }
+            .appThemeBorderColor {
+                border: #605BCD solid 5px;
+            }
+            .appThemeColorBackground {
+                background-color: #605BCD;
+            }
+            .card {
+                border: #605BCD solid 5px;
+                height: 240px;
+            }
+            .editIcon {
+                width: 60%;
+                height: 60%;
+            }
+            .lessonBox {
+                width: 90%;
+            }
+            .lessonContainer {
+                max-height: 100%;
+                scrollbar-width: thin;
+                scrollbar-color: #605BCD #BAB8D7;
+            }
+            .cardShadow {
+                box-shadow: 0 4px 0 #605BCD;
+            }
+            .categoryName {
+                font-size: 1.25em;
+            }
+            .coursePeriodBadge {
+                font-size: 1em;
+            }
+            .coursePeriodDate {
+                font-size: 0.8em;
+            }
+            .cardIconContainer {
+                height: 85%;
+            }
+            .modalBodyCell {
+                height: 60px;
+            }
+            .modalBodyCellValue {
+                color: #605BCD;
+            }
+            .addLessonBackground {
+                background-color: #398F68;
+            }
+            .pageHeader {
+                font-size: 1.5rem;
+            }
+            .date {
+                font-size: 0.9rem;
+                color: #EDEBFA;
+            }  
+            .edit-btn {
+                background-color: #d4923a;
+                max-width: 72px;
+                max-height: 64px;
+            }  
+            .edit-icon {
+                width: 70%;
+                height: 70%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="d-flex-column justify-content-center align-items-center w-75 h-100 m-auto p-3 overflow-hidden">
+            <div class="d-flex">
+                <p class="d-inline-block badge fs-5 bg-primary rounded-4">
+                    Год <span class="badge fs-5 mx-1 text-black bg-white rounded-4">2024-2025</span>
+                </p>
+                <p class="d-inline-block badge fs-5 ms-4 bg-primary rounded-4">
+                    Месяц <span class="badge fs-5 mx-1 text-black bg-white rounded-4">28.04-04.05</span>
+                </p>
+            </div>
+            <div class="lessonContainer my-2 rounded-5 overflow-y-auto">
+                <div class="container-fluid w-100 pe-5 overflow-y-auto fw-bold">
+                    <div class="row row-cols-3 g-4">
+                        <div 
+                            class="col d-flex flex-column rounded-5"
+                            style="height: 300px;">
+                            <div class="table-responsive rounded-5">
+                                <table class="table table-bordered mb-0 text-center align-middle">
+                                  <thead class="rounded-top">
+                                    <tr>
+                                      <th colspan="2" class="bg-primary text-white rounded-top">Понедельник</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            10:00 –<br>
+                                            10:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            12:00 –<br>
+                                            12:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            13:00 –<br>
+                                            13:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            17:00 –<br>
+                                            17:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <!-- Пустые строки -->
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;</td>
+                                        <td></td>
+                                      </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                        </div> 
+                        <div 
+                            class="col d-flex flex-column rounded-5"
+                            style="height: 300px;">
+                            <div class="table-responsive rounded-5">
+                                <table class="table table-bordered mb-0 text-center align-middle">
+                                  <thead class="rounded-top">
+                                    <tr>
+                                      <th colspan="2" class="bg-primary text-white rounded-top">Понедельник</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            10:00 –<br>
+                                            10:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            12:00 –<br>
+                                            12:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            13:00 –<br>
+                                            13:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            17:00 –<br>
+                                            17:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <!-- Пустые строки -->
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;</td>
+                                        <td></td>
+                                      </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                        </div> 
+                        <div 
+                            class="col d-flex flex-column rounded-5"
+                            style="height: 300px;">
+                            <div class="table-responsive rounded-5">
+                                <table class="table table-bordered mb-0 text-center align-middle">
+                                  <thead class="rounded-top">
+                                    <tr>
+                                      <th colspan="2" class="bg-primary text-white rounded-top">Понедельник</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            10:00 –<br>
+                                            10:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            12:00 –<br>
+                                            12:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            13:00 –<br>
+                                            13:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            17:00 –<br>
+                                            17:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <!-- Пустые строки -->
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;</td>
+                                        <td></td>
+                                      </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                        </div> 
+                        <div 
+                            class="col d-flex flex-column rounded-5"
+                            style="height: 300px;">
+                            <div class="table-responsive rounded-5">
+                                <table class="table table-bordered mb-0 text-center align-middle">
+                                  <thead class="rounded-top">
+                                    <tr>
+                                      <th colspan="2" class="bg-primary text-white rounded-top">Понедельник</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            10:00 –<br>
+                                            10:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            12:00 –<br>
+                                            12:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            13:00 –<br>
+                                            13:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            17:00 –<br>
+                                            17:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <!-- Пустые строки -->
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;</td>
+                                        <td></td>
+                                      </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                        </div> 
+                        <div 
+                            class="col d-flex flex-column rounded-5"
+                            style="height: 300px;">
+                            <div class="table-responsive rounded-5">
+                                <table class="table table-bordered mb-0 text-center align-middle">
+                                  <thead class="rounded-top">
+                                    <tr>
+                                      <th colspan="2" class="bg-primary text-white rounded-top">Понедельник</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            10:00 –<br>
+                                            10:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            12:00 –<br>
+                                            12:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            13:00 –<br>
+                                            13:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            17:00 –<br>
+                                            17:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <!-- Пустые строки -->
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;</td>
+                                        <td></td>
+                                      </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                        </div> 
+                        <div 
+                            class="col d-flex flex-column rounded-5"
+                            style="height: 300px;">
+                            <div class="table-responsive rounded-5">
+                                <table class="table table-bordered mb-0 text-center align-middle">
+                                  <thead class="rounded-top">
+                                    <tr>
+                                      <th colspan="2" class="bg-primary text-white rounded-top">Понедельник</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            10:00 –<br>
+                                            10:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            12:00 –<br>
+                                            12:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            13:00 –<br>
+                                            13:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            17:00 –<br>
+                                            17:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <!-- Пустые строки -->
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;</td>
+                                        <td></td>
+                                      </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} <div class="container-fluid pe-5 text-white border border-dark">
+                    <div class="row row-cols-3 g-3">
+                        <div class="col d-flex flex-column p-0 border border-dark rounded-5 overflow-hidden">
+                            <div class="table-responsive rounded shadow-sm border">
+                                <table class="table table-bordered mb-0 text-center align-middle">
+                                  <thead class=" rounded-top">
+                                    <tr>
+                                      <th colspan="2" class="bg-primary text-white rounded-top">Понедельник</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            10:00 –<br>
+                                            10:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            12:00 –<br>
+                                            12:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            13:00 –<br>
+                                            13:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            17:00 –<br>
+                                            17:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <!-- Пустые строки -->
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                        </div>
+                        <div class="col d-flex flex-column p-0 border border-dark rounded-5 overflow-hidden">
+                            <div class="table-responsive rounded shadow-sm border">
+                                <table class="table table-bordered mb-0 text-center align-middle">
+                                  <thead class=" rounded-top">
+                                    <tr>
+                                      <th colspan="2" class="bg-primary text-white rounded-top">Понедельник</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            10:00 –<br>
+                                            10:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            12:00 –<br>
+                                            12:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            13:00 –<br>
+                                            13:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            17:00 –<br>
+                                            17:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <!-- Пустые строки -->
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                        </div>
+                        <div class="col d-flex flex-column p-0 border border-dark rounded-5 overflow-hidden">
+                            <div class="table-responsive rounded shadow-sm border">
+                                <table class="table table-bordered mb-0 text-center align-middle">
+                                  <thead class=" rounded-top">
+                                    <tr>
+                                      <th colspan="2" class="bg-primary text-white rounded-top">Понедельник</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            10:00 –<br>
+                                            10:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            12:00 –<br>
+                                            12:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            13:00 –<br>
+                                            13:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            17:00 –<br>
+                                            17:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <!-- Пустые строки -->
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              
+                        </div>
+                        <div class="col d-flex flex-column p-0 border border-dark rounded-5 overflow-hidden">
+                            <div class="table-responsive rounded shadow-sm border">
+                                <table class="table table-bordered mb-0 text-center align-middle">
+                                  <thead class=" rounded-top">
+                                    <tr>
+                                      <th colspan="2" class="bg-primary text-white rounded-top">Понедельник</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            10:00 –<br>
+                                            10:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            12:00 –<br>
+                                            12:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            13:00 –<br>
+                                            13:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            17:00 –<br>
+                                            17:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <!-- Пустые строки -->
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                        </div>
+                        <div class="col d-flex flex-column p-0 border border-dark rounded-5 overflow-hidden">
+                            <div class="table-responsive rounded shadow-sm border">
+                                <table class="table table-bordered mb-0 text-center align-middle">
+                                  <thead class=" rounded-top">
+                                    <tr>
+                                      <th colspan="2" class="bg-primary text-white rounded-top">Понедельник</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            10:00 –<br>
+                                            10:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            12:00 –<br>
+                                            12:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            13:00 –<br>
+                                            13:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            17:00 –<br>
+                                            17:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <!-- Пустые строки -->
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                        </div>
+                        <div class="col d-flex flex-column p-0 border border-dark rounded-5 overflow-hidden">
+                            <div class="table-responsive rounded shadow-sm border">
+                                <table class="table table-bordered mb-0 text-center align-middle">
+                                  <thead class=" rounded-top">
+                                    <tr>
+                                      <th colspan="2" class="bg-primary text-white rounded-top">Понедельник</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            10:00 –<br>
+                                            10:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            12:00 –<br>
+                                            12:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            13:00 –<br>
+                                            13:50
+                                        </td>
+                                      <td>Английский язык. <span class="fw-bold">Intermediate.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            17:00 –<br>
+                                            17:50
+                                        </td>
+                                      <td>Повышение квалификации.</td>
+                                    </tr>
+                                    <!-- Пустые строки -->
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                        </div>
+                    </div>
+                </div> {% endcomment %}
+            </div>
+        </div>
+    </body>
+</html>

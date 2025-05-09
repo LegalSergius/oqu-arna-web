@@ -11,7 +11,6 @@ class Status(models.TextChoices):
 
 class AuthorWork(models.Model):
     name = models.CharField(max_length=100)
-    image = models.ForeignKey(Content, on_delete=models.CASCADE, blank=False, null=False)
     status = models.CharField(max_length=16, choices=Status, default=Status.public)
     creator = models.ForeignKey(User, on_delete=models.CASCADE, blank=False, null=False)
     files = models.ManyToManyField(Content, blank=False)

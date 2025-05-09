@@ -1,0 +1,230 @@
+{%load static%}
+{%get_media_prefix as MEDIA_PREFIX%}
+<html>
+    <head>
+        <title>
+            Содержимое занятий
+        </title>
+        <script src="{%static 'js/bootstrap.min.js' %}">
+        </script>
+        <link
+            rel="stylesheet"
+            href="{%static 'css/bootstrap.min.css'%}" />
+            <link
+            rel="stylesheet"
+            href="{%static 'css/bootstrap-icons.css'%}" />
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            @font-face {
+                font-family: 'Inter';
+                src: url("{%static 'fonts/Inter.ttf'%}") format('truetype');
+            }
+            body {
+                background-color: #EAEAEA;
+                font-family: 'Inter', serif;
+            }
+            .appGrayColorBackground {
+                background-color: #EAEAEA;
+            }
+            .editCellBackground {
+                background-color: #D99A44;
+            }
+            .appThemeBorderColor {
+                border: #605BCD solid 5px;
+            }
+            .appThemeColorBackground {
+                background-color: #605BCD;
+            }
+            .card {
+                border: #605BCD solid 5px;
+                height: 240px;
+            }
+            .editIcon {
+                width: 60%;
+                height: 60%;
+            }
+            .lessonBox {
+                width: 90%;
+            }
+            .lessonContainer {
+                scrollbar-width: thin;
+                scrollbar-color: #605BCD #BAB8D7;
+            }
+            .cardShadow {
+                box-shadow: 0 4px 0 #605BCD;
+            }
+            .categoryName {
+                font-size: 1.25em;
+            }
+            .contentAppThemeColor {
+                color: #605BCD;
+            }
+            .coursePeriodBadge {
+                font-size: 1em;
+            }
+            .coursePeriodDate {
+                font-size: 0.8em;
+            }
+            .cardIconContainer {
+                height: 85%;
+            }
+            .modalBodyCell {
+                height: 60px;
+            }
+            
+            .addLessonBackground {
+                background-color: #398F68;
+            }
+            .pageHeader {
+                font-size: 1.5rem;
+            }
+            .date {
+                font-size: 0.9rem;
+                color: #EDEBFA;
+            }  
+            .edit-btn {
+                background-color: #d4923a;
+                max-width: 72px;
+                max-height: 64px;
+            }  
+            .edit-icon {
+                width: 70%;
+                height: 70%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="d-flex-column justify-content-center align-items-center h-100 m-auto p-5 fw-bold overflow-hidden">
+          <div class="w-50 h-75 d-flex-column m-auto lessonContainer bg-white rounded-5 overflow-y-auto">
+            <div class="bg-success d-flex p-3 m-3 align-items-center rounded-3">
+                <p class="flex-grow-1 text-light my-auto my-auto">
+                    Название файла
+                </p>
+                <p class="my-auto text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-download me-3" viewBox="0 0 16 16">
+                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                    </svg>
+                </p>
+                <p class="my-auto text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash-fill ms-3" viewBox="0 0 16 16">
+                        <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                    </svg>
+                </p>
+            </div>
+            <div class="bg-success d-flex p-3 m-3 align-items-center rounded-3">
+                <p class="flex-grow-1 text-light my-auto">
+                    Название файла
+                </p>
+                <p>
+                    <i class="bi bi-download"></i>
+                </p>
+                <p>
+                    <i class="bi bi-trash"></i>
+                </p>
+            </div>
+            <div class="bg-success d-flex p-3 m-3 align-items-center rounded-3">
+                <p class="flex-grow-1 text-light my-auto">
+                    Название файла
+                </p>
+                <p>
+                    <i class="bi bi-download"></i>
+                </p>
+                <p>
+                    <i class="bi bi-trash"></i>
+                </p>
+            </div>
+            <div class="bg-success d-flex p-3 m-3 align-items-center rounded-3">
+                <p class="flex-grow-1 text-light my-auto">
+                    Название файла
+                </p>
+                <p>
+                    <i class="bi bi-download"></i>
+                </p>
+                <p>
+                    <i class="bi bi-trash"></i>
+                </p>
+            </div>
+            <div class="bg-success d-flex p-3 m-3 align-items-center rounded-3">
+                <p class="flex-grow-1 text-light my-auto">
+                    Название файла
+                </p>
+                <p>
+                    <i class="bi bi-download"></i>
+                </p>
+                <p>
+                    <i class="bi bi-trash"></i>
+                </p>
+            </div>
+            <div class="bg-success d-flex p-3 m-3 align-items-center rounded-3">
+                <p class="flex-grow-1 text-light my-auto">
+                    Название файла
+                </p>
+                <p>
+                    <i class="bi bi-download"></i>
+                </p>
+                <p>
+                    <i class="bi bi-trash"></i>
+                </p>
+            </div>
+            <div class="bg-success d-flex p-3 m-3 align-items-center rounded-3">
+                <p class="flex-grow-1 text-light my-auto">
+                    Название файла
+                </p>
+                <p>
+                    <i class="bi bi-download"></i>
+                </p>
+                <p>
+                    <i class="bi bi-trash"></i>
+                </p>
+            </div>
+            <div class="bg-success d-flex p-3 m-3 align-items-center rounded-3">
+                <p class="flex-grow-1 text-light my-auto">
+                    Название файла
+                </p>
+                <p>
+                    <i class="bi bi-download"></i>
+                </p>
+                <p>
+                    <i class="bi bi-trash"></i>
+                </p>
+            </div>
+            <div class="bg-success d-flex p-3 m-3 align-items-center rounded-3">
+                <p class="flex-grow-1 text-light my-auto">
+                    Название файла
+                </p>
+                <p>
+                    <i class="bi bi-download"></i>
+                </p>
+                <p>
+                    <i class="bi bi-trash"></i>
+                </p>
+            </div>
+            <div class="bg-success d-flex p-3 m-3 align-items-center rounded-3">
+                <p class="flex-grow-1 text-light my-auto">
+                    Название файла
+                </p>
+                <p>
+                    <i class="bi bi-download"></i>
+                </p>
+                <p>
+                    <i class="bi bi-trash"></i>
+                </p>
+            </div>
+            <div class="bg-success d-flex p-3 m-3 align-items-center rounded-3">
+                <p class="flex-grow-1 text-light my-auto">
+                    Название файла
+                </p>
+                <p>
+                    <i class="bi bi-download"></i>
+                </p>
+                <p>
+                    <i class="bi bi-trash"></i>
+                </p>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>
