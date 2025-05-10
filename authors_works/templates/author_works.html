@@ -1,0 +1,17 @@
+{% extends 'works_base.html' %}
+
+{% load static %}
+
+{% block head %}
+<link type="text/css" href="{% static 'author_works/css/style.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+
+<div class="overflow-hidden">
+    {% url 'author-works' category as author_works_url%}
+    {%include "components/entities_tabs.html" with tab_name_one="Все работы" tab_name_two="Мои работы" active_table_name=active_table_name url_one=author_works_url url_two=author_works_url|add:"?personal_works=True"%}
+    {%include "components/list_grid.html" with href_card_add='author-work-create' card_add="True" template_name="components/author_work_card.html" href='author-work-detail' items=works %}
+</div>
+
+{% endblock %}

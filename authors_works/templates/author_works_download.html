@@ -1,0 +1,63 @@
+{% extends 'works_base.html' %}
+
+{% load static %}
+
+{% block header %}
+    {% include 'components/name_page.html' with href="javascript:history.back()" name=work.name %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="author-work-content mt-5">
+
+        <div class="info description">
+            <span class="info-title">Краткое описание: </span>
+            <span>{{ work.description }}</span>
+        </div>
+
+        <div class="d-flex justify-content-between mt-2 w-100">
+
+            <div class="info info-down">
+                <span class="info-title">Категория: </span>
+                <span>{{ work.category.name }}</span>
+            </div>
+
+            <div class="info info-down">
+                <span class="info-title">Автор: </span>
+                <span>{{ work.creator.full_name }}</span>
+            </div>
+
+        </div>
+
+        <h3 class="status-title mt-2">Статус доступа:</h3>
+
+        <h3 class="status">{{ work.status }}</h3>
+
+        <div class="file mt-2">
+            <span class="text-white">{{ file_name }}</span>
+            <img width="20" height="20" src="{% static 'icons/pdf.svg' %}" alt="pdf">
+        </div>
+
+        <div class="d-flex {% if work.status == "PRIVATE" %} justify-content-between {% else %} justify-content-center {% endif %} mt-4 w-100" >
+
+            {% if work.status == "PRIVATE" %}
+                <div class="d-flex info info-price justify-content-between align-items-center">
+                    <span class="info-title">цена: </span>
+                    <span class="info-price-text">{{ work.price }} <span class="info-price-text">Тг.</span></span>
+                </div>
+
+                {% if is_acceptable_user %}
+                    <a href="{% url 'author-work-download' work.pk %}" class="download-btn info-price">Скачать</a>
+                {% else %}
+                    <a href="#" class="download-btn info-price">Купить</a>
+                {% endif %}
+
+            {% else %}
+                <a href="{% url 'author-work-download' work.pk %}" class="download-btn info-price">Скачать</a>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+{% endblock %}
