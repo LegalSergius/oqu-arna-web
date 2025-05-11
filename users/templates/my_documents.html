@@ -1,0 +1,73 @@
+{# templates/documents/list.html #}
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+  <link href="{% static 'users/css/style.css' %}" rel="stylesheet"/>
+{% endblock %}
+{% block header %}
+
+    Мои документы
+        {% endblock %}
+
+{% block content %}
+<div class="doc-content mt-3">
+  <form method="post" enctype="multipart/form-data" class="doc-form">
+    {% csrf_token %}
+
+    <div class="doc" id="doc-id">
+      {% if docs %}
+        {% for doc in docs %}
+          {% include 'components/doc.html' with name_file=doc.title delete_url=doc.file.url %}
+        {% endfor %}
+      {% else %}
+        <p class="no-documents">Документы отсутствуют.</p>
+      {% endif %}
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mt-4">
+      <input type="file" id="files" name="files" multiple hidden>
+      <label for="files" class="btn btn-doc-1 btn-profile-base">
+        Загрузить документы…
+      </label>
+      <button type="submit" class="btn btn-doc-1 btn-outline-base">
+        Сохранить
+      </button>
+    </div>
+  </form>
+</div>
+
+{# Шаблон для добавления нового документа на клиенте #}
+<template id="doc-element-id">
+  <div class="doc-element d-flex align-items-center">
+    <span class="doc-name flex-grow-1">Имя_документа.pdf</span>
+    <a href="#" class="doc-remove text-danger ms-3">✕</a>
+  </div>
+</template>
+
+<script>
+  document.getElementById('files').addEventListener('change', e => {
+    const tpl = document.getElementById('doc-element-id').content;
+    const container = document.getElementById('doc-id');
+
+    Array.from(e.target.files).forEach(file => {
+      const clone = tpl.cloneNode(true);
+      clone.querySelector('.doc-name').textContent = file.name;
+      container.appendChild(clone);
+    });
+  });
+
+  // Делегируем клик по крестикам внутри контейнера
+  document.getElementById('doc-id').addEventListener('click', e => {
+    if (e.target.classList.contains('doc-remove')) {
+      e.preventDefault();
+      e.target.closest('.doc-element').remove();
+    }
+  });
+</script>
+{% endblock %}
+
+{% block scripts %}
+  {# Подключаем ваш существующий нижний navbar, если он нужен #}
+  {% include "create_navbar.html" with name_active_element="documents" %}
+{% endblock %}

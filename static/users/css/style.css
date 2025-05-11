@@ -98,7 +98,6 @@ body {
 .role-toggle {
     display: flex;
     justify-content: space-between;
-
     width: 100%;
 }
 
@@ -118,7 +117,7 @@ body {
     padding: 10px 60px;
     border-radius: 4px;
     font-size: 17px;
-    background-color: white;
+    background-color: var(--background-page-color);
     color: black;
     transition: background 0.2s;
 }
@@ -131,3 +130,151 @@ body {
     background-color: var(--primary-color);
     color: white;
 }
+
+.doc{
+    background-color: white;
+    padding: 30px 60px 70px 65px;
+    border-radius: 30px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.doc-element{
+    background-color: #60BC7A;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.doc-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+
+
+}
+
+.doc-name{
+    color: white;
+}
+
+#files{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;;
+}
+
+
+
+.form-profile{
+    width: 75%;
+    margin-top: 20px;
+
+
+}
+
+.profile-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 25px;
+    column-gap: 150px;
+}
+
+
+
+.profile-input * {
+    border: 0 solid rgba(255, 255, 255, 0);
+    border-radius: 12px;
+    background-color: white;
+    padding: 0;
+}
+
+.profile-input {
+    border: 0 solid var(--primary-color);
+    border-radius: 12px;
+    background-color: white;
+    padding: 20px;
+
+}
+
+.input-info-title {
+    padding-right: 5px;
+}
+
+.input-info input {
+    padding-left: 0;
+}
+
+.input-info:focus {
+    outline: none;
+    box-shadow: none;
+    border: 3px solid var(--primary-color);
+}
+.input-title {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 20px;
+
+    background-color: white;
+}
+
+.btn-profile-base{
+    background-color: var(--primary-color);
+    color: white;
+
+}
+
+.btn-outline-base{
+    border: 4px solid var(--primary-color);
+    background-color: white;
+
+}
+
+.btn-base-2{
+    padding: 10px 0px ;
+    border-radius: 17px;
+    width: 33%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.btn-doc-1{
+    padding: 10px 0px;
+    width: 40%;
+    border-radius: 17px;
+    font-size: 17px;
+    font-weight: bold;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

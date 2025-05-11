@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "users",
-    "account",
     "authors_works",
+    "common"
 ]
 
 MIDDLEWARE = [
@@ -288,3 +288,6 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'eco.almaty.noreply@gmail.com'
 EMAIL_HOST_PASSWORD = 'xkoukrglexkowmbh'
+
+
+

@@ -37,11 +37,11 @@ body {
     border-radius: 0 0 64px 64px;
     padding-bottom: 130px;
 
-    position: fixed;
+    /*position: fixed;*/
 
-    left: 0;
-    top: 0;
-    width: 100%;
+    /*left: 0;*/
+    /*top: 0;*/
+    /*width: 100%;*/
 }
 
 .navbar-container {
