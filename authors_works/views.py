@@ -23,14 +23,14 @@ def is_personal_works(request):
     return personal_works
 
 
-def file_response(request, author_work_id):
-    content = get_object_or_404(common.models.Content, pk=author_work_id)
+def file_response(request, author_work):
+    content = author_work.file
     path = content.file.path
 
     return FileResponse(
         open(path, 'rb'),
         as_attachment=True,
-        filename=os.path.basename(path)
+        filename=content.file_name
     )
 
 
@@ -120,7 +120,7 @@ class AuthorWorkDetailView(DetailView):
         if is_acceptable_user:
             context['is_acceptable_user'] = True
 
-        context['file_name'] = os.path.basename(self.object.file.file.url)
+        context['file_name'] = self.object.file.file_name
 
         return context
 
@@ -132,10 +132,10 @@ class DownloadAuthorWorkView(View):
             is_acceptable_user = author_work.acceptable_users.filter(pk=request.user.pk).exists()
 
             if is_acceptable_user:
-                return file_response(request, author_work_id)
+                return file_response(request, author_work)
 
         else:
-            return file_response(request, author_work_id)
+            return file_response(request, author_work)
 
 class AuthorWorkCreateView(CreateView):
     model = models.AuthorWork

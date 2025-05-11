@@ -55,9 +55,10 @@ class AuthorWorkForm(forms.ModelForm):
         uploads_file = self.cleaned_data.get('upload')
         if uploads_file:
             content = common.models.Content()
+            content.file_name = uploads_file.name
             content.file.save(uploads_file.name, uploads_file, save=True)
             print(uploads_file)
-            instance.content = content
+            instance.file = content
 
         instance.creator = self.user
 
