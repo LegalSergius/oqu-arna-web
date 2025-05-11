@@ -5,6 +5,9 @@
     --dark-green: #398F68;
 
     --font-family-headlines: "Krona One" Inter;
+
+    --content-layout-bottom-padding: 100px;
+    --content-layout-top-padding: 70px;
 }
 
 
@@ -22,6 +25,15 @@ body {
     font-family: 'Inter', serif;
 
     background-color: var(--background-page-color);
+}
+
+.content-layout {
+
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: var(--content-layout-bottom-padding);
+    padding-top: var(--content-layout-top-padding);
 }
 
 .btn-base {
@@ -48,12 +60,19 @@ body {
     border-radius: 0 0 30px 30px;
 
     padding: 10px;
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    z-index: 1000;
 }
 
 
 .content {
     flex: 1;
-    justify-content: spa;
     overflow: auto;
     height: 30%;
 }
@@ -70,6 +89,8 @@ body {
     border-radius: 64px 64px 0 0;
 
     flex-shrink: 0;
+
+
 
     position: fixed;
 

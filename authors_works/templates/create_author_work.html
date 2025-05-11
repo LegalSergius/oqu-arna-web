@@ -7,14 +7,38 @@
 {% block content %}
 
     <div class="author-work-content mt-4">
-        <form method="post" class="d-flex flex-column align-items-center">
+        <form method="post" class="d-flex flex-column align-items-center w-100" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-work">
 
-            {% for field in form %}
-                {{ field.error }}
-                {{ field }}
-            {% endfor %}
+                {{ form.name }}
+                {{ form.description }}
+
+                <div class="info-container mt-3">
+
+                    {{ form.category }}
+
+                    <div class="info padding-5px mt-1 w-100">
+                        <span class="info-title">ФИО: </span>
+                        <span>{{ request.user.full_name }}</span>
+                    </div>
+
+                    <div class="info padding-5px mt-1 w-100">
+                        <span class="info-title">Почта: </span>
+                        <span>{{ request.user.email }}</span>
+                    </div>
+
+                    <div class="info padding-5px mt-1 w-100">
+                        <span class="info-title">Тел. номер: </span>
+                        <span>{{ request.user.phone_number }}</span>
+                    </div>
+                </div>
+
+                <div class="price-container">
+                    {{ form.status }}
+                    {{ form.price }}
+                    {{ form.upload }}
+                </div>
 
             </div>
 
