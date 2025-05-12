@@ -1,22 +1,59 @@
-<div 
-    class="container-fluid cardContainer fw-bold"
-    style="width: 85%;">
+<div class="container-fluid cardContainer w-75 overflow-y-auto fw-bold">
     <div class="row row-cols-4 g-4">
-    {% if request.user.is_educator and not is_category %}
         <div class="col">
-            {%include 'components/card_add.html' with href_card_add=href_card_add %}
+            {%include 'components/createCourseCard.html'%}
         </div>
-    {% endif %}
-        {% for item in items %}
         <div class="col">
-            {%include template_name with item=item href=href %}
+            {%include template_name%}
         </div>
-        {% endfor %}
+        <div class="col">
+            {%include template_name%}
+        </div>
+        <div class="col">
+            {%include template_name%}
+        </div>
+        <div class="col">
+            {%include template_name%}
+        </div>
+        <div class="col">
+            {%include template_name%}
+        </div>
+        <div class="col">
+            {%include template_name%}
+        </div>
+        <div class="col">
+            {%include template_name%}
+        </div>
+        <div class="col">
+            {%include template_name%}
+        </div>
+        <div class="col">
+            {%include template_name%}
+        </div>
+        <div class="col">
+            {%include template_name%}
+        </div>
+        <div class="col">
+            {%include template_name%}
+        </div>
+        <div class="col">
+            {%include template_name%}
+        </div>
+        <div class="col">
+            {%include template_name%}
+        </div>
+        <div class="col">
+            {%include template_name%}
+        </div>
+        <div class="col">
+            {%include template_name%}
+        </div>
+        <div class="col">
+            {%include template_name%}
+        </div>
     </div>
 </div>
-<div id="createCourseModalWindow">
-</div>
-{% comment %} <div 
+<div 
     id="entityModal"
     class="modal fade"
     tabindex="-1"
@@ -30,9 +67,7 @@
                 </p>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
             </div>
-            <div 
-                class="modal-body appGrayColorBackground p-5 fw-bold"
-                style="background-color: #BAB8D7">
+            <div class="modal-body appGrayColorBackground p-5 fw-bold">
                 <textarea
                     class="form-control appThemeBorderColor"
                     readonly>Привет! Это описание</textarea>
@@ -59,7 +94,7 @@
                         </div>
                         <div class="col-md-6">
                           <div class="d-flex flex-column gap-3 h-100">
-                            <div class="modalBodyCell modalBodyCellValue bg-white fs-5 d-flex justify-content-center align-items-center rounded-4">
+                            <div class="modalBodyCell modalBodyCellValue bg-light fs-5 d-flex justify-content-center align-items-center rounded-4">
                                 Категория
                             </div>
                             <div class="modalBodyCell modalBodyCellValue bg-light fs-5 d-flex justify-content-center align-items-center rounded-4">
@@ -81,4 +116,4 @@
             </div>   
         </div>
     </div>
-</div> {% endcomment %}
+</div>

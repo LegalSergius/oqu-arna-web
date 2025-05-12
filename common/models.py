@@ -10,3 +10,6 @@ class Category(models.Model):
     name        = models.CharField(max_length=100)
     image       = models.ForeignKey(Content, on_delete=models.CASCADE, blank=False, null=False)
     created_at  = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name

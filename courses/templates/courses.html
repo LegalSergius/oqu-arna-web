@@ -1,0 +1,24 @@
+{% extends 'works_base.html' %}
+
+{% load static %}
+
+{% block head %}
+<link type="text/css" href="{% static 'author_works/css/style.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+
+<div class="overflow-hidden">
+    {% url 'courses' category as courses_category %}
+    {%if messages%}
+        <script>
+            {%for message in messages%}
+                alert('{{ message|escapejs }')
+            {%endfor%}
+        </script>
+    {%endif%}
+    {%include "components/entities_tabs.html" with tab_name_one="Все курсы" tab_name_two="Мои курсы" active_table_name=active_table_name url_one=courses_category url_two=courses_category|add:"?personal_works=True"%}
+    {%include "components/list_grid.html" with template_name="components/courseCard.html" href='course-detail' items=courses %}
+</div>
+
+{% endblock %}

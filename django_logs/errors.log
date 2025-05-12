@@ -645,3 +645,1407 @@ Traceback (most recent call last):
   File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 347, in do_include
     raise TemplateSyntaxError(
 django.template.exceptions.TemplateSyntaxError: Unknown argument for 'include' tag: "'icons/plus_icon.svg'".
+2025-05-10 10:20:10,690 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /
+2025-05-10 10:20:10,920 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /favicon.ico
+2025-05-10 10:21:49,489 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /users/send_code/
+2025-05-10 10:22:42,940 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /works/test/
+2025-05-10 10:22:50,962 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /works/author+works/
+2025-05-10 10:23:00,534 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /works/author_works/
+2025-05-10 10:23:08,478 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /works/  author_works/
+2025-05-10 10:23:13,080 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /works/ author_works/
+2025-05-10 10:27:22,417 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /works/download_author_work/
+2025-05-10 10:27:25,726 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /works/download_author_work/1
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\authors_works\views.py", line 129, in get
+    author_work = models.AuthorWork.objects.get(pk=author_work_id)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+authors_works.models.AuthorWork.DoesNotExist: AuthorWork matching query does not exist.
+2025-05-10 10:46:26,591 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: courses/categories.html
+2025-05-10 11:07:35,221 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:12:01,943 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:24:02,040 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:24:14,757 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:24:15,133 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:24:16,325 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:28:34,974 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:28:35,326 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:28:35,782 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:28:36,064 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:28:46,630 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:33,313 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:33,787 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:34,444 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:43,390 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:47,256 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:48,800 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:49,448 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:49,950 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:50,399 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:50,822 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:51,101 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:51,368 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:51,798 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:52,831 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:53,051 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:53,293 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:53,563 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:53,984 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:54,306 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:34:59,999 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:35:00,069 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 11:46:23,812 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: courses/course_category.html, common/category_list.html
+2025-05-10 11:47:37,335 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'courses' with arguments '(1,)' not found. 1 pattern(s) tried: ['courses/\\Z']
+2025-05-10 11:52:34,444 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 12:08:27,277 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-10 12:36:15,623 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/1
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\list.py", line 158, in get
+    self.object_list = self.get_queryset()
+  File "C:\Projects\OquArnaWeb\common\views.py", line 42, in get_queryset
+    queryset = self.model.objects.filter(**kw)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\query.py", line 1481, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\query.py", line 1499, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\query.py", line 1506, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\sql\query.py", line 1643, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\sql\query.py", line 1675, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\sql\query.py", line 1523, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\sql\query.py", line 1330, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\sql\query.py", line 1802, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'category_id' into field. Choices are: created_at, description, end_date, guideline, guideline_id, id, lessons, mentor, mentor_id, name, participants, start_date, updated_at
+2025-05-10 12:50:43,086 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/1
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\list.py", line 158, in get
+    self.object_list = self.get_queryset()
+  File "C:\Projects\OquArnaWeb\common\views.py", line 42, in get_queryset
+    queryset = self.model.objects.filter(**kw)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\query.py", line 1481, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\query.py", line 1499, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\query.py", line 1506, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\sql\query.py", line 1643, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\sql\query.py", line 1675, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\sql\query.py", line 1523, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\sql\query.py", line 1330, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\sql\query.py", line 1802, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'creator' into field. Choices are: category, category_id, created_at, description, end_date, guideline, guideline_id, id, lessons, mentor, mentor_id, name, participants, start_date, updated_at
+2025-05-10 15:29:23,406 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/1
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'course-create' not found. 'course-create' is not a valid view function or pattern name.
+2025-05-10 15:59:09,837 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/1
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '' not found. '' is not a valid view function or pattern name.
+2025-05-10 18:14:20,914 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 73, in get
+    form = self.get_form()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\edit.py", line 37, in get_form
+    return form_class(**self.get_form_kwargs())
+TypeError: BaseModelForm.__init__() got an unexpected keyword argument 'creater'
+2025-05-10 18:15:51,157 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 73, in get
+    form = self.get_form()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\edit.py", line 37, in get_form
+    return form_class(**self.get_form_kwargs())
+TypeError: BaseModelForm.__init__() got an unexpected keyword argument 'creator'
+2025-05-10 18:24:36,270 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 74, in get
+    html = render_to_string(self.template_name, {'form': form}, request=request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: componenets/course_create_modal.html
+2025-05-10 18:25:01,481 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 74, in get
+    html = render_to_string(self.template_name, {'form': form}, request=request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: components/course_create_modal.html
+2025-05-10 18:25:02,728 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 74, in get
+    html = render_to_string(self.template_name, {'form': form}, request=request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: components/course_create_modal.html
+2025-05-11 09:15:09,027 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 74, in get
+    html = render_to_string(self.template_name, {'form': form}, request=request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: components/course_create_modal.html
+2025-05-11 09:23:07,383 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Bad Request: /courses/create/
+2025-05-11 09:37:57,952 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /courses/чз
+2025-05-11 09:38:04,898 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /courses/4чз
+2025-05-11 09:38:09,272 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Bad Request: /courses/create/
+2025-05-11 10:14:10,637 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /courses/чз
+2025-05-11 10:14:15,395 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /courses/4
+2025-05-11 10:15:17,717 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /courses/4
+2025-05-11 10:15:51,176 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /courses/1
+2025-05-11 10:15:53,175 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /courses/1
+2025-05-11 10:15:53,450 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /courses/1
+2025-05-11 10:15:53,774 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /courses/1
+2025-05-11 10:15:53,937 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /courses/1
+2025-05-11 10:15:57,584 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/2
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\list.py", line 178, in get
+    context = self.get_context_data()
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 26, in get_context_data
+    if not is_personal_works(self.request):
+NameError: name 'is_personal_works' is not defined
+2025-05-11 10:48:40,448 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 37, in get
+    html = render_to_string(self.template_name, {'form': form}, request=request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'add_class'
+2025-05-11 10:48:41,003 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 37, in get
+    html = render_to_string(self.template_name, {'form': form}, request=request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'add_class'
+2025-05-11 10:48:41,155 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 37, in get
+    html = render_to_string(self.template_name, {'form': form}, request=request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'add_class'
+2025-05-11 10:48:41,581 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 37, in get
+    html = render_to_string(self.template_name, {'form': form}, request=request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'add_class'
+2025-05-11 10:48:41,966 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 37, in get
+    html = render_to_string(self.template_name, {'form': form}, request=request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'add_class'
+2025-05-11 10:48:42,922 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 37, in get
+    html = render_to_string(self.template_name, {'form': form}, request=request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'add_class'
+2025-05-11 10:48:43,287 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 37, in get
+    html = render_to_string(self.template_name, {'form': form}, request=request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'add_class'
+2025-05-11 10:48:43,546 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 37, in get
+    html = render_to_string(self.template_name, {'form': form}, request=request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'add_class'
+2025-05-11 10:48:43,719 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 37, in get
+    html = render_to_string(self.template_name, {'form': form}, request=request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'add_class'
+2025-05-11 10:48:43,895 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 37, in get
+    html = render_to_string(self.template_name, {'form': form}, request=request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'add_class'
+2025-05-11 10:48:44,119 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 37, in get
+    html = render_to_string(self.template_name, {'form': form}, request=request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'add_class'
+2025-05-11 11:30:10,352 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 12:38:30,995 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 12:40:30,290 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 12:41:56,963 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 12:42:33,437 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 12:42:50,567 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 12:43:31,838 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 12:49:40,183 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 12:50:02,588 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 12:50:19,077 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 12:53:03,491 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 12:54:55,886 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 12:55:25,074 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 12:56:05,464 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 12:56:38,901 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 12:58:41,351 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 12:58:42,675 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:00:12,456 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:00:13,664 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:00:49,423 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:01:20,130 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:01:46,051 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:03:13,222 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:05:46,016 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:06:19,301 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:06:22,295 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:06:23,091 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:06:24,375 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:06:24,930 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:06:25,786 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:06:26,164 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:06:26,641 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:06:27,326 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:06:28,082 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:06:31,440 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:06:32,655 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:06:33,480 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:06:34,080 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:06:34,555 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:06:34,857 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:06:35,484 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:06:43,880 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:11:10,622 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:11:57,729 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:15:07,339 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:16:59,423 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:17:24,295 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:17:49,387 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:19:46,072 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:26:34,589 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:32:07,587 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:32:40,349 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:33:29,265 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:36:19,050 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:36:50,975 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:49:29,462 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:51:30,802 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:51:41,739 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:51:43,115 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:52:06,472 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:52:13,682 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:52:23,042 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:53:49,636 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:54:22,258 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:54:24,151 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 13:55:13,005 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:09:03,878 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:10:23,354 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:12:12,238 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:12:22,770 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:12:23,068 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:12:23,322 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:12:28,587 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:12:42,417 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:12:46,728 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:12:46,822 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /favicon.ico
+2025-05-12 08:22:32,277 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /
+2025-05-12 08:22:32,888 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /favicon.ico
+2025-05-12 09:23:31,268 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 09:24:21,736 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 09:24:23,095 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 09:24:43,534 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 09:25:51,464 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 09:26:24,727 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 09:26:45,531 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 09:44:19,487 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 09:44:21,928 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 09:44:59,175 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py:146
+Method Not Allowed (POST): /courses/2
+2025-05-12 09:44:59,176 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Method Not Allowed: /courses/2
+2025-05-12 09:45:30,621 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 09:45:33,300 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 09:45:34,117 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 09:45:34,290 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 09:45:41,948 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 09:48:23,889 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 09:49:05,433 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\edit.py", line 150, in post
+    if form.is_valid():
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\forms.py", line 201, in errors
+    self.full_clean()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\forms.py", line 339, in full_clean
+    self._post_clean()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\models.py", line 491, in _post_clean
+    self.instance = construct_instance(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\models.py", line 87, in construct_instance
+    f.save_form_data(instance, cleaned_data[f.name])
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\fields\__init__.py", line 1099, in save_form_data
+    setattr(instance, self.name, data)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 288, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<InMemoryUploadedFile: picture.jfif (image/jpeg)>": "Course.guideline" must be a "Content" instance.
+2025-05-12 09:49:05,469 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 11:06:00,723 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\edit.py", line 150, in post
+    if form.is_valid():
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\forms.py", line 201, in errors
+    self.full_clean()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\forms.py", line 339, in full_clean
+    self._post_clean()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\models.py", line 491, in _post_clean
+    self.instance = construct_instance(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\models.py", line 87, in construct_instance
+    f.save_form_data(instance, cleaned_data[f.name])
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\fields\__init__.py", line 1099, in save_form_data
+    setattr(instance, self.name, data)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 288, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<InMemoryUploadedFile: picture.jfif (image/jpeg)>": "Course.guideline" must be a "Content" instance.
+2025-05-12 11:07:57,055 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\edit.py", line 150, in post
+    if form.is_valid():
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\forms.py", line 201, in errors
+    self.full_clean()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\forms.py", line 339, in full_clean
+    self._post_clean()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\models.py", line 491, in _post_clean
+    self.instance = construct_instance(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\models.py", line 87, in construct_instance
+    f.save_form_data(instance, cleaned_data[f.name])
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\fields\__init__.py", line 1099, in save_form_data
+    setattr(instance, self.name, data)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 288, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<InMemoryUploadedFile: picture.jfif (image/jpeg)>": "Course.guideline" must be a "Content" instance.
+2025-05-12 11:19:45,053 [ERROR] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\edit.py", line 150, in post
+    if form.is_valid():
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\forms.py", line 201, in errors
+    self.full_clean()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\forms.py", line 339, in full_clean
+    self._post_clean()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\models.py", line 491, in _post_clean
+    self.instance = construct_instance(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\forms\models.py", line 87, in construct_instance
+    f.save_form_data(instance, cleaned_data[f.name])
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\fields\__init__.py", line 1099, in save_form_data
+    setattr(instance, self.name, data)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 288, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<InMemoryUploadedFile: download.svg (image/svg+xml)>": "Course.guideline" must be a "Content" instance.
+2025-05-12 11:44:03,221 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 11:52:05,368 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json

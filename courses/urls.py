@@ -18,10 +18,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from django.views.generic import TemplateView
+from common import views as common_views
 from courses import views
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='courses/categories.html'), name='courses_categories'),
+    path('', views.CoursesCategoriesView.as_view(), name='courses-categories'),
+    path('<int:category>', views.CoursesListView.as_view(), name='courses'),
+    path('details/<int:course_id>', views.CoursesListView.as_view(), name='course-details'),
+    path('create/', views.CourseCreateView.as_view(), name='course-create'),
     path('entities/', TemplateView.as_view(template_name='courses/entities.html'), name='entities'),
     path('lessons/', TemplateView.as_view(template_name='courses/lessons.html'), name='lessons'),
     path('lessonActions/', TemplateView.as_view(template_name='courses/lessonActions.html'), name='lesson_actions'),

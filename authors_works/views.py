@@ -150,4 +150,3 @@ class AuthorWorkCreateView(CreateView):
         return kwargs
 
 
-

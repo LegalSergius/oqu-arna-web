@@ -1,26 +1,8 @@
 <div 
-    class="container-fluid cardContainer fw-bold"
-    style="width: 85%;">
-    <div class="row row-cols-4 g-4">
-    {% if request.user.is_educator and not is_category %}
-        <div class="col">
-            {%include 'components/card_add.html' with href_card_add=href_card_add %}
-        </div>
-    {% endif %}
-        {% for item in items %}
-        <div class="col">
-            {%include template_name with item=item href=href %}
-        </div>
-        {% endfor %}
-    </div>
-</div>
-<div id="createCourseModalWindow">
-</div>
-{% comment %} <div 
-    id="entityModal"
+    id="courseCreateModal"
     class="modal fade"
     tabindex="-1"
-    aria-labelledby="entityModal"
+    aria-labelledby="courseCreateModal"
     aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content appThemeBorderColor rounded-4">
@@ -78,7 +60,7 @@
                         </div>
                       </div> 
                 </div>
-            </div>   
+            </div>  
         </div>
     </div>
-</div> {% endcomment %}
+</div>
