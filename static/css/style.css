@@ -10,7 +10,6 @@
     --content-layout-top-padding: 70px;
 }
 
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -176,12 +175,13 @@ body {
 
 .card {
     height: 240px;
+    border: 5px solid var(--primary-color);
     text-decoration: none;
 }
 
 .cardContainer {
     max-height: 80%;
-    width: 90%;
+    width: 85%;
     padding-bottom: 5px;
     overflow-y: auto;
     scrollbar-width: thin;

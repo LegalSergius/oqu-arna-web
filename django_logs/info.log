@@ -265,3 +265,484 @@ AttributeError: 'Content' object has no attribute 'name'
 2025-05-11 17:14:42,242 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\views.py changed, reloading.
 2025-05-11 17:14:42,703 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
 2025-05-11 17:51:17,284 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:38:12,907 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 14:38:14,883 [WARNING] django.request: Not Found: /
+2025-05-11 14:38:14,951 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-11 14:39:28,902 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:50:26,960 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:50:57,962 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:52:14,293 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:52:35,574 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:52:40,695 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:53:02,654 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:53:26,895 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:53:29,902 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 14:53:37,890 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:05:48,696 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:06:08,849 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:06:09,602 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:06:22,979 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:07:11,275 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:07:20,493 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:08:38,134 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:09:34,430 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:10:21,317 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:10:29,176 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:10:36,816 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:11:28,905 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:11:39,003 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:11:53,886 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:14:30,657 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:15:04,722 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:15:27,692 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:16:19,881 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:16:32,992 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:17:21,775 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:18:00,084 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:18:14,164 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:18:24,260 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:18:45,668 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:19:12,249 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:19:16,834 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:19:20,479 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:19:21,162 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:20:48,686 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:21:02,320 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:21:12,255 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:21:37,223 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:21:46,129 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:22:08,793 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:23:01,374 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:23:01,994 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:23:02,172 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:23:15,458 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:23:19,964 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:23:36,943 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:29:26,330 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:30:00,553 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:30:12,720 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:30:19,664 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:30:23,799 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:38:07,159 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:38:47,576 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:39:38,814 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:39:46,286 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:39:59,411 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:41:24,890 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:44:32,299 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:46:04,503 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:46:36,046 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:54:45,569 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:55:03,174 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:55:08,709 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:55:14,236 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:55:26,696 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:55:42,861 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:55:50,492 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:56:19,217 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:57:13,129 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 15:58:35,106 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 16:00:26,332 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\common\models.py changed, reloading.
+2025-05-11 16:00:26,850 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 16:02:09,537 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\forms.py changed, reloading.
+2025-05-11 16:02:09,987 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 16:02:13,232 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\forms.py changed, reloading.
+2025-05-11 16:02:13,947 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 16:02:17,196 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\forms.py changed, reloading.
+2025-05-11 16:02:17,609 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 16:07:20,301 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\forms.py changed, reloading.
+2025-05-11 16:07:20,983 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 16:07:47,779 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\forms.py changed, reloading.
+2025-05-11 16:07:48,738 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 16:07:53,243 [WARNING] django.request: Not Found: /works
+2025-05-11 16:19:44,176 [WARNING] django.request: Not Found: /works/download_author_work/14
+2025-05-11 16:20:23,577 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 16:20:33,224 [WARNING] django.request: Not Found: /works/download_author_work/14
+2025-05-11 16:22:03,811 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 16:22:11,707 [WARNING] django.request: Not Found: /works/download_author_work/14
+2025-05-11 16:24:27,914 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\views.py changed, reloading.
+2025-05-11 16:24:28,376 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 16:24:40,681 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\views.py changed, reloading.
+2025-05-11 16:24:41,164 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 16:25:51,271 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\forms.py changed, reloading.
+2025-05-11 16:25:51,915 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 16:27:15,286 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\common\models.py changed, reloading.
+2025-05-11 16:27:15,750 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 16:32:52,601 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 16:33:27,229 [WARNING] django.request: Not Found: /works/users/login
+2025-05-11 17:10:59,864 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\views.py changed, reloading.
+2025-05-11 17:11:00,348 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 17:11:02,956 [ERROR] django.request: Internal Server Error: /works/author_work/16
+Traceback (most recent call last):
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\detail.py", line 113, in get
+    context = self.get_context_data(object=self.object)
+  File "D:\code\oquArna\oqu-arna-web\authors_works\views.py", line 123, in get_context_data
+    context['file_name'] = self.object.file.name
+                           ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Content' object has no attribute 'name'
+2025-05-11 17:11:05,115 [ERROR] django.request: Internal Server Error: /works/author_work/16
+Traceback (most recent call last):
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\detail.py", line 113, in get
+    context = self.get_context_data(object=self.object)
+  File "D:\code\oquArna\oqu-arna-web\authors_works\views.py", line 123, in get_context_data
+    context['file_name'] = self.object.file.name
+                           ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Content' object has no attribute 'name'
+2025-05-11 17:11:15,433 [ERROR] django.request: Internal Server Error: /works/author_work/16
+Traceback (most recent call last):
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\detail.py", line 113, in get
+    context = self.get_context_data(object=self.object)
+  File "D:\code\oquArna\oqu-arna-web\authors_works\views.py", line 123, in get_context_data
+    context['file_name'] = self.object.file.name
+                           ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Content' object has no attribute 'name'
+2025-05-11 17:11:23,351 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\views.py changed, reloading.
+2025-05-11 17:11:23,876 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 17:12:02,571 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\common\models.py changed, reloading.
+2025-05-11 17:12:03,088 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 17:14:42,242 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\views.py changed, reloading.
+2025-05-11 17:14:42,703 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 17:51:17,284 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 22:11:45,734 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 22:13:11,592 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 22:16:05,375 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 22:21:57,373 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 22:24:48,588 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 22:25:21,115 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-11 22:38:04,991 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\forms.py changed, reloading.
+2025-05-11 22:38:05,539 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-11 22:38:27,978 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\forms.py changed, reloading.
+2025-05-11 22:38:28,761 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 11:26:19,544 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 11:26:22,036 [WARNING] django.request: Not Found: /
+2025-05-12 11:26:22,152 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-12 11:27:02,566 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 11:46:14,236 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 11:51:05,557 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\views.py changed, reloading.
+2025-05-12 11:51:06,189 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 11:53:33,439 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\views.py changed, reloading.
+2025-05-12 11:53:34,040 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 11:53:36,117 [ERROR] django.request: Internal Server Error: /works/author_works/1
+Traceback (most recent call last):
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\list.py", line 158, in get
+    self.object_list = self.get_queryset()
+                       ~~~~~~~~~~~~~~~~~^^
+  File "D:\code\oquArna\oqu-arna-web\authors_works\views.py", line 54, in get_queryset
+    kw = self.get_kwargs()
+  File "D:\code\oquArna\oqu-arna-web\authors_works\views.py", line 83, in get_kwargs
+    kwargs = super().kwargs()
+             ^^^^^^^^^^^^^^
+AttributeError: 'super' object has no attribute 'kwargs'. Did you mean: 'args'?
+2025-05-12 11:53:56,619 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\views.py changed, reloading.
+2025-05-12 11:53:57,241 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 11:57:19,852 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\views.py changed, reloading.
+2025-05-12 11:57:20,625 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 12:04:17,579 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\views.py changed, reloading.
+2025-05-12 12:04:18,150 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 12:06:51,057 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\common\views.py changed, reloading.
+2025-05-12 12:06:51,687 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 12:09:12,715 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\urls.py changed, reloading.
+2025-05-12 12:09:13,361 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 12:10:13,387 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\common\urls.py changed, reloading.
+2025-05-12 12:10:14,044 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 12:10:21,847 [WARNING] django.request: Not Found: /common/categories/author-works/
+2025-05-12 12:16:35,868 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\urls.py changed, reloading.
+2025-05-12 12:16:36,468 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 12:17:13,038 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\common\views.py changed, reloading.
+2025-05-12 12:17:13,658 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 12:20:49,048 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\oquArnaWeb\urls.py changed, reloading.
+2025-05-12 12:20:49,694 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 12:20:52,951 [ERROR] django.request: Internal Server Error: /works/author_works
+Traceback (most recent call last):
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'categories' not found. 'categories' is not a valid view function or pattern name.
+2025-05-12 12:26:01,055 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\common\views.py changed, reloading.
+2025-05-12 12:26:01,720 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 12:26:02,143 [ERROR] django.request: Internal Server Error: /works/author_works
+Traceback (most recent call last):
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'categories' not found. 'categories' is not a valid view function or pattern name.
+2025-05-12 20:46:41,732 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 20:46:43,564 [WARNING] django.request: Not Found: /
+2025-05-12 20:46:43,646 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-12 23:30:15,084 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 01:06:31,158 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 01:06:34,128 [WARNING] django.request: Not Found: /
+2025-05-13 01:07:43,574 [ERROR] django.request: Internal Server Error: /users/verification_code/
+Traceback (most recent call last):
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\code\oquArna\oqu-arna-web\users\views.py", line 121, in post
+    print(page_to_after_confirmation)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 22] Invalid argument
+2025-05-13 01:10:46,908 [ERROR] django.request: Internal Server Error: /users/login/
+Traceback (most recent call last):
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\code\oquArna\oqu-arna-web\users\views.py", line 62, in post
+    print(email, password)
+    ~~~~~^^^^^^^^^^^^^^^^^
+OSError: [Errno 22] Invalid argument
+2025-05-13 01:10:56,841 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 01:11:01,931 [ERROR] django.request: Internal Server Error: /users/login/
+Traceback (most recent call last):
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\code\oquArna\oqu-arna-web\users\views.py", line 62, in post
+    print(email, password)
+    ~~~~~^^^^^^^^^^^^^^^^^
+OSError: [Errno 22] Invalid argument
+2025-05-13 01:11:21,868 [ERROR] django.request: Internal Server Error: /works/create_author_work
+Traceback (most recent call last):
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+           ~~~~~~~~~~~~~~~^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\edit.py", line 133, in form_valid
+    self.object = form.save()
+                  ~~~~~~~~~^^
+  File "D:\code\oquArna\oqu-arna-web\authors_works\forms.py", line 54, in save
+    print(instance)
+    ~~~~~^^^^^^^^^^
+OSError: [Errno 22] Invalid argument
+2025-05-13 01:13:49,275 [ERROR] django.request: Internal Server Error: /works/create_author_work
+Traceback (most recent call last):
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+           ~~~~~~~~~~~~~~~^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\edit.py", line 133, in form_valid
+    self.object = form.save()
+                  ~~~~~~~~~^^
+  File "D:\code\oquArna\oqu-arna-web\authors_works\forms.py", line 54, in save
+    print(instance)
+    ~~~~~^^^^^^^^^^
+OSError: [Errno 22] Invalid argument
+2025-05-13 01:14:18,035 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\forms.py changed, reloading.
+2025-05-13 01:14:18,565 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\forms.py changed, reloading.
+2025-05-13 01:14:18,936 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 01:14:19,067 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 01:16:04,648 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\users\views.py changed, reloading.
+2025-05-13 01:16:05,191 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 21:10:57,530 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 21:11:04,242 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-13 22:19:29,708 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\common\views.py changed, reloading.
+2025-05-13 22:19:30,478 [INFO] django.utils.autoreload: Watching for file changes with StatReloader

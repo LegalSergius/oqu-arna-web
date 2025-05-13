@@ -8,6 +8,8 @@ from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView
 
+from common.views import SearchView, CategoriesView
+
 from . import models, forms
 
 import common.models
@@ -39,57 +41,33 @@ def file_response(request, author_work):
 
 
 
+
+
 class TestView(View):
     def get(self, request):
         return render(request, 'category.html')
 
-
-class CategoriesListView(ListView):
-    model = common.models.Category
-    context_object_name = 'categories'
+class CategoriesAuthorWorksView(CategoriesView):
     template_name = 'category.html'
 
-
-    def get_queryset(self):
-        kw = {}
-
-        search = self.request.GET.get('search')
-
-        if search:
-            kw['name__iregex'] = search
-
-        queryset = self.model.objects.filter(**kw)
-        return queryset
-
-class Category(CategoriesListView):
-    template_name = 'category.html'
-
-
-class AuthorWorksListView(ListView):
+class AuthorWorksListView(SearchView):
     model = models.AuthorWork
     template_name = 'author_works.html'
     context_object_name = 'works'
+    field_for_filtering = 'name'
 
-    def get_queryset(self):
-        search = self.request.GET.get('search')
+    def get_kwargs(self):
+        kwargs = super().get_kwargs()
 
         category = self.kwargs.get('category')
-
         personal_works = bool(self.request.GET.get('personal_works'))
 
-        kw = {
-            'category_id' : category,
-        }
-
-        if search:
-            kw['name__iregex'] = search
+        kwargs['category_id'] = category
 
         if personal_works:
-            kw['creator'] = self.request.user
+            kwargs['creator'] = self.request.user
 
-        queryset = self.model.objects.filter(**kw)
-        print(kw)
-        return queryset
+        return kwargs
 
     def get_context_data(self, **kwargs):
 

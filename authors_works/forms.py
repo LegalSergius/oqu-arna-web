@@ -34,7 +34,8 @@ class AuthorWorkForm(forms.ModelForm):
             ),
 
             'category': widgets.SelectInput(
-                text="Категория"
+                text="Категория",
+
             ),
 
             'status': widgets.RadioInput,
@@ -49,8 +50,6 @@ class AuthorWorkForm(forms.ModelForm):
     def save(self, commit=True):
 
         instance = super().save(commit=False)
-
-        print(instance)
 
         uploads_file = self.cleaned_data.get('upload')
         if uploads_file:

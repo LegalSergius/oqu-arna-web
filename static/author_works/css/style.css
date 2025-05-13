@@ -7,7 +7,7 @@
     align-self: center;
 
     height: 100%;
-    width: 650px;
+    width: 655px;
 }
 
 .description {
@@ -31,6 +31,14 @@
     background-color: white;
 }
 
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 80px;
+    row-gap: 10px;
+}
+
 
 .info {
     padding: 10px 10px;
@@ -40,7 +48,7 @@
 }
 
 .info-down {
-    width: 45%;
+
 }
 
 .info-price {
@@ -84,6 +92,18 @@
     width: 45%;
 }
 
+.of {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    padding: 20px 60px;
+}
+
 .download-btn {
     background-color: var(--dark-green);
 
@@ -112,6 +132,10 @@
 
 .info-container {
     width: 80%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
 }
 
 .padding-5px {

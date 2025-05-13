@@ -59,11 +59,8 @@ class LoginView(View):
         email = request.POST.get('email')
         password = request.POST.get('password')
 
-        print(email, password)
-
         user = authenticate(request, email=email, password=password)
 
-        print(user)
         if user is not None:
 
             login(request, user)
@@ -118,8 +115,6 @@ class VerificationCodeView(View):
 
             page_to_after_confirmation = request.session.get('page_to_go_after_confirmation')
 
-            print(page_to_after_confirmation)
-
             if code_in_cache:
                 if code != code_in_cache:
                     messages.error(request, "Неверный код")
@@ -152,7 +147,6 @@ class RegistrationSetPasswordView(View):
         else:
             del request.session['verified_email']
             user = User.objects.get(email=email)
-            print(user)
             user.is_active = True
             user.set_password(password)
             user.save()
