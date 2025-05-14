@@ -1,0 +1,18 @@
+{% load widget_tweaks %}
+<input type="file" id="file" name="{{ widget.name }}">
+<label for="file" class="file-btn">Загрузить документ...</label>
+<span id="file-name" class="file-name mt-3"></span>
+
+<script>
+    const inputFile = document.getElementById('file');
+    const fileNameSpan = document.getElementById('file-name');
+
+    fileNameSpan.style.display = "none"
+
+    inputFile.addEventListener('change', () => {
+        fileNameSpan.style.display = "revert"
+        fileNameSpan.textContent = inputFile.files.length
+            ? inputFile.files[0].name
+            : '';
+});
+</script>

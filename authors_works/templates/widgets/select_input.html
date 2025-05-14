@@ -1,0 +1,24 @@
+
+{% load widget_tweaks %}
+
+<div class="input-group input-info">
+  <span class="input-group-text input-info-title info-title">{{ widget.group_text }}</span>
+  <select
+    name="{{ widget.name }}"
+    class="form-control"
+    {% include "django/forms/widgets/attrs.html" %}
+  >
+
+    {% for group_name, options, group_index in widget.optgroups %}
+      {% for option in options %}
+        <option value="{{ option.value|stringformat:'s' }}"
+                {% if option.selected %} selected{% endif %}
+                {% for attr_name, attr_val in option.attrs.items %}
+                  {{ attr_name }}="{{ attr_val }}"
+                {% endfor %}>
+          {{ option.label }}
+        </option>
+      {% endfor %}
+    {% endfor %}
+  </select>
+</div>

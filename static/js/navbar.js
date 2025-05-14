@@ -20,6 +20,7 @@ class NavbarElement{
         //Создание элементов
         this.navbarElement = document.createElement('a');
         this.navbarElement.classList.add('navbar-element');
+        this.navbarElement.classList.add('btn');
 
         const iconContainer = document.createElement('div');
         iconContainer.classList.add('icon-container');
@@ -87,4 +88,9 @@ class Navbar{
 
         });
     }
+}
+
+
+function createNavbar(name_active_element){
+
 }

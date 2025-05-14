@@ -1,0 +1,15 @@
+<a
+    class="card text-decoration-none"
+    href="{% url href item.pk %}">
+    <div class="appThemeColorBackground p-3 d-flex align-items-center justify-content-center flex-shrink-0 h-25 text-center text-light">
+        <p class="fs-5">
+            {{ item.name }}
+        </p>
+    </div>
+    <div class="card-body d-flex flex-column p-2">
+        <span class="text-body">Автор: {{ item.creator.full_name }}</span>
+        <span class="text-body">Статус: {{ item.status }}</span>
+
+        <span class="coursePeriodDate">дата публикации: {{ item.created_at }}</span>
+    </div>
+</a>

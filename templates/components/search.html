@@ -1,0 +1,5 @@
+<form method="get" class="d-flex align-self-center justify-content-center w-100">
+    {% block search_form %}
+    {% endblock %}
+    <input type="text" class="search" name="search" placeholder="Поиск..." value="{{ request.GET.search|default:'' }}">
+</form>

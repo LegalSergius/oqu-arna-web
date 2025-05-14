@@ -1,0 +1,19 @@
+{% load widget_tweaks %}
+
+<h3 class="status-title mt-3">Статус доступа:</h3>
+
+<div class="radio-works-toggle">
+
+        {% for group_name, options, index in widget.optgroups %}
+            {% for option in options %}
+                <label>
+                    <input type="radio" name="{{ option.name }}" value="{{ option.value }}">
+                    <span>{{ option.label }}</span>
+                </label>
+        {% endfor %}
+    {% endfor %}
+
+</div>
+
+
+
