@@ -1,15 +1,8 @@
-{% extends "registration_base.html" %}
+{% extends "entry_email.html" %}
 
-{% block head %}
-<title>OQU ARNA - регистрация</title>
-{% endblock %}
 
-{% block log_form_content %}
-<label for="email" class="fs-5 align-self-stretch">Почта</label>
-<input type="text" name="email" id="email" class="log-input mt-2 ">
+{% block log_content %}
 
-{% include 'errors.html' with messages=messages %}
-
-{{ block.super }}
+{% include "components/registration_title.html" %}
 
 {% endblock %}
