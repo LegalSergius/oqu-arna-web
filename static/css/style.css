@@ -4,6 +4,8 @@
     --secondary-color: #4b47a1;
     --dark-green: #398F68;
 
+    --error-color: #DB2A2A;
+
     --font-family-headlines: "Krona One" Inter;
 
     --content-layout-bottom-padding: 100px;
@@ -276,5 +278,24 @@ body {
 
 .radio-toggle input[type="radio"]:checked + span {
     background-color: var(--primary-color);
+    color: white;
+}
+
+
+/*Error*/
+
+.error {
+    padding: 10px 150px;
+    border-radius: 0 0 20px 20px;
+
+    position: absolute;
+    right: 50%;
+    transform: translateX(+50%);
+    top: 0;
+
+    background-color: var(--error-color);
+}
+
+.error-text {
     color: white;
 }

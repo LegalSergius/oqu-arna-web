@@ -51,18 +51,7 @@
 
 <label for="code" class="fs-5 align-self-stretch">Код</label>
 
-<div class="input-group">
-  <input type="number" name="code" min="0" id="code"  class="log-input rounded-end mt-1">
-
-  {% if messages %}
-    {% for message in messages %}
-    <span class="text-danger position-absolute top-50 end-0 translate-middle-y me-3">
-      {{ message }}
-    </span>
-    {% endfor %}
-  {% endif %}
-
-</div>
+<input type="number" name="code" min="0" id="code"  class="log-input rounded-end mt-1">
 
 <p class="mt-2">Введите код, который пришел на почту</p>
 <p class="mt-4 fw-bold">Отправить код повторно</p>
