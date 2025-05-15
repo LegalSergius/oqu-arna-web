@@ -253,6 +253,3 @@ class DocumentsView(View):
             document.save()
 
         return render(request, 'my_documents.html', {'docs': docs})
-
-
-
