@@ -4,12 +4,17 @@
 
 {% block head %}
   <link href="{% static 'users/css/style.css' %}" rel="stylesheet"/>
+      <style>
+    .navbar-header {
+        background-image: url("{% static 'icons/Vector.svg' %}");
+        background-size: cover;
+        background-position: center;
+    }
+  </style>
 {% endblock %}
 
   {% block header %}
-</head>
 
-<body>
   <!--  Верхний хедер с аватаром -->
   <div class="header navbar-header">
     {% if request.user.is_authenticated %}
@@ -24,7 +29,7 @@
   </div>
 
   <!--  МОДАЛЬНОЕ ОКНО -->
-  <div id="avatarModal" class="modal-avatar">
+  <div id="avatarModal" class=" modal-avatar">
     <div class="modal-avatar-content">
       <h4>Фото профиля</h4>
 
@@ -75,7 +80,7 @@
       });
     });
        </script>
+{% include "components/create_navbar.html" with name_active_element="personal_account" %}
 
   {% endblock %}
-</body>
-</html>
+

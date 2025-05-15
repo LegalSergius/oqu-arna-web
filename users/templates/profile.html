@@ -4,127 +4,135 @@
 
 
 {% block head %}
-  <link href="{% static 'users/css/style.css' %}" rel="stylesheet"/>
+    <link href="{% static 'users/css/style.css' %}" rel="stylesheet"/>
     <link href="{% static 'users/css/profile_style.css' %}" rel="stylesheet"/>
+    <style>
+        .navbar-header {
+            background-image: url("{% static 'icons/Vector.svg' %}");
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 {% endblock %}
 
 
-  {% block header %}
-  <!-- Верхний хедер с аватаром -->
-  <div class="header navbar-header">
-    {% if request.user.is_authenticated %}
-      <div class="navbar-avatar-wrapper">
-        {% if request.user.avatar %}
-          <img src="{{ request.user.avatar.url }}" class="navbar-avatar" alt="Аватар">
-        {% else %}
-          <img src="{% static 'users/img/default_avatar.png' %}" class="navbar-avatar" alt="Аватар">
+{% block header %}
+    <!-- Верхний хедер с аватаром -->
+    <div class="header navbar-header">
+        {% if request.user.is_authenticated %}
+            <div class="navbar-avatar-wrapper">
+                {% if request.user.avatar %}
+                    <img src="{{ request.user.avatar.url }}" class="navbar-avatar" alt="Аватар">
+                {% else %}
+                    <img src="{% static 'users/img/default_avatar.png' %}" class="navbar-avatar" alt="Аватар">
+                {% endif %}
+            </div>
         {% endif %}
-      </div>
-    {% endif %}
-  </div>
-
-  <!-- МОДАЛЬНОЕ ОКНО -->
-  <div id="avatarModal" class="modal-avatar">
-    <div class="modal-avatar-content">
-      <h4>Фото профиля</h4>
-
-      <!-- Загрузка фото -->
-      <form method="post" action="{% url 'users:update-avatar' %}" enctype="multipart/form-data">
-        {% csrf_token %}
-        <label class="btn green-btn">
-          Загрузить из проводника
-          <input type="file" name="avatar" accept="image/*" style="display: none" onchange="this.form.submit()">
-        </label>
-      </form>
-
-      <!-- Удаление фото -->
-      {% if request.user.avatar %}
-      <form method="post" action="{% url 'users:delete-avatar' %}">
-        {% csrf_token %}
-        <button type="submit" class="btn white-btn">Удалить фото</button>
-      </form>
-      {% endif %}
-
-      <!-- Отмена -->
-      <button onclick="closeAvatarModal()" class="btn cancel-btn">Отмена</button>
     </div>
-  </div>
+
+    <!-- МОДАЛЬНОЕ ОКНО -->
+    <div id="avatarModal" class="modal-avatar">
+        <div class="modal-avatar-content">
+            <h4>Фото профиля</h4>
+
+            <!-- Загрузка фото -->
+            <form method="post" action="{% url 'users:update-avatar' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <label class="btn green-btn">
+                    Загрузить из проводника
+                    <input type="file" name="avatar" accept="image/*" style="display: none"
+                           onchange="this.form.submit()">
+                </label>
+            </form>
+
+            <!-- Удаление фото -->
+            {% if request.user.avatar %}
+                <form method="post" action="{% url 'users:delete-avatar' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn white-btn">Удалить фото</button>
+                </form>
+            {% endif %}
+
+            <!-- Отмена -->
+            <button onclick="closeAvatarModal()" class="btn cancel-btn">Отмена</button>
+        </div>
+    </div>
 {% endblock %}
 
 {% block content %}
-   <div class="d-flex flex-column align-items-center">
-    <form method="post" class="form-profile">
-      {% csrf_token %}
-      <div class="profile-info">
-      <div class="input-group profile-input ">
-        <span class="input-group-text input-title pe-2">ФИО:</span>
-        <input type="text" name="full_name" value="{{ request.user.full_name }}"
-               class="form-control input-g" required>
-      </div>
+    <div class="d-flex flex-column align-items-center">
+        <form method="post" class="form-profile">
+            {% csrf_token %}
+            <div class="profile-info">
+                <div class="input-group profile-input ">
+                    <span class="input-group-text input-title pe-2">ФИО:</span>
+                    <input type="text" name="full_name" value="{{ request.user.full_name }}"
+                           class="form-control input-g" required>
+                </div>
 
-      <div class="input-group profile-input">
-        <span class="input-group-text input-title pe-2">Телефон:</span>
-        <input type="text" name="phone_number" value="{{ request.user.phone_number }}"
-               class="form-control input-g">
-      </div>
+                <div class="input-group profile-input">
+                    <span class="input-group-text input-title pe-2">Телефон:</span>
+                    <input type="text" name="phone_number" value="{{ request.user.phone_number }}"
+                           class="form-control input-g">
+                </div>
 
-      <div class="profile-input ">
-        <span class="input-title">Почта:</span>
-        <span class="input-text">{{ request.user.email }}</span>
-      </div>
+                <div class="profile-input ">
+                    <span class="input-title">Почта:</span>
+                    <span class="input-text">{{ request.user.email }}</span>
+                </div>
 
-      <div class="profile-input ">
-        <span class="input-title">Организация:</span>
-        <span class="input-text">{{ request.user.organization }}</span>
-      </div>
+                <div class="profile-input ">
+                    <span class="input-title">Организация:</span>
+                    <span class="input-text">{{ request.user.organization }}</span>
+                </div>
 
-      <div class="profile-input ">
-        <span class="input-title">Статус:</span>
-        <span class="input-text">
+                <div class="profile-input ">
+                    <span class="input-title">Статус:</span>
+                    <span class="input-text">
           {% if request.user.is_educator %}Преподаватель{% else %}Обучающийся{% endif %}
         </span>
-      </div>
+                </div>
 
-      <div class="profile-input ">
-        <span class="input-title">Город:</span>
-        <span class="input-text">{{ request.user.city }}</span>
-      </div>
-      </div>
+                <div class="profile-input ">
+                    <span class="input-title">Город:</span>
+                    <span class="input-text">{{ request.user.city }}</span>
+                </div>
+            </div>
 
-      <div class="d-flex justify-content-between py-5 px-5">
-        <a href="{% url 'users:documents' %}" class="btn btn-base-2 btn-profile-base">Мои документы</a>
-        <button type="submit" class="btn btn-base-2 btn-outline-base">Сохранить изменения</button>
-      </div>
-    </form>
-   </div>
+            <div class="d-flex justify-content-between py-5 px-5">
+                <a href="{% url 'users:documents' %}" class="btn btn-base-2 btn-profile-base">Мои документы</a>
+                <button type="submit" class="btn btn-base-2 btn-outline-base">Сохранить изменения</button>
+            </div>
+        </form>
+    </div>
 
 {% endblock %}
 
 {% block scripts %}
-  {% include "components/create_navbar.html" with name_active_element="personal_account" %}
+    {% include "components/create_navbar.html" with name_active_element="personal_account" %}
 
-       <script>
-          document.addEventListener("DOMContentLoaded", function () {
-      const avatar = document.querySelector('.navbar-avatar');
-      const modal = document.getElementById('avatarModal');
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const avatar = document.querySelector('.navbar-avatar');
+            const modal = document.getElementById('avatarModal');
 
-      if (avatar && modal) {
-        avatar.addEventListener('click', () => {
-          modal.style.display = 'flex';
+            if (avatar && modal) {
+                avatar.addEventListener('click', () => {
+                    modal.style.display = 'flex';
+                });
+            }
+
+            window.closeAvatarModal = function () {
+                modal.style.display = 'none';
+            }
+
+            window.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
         });
-      }
-
-      window.closeAvatarModal = function () {
-        modal.style.display = 'none';
-      }
-
-      window.addEventListener('click', function (event) {
-        if (event.target === modal) {
-          modal.style.display = "none";
-        }
-      });
-    });
-       </script>
+    </script>
 
 
 {% endblock %}
