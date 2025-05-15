@@ -54,6 +54,8 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+LOGIN_URL = 'users:login'
+
 ROOT_URLCONF = "oquArnaWeb.urls"
 
 TEMPLATES = [

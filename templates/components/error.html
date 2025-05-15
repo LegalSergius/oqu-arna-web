@@ -1,6 +1,6 @@
 
 {% if messages %}
-<div class="error" id="error">
+<div class="error d-flex flex-column align-items-center" id="error">
     {% for message in messages %}
         <span class="error-text">{{ message }}</span>
     {% endfor %}

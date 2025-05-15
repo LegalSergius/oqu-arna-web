@@ -2,7 +2,7 @@ from django import forms
 from unicodedata import category
 
 import common.models
-from authors_works.models import AuthorWork
+from authors_works.models import AuthorWork, Status
 from . import widgets
 from .widgets import CustomFileInput
 
@@ -41,8 +41,10 @@ class AuthorWorkForm(forms.ModelForm):
             'status': widgets.RadioInput,
             'price': widgets.InputGroupText(
                 text="Цена:",
+                input_type="number",
+                default="0",
                 attrs={
-                    "class": "input-group input-info my-3"
+                    "class": "input-group input-info my-3",
                 }
             ),
         }
