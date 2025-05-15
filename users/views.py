@@ -188,7 +188,7 @@ class   ProfileView(View):
 
 
 class UpdateAvatarView(LoginRequiredMixin, View):
-    """Сохраняет присланный в форме файл в поле user.avatar."""
+    """Сохраняет файл в user.avatar"""
     def post(self, request):
         avatar_file = request.FILES.get('avatar')
         if not avatar_file:
@@ -202,7 +202,7 @@ class UpdateAvatarView(LoginRequiredMixin, View):
 
 
 class DeleteAvatarView(LoginRequiredMixin, View):
-    """Удаляет текущий аватар пользователя."""
+    """Удаляет аватар"""
     def post(self, request):
         if request.user.avatar:
             request.user.avatar.delete(save=False)
