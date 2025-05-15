@@ -1,15 +1,15 @@
 {# templates/profile.html #}
-{% extends "base_profile.html" %}
+{% extends "base.html" %}
 {% load static %}
-
 
 {% block head %}
   <link href="{% static 'users/css/style.css' %}" rel="stylesheet"/>
-    <link href="{% static 'users/css/profile_style.css' %}" rel="stylesheet"/>
 {% endblock %}
 
-
   {% block header %}
+</head>
+
+<body>
   <!-- 🔷 Верхний хедер с аватаром -->
   <div class="header navbar-header">
     {% if request.user.is_authenticated %}
@@ -51,58 +51,8 @@
   </div>
 {% endblock %}
 
-{% block content %}
-   <div class="d-flex flex-column align-items-center">
-    <form method="post" class="form-profile">
-      {% csrf_token %}
-      <div class="profile-info">
-      <div class="input-group profile-input ">
-        <span class="input-group-text input-title pe-2">ФИО:</span>
-        <input type="text" name="full_name" value="{{ request.user.full_name }}"
-               class="form-control input-g" required>
-      </div>
 
-      <div class="input-group profile-input">
-        <span class="input-group-text input-title pe-2">Телефон:</span>
-        <input type="text" name="phone_number" value="{{ request.user.phone_number }}"
-               class="form-control input-g">
-      </div>
-
-      <div class="profile-input ">
-        <span class="input-title">Почта:</span>
-        <span class="input-text">{{ request.user.email }}</span>
-      </div>
-
-      <div class="profile-input ">
-        <span class="input-title">Организация:</span>
-        <span class="input-text">{{ request.user.organization }}</span>
-      </div>
-
-      <div class="profile-input ">
-        <span class="input-title">Статус:</span>
-        <span class="input-text">
-          {% if request.user.is_educator %}Преподаватель{% else %}Обучающийся{% endif %}
-        </span>
-      </div>
-
-      <div class="profile-input ">
-        <span class="input-title">Город:</span>
-        <span class="input-text">{{ request.user.city }}</span>
-      </div>
-      </div>
-
-      <div class="d-flex justify-content-between py-5 px-5">
-        <a href="{% url 'users:documents' %}" class="btn btn-base-2 btn-profile-base">Мои документы</a>
-        <button type="submit" class="btn btn-base-2 btn-outline-base">Сохранить изменения</button>
-      </div>
-    </form>
-   </div>
-
-{% endblock %}
-
-{% block scripts %}
-  {% include "components/create_navbar.html" with name_active_element="personal_account" %}
-
+  {% block scripts %}
        <script>
           document.addEventListener("DOMContentLoaded", function () {
       const avatar = document.querySelector('.navbar-avatar');
@@ -126,6 +76,6 @@
     });
        </script>
 
-
-{% endblock %}
-
+  {% endblock %}
+</body>
+</html>

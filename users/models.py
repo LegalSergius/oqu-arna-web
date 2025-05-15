@@ -18,6 +18,7 @@ class CustomUser(AbstractUser):
     country       = models.CharField(_('Страна'), max_length=100,  blank=True)
     city          = models.CharField(_('Город'),  max_length=100,  blank=True)
     is_educator   = models.BooleanField(_('Преподаватель'), default=False)
+    avatar = models.ImageField(upload_to='avatars/', blank=True, null=True, verbose_name="Аватар")
 
     USERNAME_FIELD  = 'email'
     REQUIRED_FIELDS = ['username']

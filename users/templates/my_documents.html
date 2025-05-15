@@ -1,14 +1,11 @@
 {# templates/documents/list.html #}
-{% extends "base.html" %}
+{% extends "base_profile.html" %}
 {% load static %}
 
-{% block head %}
-  <link href="{% static 'users/css/style.css' %}" rel="stylesheet"/>
-{% endblock %}
 {% block header %}
+    include'   <a href="javascript:history.back()"> adsfasdf </a>
 
-    Мои документы
-        {% endblock %}
+{% endblock %}
 
 {% block content %}
 <div class="doc-content mt-3">
@@ -67,7 +64,3 @@
 </script>
 {% endblock %}
 
-{% block scripts %}
-  {# Подключаем ваш существующий нижний navbar, если он нужен #}
-  {% include "create_navbar.html" with name_active_element="documents" %}
-{% endblock %}
