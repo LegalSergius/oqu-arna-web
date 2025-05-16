@@ -34,19 +34,19 @@
     <div id="avatarModal" class="modal-avatar">
         <div class="modal-avatar-content">
             <h4>Фото профиля</h4>
-
-            <!-- Загрузка фото -->
-            <form method="post" action="{% url 'users:update-avatar' %}" enctype="multipart/form-data">
-                {% csrf_token %}
-                <label class="btn green-btn">
-                    Загрузить из проводника
-                    <input type="file" name="avatar" accept="image/*" style="display: none"
-                           onchange="this.form.submit()">
-                </label>
-            </form>
-
-            <!-- Удаление фото -->
             {% if request.user.avatar %}
+                <!-- Загрузка фото -->
+                <form method="post" action="{% url 'users:update-avatar' %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <label class="btn green-btn">
+                        Загрузить из проводника
+                        <input type="file" name="avatar" accept="image/*" style="display: none"
+                               onchange="this.form.submit()">
+                    </label>
+                </form>
+
+                <!-- Удаление фото -->
+
                 <form method="post" action="{% url 'users:delete-avatar' %}">
                     {% csrf_token %}
                     <button type="submit" class="btn white-btn">Удалить фото</button>

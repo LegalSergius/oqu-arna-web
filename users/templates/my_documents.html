@@ -18,7 +18,7 @@
         }
 
         .doc-wrapper {
-            max-height: 400px;
+            max-height: 900px;
             overflow-y: auto;
             padding-right: 5px;
         }
@@ -47,9 +47,11 @@
 
 {% block header %}
     <div class="header navbar-header-my-doc">
-        {% include 'components/name_page.html' with name='Мои документы' href="javascript:history.back()" %}
+        {% url 'users:profile' as profile_url %}
+        {% include 'components/name_page.html' with name='Профиль' href=profile_url class='btn btn-base-2 btn-profile-base' %}
     </div>
 {% endblock %}
+
 
 {% block content %}
     <div class="doc-content mt-3">
