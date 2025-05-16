@@ -1,14 +1,14 @@
 <div 
-    id="courseCreateModal"
+    id="courseModal"
     class="modal fade"
     tabindex="-1"
-    aria-labelledby="courseCreateModal"
+    aria-labelledby="courseModal"
     aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content appThemeBorderColor rounded-4">
             <div class="modal-header appThemeBorderColor position-relative rounded-3">
                 <p class="modal-title position-absolute top-25 start-50 translate-middle-x fs-5 text-center fw-bold" id="entityModalLabel">
-                    Английский язык (Intermediate) 
+                    {{ course.name }}
                 </p>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
             </div>
@@ -17,7 +17,7 @@
                 style="background-color: #BAB8D7">
                 <textarea
                     class="form-control appThemeBorderColor"
-                    readonly>Привет! Это описание</textarea>
+                    readonly>{{ course.description}}</textarea>
                 <div class="container my-4 p-0 text-center">
                     <div class="row gx-5">
                         <div class="col-md-6">
@@ -42,20 +42,29 @@
                         <div class="col-md-6">
                           <div class="d-flex flex-column gap-3 h-100">
                             <div class="modalBodyCell modalBodyCellValue bg-white fs-5 d-flex justify-content-center align-items-center rounded-4">
-                                Категория
+                                {{ course.category.name }}
                             </div>
                             <div class="modalBodyCell modalBodyCellValue bg-light fs-5 d-flex justify-content-center align-items-center rounded-4">
-                              11.03.2025<br />11.03.2025
+                              {{ course.start_date|date:"d.m.Y" }}<br />{{ course.end_date|date:"d.m.Y" }}
                             </div>
                             <div class="modalBodyCell modalBodyCellValue bg-light fs-5 d-flex justify-content-center align-items-center rounded-4">
-                              23
+                              {{ course.participants_count }}
                             </div>
                             <div class="modalBodyCell modalBodyCellValue bg-light fs-5 d-flex justify-content-center align-items-center rounded-4">
-                              Дамир Мертл
+                              {{ course.creator.first_name }} {{ course.creator.last_name }}
                             </div>
-                            <div class="modalBodyCell modalBodyCellDownload bg-light fs-5 d-flex justify-content-center align-items-center w-50 m-auto rounded-4">
+                            {%if not course.guideline%}
+                            <div class="modalBodyCell modalBodyCellDownload bg-secondary fs-5 text-decoration-none d-flex justify-content-center align-items-center w-50 m-auto rounded-4">
+                              Нет файла
+                            </div>
+                            {%else%}
+                            <a 
+                              class="modalBodyCell modalBodyCellDownload bg-light fs-5 text-decoration-none d-flex justify-content-center align-items-center w-50 m-auto rounded-4"
+                              href="{%url 'download-guideline' course.guideline.id %}">
                               Скачать
-                            </div>
+                            </a>
+                            {%endif%}
+                      
                           </div>
                         </div>
                       </div> 

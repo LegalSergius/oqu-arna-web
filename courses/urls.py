@@ -21,18 +21,27 @@ from django.views.generic import TemplateView
 from common import views as common_views
 from courses import views
 
+
+lesson_creation_urlpatterns = [
+    path('', views.LessonCreateView.as_view(), name='create-lesson'),
+    path('content/', common_views.LessonContentView.as_view(), name='content'),
+]
+
 urlpatterns = [
     path('', views.CoursesCategoriesView.as_view(), name='courses-categories'),
     path('<int:category>', views.CoursesListView.as_view(), name='courses'),
-    path('details/<int:course_id>', views.CoursesListView.as_view(), name='course-details'),
+    path('<int:course_id>/details', views.CourseDetailView.as_view(), name='course-details'),
     path('create/', views.CourseCreateView.as_view(), name='course-create'),
-    path('entities/', TemplateView.as_view(template_name='courses/entities.html'), name='entities'),
-    path('lessons/', TemplateView.as_view(template_name='courses/lessons.html'), name='lessons'),
-    path('lessonActions/', TemplateView.as_view(template_name='courses/lessonActions.html'), name='lesson_actions'),
+    path('download/<int:content_id>', views.DownloadCourseView.as_view(), name='download-guideline'),
+    path('<int:course_id>/lessons', views.LessonsListView.as_view(), name='lessons'),
+    path('<int:course_id>/createLesson/', include(lesson_creation_urlpatterns)),
+    # path('<int:course_id>/createLesson', views.LessonCreateView.as_view(), name='create-lesson'),
+    # path('<int:course_id>/content/', common_views.LessonContentView.as_view(), name='content'),
     path('lessonStats/', TemplateView.as_view(template_name='courses/lessonStats.html'), name='lesson_stats'),
-    path('content/', TemplateView.as_view(template_name='courses/content.html'), name='content'),
+    # path('content/', TemplateView.as_view(template_name='content.html'), name='content'),
     path('schedule/', TemplateView.as_view(template_name='courses/schedule.html'), name='schedule'),
     path('', TemplateView.as_view(template_name='courses/../templates/categories/categories.html'), name='courses_categories'),
     path('entities/', TemplateView.as_view(template_name='courses/../authors_works/templates/entities.html'), name='entities')
-
 ]
+
+

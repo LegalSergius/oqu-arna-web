@@ -1,0 +1,113 @@
+{% extends 'works_base.html' %}
+{%load static%}
+{%get_media_prefix as MEDIA_PREFIX%}
+{% block header %}
+    {% include 'components/name_page.html' with name=course_name href="javascript:history.back()" %}
+{% endblock %}
+{% block content %}
+    {%if messages%}
+        <script>
+        {% for message in messages %}
+            alert('{{message|escapejs }}');
+        {% endfor %}
+        </script>
+    {%endif%}
+    <form
+        id="lessonContentCreationForm"
+        class="text-center"
+        method="POST"
+        action="{%url 'content' course_id %}"
+        enctype="multipart/form-data">
+        {% csrf_token %}
+        <div
+            class="d-flex-column bg-white justify-content-center align-items-center w-50 p-3 my-1 mx-auto rounded-5"
+            style="height: 50vh; padding-right: 1rem; scrollbar-width: thin; scrollbar-color: #605BCD #BAB8D7;">
+            <div
+                id="fileListContainer"
+                class="px-2 h-100 overflow-y-auto">
+                <div
+                    class="d-flex p-3 m-3 justify-content-center rounded-3"
+                    style="background-color: var(--background-page-color);">
+                    <input
+                        id="addFileInput"
+                        type="file"
+                        name="content"
+                        multiple
+                        hidden>
+                    <label
+                        for="addFileInput"
+                        class="fs-4 fw-bold border-0 pe-auto"
+                        style="background-color: inherit; color: var(--primary-color);">
+                        <span role="button">
+                            Добавить файл...
+                        </span>
+                    </label>
+                </div>
+                {% for file in uploaded_files %}
+                    <div
+                        class="d-flex p-3 m-3 align-items-center rounded-3"
+                        style="background-color: var(--primary-color);">
+                        <p class="flex-grow-1 text-light my-auto my-auto">
+                            {{ file }}
+                        </p>
+                        <p 
+                            class="my-auto text-white"
+                            onclick="deleteDocumentContainer(event)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash-fill ms-3" viewBox="0 0 16 16">
+                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                            </svg>
+                        </p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </form>
+    <button
+        class="btn my-3 fs-3 py-3 px-5 mx-auto text-white shadow-lg fw-bold"
+        type="submit"
+        form="lessonContentCreationForm"
+        style="background-color: var(--dark-green);">
+        Сохранить
+    </button>
+    <button
+        class="btn mt-3 px-5 mx-auto bg-white shadow-lg fw-bold"
+        type="button"
+        onclick="javascript:history.back()">
+        Отмена
+    </button>
+   
+    <script>
+        const addFileInput = document.getElementById('addFileInput');
+        const fileListContainer = document.getElementById('fileListContainer');
+        addFileInput.addEventListener('change', () => {
+            for (const file of addFileInput.files) {
+                const fileHTMLContent = `
+                    <div
+                        class="d-flex p-3 m-3 align-items-center rounded-3"
+                        style="background-color: var(--primary-color);">
+                        <p class="flex-grow-1 text-light my-auto my-auto">
+                            ${file.name}
+                        </p>
+                        <p 
+                            class="my-auto text-white"
+                            onclick="deleteDocumentContainer(event)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash-fill ms-3" viewBox="0 0 16 16">
+                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                            </svg>
+                        </p>
+                    </div>
+                `;
+                fileListContainer.insertAdjacentHTML('beforeend', fileHTMLContent);
+                
+            }
+        });
+    </script>
+    <script>
+        function deleteDocumentContainer(event) {
+            const containerElement = event.target.closest('.d-flex');
+            if (containerElement) {
+                containerElement.remove();
+            }
+        }
+    </script>
+{% endblock content %}

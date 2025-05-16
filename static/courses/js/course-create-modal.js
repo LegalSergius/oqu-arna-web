@@ -1,5 +1,3 @@
-let input;
-
 document.addEventListener('DOMContentLoaded', () => {
     const createCourseCard = document.getElementById('createCourseCard');
     
@@ -12,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (error) {
                     alert(error)
                 } else {
-                    const courseModalContainer = document.getElementById('createCourseModalWindow');
+                    const courseModalContainer = document.getElementById('courseModalWindow');
                     courseModalContainer.innerHTML = data.html;
                     const courseCreateModal = document.getElementById('courseCreateModal');
 
@@ -21,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     courseCreateModal.addEventListener('shown.bs.modal', function () {
                         console.log('modalEl - ', courseCreateModal);
                         const fileNameLabel = document.getElementById('fileNameLabel');
-                        input = document.getElementById('fileInput');
+                        const input = document.getElementById('id_guideline_upload');
                         input.addEventListener('change', function () {
                             const file = input.files[0];
                             if (file) {
@@ -29,19 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                 console.log('file - ', file, file.name)
                             } 
                         });
-                    }
-                        
-
-                        // const fileNameButton = document.getElementById('fileNameButton');
-                        // console.log('fileNameButton - ', fileNameButton);
-                        // fileNameButton.addEventListener('click', () => {
-                        //     console.log('button');
-                        //     fileNameButton.textContent = 'picture.jfifs'});
-                        //     console.log('input - ', input)  
-                            
-                        // }
-                    )
+                    });
                 }
-            })
+            });
     });    
 });

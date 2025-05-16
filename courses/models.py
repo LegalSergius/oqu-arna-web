@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.conf import settings
 from common.models import Content, Category
+from datetime import timedelta
 
 User = settings.AUTH_USER_MODEL
 
@@ -27,14 +28,13 @@ class Course(models.Model):
 
 
 class Lesson(models.Model):
-    name = models.CharField(_('Название занятия'), max_length=128)
+    name        = models.CharField(_('Название занятия'), max_length=128)
     description = models.TextField(_('Описание занятия'))
-    lesson_date = models.DateField(_('Дата проведения'))
-    duration = models.DurationField(_('Продолжительность'))
-    created_at = models.DateTimeField(auto_now_add=True)
-    course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='lessons', verbose_name=_('Курс'))
-    assignment = models.ForeignKey(Content, on_delete=models.CASCADE, verbose_name=_('Задание'))
-
+    lesson_date = models.DateTimeField(_('Дата проведения'))
+    duration    = models.DurationField(_('Продолжительность'), default=timedelta(minutes=60))
+    created_at  = models.DateTimeField(auto_now_add=True)
+    course      = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='lessons', verbose_name=_('Курс'))
+    assignments = models.ManyToManyField(Content, related_name='lessons', verbose_name=_('Материалы'), blank=True)
     class Meta:
         verbose_name = _('занятие')
         verbose_name_plural = _('занятия')

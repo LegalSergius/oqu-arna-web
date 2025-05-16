@@ -1,7 +1,8 @@
 {% load static %}
 
 <div class="d-flex align-items-center justify-content-between w-100 px-4">
-    <a href="{{ href }}"><img width="35" height="35" src="{% static 'icons/back.svg' %}" alt="логотип"></a>
+    {% comment %} <a href="{{ href }}"><img width="35" height="35" src="{% static 'icons/back.svg' %}" alt="логотип"></a> {% endcomment %}
+    {%include 'components/backward_button.html' with href=href%}
     <h1 class="text-white">{{ name }}</h1>
     <div></div>
 </div>

@@ -1,9 +1,7 @@
 from django import forms
 from common.models import Category, Content
-from .models import Course
+from .models import Course, Lesson
 from datetime import date
-# from . import widgets
-# from .widgets import CustomFileInput
 
 
 class CourseForm(forms.ModelForm):
@@ -19,7 +17,7 @@ class CourseForm(forms.ModelForm):
 
     class Meta:
         model = Course
-        fields = ['name', 'description', 'category', 'participants_count', 'start_date', 'end_date', 'guideline']
+        fields = ['name', 'description', 'category', 'participants_count', 'start_date', 'end_date']
         widgets = {
             'name': forms.TextInput(
                 attrs={
@@ -56,13 +54,8 @@ class CourseForm(forms.ModelForm):
             ),
             'participants_count': forms.NumberInput(
                 attrs={
-                    'class': 'modalBodyCell modalBodyCellValue bg-white fs-5 text-center fw-bold d-flex justify-content-center align-items-center rounded-4 border-0'
-                }
-            ),
-            'guideline': forms.ClearableFileInput(
-                attrs={
-                    'class': 'd-none',
-                    'id': 'fileInput'
+                    'class': 'modalBodyCell modalBodyCellValue bg-white fs-5 text-center fw-bold d-flex justify-content-center align-items-center rounded-4 border-0',
+                    'min': 0
                 }
             )
         }
@@ -77,7 +70,10 @@ class CourseForm(forms.ModelForm):
         print(uploads_file)
         if uploads_file:
             content = Content()
-            content.file.save(uploads_file.name, uploads_file, save=True)
+            uploaded_file_name = uploads_file.name
+            content.file_name = uploaded_file_name
+
+            content.file.save(uploaded_file_name, uploads_file, save=True)
             print(uploads_file)
             instance.guideline = content
 
@@ -87,3 +83,29 @@ class CourseForm(forms.ModelForm):
             instance.save()
 
         return instance
+    
+
+class LessonForm(forms.ModelForm):
+    class Meta:
+        model = Lesson
+        fields = ['name', 'description', 'lesson_date']  # course и assignments зададим во view
+        widgets = {
+            'name': forms.TextInput(attrs={
+                'id': 'lessonNameInput',
+                'class': 'form-control fs-3 mb-2 text-center border-0 contentAppThemeColor',
+                'style': 'color: var(--primary-color); background: var(--background-page-color);',
+                'placeholder': 'Первое занятие',
+                'required': True
+            }),
+            'description': forms.Textarea(attrs={
+                'class': 'form-control w-100 px-3 mx-auto appThemeBorderColor',
+                'rows': 4,
+                'placeholder': 'Описание занятия',
+                'required': True
+            }),
+            'lesson_date': forms.DateTimeInput(attrs={
+                'id': 'datetimeInput',
+                'type': 'hidden',
+                'required': True
+            }),
+        }

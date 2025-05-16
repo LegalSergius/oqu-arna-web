@@ -265,3 +265,1597 @@ AttributeError: 'Content' object has no attribute 'name'
 2025-05-11 17:14:42,242 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\views.py changed, reloading.
 2025-05-11 17:14:42,703 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
 2025-05-11 17:51:17,284 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 14:03:55,838 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 14:12:55,194 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\forms.py changed, reloading.
+2025-05-12 14:12:57,712 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 14:14:24,502 [ERROR] django.request: Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: table common_content has no column named file_name
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 49, in form_valid
+    self.object = form.save()
+  File "C:\Projects\OquArnaWeb\courses\forms.py", line 80, in save
+    content.file.save(uploads_file.name, uploads_file, save=True)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\fields\files.py", line 105, in save
+    self.instance.save()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\query.py", line 1854, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\sql\compiler.py", line 1881, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: table common_content has no column named file_name
+2025-05-12 14:26:32,069 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 14:26:42,079 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 14:27:21,770 [ERROR] django.request: Internal Server Error: /courses/create/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 53, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\http\response.py", line 632, in __init__
+    self["Location"] = iri_to_uri(redirect_to)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\encoding.py", line 134, in iri_to_uri
+    iri = str(iri)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\functional.py", line 119, in __str__
+    return str(self.__cast())
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\functional.py", line 110, in __cast
+    return func(*self._args, **self._kw)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'courses' with keyword arguments '{'pk': 2}' not found. 1 pattern(s) tried: ['courses/(?P<category>[0-9]+)\\Z']
+2025-05-12 14:28:19,025 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-12 14:28:20,974 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 19:32:58,103 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-12 19:33:00,223 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 19:54:58,241 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-12 19:54:59,908 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 19:55:04,251 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-12 19:55:05,522 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 20:00:05,317 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 20:01:04,556 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 20:02:30,093 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 20:03:14,318 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 22:42:05,737 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-12 22:42:07,732 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 22:42:25,350 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-12 22:42:26,574 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 22:51:39,799 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-12 22:51:41,753 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 22:54:17,922 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 22:55:09,865 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 22:55:24,756 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 22:55:34,470 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 22:55:50,907 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 22:56:14,841 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 22:56:39,118 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 22:56:54,703 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 22:57:14,846 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 23:10:03,687 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 23:11:07,903 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-12 23:11:09,601 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 23:24:26,762 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-12 23:24:28,630 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 23:25:32,755 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-12 23:25:33,812 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 23:28:00,982 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-12 23:28:02,668 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 23:28:09,600 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-12 23:28:10,730 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 23:28:28,271 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-12 23:28:30,076 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 23:32:02,677 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-12 23:32:04,474 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 23:32:12,666 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-12 23:32:14,291 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 23:32:20,080 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-12 23:32:21,683 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 23:33:12,438 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-12 23:33:14,225 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 23:33:14,959 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 23:34:47,327 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 23:34:49,287 [ERROR] django.request: Internal Server Error: /courses/download/3
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: DownloadCourseView.get() got multiple values for argument 'content_id'
+2025-05-12 23:34:49,438 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 23:35:15,364 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-12 23:35:17,439 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-12 23:35:22,400 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 23:35:22,466 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 23:35:25,055 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 23:42:14,725 [WARNING] django.request: Not Found: /courses/details/2
+2025-05-12 23:42:15,733 [WARNING] django.request: Not Found: /courses/details/2
+2025-05-12 23:42:16,118 [WARNING] django.request: Not Found: /courses/details/2
+2025-05-12 23:42:16,296 [WARNING] django.request: Not Found: /courses/details/2
+2025-05-12 23:42:17,049 [WARNING] django.request: Not Found: /courses/details/2
+2025-05-12 23:42:17,209 [WARNING] django.request: Not Found: /courses/details/2
+2025-05-12 23:42:19,904 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-12 23:42:32,036 [WARNING] django.request: Not Found: /courses/details/2
+2025-05-12 23:59:13,737 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-12 23:59:15,032 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 00:06:04,758 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 00:07:15,781 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 00:17:37,173 [WARNING] django.request: Not Found: /courses/details/3
+2025-05-13 00:22:30,203 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-13 00:22:32,138 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 00:22:32,893 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 00:22:53,160 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 00:22:59,850 [WARNING] django.request: Not Found: /courses/details/4
+2025-05-13 00:25:14,652 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 00:27:07,420 [ERROR] django.request: Internal Server Error: /courses/details/5
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 240, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+KeyError: 'guideline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 74, in get
+    content = course.guideline
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 258, in __get__
+    rel_obj = self.get_object(instance)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 221, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+common.models.Content.DoesNotExist: Content matching query does not exist.
+2025-05-13 00:30:08,248 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-13 00:30:09,521 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 00:30:45,796 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 00:30:59,710 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 00:31:04,139 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 00:31:32,927 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 09:25:57,424 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 09:26:01,109 [WARNING] django.request: Not Found: /
+2025-05-13 09:26:01,571 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-13 09:30:07,867 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\forms.py changed, reloading.
+2025-05-13 09:30:09,403 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 09:30:51,089 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\forms.py changed, reloading.
+2025-05-13 09:30:52,863 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 10:23:19,322 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 10:23:21,299 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 10:49:55,123 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 10:50:00,776 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 10:50:01,234 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 10:50:03,107 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 10:50:03,984 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 10:57:24,062 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 10:57:25,393 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 10:57:27,359 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 10:57:27,760 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 10:57:28,365 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 10:57:29,324 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 10:57:29,986 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 10:57:30,770 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 10:59:46,045 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-13 10:59:47,265 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 10:59:47,843 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 10:59:54,288 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 10:59:55,875 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 10:59:59,334 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:00:00,037 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:00:00,822 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:00:01,440 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:00:07,059 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:00:07,681 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:00:42,372 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:06:28,271 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:06:39,167 [ERROR] django.request: Internal Server Error: /courses/2
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 710, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' == 'True'' from 'rewquest.GET.personal_works == 'True''
+2025-05-13 11:06:39,207 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:07:09,979 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:08:45,282 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:08:59,064 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:09:04,422 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:09:05,256 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:09:10,000 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:09:21,921 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:09:23,107 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:09:26,437 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:09:27,373 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:09:31,242 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:09:31,912 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:09:33,425 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:09:41,254 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:22:56,997 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-13 11:22:58,265 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 11:34:22,297 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-13 11:34:23,270 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 11:34:25,338 [ERROR] django.request: Internal Server Error: /courses/2
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'lessons' with no arguments not found. 1 pattern(s) tried: ['courses/(?P<course_id>[0-9]+)/lessons\\Z']
+2025-05-13 11:34:41,898 [WARNING] django.request: Not Found: /courses/details/6
+2025-05-13 11:34:41,929 [ERROR] django.request: Internal Server Error: /courses/6/lessons
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: courses/lessons.html
+2025-05-13 11:35:01,424 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-13 11:35:02,251 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 11:35:07,176 [WARNING] django.request: Not Found: /courses/details/6
+2025-05-13 11:35:07,913 [WARNING] django.request: Not Found: /courses/details/6
+2025-05-13 11:35:08,309 [WARNING] django.request: Not Found: /courses/details/6
+2025-05-13 11:35:08,682 [WARNING] django.request: Not Found: /courses/details/7
+2025-05-13 11:35:08,976 [WARNING] django.request: Not Found: /courses/details/7
+2025-05-13 11:35:09,199 [WARNING] django.request: Not Found: /courses/details/7
+2025-05-13 11:35:09,947 [WARNING] django.request: Not Found: /courses/details/7
+2025-05-13 11:35:10,152 [WARNING] django.request: Not Found: /courses/details/7
+2025-05-13 11:35:10,521 [WARNING] django.request: Not Found: /courses/details/7
+2025-05-13 11:35:12,721 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:35:14,384 [WARNING] django.request: Not Found: /courses/details/6
+2025-05-13 11:35:44,850 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:35:49,635 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:35:49,972 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:35:50,543 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 11:36:15,575 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-13 11:36:16,775 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 11:36:36,532 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-13 11:36:37,486 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 11:40:51,532 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-13 11:40:52,585 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 11:55:06,482 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-13 11:55:07,596 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 12:11:21,153 [ERROR] django.request: Internal Server Error: /courses/6/lessons
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 519, in parse
+    self.extend_nodelist(nodelist, compiled_result, token)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 540, in extend_nodelist
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: {% extends 'works_base.html' %} must be the first tag in 'lessons.html'.
+2025-05-13 12:13:28,733 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 12:13:30,970 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 12:17:38,193 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-13 12:17:39,416 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 12:17:54,466 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 12:18:09,856 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 12:18:10,483 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 12:18:10,701 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 12:18:44,140 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 13:24:18,081 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 13:25:31,983 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 13:37:10,033 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-13 13:37:12,255 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 13:38:20,941 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-13 13:38:22,510 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 13:42:05,381 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 13:42:10,527 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 13:43:05,430 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-13 13:43:07,041 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 13:43:09,929 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 13:43:26,080 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 13:43:28,341 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 13:43:51,762 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-13 13:43:52,923 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 13:43:53,453 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 13:44:15,005 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-13 13:44:16,311 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 16:22:17,209 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\models.py changed, reloading.
+2025-05-13 16:22:51,763 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 16:26:10,262 [ERROR] django.request: Internal Server Error: /courses/lessonActions/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: courses/lessonActions.html
+2025-05-13 16:26:20,351 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-13 16:26:21,996 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 16:26:30,692 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-13 16:26:31,974 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 16:30:18,559 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 16:31:04,995 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 16:31:36,567 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 16:31:37,294 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 16:31:45,381 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 16:54:23,299 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\forms.py changed, reloading.
+2025-05-13 16:54:24,959 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 16:55:36,394 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 16:59:29,337 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\models.py changed, reloading.
+2025-05-13 16:59:30,592 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 17:01:20,339 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\models.py changed, reloading.
+2025-05-13 17:01:21,848 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 17:09:10,201 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-13 17:26:05,043 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 17:26:19,260 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-13 23:17:55,342 [ERROR] django.request: Internal Server Error: /courses/lessonActions/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 347, in do_include
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Unknown argument for 'include' tag: 'href=href'.
+2025-05-13 23:20:00,925 [ERROR] django.request: Internal Server Error: /courses/lessonActions/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 577, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 5: 'static'. Did you forget to register or load this tag?
+2025-05-14 00:25:40,186 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-14 00:26:11,676 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-14 00:26:42,234 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-14 00:26:55,977 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-14 00:27:18,728 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-14 00:29:26,425 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-14 00:30:17,344 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-14 00:36:34,293 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-14 00:36:41,478 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-14 11:45:03,642 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-14 11:45:11,741 [WARNING] django.request: Not Found: /
+2025-05-14 11:45:12,297 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-14 12:10:00,673 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-14 12:11:35,108 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-14 12:47:58,257 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-14 12:48:50,914 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 00:10:47,029 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-15 00:10:57,207 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 00:14:16,108 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 00:14:58,479 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 00:15:00,125 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 00:30:13,186 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 00:30:31,427 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 00:30:43,898 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 00:30:43,966 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-15 00:31:51,201 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 00:32:30,369 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 00:32:35,752 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 00:32:36,072 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 00:37:01,828 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 00:53:46,154 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 00:54:38,360 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 00:55:43,659 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 00:56:59,782 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 00:57:11,000 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 00:58:08,473 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 00:58:25,095 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 10:38:32,390 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-15 10:38:57,985 [WARNING] django.request: Not Found: /
+2025-05-15 10:38:58,499 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-15 10:40:36,172 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 10:40:41,834 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 10:40:41,844 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-15 11:42:34,394 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 11:43:35,758 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 11:44:00,059 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 16:35:35,489 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 16:35:46,036 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 16:36:05,553 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 16:36:14,814 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 16:38:21,663 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 16:39:22,265 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 16:42:57,282 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 16:47:42,210 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 16:48:10,359 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 16:49:05,263 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 16:51:02,842 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 16:51:25,764 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 16:55:02,522 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 16:56:04,605 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 16:58:45,928 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 17:00:18,495 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 17:07:06,201 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 17:07:32,748 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 17:15:56,041 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 17:16:08,915 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 17:18:23,071 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 17:18:44,126 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 17:19:43,793 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 17:20:18,575 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 17:23:32,674 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 17:23:53,250 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 17:26:00,188 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\models.py changed, reloading.
+2025-05-15 17:26:01,544 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-15 17:26:28,720 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\models.py changed, reloading.
+2025-05-15 17:26:29,401 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-15 17:34:41,549 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\models.py changed, reloading.
+2025-05-15 21:56:07,306 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-15 21:56:51,914 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-15 21:56:53,389 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-15 22:03:59,178 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-15 22:04:00,728 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-15 22:04:34,044 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-15 22:04:35,041 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-15 22:05:27,531 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-15 22:05:28,611 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-15 22:05:54,399 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-15 22:05:55,522 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-15 22:06:17,928 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-15 22:06:19,126 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-15 22:06:19,402 [WARNING] django.request: Not Found: /courses/lessonActions/
+2025-05-15 22:06:19,739 [WARNING] django.request: Not Found: /courses/lessonActions/
+2025-05-15 22:06:23,401 [WARNING] django.request: Not Found: /courses/lessonActions/
+2025-05-15 22:07:01,438 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-15 22:07:02,723 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-15 22:07:05,321 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 22:07:06,145 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-15 22:07:26,090 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-15 22:07:27,294 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-15 22:07:40,276 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-15 22:07:41,532 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-15 22:10:42,590 [ERROR] django.request: Internal Server Error: /courses/content/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: courses/content.html
+2025-05-15 22:10:50,061 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-15 22:10:51,495 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 00:57:36,040 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\models.py changed, reloading.
+2025-05-16 00:57:38,225 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 00:57:59,611 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 01:16:46,030 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 01:17:19,731 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 01:17:53,450 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 01:37:07,924 [ERROR] django.request: Internal Server Error: /courses/content/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 577, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 45: 'endblock'. Did you forget to register or load this tag?
+2025-05-16 02:05:04,552 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 02:05:40,832 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 02:06:08,517 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 02:06:46,180 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 02:07:08,883 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 02:07:29,321 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 02:07:59,690 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 02:18:27,527 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 02:21:31,645 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 02:22:18,916 [ERROR] django.request: Internal Server Error: /courses/content/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 577, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 4: 'endblock'. Did you forget to register or load this tag?
+2025-05-16 09:18:59,623 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 09:25:11,075 [WARNING] django.request: Not Found: /
+2025-05-16 09:25:11,575 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-16 09:26:28,838 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 11:12:16,812 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 11:12:19,074 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 11:14:38,696 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-16 11:14:39,890 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 11:17:49,933 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-16 11:17:51,662 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 11:18:14,112 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-16 11:18:15,476 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 11:18:42,086 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 11:18:45,838 [ERROR] django.request: Internal Server Error: /courses/6/createLesson
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'content' with no arguments not found. 1 pattern(s) tried: ['courses/(?P<course_id>[0-9]+)/createLessoncontent/\\Z']
+2025-05-16 11:19:18,405 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-16 11:19:19,700 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 11:19:21,966 [ERROR] django.request: Internal Server Error: /courses/6/createLesson/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'content' with no arguments not found. 1 pattern(s) tried: ['courses/(?P<course_id>[0-9]+)/createLesson/content/\\Z']
+2025-05-16 11:23:48,427 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 11:23:49,914 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 11:24:01,243 [ERROR] django.request: Internal Server Error: /courses/6/createLesson/content/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: LessonContentView.get() got an unexpected keyword argument 'course_id'
+2025-05-16 11:24:18,329 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 11:24:19,468 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 11:24:19,981 [ERROR] django.request: Internal Server Error: /courses/6/createLesson/content/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\common\views.py", line 86, in get
+    return render(request, self.template_name, {
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'basename'
+2025-05-16 12:05:01,939 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 12:05:03,774 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 12:06:34,950 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 12:06:36,200 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 12:07:59,343 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 12:08:00,610 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 12:08:22,999 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 12:08:24,122 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 12:09:47,258 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 12:09:48,350 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 12:10:14,981 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 12:10:16,220 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 12:10:36,046 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 12:10:37,116 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 12:15:07,582 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 12:15:09,299 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 12:16:48,934 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 12:16:50,128 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 12:18:37,555 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\.venv\Lib\site-packages\django\core\files\storage\filesystem.py changed, reloading.
+2025-05-16 12:18:38,994 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 12:20:42,138 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 12:20:43,580 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 12:21:03,551 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 12:21:04,852 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 12:21:13,633 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 12:21:14,673 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 12:21:43,336 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 12:21:44,502 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 12:27:13,638 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 12:27:15,197 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 13:37:03,282 [ERROR] django.request: Internal Server Error: /courses/6/createLesson/content/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\common\views.py", line 79, in get
+    return render(request, self.template_name, {
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'content' with no arguments not found. 1 pattern(s) tried: ['courses/(?P<course_id>[0-9]+)/createLesson/content/\\Z']
+2025-05-16 13:38:47,172 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 13:38:48,881 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 13:53:22,670 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 13:53:23,972 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 13:58:22,896 [ERROR] django.request: Internal Server Error: /courses/6/createLesson/content/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\common\views.py", line 99, in post
+    'uploaded_files': self.temporary_files or []
+AttributeError: 'LessonContentView' object has no attribute 'temporary_files'
+2025-05-16 13:59:03,959 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 13:59:04,916 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 13:59:05,965 [ERROR] django.request: Internal Server Error: /courses/6/createLesson/content/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\common\views.py", line 100, in post
+    return render(request, self.template_name, {
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'content' with arguments '('',)' not found. 1 pattern(s) tried: ['courses/(?P<course_id>[0-9]+)/createLesson/content/\\Z']
+2025-05-16 13:59:25,595 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 13:59:26,342 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 13:59:38,491 [ERROR] django.request: Internal Server Error: /courses/6/createLesson/content/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\common\views.py", line 100, in post
+    return render(request, self.template_name, {
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'content' with arguments '('',)' not found. 1 pattern(s) tried: ['courses/(?P<course_id>[0-9]+)/createLesson/content/\\Z']
+2025-05-16 14:00:20,368 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 14:00:21,054 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 14:00:34,041 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 14:00:34,777 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 14:09:51,543 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 14:09:52,722 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 14:11:47,499 [ERROR] django.request: Internal Server Error: /courses/6/createLesson/content/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\common\views.py", line 111, in post
+    filename = f"{uuid.uuid4()}_{uploaded_file.name}"
+AttributeError: 'list' object has no attribute 'name'
+2025-05-16 14:12:05,574 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 14:12:06,377 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 14:13:22,277 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 14:13:23,095 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 14:13:48,704 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 14:13:49,467 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 14:13:53,989 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 14:13:54,836 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 14:14:06,696 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-16 14:14:07,466 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 14:45:19,141 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\forms.py changed, reloading.
+2025-05-16 14:45:20,272 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 14:47:06,945 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\forms.py changed, reloading.
+2025-05-16 14:47:07,649 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 14:51:17,635 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\forms.py changed, reloading.
+2025-05-16 14:51:18,440 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 14:51:56,213 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\forms.py changed, reloading.
+2025-05-16 14:51:57,012 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 15:02:26,399 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\forms.py changed, reloading.
+2025-05-16 15:02:27,283 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 15:07:07,077 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\forms.py changed, reloading.
+2025-05-16 15:07:07,904 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 15:29:27,962 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 15:29:29,671 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 15:31:06,992 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 15:31:08,374 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 15:32:31,093 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 15:32:32,322 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 15:34:31,199 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 15:34:32,486 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 15:34:34,469 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 15:34:35,386 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 15:42:52,384 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 15:42:53,563 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 15:46:10,663 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 15:46:11,863 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 16:00:55,649 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 16:00:57,085 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 17:43:24,226 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 17:43:25,781 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 17:48:15,312 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 17:48:16,770 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 17:48:24,971 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 17:48:27,485 [ERROR] django.request: Internal Server Error: /courses/6/createLesson/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'content' with arguments '('',)' not found. 1 pattern(s) tried: ['courses/(?P<course_id>[0-9]+)/createLesson/content/\\Z']
+2025-05-16 18:01:58,457 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 18:01:59,769 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 18:04:04,938 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\forms.py changed, reloading.
+2025-05-16 18:04:06,173 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 18:04:13,959 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\forms.py changed, reloading.
+2025-05-16 18:04:15,319 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 18:04:39,234 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\forms.py changed, reloading.
+2025-05-16 18:04:40,393 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 18:08:37,622 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\forms.py changed, reloading.
+2025-05-16 18:08:38,790 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 18:14:52,059 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\forms.py changed, reloading.
+2025-05-16 18:14:53,273 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 18:19:15,442 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 18:19:16,638 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 18:19:29,914 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 18:19:31,372 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 18:27:35,184 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 18:27:36,091 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 18:27:41,946 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 18:27:42,645 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 18:30:35,181 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 18:30:36,041 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 18:33:43,538 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 18:33:44,255 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 18:38:37,043 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 18:38:37,688 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 18:41:59,926 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 18:42:00,582 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 18:45:11,123 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 18:45:11,907 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 18:45:15,628 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 18:45:16,252 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 18:45:26,573 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 18:45:27,288 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-16 18:46:07,174 [ERROR] django.request: Internal Server Error: /courses/6/createLesson/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 150, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+  File "C:\Projects\OquArnaWeb\courses\views.py", line 191, in form_valid
+    lesson.contents.add(content)  # через связку m2m, если она есть
+AttributeError: 'Lesson' object has no attribute 'contents'
+2025-05-16 19:31:48,253 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-16 19:31:49,191 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
