@@ -7,7 +7,7 @@ from common import models
 class SearchView(ListView):
     field_for_filtering = ''
 
-    def get_kwargs(self):
+    def get_filter_parameter(self):
         kwargs = {}
 
         search = self.request.GET.get('search')
@@ -18,7 +18,7 @@ class SearchView(ListView):
         return kwargs
 
     def get_queryset(self):
-        kw = self.get_kwargs()
+        kw = self.get_filter_parameter()
         queryset = self.model.objects.filter(**kw)
         return queryset
 
