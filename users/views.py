@@ -196,7 +196,7 @@ class RegisterEntryEmailView(EntryEmailView):
 
     def successful(self, request, email, user):
         if user and user.is_active:
-            messages.error(request, "Пользователь с данным email не зарегистрирован")
+            messages.error(request, "Пользователь с данным email зарегистрирован")
             return None
 
         return super().successful(request, email, user)

@@ -44,7 +44,8 @@ class AuthorWorkForm(forms.ModelForm):
                 input_type="number",
                 default="0",
                 attrs={
-                    "class": "input-group input-info my-3",
+                    "class": "input-group input-info mt-3",
+                    "id": "price"
                 }
             ),
         }

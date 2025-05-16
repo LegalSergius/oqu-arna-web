@@ -60,8 +60,8 @@ class AuthorWorksListView(LoginRequiredMixin, SearchView):
     context_object_name = 'works'
     field_for_filtering = 'name'
 
-    def get_kwargs(self):
-        kwargs = super().get_kwargs()
+    def get_filter_parameter(self):
+        kwargs = super().get_filter_parameter()
 
         category = self.kwargs.get('category')
         personal_works = bool(self.request.GET.get('personal_works'))
@@ -76,8 +76,13 @@ class AuthorWorksListView(LoginRequiredMixin, SearchView):
     def get_context_data(self, **kwargs):
 
         context = super().get_context_data(**kwargs)
+        category = self.kwargs.get('category')
 
-        context['category'] = self.kwargs['category']
+        self.request.session['selected_category'] = category
+
+        context['category'] = category
+
+
 
         if not is_personal_works(self.request):
             context['active_table_name'] = "one_table"
@@ -140,7 +145,12 @@ class AuthorWorkCreateView(LoginRequiredMixin, CreateView):
 
         name = form.data.get("name", "")
         status = form.data.get("status", "")
-        price = float(form.data.get("price", ""))
+        price = form.data.get('price', '0')
+
+        if price != '':
+            price = float(price)
+        else:
+            price = 0
 
 
         if name == "":

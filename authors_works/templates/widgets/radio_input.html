@@ -10,6 +10,7 @@
           type="radio"
           name="{{ option.name }}"
           value="{{ option.value }}"
+          class="status-option"
           {% if option.selected %}checked{% endif %}
         >
         <span>{{ option.label }}</span>
@@ -17,3 +18,4 @@
     {% endfor %}
   {% endfor %}
 </div>
+
