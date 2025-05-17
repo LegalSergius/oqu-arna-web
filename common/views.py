@@ -25,7 +25,7 @@ class SearchView(ListView):
         return kwargs
 
     def get_queryset(self):
-        kw = self.get_kwargs()
+        kw = self.get_filter_parameter()
         queryset = self.model.objects.filter(**kw)
         return queryset
 

@@ -4419,3 +4419,24 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'entry-email' not found. 'ent
 2025-05-16 01:47:49,734 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
 2025-05-16 01:48:52,051 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\common\views.py changed, reloading.
 2025-05-16 01:48:52,580 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-17 11:53:54,939 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-17 11:54:35,354 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-17 11:54:36,061 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-17 11:54:41,064 [WARNING] django.request: Not Found: /
+2025-05-17 11:54:46,569 [ERROR] django.request: Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\generic\list.py", line 158, in get
+    self.object_list = self.get_queryset()
+  File "C:\Projects\OquArnaWeb\common\views.py", line 28, in get_queryset
+    kw = self.get_kwargs()
+AttributeError: 'CoursesCategoriesView' object has no attribute 'get_kwargs'
+2025-05-17 11:55:13,164 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\common\views.py changed, reloading.
+2025-05-17 11:55:14,007 [INFO] django.utils.autoreload: Watching for file changes with StatReloader

@@ -35,10 +35,7 @@ urlpatterns = [
     path('download/<int:content_id>', views.DownloadCourseView.as_view(), name='download-guideline'),
     path('<int:course_id>/lessons', views.LessonsListView.as_view(), name='lessons'),
     path('<int:course_id>/createLesson/', include(lesson_creation_urlpatterns)),
-    # path('<int:course_id>/createLesson', views.LessonCreateView.as_view(), name='create-lesson'),
-    # path('<int:course_id>/content/', common_views.LessonContentView.as_view(), name='content'),
     path('lessonStats/', TemplateView.as_view(template_name='courses/lessonStats.html'), name='lesson_stats'),
-    # path('content/', TemplateView.as_view(template_name='content.html'), name='content'),
     path('schedule/', TemplateView.as_view(template_name='courses/schedule.html'), name='schedule'),
     path('', TemplateView.as_view(template_name='courses/../templates/categories/categories.html'), name='courses_categories'),
     path('entities/', TemplateView.as_view(template_name='courses/../authors_works/templates/entities.html'), name='entities')

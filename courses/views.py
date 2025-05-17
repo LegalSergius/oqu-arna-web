@@ -2,7 +2,7 @@ from django.http import JsonResponse, Http404, HttpResponseRedirect
 from django.conf import settings
 from django.contrib import messages
 from django.shortcuts import render
-from common.views import CategoriesListView, EntitiesListView, file_response
+from common.views import CategoriesView, EntitiesListView, file_response
 from django.views.generic import View, CreateView, DetailView, ListView
 from django.urls import reverse_lazy
 from courses.models import Course, Lesson
@@ -15,7 +15,7 @@ from pathlib import Path
 import os
 
 
-class CoursesCategoriesView(CategoriesListView):
+class CoursesCategoriesView(CategoriesView):
     template_name = 'course_category.html'
 
 
