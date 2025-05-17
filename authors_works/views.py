@@ -165,4 +165,3 @@ class AuthorWorkCreateView(LoginRequiredMixin, CreateView):
         return super().form_invalid(form)
 
 
-

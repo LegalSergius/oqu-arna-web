@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "users",
     "authors_works",
     "common",
+    "courses"
 ]
 
 MIDDLEWARE = [
