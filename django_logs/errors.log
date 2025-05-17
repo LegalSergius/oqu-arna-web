@@ -4316,3 +4316,5 @@ Not Found: /.well-known/appspecific/com.chrome.devtools.json
 Not Found: /.well-known/appspecific/com.chrome.devtools.json
 2025-05-16 19:36:37,021 [WARNING] django.request D:\code\oquArna\.venv\Lib\site-packages\django\utils\log.py:248
 Not Found: /favicon.ico
+2025-05-17 11:59:36,846 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /

@@ -4580,3 +4580,5 @@ ValueError: could not convert string to float: ''
 2025-05-16 19:36:37,021 [WARNING] django.request: Not Found: /favicon.ico
 2025-05-16 20:11:45,674 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\common\views.py changed, reloading.
 2025-05-16 20:11:47,556 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-17 11:59:33,500 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-17 11:59:36,846 [WARNING] django.request: Not Found: /
