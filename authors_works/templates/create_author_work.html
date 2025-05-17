@@ -52,3 +52,36 @@
     </div>
 
 {% endblock %}
+
+{% block scripts %}
+
+    <script>
+        const status = document.querySelectorAll(".status-option");
+
+        const price = document.getElementById("price");
+
+        function togglePrice() {
+            let checkedStatus;
+
+            status.forEach((item) => {
+                if(item.checked){
+                    checkedStatus = item;
+                }
+            });
+
+
+            if(checkedStatus.value === "PUBLIC") {
+                price.style.display = 'none'
+            } else {
+                price.style.display = 'flex'
+            }
+        }
+
+        status.forEach(e => e.addEventListener('change', togglePrice));
+
+        togglePrice();
+    </script>
+
+    {{ block.super }}
+
+{% endblock %}
