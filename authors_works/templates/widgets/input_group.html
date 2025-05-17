@@ -4,8 +4,9 @@
 <div {% include "django/forms/widgets/attrs.html" %}>
   <span class="input-group-text input-info-title info-title">{{ widget.group_text }}</span>
   <input
-    type="text"
+    type="{{ widget.input_type }}"
     name="{{ widget.name }}"
+    value="{{ widget.default }}"
     class="form-control"
   />
 </div>

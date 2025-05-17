@@ -13,7 +13,7 @@ class CustomUser(AbstractUser):
     organization  = models.CharField(_('Организация'), max_length=255, blank=True)
     country       = models.CharField(_('Страна'), max_length=100,  blank=True)
     city          = models.CharField(_('Город'),  max_length=100,  blank=True)
-    is_educator   = models.BooleanField(_('Преподаватель'), default=False)
+    is_educator   = models.BooleanField(_('Обучающий'), default=False)
 
     USERNAME_FIELD  = 'email'
     REQUIRED_FIELDS = ['username']

@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect, render
 from django.contrib import messages
 from django.http import Http404, FileResponse
@@ -10,54 +11,56 @@ from courses.models import Course
 from pathlib import Path
 import os, uuid
 
-# Create your views here.
-class CategoriesListView(ListView):
-    model = Category
-    context_object_name = 'categories'
-    template_name = 'category.html'
+class SearchView(ListView):
+    field_for_filtering = ''
 
-    def get_queryset(self):
-        kw = {}
+    def get_filter_parameter(self):
+        kwargs = {}
 
         search = self.request.GET.get('search')
 
         if search:
-            kw['name__iregex'] = search
+            kwargs[f'{self.field_for_filtering}__iregex'] = search
 
+        return kwargs
+
+    def get_queryset(self):
+        kw = self.get_kwargs()
         queryset = self.model.objects.filter(**kw)
         return queryset
 
+class CategoriesView(SearchView):
+    model = Category
+    context_object_name = 'categories'
+    field_for_filtering = 'name'
 
-class EntitiesListView(ListView):
-    def get_queryset(self):
-        category_id = self.kwargs.get('category')
+
+class EntitiesListView(LoginRequiredMixin, SearchView):
+    field_for_filtering = 'name'
+
+    def get_filter_parameter(self):
+        kwargs = super().get_filter_parameter()
+        category = self.kwargs.get('category')
         try:
-            self.selected_category = Category.objects.get(pk=category_id)
+            selected_category = Category.objects.get(pk=category)
         except Category.DoesNotExist:
             raise Http404('Запрашиваемая категория не была добавлена. Обратитесь к администратору')
 
-        search = self.request.GET.get('search')
+        kwargs['category_id'] = selected_category
 
-        personal_works = bool(self.request.GET.get('personal_works'))
+        if not is_personal_works(self.request):
+            kwargs['creator'] = self.request.user
 
-        kw = {
-            'category' : self.selected_category,
-        }
-
-        if search:
-            kw['name__iregex'] = search
-
-        if personal_works:
-            kw['creator'] = self.request.user
-
-        queryset = self.model.objects.filter(**kw)
-        return queryset
+        return kwargs
 
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        category = self.kwargs.get('category')
 
-        context['category_name'] = self.selected_category.name
+        self.request.session['selected_category'] = category
+
+        context['category'] = category
 
         if not is_personal_works(self.request):
             context['active_table_name'] = "one_table"
@@ -67,7 +70,7 @@ class EntitiesListView(ListView):
         return context
 
 
-class LessonContentView(View):
+class LessonContentView(LoginRequiredMixin, View):
     template_name = 'content.html'
 
     def get(self, request, course_id):
