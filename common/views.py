@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect, render
 from django.contrib import messages
@@ -10,6 +11,8 @@ from common.models import Category
 from courses.models import Course
 from pathlib import Path
 import os, uuid
+
+User = get_user_model()
 
 class SearchView(ListView):
     field_for_filtering = ''
@@ -38,20 +41,29 @@ class CategoriesView(SearchView):
 class EntitiesListView(LoginRequiredMixin, SearchView):
     field_for_filtering = 'name'
 
+    def get_personal_entities(self):
+        personal_works = bool(self.request.GET.get('personal_works'))
+
+        user = self.request.user
+
+        filter = {'creator' : user}
+
+        return filter
+
+
     def get_filter_parameter(self):
-        kwargs = super().get_filter_parameter()
-        category = self.kwargs.get('category')
-        try:
-            selected_category = Category.objects.get(pk=category)
-        except Category.DoesNotExist:
-            raise Http404('Запрашиваемая категория не была добавлена. Обратитесь к администратору')
+            kwargs = super().get_filter_parameter()
+            category = self.kwargs.get('category')
+            try:
+                selected_category = Category.objects.get(pk=category)
+            except Category.DoesNotExist:
+                raise Http404('Запрашиваемая категория не была добавлена. Обратитесь к администратору')
 
-        kwargs['category_id'] = selected_category
+            kwargs['category_id'] = selected_category
 
-        if not is_personal_works(self.request):
-            kwargs['creator'] = self.request.user
+            kwargs.update(self.get_personal_entities())
 
-        return kwargs
+            return kwargs
 
 
     def get_context_data(self, **kwargs):
@@ -124,7 +136,9 @@ class LessonContentView(LoginRequiredMixin, View):
 
         messages.success(request, 'Файлы содержимого сохранены')
 
-        return redirect(reverse_lazy('create-lesson', kwargs={'course_id': course_id}))
+        page_redirect = self.request.session['page_redirect']
+
+        return redirect(reverse_lazy(page_redirect['url_name'], kwargs=page_redirect['kwargs']))
 
 
 def is_personal_works(request):

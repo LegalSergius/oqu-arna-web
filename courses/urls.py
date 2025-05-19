@@ -20,7 +20,7 @@ from django.urls import include, path
 from django.views.generic import TemplateView
 from common import views as common_views
 from courses import views
-
+from courses.views import LessonStatisticView
 
 lesson_creation_urlpatterns = [
     path('', views.LessonCreateView.as_view(), name='create-lesson'),
@@ -35,8 +35,9 @@ urlpatterns = [
     path('download/<int:content_id>', views.DownloadCourseView.as_view(), name='download-guideline'),
     path('<int:course_id>/lessons', views.LessonsListView.as_view(), name='lessons'),
     path('<int:course_id>/createLesson/', include(lesson_creation_urlpatterns)),
-    path('lessonStats/', TemplateView.as_view(template_name='courses/lessonStats.html'), name='lesson_stats'),
-    path('schedule/', TemplateView.as_view(template_name='courses/schedule.html'), name='schedule'),
+    path('<int:lesson_id>/lessons_edit/', views.LessonUpdateView.as_view(), name='lessons-update'),
+    path('<int:lesson_id>/lessonStats/', LessonStatisticView.as_view(), name='lesson_stats'),
+    path('schedule/', views.ScheduleView.as_view(), name='schedule'),
     path('', TemplateView.as_view(template_name='courses/../templates/categories/categories.html'), name='courses_categories'),
     path('entities/', TemplateView.as_view(template_name='courses/../authors_works/templates/entities.html'), name='entities')
 ]

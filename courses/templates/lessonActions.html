@@ -1,77 +1,10 @@
-{% extends 'works_base.html' %}
+{% extends 'courses_base.html' %}
 {%load static%}
 {%get_media_prefix as MEDIA_PREFIX%}
 {% block head %}
     {{ block.super }}
     <link rel="stylesheet" href="{%static 'css/flatpickr.min.css' %}">
-    <style>
-        #lessonNameInput::placeholder {
-            text-align: center;
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-        textarea::placeholder {
-            color: #BAB8D7 !important;
-            font-weight: bold;
-        }
-        textarea:focus:placeholder-shown {
-            border: 2px solid #BAB8D7 ;
-        }
-        textarea:focus:not(:placeholder-shown) {
-            border: 2px solid var(--primary-color);
-        }
-        .flatpickr-calendar {
-            margin: auto;
-            border: none !important;
-            box-shadow: none !important;
-        }
-        .flatpickr-current-month {
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        .flatpickr-day.prevMonthDay, .flatpickr-day.nextMonthDay {
-            visibility: hidden;
-        }
-        .flatpickr-day {
-            border-radius: 50%;
-            transition: background 0.2s;
-        }
-        .flatpickr-day:hover {
-            background: #c9c3ff;
-        }
-        .flatpickr-day.today,  .flatpickr-day.selected {
-            background-color: var(--primary-color);
-            color: white;
-        }
-        .time-picker {
-            height: 7em;
-        }
-        .time-column {
-            height: 100%;
-            width: 3em;
-            overflow: hidden;
-            position: relative;
-        }
-        .value {
-            height: 2em;
-            line-height: 2em;
-            font-size: 1.5em;
-            opacity: 0.4;
-            transition: opacity 0.3s;
-            text-align: center;
-        }
-        .value.current {
-            border-top: #6c757d 1px solid;
-            border-bottom: #6c757d 1px solid;
-            font-weight: bold;
-            opacity: 1;
-        }
-        .colon {
-            font-size: 2em;
-            line-height: 1em;
-            user-select: none;
-        }
-    </style> 
+    <link rel="stylesheet" href="{% static 'courses/css/style.css' %}">
 {% endblock head %}
 {% block header %}
     {% include 'components/name_page.html' with name=course_name href="javascript:history.back()" %}
@@ -86,8 +19,7 @@
             {% endfor %}
         {% endif %}
         <form
-            method="POST"
-            action="{%url 'create-lesson' course_id %}">
+            method="POST">
             {% csrf_token %}
             <div class="w-50 h-100 m-auto pb-3 px-4 pt-5 appThemeColorBackground rounded-5">
                     <div class="d-flex-column bg-white h-100 p-4 rounded-5 text-center ">
@@ -102,22 +34,26 @@
                             style="height: 150px;"
                             placeholder="Описание:"></textarea> {% endcomment %}
                         {{ form.description }}
-                        <a class="d-block btn btn-success my-2 p-2 fs-5 fw-bold">
-                            Создать конференцию
-                        </a>
-                        <a class="d-block btn btn-success my-2 p-2 fs-5 fw-bold">
-                            Создать тест
-                        </a>
-                        <a 
-                            class="d-block btn btn-success my-2 p-2 fs-5 fw-bold"
-                            href="{%url 'content' course_id %}">
-                            Загрузить задание
-                        </a>
+
+                        {% block conference %}
+                            {% include 'components/lesson_action_link.html' with name="Создать конференцию" %}
+                        {% endblock %}
+
+                        {% block test %}
+                            {% include 'components/lesson_action_link.html' with name="Создать тест" %}
+                        {% endblock %}
+
+                        {% block task %}
+                            {% url 'content' course_id as content_url %}
+                            {% include 'components/lesson_action_link.html' with name="Загрузить задание" href=content_url %}
+                        {% endblock %}
                         {% comment %} <input
                             id="datetimeInput"
                             type="datetime-local"
                             hidden> {% endcomment %}
                         {{ form.lesson_date }}
+
+                        {% block choose_date_modal_button %}
                         <button 
                             class="d-inline-block btn btn-success my-2 px-4"
                             style="background-color: var(--primary-color);"
@@ -132,6 +68,7 @@
                                 <path d="M18.4996 18.5C18.8772 18.5 19.2417 18.6387 19.5238 18.8896C19.806 19.1405 19.9863 19.4863 20.0305 19.8613L20.0413 20.0417V24.6667C20.0408 25.0596 19.8904 25.4375 19.6206 25.7233C19.3509 26.009 18.9822 26.1809 18.5899 26.204C18.1977 26.227 17.8114 26.0994 17.5101 25.8472C17.2088 25.595 17.0151 25.2372 16.9687 24.847L16.9579 24.6667V21.5833C16.565 21.5829 16.187 21.4324 15.9013 21.1627C15.6156 20.8929 15.4436 20.5243 15.4206 20.132C15.3976 19.7398 15.5252 19.3535 15.7774 19.0522C16.0296 18.7509 16.3874 18.5572 16.7776 18.5108L16.9579 18.5H18.4996Z" fill="white"/>
                             </svg>
                         </button>
+                        {% endblock %}
                     </div>
             </div>
             <button
@@ -142,6 +79,8 @@
             </button>
         </form>
     </div>
+
+    {% block choose_date_modal %}
     <div 
         id="lessonChooseDateModal"
         class="modal fade"
@@ -151,7 +90,7 @@
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content appThemeColorBackground fw-bold rounded-5">
                 <div class="modal-header d-flex w-100 align-items-center position-relative px-5 border-0">
-                    {%include 'components/backward_button.html' with href="javascript:history.back()" is_modal=True%}
+                    {%include 'components/back_button.html' with href="javascript:history.back()" is_modal=True%}
                     <p class="d-inline-block bg-white position-absolute top-50 start-50 translate-middle py-2 px-4 fs-4 rounded-3">
                         Выберите время и дату
                     </p>
@@ -207,6 +146,8 @@
         <script src="{%static 'js/flatpickr.js'%}">
         </script>
     </div>
+    {% endblock %}
+
 {%endblock content%}
 {% block scripts %}
     {{ block.super }}

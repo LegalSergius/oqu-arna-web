@@ -1,8 +1,8 @@
-{% extends 'works_base.html' %}
+{% extends 'courses_base.html' %}
 {%load static%}
 {%get_media_prefix as MEDIA_PREFIX%}
 {% block header %}
-    {% include 'components/name_page.html' with name=course_name href="javascript:history.back()" %}
+    {% include 'components/name_page.html' with name=course.name href="javascript:history.back()" %}
 {% endblock %}
 {% block content %}
   <div
@@ -13,7 +13,8 @@
         <div 
           class="container lessonBox h-25 mb-4 p-3 rounded-4 appThemeColorBackground text-white d-flex flex-column justify-content-between"
           data-bs-toggle="modal"
-          data-bs-target="#lessonModal">
+          data-bs-target="#lessonModal"
+          data-lesson-pk="{{ lesson.pk }}">
           <div class="d-flex justify-content-between align-items-start mb-2">
             <strong>{{ lesson.name }}</strong>
             <span class="date">{{ lesson.start_date }}</span>
@@ -22,9 +23,9 @@
             <div class="flex-grow-1 text-dark px-2 d-flex">
               <strong class="fs-4">{{ lesson.description }}</strong>
             </div>
-            <div 
+            <div
               class="edit-btn d-flex justify-content-center align-items-center rounded-3 ms-2 p-1"
-              style="width: 80px; height: 80px; background-color: #D99A44;">
+              style="width: 60px; height: 60px; background-color: #D99A44;">
               <svg viewBox="0 0 39 41" fill="none" xmlns="http://www.w3.org/2000/svg" class="edit-icon m-auto w-75 h-75 ">
                 <path d="M27.2861 0.617127C27.671 0.221981 28.193 0 28.7373 0C29.2816 0 29.8036 0.221981 30.1886 0.617127L38.3992 9.04821C38.784 9.44348 39.0002 9.9795 39.0002 10.5384C39.0002 11.0973 38.784 11.6333 38.3992 12.0286L11.7146 39.4296C11.3297 39.8249 10.8077 40.0471 10.2633 40.0472H2.05267C1.50827 40.0472 0.986161 39.8251 0.601212 39.4299C0.216262 39.0346 0 38.4984 0 37.9394V29.5083C0.000116258 28.9494 0.216455 28.4133 0.601431 28.0182L21.1281 6.94044L27.2861 0.617127ZM22.5793 11.411L4.10533 30.381V35.8317H9.41353L27.8875 16.8617L22.5793 11.411ZM30.79 13.8813L34.0455 10.5384L28.7373 5.08771L25.4818 8.43063L30.79 13.8813Z" fill="white"/>
               </svg>
@@ -35,7 +36,7 @@
     </div>
   </div>
   <a
-    href="{%url 'create-lesson' 6 %}"
+    href="{%url 'create-lesson' course.pk %}"
     class="d-block btn text-light mx-auto mt-2 fs-4 fw-bold addLessonBackground border border-dark"
     style="background-color: var(--dark-green);">
     Добавить занятие
@@ -55,13 +56,15 @@
         </div>
         <div class="modal-body d-flex flex-column justify-content-center p-5 rounded-bottom-4">
           <a
+            id = 'edit-lesson'
             class="btn btn-success mb-3"
-            href="#">
+            href="">
             Настроить курс
           </a>
           <a
+            id="statistic"
             class="btn bg-light my-3 text-success"
-            href="#">
+            href="">
             Статистика курса
           </a>
           <a
@@ -73,4 +76,27 @@
       </div>
     </div>
   </div>
+
+    <script>
+        const statsModal = document.getElementById('lessonModal');
+
+        statsModal.addEventListener('show.bs.modal', function (event) {
+            // кнопка, которая вызвала открытие
+            const button = event.relatedTarget;
+
+            // читаем data-атрибуты
+            const lessonPk = button.getAttribute('data-lesson-pk');
+
+            // находим в модалке элементы для вставки
+            statsModal.querySelector('#statistic').href = `/courses/${lessonPk}/lessonStats/`;
+
+            statsModal.querySelector('#edit-lesson').href = `/courses/${lessonPk}/lessons_edit/`;
+
+
+        // --- при желании здесь же можно сделать AJAX-запрос
+        // fetch(`/api/user/${userId}/stats/`)
+        //   .then(res => res.json())
+        //   .then(data => { /* обновить остальной контент */ });
+        });
+    </script>
 {% endblock content %}

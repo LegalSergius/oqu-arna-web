@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from django.conf import settings
 from common.models import Content, Category
@@ -26,21 +27,33 @@ class Course(models.Model):
     def __str__(self):
         return self.name
 
+class LessonStatistics(models.Model):
+    user            = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_statistic')
+    conference      = models.BooleanField(default=False)
+    test            = models.BooleanField(default=False)
+    task            = models.BooleanField(default=False)
+
+    comment         = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.user}"
+
 
 class Lesson(models.Model):
-    name        = models.CharField(_('Название занятия'), max_length=128)
-    description = models.TextField(_('Описание занятия'))
-    lesson_date = models.DateTimeField(_('Дата проведения'))
-    duration    = models.DurationField(_('Продолжительность'), default=timedelta(minutes=60))
-    created_at  = models.DateTimeField(auto_now_add=True)
-    course      = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='lessons', verbose_name=_('Курс'))
-    assignments = models.ManyToManyField(Content, related_name='lessons', verbose_name=_('Материалы'), blank=True)
+    name            = models.CharField(_('Название занятия'), max_length=128)
+    description     = models.TextField(_('Описание занятия'))
+    lesson_date     = models.DateTimeField(_('Дата проведения'))
+    duration        = models.DurationField(_('Продолжительность'), default=timedelta(minutes=60))
+    lesson_statics  = models.ManyToManyField(LessonStatistics, related_name='lesson_statics')
+    created_at      = models.DateTimeField(auto_now_add=True)
+    course          = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='lessons', verbose_name=_('Курс'))
+    assignments     = models.ManyToManyField(Content, related_name='lessons', verbose_name=_('Материалы'), blank=True)
     class Meta:
         verbose_name = _('занятие')
         verbose_name_plural = _('занятия')
 
     def __str__(self):
-        return f"{self.name} ({self.course.name})"
+        return f"{self.name} ({self.course.name}) - {timezone.make_naive(self.lesson_date)}"
 
 
 class Conference(models.Model):

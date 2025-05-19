@@ -1,0 +1,66 @@
+#lessonNameInput::placeholder {
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+textarea::placeholder {
+    color: #BAB8D7 !important;
+    font-weight: bold;
+}
+textarea:focus:placeholder-shown {
+    border: 2px solid #BAB8D7 ;
+}
+textarea:focus:not(:placeholder-shown) {
+    border: 2px solid var(--primary-color);
+}
+.flatpickr-calendar {
+    margin: auto;
+    border: none !important;
+    box-shadow: none !important;
+}
+.flatpickr-current-month {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.flatpickr-day.prevMonthDay, .flatpickr-day.nextMonthDay {
+    visibility: hidden;
+}
+.flatpickr-day {
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+.flatpickr-day:hover {
+    background: #c9c3ff;
+}
+.flatpickr-day.today,  .flatpickr-day.selected {
+    background-color: var(--primary-color);
+    color: white;
+}
+.time-picker {
+    height: 7em;
+}
+.time-column {
+    height: 100%;
+    width: 3em;
+    overflow: hidden;
+    position: relative;
+}
+.value {
+    height: 2em;
+    line-height: 2em;
+    font-size: 1.5em;
+    opacity: 0.4;
+    transition: opacity 0.3s;
+    text-align: center;
+}
+.value.current {
+    border-top: #6c757d 1px solid;
+    border-bottom: #6c757d 1px solid;
+    font-weight: bold;
+    opacity: 1;
+}
+.colon {
+    font-size: 2em;
+    line-height: 1em;
+    user-select: none;
+}
