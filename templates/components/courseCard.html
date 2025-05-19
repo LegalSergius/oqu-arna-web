@@ -1,8 +1,8 @@
-{% if request.GET.personal_works == 'True' %}
+{% if item.is_access %}
     <a
         class="card cardShadow"
         data-id="{{item.id}}"
-        href="{%url 'lessons' item.id %}">
+        href="{% if request.user.is_educator %}{%url 'lessons' item.id %} {% else %} {%url 'lessons-student-list' item.id %} {% endif %}">
         <div class="appThemeColorBackground  d-flex align-items-center justify-content-center flex-shrink-0 h-25 text-center text-light">
             <p class="fs-6">
                 {{ item.name }}

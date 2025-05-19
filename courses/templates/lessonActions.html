@@ -28,22 +28,21 @@
                             style="color: var(--primary-color);">
                             Первое занятие
                         </p> {% endcomment %}
+
+
+
+                        {% block description %}
+
                         {{ form.name }}
-                        {% comment %} <textarea
-                            class="form-control w-100 px-3 mx-auto appThemeBorderColor"
-                            style="height: 150px;"
-                            placeholder="Описание:"></textarea> {% endcomment %}
+
                         {{ form.description }}
 
-                        {% block conference %}
+                        {% endblock %}
+
+                        {% block link_buttons %}
                             {% include 'components/lesson_action_link.html' with name="Создать конференцию" %}
-                        {% endblock %}
-
-                        {% block test %}
                             {% include 'components/lesson_action_link.html' with name="Создать тест" %}
-                        {% endblock %}
 
-                        {% block task %}
                             {% url 'content' course_id as content_url %}
                             {% include 'components/lesson_action_link.html' with name="Загрузить задание" href=content_url %}
                         {% endblock %}
@@ -71,12 +70,14 @@
                         {% endblock %}
                     </div>
             </div>
+            {% block button_form %}
             <button
                 type="submit"
                 class="btn d-block mx-auto mt-2 fs-3 px-5 text-white fw-bold"
                 style="background-color: var(--dark-green);">
                 &check;
             </button>
+            {% endblock %}
         </form>
     </div>
 

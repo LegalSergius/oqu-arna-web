@@ -2,7 +2,8 @@
 {%load static%}
 {%get_media_prefix as MEDIA_PREFIX%}
 {% block header %}
-    {% include 'components/name_page.html' with name=course.name href="javascript:history.back()" %}
+    {% url 'courses' course.category.pk as course_url %}
+    {% include 'components/name_page.html' with name=course.name href=course_url %}
 {% endblock %}
 {% block content %}
   <div
@@ -17,7 +18,7 @@
           data-lesson-pk="{{ lesson.pk }}">
           <div class="d-flex justify-content-between align-items-start mb-2">
             <strong>{{ lesson.name }}</strong>
-            <span class="date">{{ lesson.start_date }}</span>
+            <span class="date">{{ lesson.lesson_date }}</span>
           </div>
           <div class="d-flex flex-grow-1 align-items-stretch bg-light-subtle rounded-3 p-2">
             <div class="flex-grow-1 text-dark px-2 d-flex">
@@ -91,6 +92,7 @@
             statsModal.querySelector('#statistic').href = `/courses/${lessonPk}/lessonStats/`;
 
             statsModal.querySelector('#edit-lesson').href = `/courses/${lessonPk}/lessons_edit/`;
+
 
 
         // --- при желании здесь же можно сделать AJAX-запрос

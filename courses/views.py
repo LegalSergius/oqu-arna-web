@@ -1,13 +1,17 @@
+import tempfile
+import zipfile
 from collections import OrderedDict
 from multiprocessing.reduction import send_handle
 
 from django.contrib.auth import get_user_model
-from django.http import JsonResponse, Http404, HttpResponseRedirect
+from django.http import JsonResponse, Http404, HttpResponseRedirect, FileResponse
 from django.conf import settings
 from django.contrib import messages
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.views.generic.edit import FormMixin
+
 from common.views import CategoriesView, EntitiesListView, file_response
-from django.views.generic import View, CreateView, DetailView, ListView, TemplateView, UpdateView
+from django.views.generic import View, CreateView, DetailView, ListView, TemplateView, UpdateView, RedirectView
 from django.urls import reverse_lazy
 
 from courses import models
@@ -27,6 +31,34 @@ from datetime import datetime, time, timedelta
 
 from django.utils import timezone
 from django.db.models import Min, Max
+
+def file_response(request, lesson):
+    contents = lesson.assignments.all()
+
+    if not contents.exists():
+        redirect('courses')
+
+    temp_file = tempfile.TemporaryFile()
+
+    cont = None
+    with zipfile.ZipFile(temp_file, 'w', zipfile.ZIP_DEFLATED) as zf:
+        for content in contents:
+            cont = content
+            print(content)
+            arcname = os.path.basename(content.file.name)
+            zf.write(content.file.path, arcname=arcname)
+
+    print(cont)
+
+    temp_file.seek(0)
+
+    return FileResponse(
+        temp_file,
+        as_attachment=True,
+        filename=cont.file_name,
+        content_type='application/zip',
+    )
+
 
 DAYS_RU = [
     'понедельник', 'вторник', 'среда',
@@ -54,19 +86,6 @@ def _fill_to_seven(day_date: datetime, day_items: list[dict]) -> list[dict]:
 
 
 def build_week_schedule(*, week_index: int | None = None, first_date, last_date, filters=dict()) -> list[dict]:
-    """
-    Возвращает расписание недели в виде
-    [
-        {'понедельник': [ {'start': …, 'end': …, 'title': …}, … × 7 ]},
-        …
-        {'суббота':    [ … ]}
-    ]
-    Если week_index — None, берётся «текущая» (самая последняя) неделя.
-    «Неделя 1» — та, где находится самый ранний Lesson.
-    """
-       # импорт внутри, чтоб не зациклилось
-
-    # границы всей выборки
 
     # номер запрашиваемой недели
 
@@ -76,7 +95,7 @@ def build_week_schedule(*, week_index: int | None = None, first_date, last_date,
 
     # понедельник нужной недели
     week0_monday = first_date - timedelta(days=first_date.weekday())
-    monday = week0_monday + timedelta(weeks=week_index+1)
+    monday = week0_monday + timedelta(weeks=week_index)
     sunday = monday + timedelta(days=6)
 
     # все занятия этой недели
@@ -164,6 +183,25 @@ class CoursesListView(EntitiesListView):
 
         return filter
 
+    def get_context_data(self, **kwargs):
+        context = super(CoursesListView, self).get_context_data(**kwargs)
+
+        courses = context['courses']
+
+        for course in courses:
+            is_access = False
+            if self.request.user.is_educator:
+                is_access = course.creator == self.request.user
+            else:
+                is_access = course.participants.filter(pk=self.request.user.pk).exists()
+
+            course.is_access = is_access
+
+        context['courses'] = courses
+
+        return context
+
+
     
 class CourseCreateView(CreateView):
     model = Course
@@ -241,7 +279,12 @@ class DownloadCourseView(View):
             return Http404('Запрашиваемый файл тематики курсов не может быть скачан. Может быть, он был удалён.')
         
         return file_response(course_content)
-    
+
+class DownloadTaskView(View):
+    def get(self, request, lesson_id):
+        lesson = Lesson.objects.get(pk=lesson_id)
+        if lesson.course.participants.filter(pk=self.request.user.pk).exists():
+            return file_response(request, lesson)
 
 class LessonsListView(ListView):
     model = Lesson
@@ -261,11 +304,13 @@ class LessonsListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-    
+
         context['course'] = self.course
 
         return context
 
+class LessonsStudentListView(LessonsListView):
+    template_name = 'course_detail.html'
 
 class LessonCreateView(CreateView):
     model = Lesson
@@ -455,6 +500,14 @@ class LessonStatisticView(TemplateView):
         return self.render_to_response(self.get_context_data(**kwargs))
 
 
+class LessonDetailView(DetailView):
+    model = Lesson
+    template_name = 'lessons_detail.html'
+    context_object_name = 'lesson'
+    pk_url_kwarg = 'lesson_id'
+
+
+
 class ScheduleView(TemplateView):
     template_name = 'schedule.html'   # ваш готовый шаблон
 
@@ -480,6 +533,10 @@ class ScheduleView(TemplateView):
 
         now = timezone.now()
 
+        if first_date.date() >= now.date():
+            print("true",)
+            first_date = now
+        print("sfadsfadsfadsfads:", first_date.date(), now.date())
         options = []
 
         d = first_date - timedelta(days=first_date.weekday())
@@ -492,7 +549,7 @@ class ScheduleView(TemplateView):
             options.append((f"{d.day}.{d.month:02d} - {next_day.day}.{next_day.month:02d}", week_index))
             d += timedelta(days=7)
 
-        now_week_index = ((now - first_date).days // 7)
+        now_week_index = ((last_date - first_date).days // 7)
 
         week_index = kwargs.pop('week')
 

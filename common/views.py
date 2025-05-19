@@ -14,6 +14,9 @@ import os, uuid
 
 User = get_user_model()
 
+
+
+
 class SearchView(ListView):
     field_for_filtering = ''
 
