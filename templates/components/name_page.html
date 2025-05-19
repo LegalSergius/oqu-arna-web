@@ -1,7 +1,11 @@
 {% load static %}
 
 <div class="d-flex align-items-center justify-content-between w-100 px-4">
-    {% include 'components/back_button.html' with href=href %}
-    <h1 class="text-white">{{ name }}</h1>
+    {% if href %}
+        {% include 'components/back_button.html' with href=href %}
+    {% else %}
+        {% include 'components/back_button.html' with href="javascript:history.back()" %}
+    {% endif %}
+    <h3 class="text-white">{{ name }}</h3>
     <div></div>
 </div>

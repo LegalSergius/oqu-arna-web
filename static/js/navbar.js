@@ -19,6 +19,7 @@ class NavbarElement{
 
         //Создание элементов
         this.navbarElement = document.createElement('a');
+        this.navbarElement.href = this.href;
         this.navbarElement.classList.add('navbar-element');
         this.navbarElement.classList.add('btn');
 

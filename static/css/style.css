@@ -9,15 +9,13 @@
     --font-family-headlines: "Krona One" Inter;
 
     --content-layout-bottom-padding: 100px;
-    --content-layout-top-padding: 70px;
+    --content-layout-top-padding: 50px;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
-    
 }
 
 
@@ -64,7 +62,7 @@ body {
     background-color: var(--primary-color);
     border-radius: 0 0 30px 30px;
 
-    padding: 10px;
+    padding: 5px;
 
     position: fixed;
 

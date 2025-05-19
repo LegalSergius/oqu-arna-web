@@ -1,0 +1,31 @@
+{% extends 'lessonActions.html' %}
+
+{% block description %}
+
+    <span class="form-control fs-3 mb-2 text-center border-0 contentAppThemeColor" style="color: var(--primary-color); background: var(--background-page-color);">
+        {{ lesson.name }}
+    </span>
+
+    <span class="form-control w-100 text px-3 appThemeBorderColor" style="height: 170px; color: var(--primary-color); background: var(--background-page-color);">
+        {{ lesson.description }}
+    </span>
+{% endblock %}
+
+{% block button_form %}
+{% endblock %}
+
+{% block link_buttons %}
+
+    {% include 'components/lesson_action_link.html' with name="Конференция" %}
+    {% include 'components/lesson_action_link.html' with name="Тест" %}
+
+    {% url 'download-task' lesson.pk as content_url %}
+    {% include 'components/lesson_action_link.html' with name="Задание" href=content_url %}
+
+{% endblock %}
+
+{% block choose_date_modal_button %}
+{% endblock %}
+
+{% block choose_date_modal %}
+{% endblock %}
