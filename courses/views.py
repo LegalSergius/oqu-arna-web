@@ -32,11 +32,12 @@ from datetime import datetime, time, timedelta
 from django.utils import timezone
 from django.db.models import Min, Max
 
-def file_response(request, lesson):
+def file_response_zip(request, lesson):
     contents = lesson.assignments.all()
 
     if not contents.exists():
-        redirect('courses')
+        messages.error(request, 'У этого урока нету материалов')
+        return
 
     temp_file = tempfile.TemporaryFile()
 
@@ -45,7 +46,7 @@ def file_response(request, lesson):
         for content in contents:
             cont = content
             print(content)
-            arcname = os.path.basename(content.file.name)
+            arcname = os.path.basename(content.file_name)
             zf.write(content.file.path, arcname=arcname)
 
     print(cont)
@@ -284,7 +285,12 @@ class DownloadTaskView(View):
     def get(self, request, lesson_id):
         lesson = Lesson.objects.get(pk=lesson_id)
         if lesson.course.participants.filter(pk=self.request.user.pk).exists():
-            return file_response(request, lesson)
+            response = file_response_zip(request, lesson)
+
+            if response:
+                return response
+
+        return redirect('lessons-student-list', course_id=lesson.course.id)
 
 class LessonsListView(ListView):
     model = Lesson

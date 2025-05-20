@@ -9674,3 +9674,102 @@ Traceback (most recent call last):
   File "D:\code\oquArna\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
     raise NoReverseMatch(msg)
 django.urls.exceptions.NoReverseMatch: Reverse for 'courses' with no arguments not found. 1 pattern(s) tried: ['courses/(?P<category>[0-9]+)\\Z']
+2025-05-20 09:13:50,253 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-20 09:13:52,150 [WARNING] django.request: Not Found: /
+2025-05-20 09:13:52,271 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-20 09:17:37,873 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\courses\views.py changed, reloading.
+2025-05-20 09:17:38,511 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-20 09:21:21,327 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\courses\views.py changed, reloading.
+2025-05-20 09:21:22,812 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-20 09:22:12,674 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\courses\views.py changed, reloading.
+2025-05-20 09:22:13,223 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-20 09:22:42,990 [ERROR] django.request: Internal Server Error: /courses/download_task/49
+Traceback (most recent call last):
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\code\oquArna\oqu-arna-web\courses\views.py", line 292, in get
+    response = file_response(request, lesson)
+  File "D:\code\oquArna\oqu-arna-web\courses\views.py", line 39, in file_response
+    messages.error('У этого урока нету материалов')
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: error() missing 1 required positional argument: 'message'
+2025-05-20 09:23:08,539 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\courses\views.py changed, reloading.
+2025-05-20 09:23:09,180 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-20 09:23:10,124 [ERROR] django.request: Internal Server Error: /courses/download_task/49
+Traceback (most recent call last):
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\code\oquArna\oqu-arna-web\courses\views.py", line 297, in get
+    return redirect('lesson_student_list', course_id=lesson.course.id)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'lesson_student_list' not found. 'lesson_student_list' is not a valid view function or pattern name.
+2025-05-20 09:23:11,840 [ERROR] django.request: Internal Server Error: /courses/download_task/49
+Traceback (most recent call last):
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\code\oquArna\oqu-arna-web\courses\views.py", line 297, in get
+    return redirect('lesson_student_list', course_id=lesson.course.id)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'lesson_student_list' not found. 'lesson_student_list' is not a valid view function or pattern name.
+2025-05-20 09:24:16,978 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\courses\views.py changed, reloading.
+2025-05-20 09:24:17,601 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-20 09:24:27,878 [WARNING] django.security.csrf: Forbidden (CSRF token from POST incorrect.): /admin/courses/lesson/49/change/
+2025-05-20 09:24:53,097 [ERROR] django.request: Internal Server Error: /courses/download_task/49
+Traceback (most recent call last):
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\oquArna\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\code\oquArna\oqu-arna-web\courses\views.py", line 292, in get
+    response = file_response(request, lesson)
+  File "D:\code\oquArna\oqu-arna-web\courses\views.py", line 49, in file_response
+    arcname = os.path.basename(content.name)
+                               ^^^^^^^^^^^^
+AttributeError: 'Content' object has no attribute 'name'
+2025-05-20 09:25:18,912 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\courses\views.py changed, reloading.
+2025-05-20 09:25:19,737 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-20 09:26:03,350 [WARNING] django.security.csrf: Forbidden (CSRF token from POST incorrect.): /users/login/
+2025-05-20 09:27:28,169 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\courses\views.py changed, reloading.
+2025-05-20 09:27:28,804 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
