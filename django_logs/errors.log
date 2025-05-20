@@ -6676,3 +6676,7 @@ Not Found: /users/profile/documents/url 'users:documents'
 Not Found: /users/profile/documents/url 'users:profile'
 2025-05-19 14:12:05,526 [WARNING] django.request C:\Users\royalka\Work\.venv\Lib\site-packages\django\utils\log.py:248
 Not Found: /
+2025-05-20 18:34:52,646 [WARNING] django.request D:\code\oquArna\.venv\Lib\site-packages\django\utils\log.py:248
+Not Found: /
+2025-05-20 18:34:52,751 [WARNING] django.request D:\code\oquArna\.venv\Lib\site-packages\django\utils\log.py:248
+Not Found: /favicon.ico

@@ -7657,3 +7657,13 @@
 2025-05-20 19:03:02,978 [SQL] (0.000) SELECT "django_content_type"."app_label" AS "content_type__app_label", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id"); args=(); alias=default
 2025-05-20 19:03:03,689 [SQL] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2025-05-20 13:03:03.677616' AND "django_session"."session_key" = 'sohj90ylar3xzarutb6luuwwxwfdbhrf') LIMIT 21; args=('2025-05-20 13:03:03.677616', 'sohj90ylar3xzarutb6luuwwxwfdbhrf'); alias=default
 2025-05-20 19:03:03,698 [SQL] (0.000) SELECT "users_customuser"."id", "users_customuser"."password", "users_customuser"."last_login", "users_customuser"."is_superuser", "users_customuser"."username", "users_customuser"."first_name", "users_customuser"."last_name", "users_customuser"."is_staff", "users_customuser"."is_active", "users_customuser"."date_joined", "users_customuser"."email", "users_customuser"."full_name", "users_customuser"."phone_number", "users_customuser"."organization", "users_customuser"."country", "users_customuser"."city", "users_customuser"."is_educator", "users_customuser"."avatar" FROM "users_customuser" WHERE "users_customuser"."id" = 1 LIMIT 21; args=(1,); alias=default
+2025-05-20 18:34:48,871 [SQL] (0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-20 18:34:48,875 [SQL] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-05-20 18:49:17,862 [SQL] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2025-05-20 18:49:17,864 [SQL] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default

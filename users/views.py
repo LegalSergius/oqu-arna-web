@@ -35,7 +35,7 @@ class ActivateUserPasswordResetConfirmView(PasswordResetConfirmView):
         return response
 
 
-class SendCodeToEmailView(View):
+class SendCodeToEmailView(LoginRequiredMixin, View):
     def get(self, request):
 
         email=request.session.get('email')
@@ -58,11 +58,11 @@ class SendCodeToEmailView(View):
         return redirect(after_url)
 
 
-class HomeView(View):
+class HomeView(LoginRequiredMixin, View):
     def get(self, request):
         return render(request, 'index.html')
 
-class LoginView(View):
+class LoginView(LoginRequiredMixin, View):
     def get(self, request):
         return render(request, 'login.html')
 
@@ -82,12 +82,12 @@ class LoginView(View):
 
         return render(request, 'login.html')
 
-class LogoutView(View):
+class LogoutView(LoginRequiredMixin, View):
     def get(self, request):
         logout(request)
         return redirect('users:login')
 
-class EntryEmailView(View):
+class EntryEmailView(LoginRequiredMixin, View):
     template_name = 'entry_email.html'
     success_url = 'users:send-code'
     page_to_go_after_sending = 'users:verification-code'
@@ -125,7 +125,7 @@ class EntryEmailView(View):
 
         return render(request, self.template_name)
 
-class VerificationCodeView(View):
+class VerificationCodeView(LoginRequiredMixin, View):
     template_name = 'verification_code.html'
     unsuccessful_url = None
 
@@ -159,7 +159,7 @@ class VerificationCodeView(View):
 
         return render(request, self.template_name)
 
-class ResetPasswordView(View):
+class ResetPasswordView(LoginRequiredMixin, View):
     template_name = 'reset_password.html'
     success_url = 'users:login'
     unsuccessful_url = 'users:login'
@@ -228,7 +228,7 @@ class RegisterResetPasswordView(ResetPasswordView):
         return user
 
 
-class   ProfileView(View):
+class   ProfileView(LoginRequiredMixin, View):
     def get(self, request):
         return render(request, 'profile.html')
 

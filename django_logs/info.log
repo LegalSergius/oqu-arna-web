@@ -6570,3 +6570,9 @@ django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '
 2025-05-19 14:49:08,058 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
 2025-05-19 14:49:11,434 [INFO] django.utils.autoreload: C:\Users\royalka\Work\oqu-arna-web\users\views.py changed, reloading.
 2025-05-19 14:49:11,936 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-20 18:33:10,383 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-20 18:34:48,724 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-20 18:34:52,646 [WARNING] django.request: Not Found: /
+2025-05-20 18:34:52,751 [WARNING] django.request: Not Found: /favicon.ico
+2025-05-20 18:49:17,011 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\courses\views.py changed, reloading.
+2025-05-20 18:49:17,761 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
