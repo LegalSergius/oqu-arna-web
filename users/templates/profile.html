@@ -34,7 +34,7 @@
     <div id="avatarModal" class="modal-avatar">
         <div class="modal-avatar-content">
             <h4>Фото профиля</h4>
-            {% if request.user.avatar %}
+
                 <!-- Загрузка фото -->
                 <form method="post" action="{% url 'users:update-avatar' %}" enctype="multipart/form-data">
                     {% csrf_token %}
@@ -51,7 +51,7 @@
                     {% csrf_token %}
                     <button type="submit" class="btn white-btn">Удалить фото</button>
                 </form>
-            {% endif %}
+
 
             <!-- Отмена -->
             <button onclick="closeAvatarModal()" class="btn cancel-btn">Отмена</button>
@@ -100,8 +100,8 @@
             </div>
 
             <div class="d-flex justify-content-between py-5 px-5">
-                <a href="{% url 'users:documents' %}" class="btn btn-base-2 btn-profile-base">Мои документы</a>
-                <button type="submit" class="btn btn-base-2 btn-outline-base">Сохранить изменения</button>
+                <a href="{% url 'users:documents' %}" class="btn btn-base-2 btn-outline-base">Мои документы</a>
+                <button type="submit" class="btn btn-base-2 btn-outline-base ">Сохранить изменения</button>
             </div>
         </form>
     </div>

@@ -5,6 +5,7 @@
     --dark-green: #398F68;
 
     --error-color: #DB2A2A;
+    --success-message: #3ad899;
 
     --font-family-headlines: "Krona One" Inter;
 
@@ -108,6 +109,7 @@ body {
     flex-direction: column;
 
     align-items: center;
+    justify-content: center;
 
     text-decoration: none;
 
@@ -116,6 +118,7 @@ body {
     border-radius: 14px;
 
     width: 75px;
+    height: 75px;
 
     transition: background-color 0.3s ease-in-out 0s,
                 opacity   0.3s ease-in-out 0s;
@@ -284,20 +287,27 @@ body {
 
 /*Error*/
 
-.error {
+.message {
     padding: 10px 150px;
     border-radius: 0 0 20px 20px;
 
-    position: absolute;
+    position: fixed;
     right: 50%;
     transform: translateX(+50%);
     top: 0;
 
-    background-color: var(--error-color);
 
-    z-index: 1001;
+    z-index: 10200;
+}
+
+.error {
+    background-color: var(--error-color);
 }
 
 .error-text {
     color: white;
+}
+
+.success {
+    background-color: var(--success-message);
 }
