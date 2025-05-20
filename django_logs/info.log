@@ -4582,3 +4582,240 @@ ValueError: could not convert string to float: ''
 2025-05-16 20:11:47,556 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
 2025-05-17 11:59:33,500 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
 2025-05-17 11:59:36,846 [WARNING] django.request: Not Found: /
+2025-05-17 13:13:59,797 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-17 13:14:25,506 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-17 13:15:45,389 [WARNING] django.request: Not Found: /
+2025-05-17 13:15:48,503 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-17 13:18:46,454 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\oquArnaWeb\settings.py changed, reloading.
+2025-05-17 13:18:48,357 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-17 13:20:00,537 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\oquArnaWeb\settings.py changed, reloading.
+2025-05-17 13:20:02,366 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-17 13:21:27,625 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\oquArnaWeb\settings.py changed, reloading.
+2025-05-17 13:21:29,408 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-17 13:23:24,387 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\oquArnaWeb\settings.py changed, reloading.
+2025-05-17 13:23:25,753 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-17 13:43:51,626 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\oquArnaWeb\settings.py changed, reloading.
+2025-05-17 13:43:53,770 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-17 13:44:17,389 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-17 13:44:18,680 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-17 13:45:43,593 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-17 13:45:46,176 [ERROR] django.request: Internal Server Error: /courses/zoom/oauth/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+AttributeError: 'str' object has no attribute 'get'
+2025-05-17 13:45:46,275 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-17 13:46:45,760 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-17 13:46:47,307 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-17 13:46:49,580 [ERROR] django.request: Internal Server Error: /courses/zoom/oauth/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\middleware\clickjacking.py", line 34, in process_response
+    response.headers["X-Frame-Options"] = self.get_xframe_options_value(
+AttributeError: 'dict' object has no attribute 'headers'
+2025-05-17 13:46:49,645 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-17 13:47:50,774 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-17 13:47:52,127 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-17 13:47:54,518 [ERROR] django.request: Internal Server Error: /courses/zoom/oauth/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\middleware\clickjacking.py", line 34, in process_response
+    response.headers["X-Frame-Options"] = self.get_xframe_options_value(
+AttributeError: 'dict' object has no attribute 'headers'
+2025-05-17 13:47:54,587 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-17 16:41:22,932 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-17 16:41:25,005 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-17 16:41:32,616 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-17 16:41:33,928 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-17 16:43:03,926 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-17 16:43:05,344 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-18 10:55:35,165 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-18 10:55:37,300 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-18 10:56:07,976 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-18 10:56:12,343 [WARNING] django.request: Not Found: /
+2025-05-18 10:56:17,893 [ERROR] django.request: Internal Server Error: /courses/zoom/oauth/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: get_zoom_access_token() takes 0 positional arguments but 1 was given
+2025-05-18 10:56:44,065 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-18 10:56:45,862 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-18 10:56:46,854 [ERROR] django.request: Internal Server Error: /courses/zoom/oauth/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+AttributeError: 'str' object has no attribute 'get'
+2025-05-18 10:59:39,998 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-18 10:59:42,033 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-18 10:59:44,750 [ERROR] django.request: Internal Server Error: /courses/zoom/oauth/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\middleware\clickjacking.py", line 34, in process_response
+    response.headers["X-Frame-Options"] = self.get_xframe_options_value(
+AttributeError: 'dict' object has no attribute 'headers'
+2025-05-18 10:59:44,984 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-18 11:00:22,181 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-18 11:00:23,463 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-18 11:00:27,467 [ERROR] django.request: Internal Server Error: /courses/zoom/oauth/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\middleware\clickjacking.py", line 34, in process_response
+    response.headers["X-Frame-Options"] = self.get_xframe_options_value(
+AttributeError: 'dict' object has no attribute 'headers'
+2025-05-18 11:00:27,559 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-18 11:00:54,066 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-18 11:00:55,259 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-18 11:01:01,973 [ERROR] django.request: Internal Server Error: /courses/zoom/oauth/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\middleware\clickjacking.py", line 34, in process_response
+    response.headers["X-Frame-Options"] = self.get_xframe_options_value(
+AttributeError: 'dict' object has no attribute 'headers'
+2025-05-18 11:01:02,078 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-18 11:01:19,701 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-18 11:01:21,295 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-18 11:01:22,402 [ERROR] django.request: Internal Server Error: /courses/zoom/oauth/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\middleware\clickjacking.py", line 34, in process_response
+    response.headers["X-Frame-Options"] = self.get_xframe_options_value(
+AttributeError: 'dict' object has no attribute 'headers'
+2025-05-18 11:01:22,455 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-19 13:52:34,513 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-19 13:52:42,824 [WARNING] django.request: Not Found: /
+2025-05-19 18:29:32,328 [ERROR] django.request: Internal Server Error: /courses/6/createLesson/
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\engine.py", line 214, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: components/backward_button.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: components/backward_button.html
+2025-05-19 19:02:36,141 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-19 19:02:37,484 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-19 19:10:10,595 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-19 19:10:11,493 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-19 19:10:20,809 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-19 19:10:21,696 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-19 19:10:33,028 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-19 19:10:33,995 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-19 19:13:59,974 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-19 19:14:00,851 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-19 19:14:20,959 [WARNING] django.request: Not Found: /courses/6/
+2025-05-19 19:14:45,873 [ERROR] django.request: Internal Server Error: /courses/6/lessonTemporarySave
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+TypeError: save_lesson_temporary() got an unexpected keyword argument 'course_id'
+2025-05-19 19:14:48,782 [ERROR] django.request: Internal Server Error: /courses/6/lessonTemporarySave
+Traceback (most recent call last):
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+TypeError: save_lesson_temporary() got an unexpected keyword argument 'course_id'
+2025-05-19 19:14:50,766 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-19 19:15:23,510 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-19 19:15:24,180 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-19 19:17:41,641 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\views.py changed, reloading.
+2025-05-19 19:17:42,297 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-19 19:17:56,772 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-19 19:17:57,505 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-19 19:18:20,842 [WARNING] django.request: Not Found: /courses/6/lessonTemporarySave
+2025-05-19 19:18:23,921 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-19 19:18:56,121 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-19 19:19:12,472 [WARNING] django.request: Not Found: /courses/lessonTemporarySave
+2025-05-19 19:19:13,399 [WARNING] django.request: Not Found: /courses/lessonTemporarySave
+2025-05-19 19:19:15,309 [WARNING] django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-19 19:20:36,988 [INFO] django.utils.autoreload: C:\Projects\OquArnaWeb\courses\urls.py changed, reloading.
+2025-05-19 19:20:37,777 [INFO] django.utils.autoreload: Watching for file changes with StatReloader

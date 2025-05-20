@@ -78,29 +78,14 @@
 {% endblock %}
 {% block content %}
     <div class="d-flex-column justify-content-center align-items-center w-75 h-100 m-auto p-5 fw-bold">
-        {% if messages %}
-            {% for message in messages %}
-                <script>
-                    alert('{{message|escapejs}}')
-                </script>
-            {% endfor %}
-        {% endif %}
         <form
+            id="lessonForm"
             method="POST"
             action="{%url 'create-lesson' course_id %}">
             {% csrf_token %}
             <div class="w-50 h-100 m-auto pb-3 px-4 pt-5 appThemeColorBackground rounded-5">
                     <div class="d-flex-column bg-white h-100 p-4 rounded-5 text-center ">
-                        {% comment %} <p
-                            class="fs-3 contentAppThemeColor"
-                            style="color: var(--primary-color);">
-                            Первое занятие
-                        </p> {% endcomment %}
                         {{ form.name }}
-                        {% comment %} <textarea
-                            class="form-control w-100 px-3 mx-auto appThemeBorderColor"
-                            style="height: 150px;"
-                            placeholder="Описание:"></textarea> {% endcomment %}
                         {{ form.description }}
                         <a class="d-block btn btn-success my-2 p-2 fs-5 fw-bold">
                             Создать конференцию
@@ -109,14 +94,11 @@
                             Создать тест
                         </a>
                         <a 
+                            id="downloadContentHref"
                             class="d-block btn btn-success my-2 p-2 fs-5 fw-bold"
                             href="{%url 'content' course_id %}">
                             Загрузить задание
                         </a>
-                        {% comment %} <input
-                            id="datetimeInput"
-                            type="datetime-local"
-                            hidden> {% endcomment %}
                         {{ form.lesson_date }}
                         <button 
                             class="d-inline-block btn btn-success my-2 px-4"
@@ -151,7 +133,7 @@
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content appThemeColorBackground fw-bold rounded-5">
                 <div class="modal-header d-flex w-100 align-items-center position-relative px-5 border-0">
-                    {%include 'components/backward_button.html' with href="javascript:history.back()" is_modal=True%}
+                    {%include 'components/back_button.html' with href="javascript:history.back()" is_modal=True%}
                     <p class="d-inline-block bg-white position-absolute top-50 start-50 translate-middle py-2 px-4 fs-4 rounded-3">
                         Выберите время и дату
                     </p>
@@ -214,6 +196,26 @@
     <script
         type="module" 
         src="{%static 'courses/js/render-date-time-pickers.js'%}">
+    </script>
+    <script>
+        document.getElementById('downloadContentHref').addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const form = document.getElementById('lessonForm');
+            const formData = new FormData(form);
+
+            fetch('/courses/lessonTemporarySave', {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}'
+                },
+                body: formData
+            }).then(response => {
+                if (response.ok) {
+                    window.location.href = this.href;
+                }
+            });
+        });
     </script>
     <script>
         function onSaveButtonClick() {

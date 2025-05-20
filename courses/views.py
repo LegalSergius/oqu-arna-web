@@ -1,9 +1,10 @@
-from django.http import JsonResponse, Http404, HttpResponseRedirect
+from django.http import JsonResponse, Http404, HttpResponseRedirect, HttpResponseForbidden
 from django.conf import settings
 from django.contrib import messages
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from common.views import CategoriesView, EntitiesListView, file_response
 from django.views.generic import View, CreateView, DetailView, ListView
+from django.views.decorators.http import require_POST
 from django.urls import reverse_lazy
 from courses.models import Course, Lesson
 from common.models import Category, Content
@@ -13,6 +14,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.core.files import File
 from pathlib import Path
 import os
+import requests, base64
 
 
 class CoursesCategoriesView(CategoriesView):
@@ -132,6 +134,15 @@ class LessonCreateView(CreateView):
     form_class = LessonForm
     template_name = 'lessonActions.html'
 
+    def get_initial(self):
+        initial = super().get_initial()
+        session_data = self.request.session.get('lesson_form_temp')
+
+        if session_data:
+            initial.update(session_data)
+        
+        return initial
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         course_id = self.kwargs.get('course_id')
@@ -150,7 +161,7 @@ class LessonCreateView(CreateView):
         return super().dispatch(request, *args, **kwargs)
     
     def form_invalid(self, form):
-        for field, errors in form.errors.items():
+        for field, _ in form.errors.items():
             if field == 'lesson_date':
                 messages.error(self.request, 'Для добавления занятия нужно определить дату проведения')
 
@@ -196,3 +207,90 @@ class LessonCreateView(CreateView):
 
     def get_success_url(self):
         return reverse_lazy('lessons', kwargs={'course_id': self.kwargs['course_id']})
+
+
+@require_POST
+def save_lesson_temporary(request):
+    request.session['lesson_form_temp'] = request.POST.dict()
+
+    return JsonResponse({'status': 'ok'})
+
+
+def zoom_oauth_start(request):
+    token_url = "https://zoom.us/oauth/token"
+    
+    response = requests.post(
+        token_url,
+        headers={
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        data={
+            'grant_type': 'account_credentials',
+            'account_id': settings.ZOOM_ACCOUNT_ID,
+        },
+        auth=(settings.ZOOM_CLIENT_ID, settings.ZOOM_CLIENT_SECRET)
+    )
+
+    print('response - ', response.json()['access_token'])
+    
+    if response.status_code == 200:
+        return response.json()
+    else:
+        raise Exception(f'Error getting token: {response.text}')
+    
+
+def get_zoom_access_token(request):
+    url = "https://zoom.us/oauth/token"
+    response = requests.post(
+        url,
+        params={
+            "grant_type": "account_credentials",
+            "account_id": settings.ZOOM_ACCOUNT_ID,
+        },
+        auth=(settings.ZOOM_CLIENT_ID, settings.ZOOM_CLIENT_SECRET)
+    )
+
+    if response.status_code == 200:
+        return response.json()["access_token"]
+    else:
+        raise Exception(f"Zoom token error: {response.text}")
+
+
+def create_zoom_meeting(topic, start_time, duration_minutes):
+    token = get_zoom_access_token()
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json"
+    }
+
+    body = {
+        "topic": topic,
+        "type": 2,  # Запланированная встреча
+        "start_time": start_time,  # в формате "2025-05-13T15:00:00Z"
+        "duration": duration_minutes,
+        "timezone": "Europe/Moscow",
+        "settings": {
+            "join_before_host": True,
+            "approval_type": 0,
+            "registration_type": 1,
+            "audio": "both",
+            "auto_recording": "cloud"
+        }
+    }
+
+    response = requests.post("https://api.zoom.us/v2/users/me/meetings", headers=headers, json=body)
+
+    if response.status_code == 201:
+        return response.json()
+    else:
+        raise Exception(f"Zoom meeting creation error: {response.text}")
+
+
+class CreateZoomMeetingView(View):
+    def get(self, request):
+        if not request.user.is_authenticated or not request.user.is_educator:
+            return HttpResponseForbidden('Нет прав')
+
+        access_token = request.GET.get('access_token')
+        meeting_info = create_zoom_meeting(access_token)
+        return JsonResponse(meeting_info)
