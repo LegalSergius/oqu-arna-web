@@ -3,7 +3,6 @@ from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.shortcuts import render, redirect
-from common.views import CategoriesView, EntitiesListView, file_response
 from django.views.generic import View, CreateView, DetailView, ListView, TemplateView, UpdateView, RedirectView
 from django.urls import reverse_lazy
 from django.utils import timezone
@@ -11,16 +10,17 @@ from django.db.models import Min, Max
 from courses import models
 from courses.models import Course, Lesson
 from common.models import Category, Content
+from common.views import CategoriesView, EntitiesListView, file_response
 from courses.forms import CourseForm, LessonForm
 from django.template.loader import render_to_string
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.files import File
 from pathlib import Path
 from datetime import datetime, time, timedelta
-import os, tempfile, zipfile
+import os, requests
+import tempfile, zipfile
 
 User = get_user_model()
-
 
 
 def file_response(request, lesson):
