@@ -22,9 +22,6 @@
 body {
     display: flex;
     flex-direction: column;
-
-    font-family: 'Inter', serif;
-
     background-color: var(--background-page-color);
 }
 
@@ -83,6 +80,7 @@ body {
 .navbar-container {
 
     display: flex;
+
     gap: 40px;
 
     align-items: center;

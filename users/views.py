@@ -7,11 +7,20 @@ from django.core.mail import send_mail
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views import View
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect, get_object_or_404
+from django.http import HttpResponseForbidden
+from .forms import DocumentUploadForm
+from .models import Document
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views import View
+from django.shortcuts import redirect
+from django.contrib import messages
 
 from smtplib import SMTPRecipientsRefused
 
 from .register_code import generate_code, save_code, get_code, delete_code
-from oquArnaWeb import settings
+
 
 User = get_user_model()
 
@@ -98,9 +107,12 @@ class EntryEmailView(View):
 
     def post(self, request):
         email = request.POST.get('email')
+
         users = User.objects.filter(email=email)
 
         if users.exists():
+            users_list = list(users)
+            user = users_list[0]
 
             user = users.first()
 
@@ -215,3 +227,86 @@ class RegisterResetPasswordView(ResetPasswordView):
 
         return user
 
+
+class   ProfileView(View):
+    def get(self, request):
+        return render(request, 'profile.html')
+
+    def post(self, request):
+        full_name = request.POST.get('full_name')
+        phone_number = request.POST.get('phone_number')
+
+        request.user.full_name = full_name
+
+        request.user.phone_number = phone_number
+
+        request.user.save()
+        return render(request, 'profile.html')
+
+
+class UpdateAvatarView(LoginRequiredMixin, View):
+    """Сохраняет файл в user.avatar"""
+    def post(self, request):
+        avatar_file = request.FILES.get('avatar')
+        if not avatar_file:
+            messages.error(request, 'Файл не выбран')
+            return redirect('users:profile')
+
+        request.user.avatar = avatar_file
+        request.user.save(update_fields=['avatar'])
+        messages.success(request, 'Фото профиля обновлено')
+        return redirect('users:profile')
+
+
+class DeleteAvatarView(LoginRequiredMixin, View):
+    """Удаляет аватар"""
+    def post(self, request):
+        if request.user.avatar:
+            request.user.avatar.delete(save=False)
+            request.user.avatar = None
+            request.user.save(update_fields=['avatar'])
+            messages.success(request, 'Фото профиля удалено')
+        return redirect('users:profile')
+
+@login_required
+def document_list(request):
+
+    docs = request.user.documents.all()
+    form = DocumentUploadForm(request.POST or None, request.FILES or None)
+
+    if form.is_valid():
+        new_doc = form.save(commit=False)
+        new_doc.user = request.user
+        new_doc.save()
+        return redirect('users:documents')
+
+    return render(request, 'documents/list.html', {
+        'docs': docs,
+        'form': form,
+    })
+
+
+@login_required
+def document_delete(request, pk):
+
+    doc = get_object_or_404(Document, pk=pk)
+    if doc.user != request.user and not request.user.is_staff:
+        return HttpResponseForbidden("Нельзя удалять чужие документы")
+    doc.delete()
+    return redirect('users:documents')
+
+class DocumentsView(View):
+    def get(self, request):
+        docs = request.user.documents.all()
+        return render(request, 'my_documents.html', {'docs': docs})
+
+    def post(self, request   ):
+        docs = request.user.documents.all()
+        for file in request.FILES.getlist('files'):
+            document = Document()
+            document.file = file
+            document.user = request.user
+            document.title = file.name
+            document.save()
+
+        return render(request, 'my_documents.html', {'docs': docs})
