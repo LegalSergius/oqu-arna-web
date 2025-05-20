@@ -1,7 +1,9 @@
 {% load widget_tweaks %}
+
 <input type="file" id="file" name="{{ widget.name }}">
-<label for="file" class="file-btn">Загрузить документ...</label>
-<span id="file-name" class="file-name mt-3"></span>
+<label for="file" class="file-btn mt-3">Загрузить документ...</label>
+<span id="file-name" class="file-name mt-1"></span>
+
 
 <script>
     const inputFile = document.getElementById('file');
@@ -14,5 +16,5 @@
         fileNameSpan.textContent = inputFile.files.length
             ? inputFile.files[0].name
             : '';
-});
+    });
 </script>

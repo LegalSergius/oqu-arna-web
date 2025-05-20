@@ -1,5 +1,11 @@
-<form method="get" class="d-flex align-self-center justify-content-center w-100">
+<form method="get" class="d-flex align-self-center justify-content-between w-100 px-4">
     {% block search_form %}
     {% endblock %}
+    {% if href_back %}
+        {% include 'components/back_button.html' with href=href_back %}
+    {% else %}
+        <div></div>
+    {% endif %}
     <input type="text" class="search" name="search" placeholder="Поиск..." value="{{ request.GET.search|default:'' }}">
+    <div></div>
 </form>

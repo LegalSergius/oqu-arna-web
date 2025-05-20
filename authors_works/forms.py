@@ -2,7 +2,7 @@ from django import forms
 from unicodedata import category
 
 import common.models
-from authors_works.models import AuthorWork
+from authors_works.models import AuthorWork, Status
 from . import widgets
 from .widgets import CustomFileInput
 
@@ -34,14 +34,18 @@ class AuthorWorkForm(forms.ModelForm):
             ),
 
             'category': widgets.SelectInput(
-                text="Категория"
+                text="Категория",
+
             ),
 
             'status': widgets.RadioInput,
             'price': widgets.InputGroupText(
                 text="Цена:",
+                input_type="number",
+                default="0",
                 attrs={
-                    "class": "input-group input-info my-3"
+                    "class": "input-group input-info mt-3",
+                    "id": "price"
                 }
             ),
         }
@@ -49,8 +53,6 @@ class AuthorWorkForm(forms.ModelForm):
     def save(self, commit=True):
 
         instance = super().save(commit=False)
-
-        print(instance)
 
         uploads_file = self.cleaned_data.get('upload')
         if uploads_file:

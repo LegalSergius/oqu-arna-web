@@ -1,0 +1,20 @@
+{% load static %}
+{% if is_modal%}
+    <button 
+        class="rounded-2 border-0"
+        data-bs-dismiss="modal">
+        <img
+            width="30"
+            height="30"
+            src="{% static 'icons/back.svg' %}"
+            alt="логотип">
+    </button>
+{%else%}
+    <a href="{{ href }}">
+        <img
+            width="30"
+            height="30"
+            src="{% static 'icons/back.svg' %}"
+            alt="логотип">
+    </a>
+{%endif%}

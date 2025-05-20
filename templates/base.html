@@ -14,6 +14,8 @@
 </head>
 <body>
 
+    {% include 'components/error.html' with messages=messages %}
+
     <div class="header">
         {% block header %}
         {% endblock %}

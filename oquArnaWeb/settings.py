@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "users",
     "authors_works",
     "common",
+    "courses"
 ]
 
 MIDDLEWARE = [
@@ -53,6 +54,8 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+LOGIN_URL = 'users:login'
 
 ROOT_URLCONF = "oquArnaWeb.urls"
 
@@ -132,11 +135,11 @@ CACHES = {
 
 LANGUAGE_CODE = "ru-ru"
 
+USE_TZ = True
+
 TIME_ZONE = "UTC"
 
 USE_I18N = True
-
-USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)

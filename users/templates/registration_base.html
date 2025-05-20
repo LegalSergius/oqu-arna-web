@@ -1,4 +1,4 @@
-{% extends "log_base.html" %}
+{% extends "reset_password_base.html" %}
 
 {% block head %}
 
@@ -15,13 +15,3 @@
 
 {% endblock %}
 
-{% block log_form_content %}
-
-<button type="submit" class="btn btn-base py-2" id="register-button">Продолжить</button>
-{% endblock %}
-
-{% block log_post_content %}
-
-<p class="mt-3">Уже есть аккаунт? <a href="{% url 'users:login' %}" class="log-link fw-bold">Вход!</a></p>
-
-{% endblock %}

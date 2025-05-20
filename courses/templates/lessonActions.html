@@ -1,0 +1,178 @@
+{% extends 'courses_base.html' %}
+{%load static%}
+{%get_media_prefix as MEDIA_PREFIX%}
+{% block head %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{%static 'css/flatpickr.min.css' %}">
+    <link rel="stylesheet" href="{% static 'courses/css/style.css' %}">
+{% endblock head %}
+{% block header %}
+    {% include 'components/name_page.html' with name=course_name href="javascript:history.back()" %}
+{% endblock %}
+{% block content %}
+    <div class="d-flex-column justify-content-center align-items-center w-75 h-100 m-auto p-5 fw-bold">
+        {% if messages %}
+            {% for message in messages %}
+                <script>
+                    alert('{{message|escapejs}}')
+                </script>
+            {% endfor %}
+        {% endif %}
+        <form
+            method="POST">
+            {% csrf_token %}
+            <div class="w-50 h-100 m-auto pb-3 px-4 pt-5 appThemeColorBackground rounded-5">
+                    <div class="d-flex-column bg-white h-100 p-4 rounded-5 text-center ">
+                        {% comment %} <p
+                            class="fs-3 contentAppThemeColor"
+                            style="color: var(--primary-color);">
+                            Первое занятие
+                        </p> {% endcomment %}
+
+
+
+                        {% block description %}
+
+                        {{ form.name }}
+
+                        {{ form.description }}
+
+                        {% endblock %}
+
+                        {% block link_buttons %}
+                            {% include 'components/lesson_action_link.html' with name="Создать конференцию" %}
+                            {% include 'components/lesson_action_link.html' with name="Создать тест" %}
+
+                            {% url 'content' course_id as content_url %}
+                            {% include 'components/lesson_action_link.html' with name="Загрузить задание" href=content_url %}
+                        {% endblock %}
+                        {% comment %} <input
+                            id="datetimeInput"
+                            type="datetime-local"
+                            hidden> {% endcomment %}
+                        {{ form.lesson_date }}
+
+                        {% block choose_date_modal_button %}
+                        <button 
+                            class="d-inline-block btn btn-success my-2 px-4"
+                            style="background-color: var(--primary-color);"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#lessonChooseDateModal">
+                            <p class="d-inline-block fs-5 m-auto fw-bold">
+                                Создать расписание
+                            </p>
+                            <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.6667 3.08301C25.0443 3.08306 25.4087 3.22169 25.6909 3.47261C25.9731 3.72353 26.1534 4.06929 26.1975 4.4443L26.2083 4.62467V6.16634H27.75C28.9297 6.16628 30.0648 6.61701 30.9232 7.42632C31.7815 8.23563 32.2981 9.34234 32.3673 10.52L32.375 10.7913V29.2913C32.3751 30.471 31.9243 31.6062 31.115 32.4645C30.3057 33.3228 29.199 33.8394 28.0213 33.9086L27.75 33.9163H9.25C8.0703 33.9164 6.93516 33.4657 6.07685 32.6564C5.21853 31.8471 4.70192 30.7403 4.63271 29.5627L4.625 29.2913V10.7913C4.62493 9.61164 5.07567 8.47651 5.88498 7.61819C6.69429 6.75987 7.801 6.24326 8.97867 6.17405L9.25 6.16634H10.7917V4.62467C10.7921 4.23174 10.9426 3.85379 11.2123 3.56807C11.4821 3.28234 11.8507 3.1104 12.243 3.08737C12.6352 3.06434 13.0215 3.19196 13.3228 3.44417C13.6241 3.69637 13.8178 4.05411 13.8642 4.4443L13.875 4.62467V6.16634H23.125V4.62467C23.125 4.2158 23.2874 3.82367 23.5765 3.53455C23.8657 3.24543 24.2578 3.08301 24.6667 3.08301ZM29.2917 13.8747H7.70833V28.7132C7.70833 29.8001 8.30342 30.6958 9.06962 30.8191L9.25 30.833H27.75C28.5409 30.833 29.193 30.0159 29.2809 28.9599L29.2917 28.7132V13.8747Z" fill="white"/>
+                                <path d="M18.4996 18.5C18.8772 18.5 19.2417 18.6387 19.5238 18.8896C19.806 19.1405 19.9863 19.4863 20.0305 19.8613L20.0413 20.0417V24.6667C20.0408 25.0596 19.8904 25.4375 19.6206 25.7233C19.3509 26.009 18.9822 26.1809 18.5899 26.204C18.1977 26.227 17.8114 26.0994 17.5101 25.8472C17.2088 25.595 17.0151 25.2372 16.9687 24.847L16.9579 24.6667V21.5833C16.565 21.5829 16.187 21.4324 15.9013 21.1627C15.6156 20.8929 15.4436 20.5243 15.4206 20.132C15.3976 19.7398 15.5252 19.3535 15.7774 19.0522C16.0296 18.7509 16.3874 18.5572 16.7776 18.5108L16.9579 18.5H18.4996Z" fill="white"/>
+                            </svg>
+                        </button>
+                        {% endblock %}
+                    </div>
+            </div>
+            {% block button_form %}
+            <button
+                type="submit"
+                class="btn d-block mx-auto mt-2 fs-3 px-5 text-white fw-bold"
+                style="background-color: var(--dark-green);">
+                &check;
+            </button>
+            {% endblock %}
+        </form>
+    </div>
+
+    {% block choose_date_modal %}
+    <div 
+        id="lessonChooseDateModal"
+        class="modal fade"
+        tabindex="-1"
+        aria-labelledby="lessonChooseDateModal"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content appThemeColorBackground fw-bold rounded-5">
+                <div class="modal-header d-flex w-100 align-items-center position-relative px-5 border-0">
+                    {%include 'components/back_button.html' with href="javascript:history.back()" is_modal=True%}
+                    <p class="d-inline-block bg-white position-absolute top-50 start-50 translate-middle py-2 px-4 fs-4 rounded-3">
+                        Выберите время и дату
+                    </p>
+                </div>
+                <div 
+                    class="modal-body d-flex flex-column justify-content-center p-5 mt-1 m-5 rounded-4"
+                    style="background-color: var(--background-page-color);">
+                    <div class="container">
+                        <div
+                            class="row gap-5 h-100"
+                            style="min-height: 350px;"> 
+                            <div class="col bg-white rounded-2 p-2">
+                                <div id="datePicker">
+                                </div>
+                            </div>
+                            <div
+                                class="col bg-white d-flex flex-column align-items-center justify-content-between text-center rounded-2 p-3"
+                                style="min-height: 350px;">
+                                <h3 class="fw-bold">
+                                    Выберите время
+                                </h3>
+                                <div class="time-picker d-flex m-auto align-items-center jutify-content-center g-1">
+                                    <div class="time-column hours">
+                                        <div class="values">
+                                            <div class="value"></div>
+                                            <div class="value"></div>
+                                            <div class="value"></div>
+                                        </div>
+                                    </div>
+                                    <div class="p-2">
+                                        :
+                                    </div>
+                                    <div class="time-column minutes">
+                                        <div class="values">
+                                            <div class="value"></div>
+                                            <div class="value"></div>
+                                            <div class="value"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="btn d-inline-block mx-auto py-2 px-4 mt-4 fs-4 text-white fw-bold"
+                        style="background-color: var(--dark-green);"
+                        onclick="onSaveButtonClick()">
+                        Сохранить
+                    </button>
+                </div>   
+            </div>
+        </div>
+        <script src="{%static 'js/flatpickr.js'%}">
+        </script>
+    </div>
+    {% endblock %}
+
+{%endblock content%}
+{% block scripts %}
+    {{ block.super }}
+    <script src="{%static 'courses/js/ru.js'%}"></script>
+    <script
+        type="module" 
+        src="{%static 'courses/js/render-date-time-pickers.js'%}">
+    </script>
+    <script>
+        function onSaveButtonClick() {
+            const datePickerValue = document.getElementById('datePicker').value || new Date().toISOString().split('T')[0];
+            const timePickerHourValue =  document.querySelector('.hours .value.current').textContent;
+            const timePickerMinuteValue = document.querySelector('.minutes .value.current').textContent;
+
+            const datetime = `${datePickerValue}T${timePickerHourValue}:${timePickerMinuteValue}`;
+            const dateTimeInput = document.getElementById('dateTimeInput');
+            datetimeInput.value = datetime;
+
+            const lessonChooseDateModal = document.getElementById('lessonChooseDateModal');
+            const lessonChooseDateModalInstance = bootstrap.Modal.getInstance(lessonChooseDateModal);
+            
+            if (lessonChooseDateModalInstance) {
+                lessonChooseDateModalInstance.hide();
+            }
+        }   
+    </script>
+{% endblock scripts%}

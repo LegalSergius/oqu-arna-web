@@ -5,14 +5,18 @@ from django.forms import Widget, Select, RadioSelect, FileInput
 class InputGroupText(Widget):
     template_name = 'widgets/input_group.html'
 
-    def __init__(self, text='', **kwargs):
+    def __init__(self, text='', input_type='text', default="", **kwargs):
         super().__init__(**kwargs)
         self.text = text
+        self.input_type = input_type
+        self.default = default
 
     def get_context(self, name, value, attrs):
         context = super().get_context(name, value, attrs)
         context['widget'].update({
             'group_text': self.text,
+            'input_type': self.input_type,
+            'default': self.default,
         })
 
         return context
