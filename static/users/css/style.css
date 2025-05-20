@@ -390,8 +390,8 @@ body {
 .green-btn {
     background-color: #3CB371;
     color: white;
-    font-size: 30px;
-    padding: 15px 55px;
+    font-size: 35px;
+    padding: 15px 40px;
     border-radius: 18px;
 
 }
@@ -399,7 +399,7 @@ body {
 .white-btn {
     background-color: white;
     color: #3CB371;
-    font-size: 10px;
+    font-size: 35px;
     padding: 15px 100px;
     border-radius: 18px;
 }

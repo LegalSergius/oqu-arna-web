@@ -48,7 +48,7 @@
 {% block header %}
     <div class="header navbar-header-my-doc">
         {% url 'users:profile' as profile_url %}
-        {% include 'components/name_page.html' with name='Профиль' href=profile_url class='btn btn-base-2 btn-profile-base' %}
+        {% include 'components/name_page.html' with name='Мои документы' href=profile_url class='btn btn-base-2 btn-profile-base' %}
     </div>
 {% endblock %}
 

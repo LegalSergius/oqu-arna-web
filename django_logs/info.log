@@ -6557,3 +6557,16 @@ django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '
 2025-05-16 19:03:30,970 [WARNING] django.request: Not Found: /users/profile/documents/url 'users:documents'
 2025-05-16 19:04:36,204 [WARNING] django.request: Not Found: /users/profile/documents/url 'users:documents'
 2025-05-16 19:04:39,159 [WARNING] django.request: Not Found: /users/profile/documents/url 'users:profile'
+2025-05-19 14:12:02,104 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-19 14:12:05,526 [WARNING] django.request: Not Found: /
+2025-05-19 14:37:23,036 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-19 14:39:04,172 [INFO] django.utils.autoreload: C:\Users\royalka\Work\oqu-arna-web\users\urls.py changed, reloading.
+2025-05-19 14:39:04,784 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-19 14:39:13,184 [INFO] django.utils.autoreload: C:\Users\royalka\Work\oqu-arna-web\users\urls.py changed, reloading.
+2025-05-19 14:39:14,255 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-19 14:42:00,119 [INFO] django.utils.autoreload: C:\Users\royalka\Work\oqu-arna-web\users\views.py changed, reloading.
+2025-05-19 14:42:00,829 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-19 14:49:07,573 [INFO] django.utils.autoreload: C:\Users\royalka\Work\oqu-arna-web\users\urls.py changed, reloading.
+2025-05-19 14:49:08,058 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-05-19 14:49:11,434 [INFO] django.utils.autoreload: C:\Users\royalka\Work\oqu-arna-web\users\views.py changed, reloading.
+2025-05-19 14:49:11,936 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
