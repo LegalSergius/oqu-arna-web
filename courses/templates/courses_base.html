@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
+    <link type="text/css" href="{% static 'author_works/css/style.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block header %}
+    {% include 'components/author_works_search.html' with request=request %}
+{% endblock %}
+
+{% block scripts %}
+{% include 'components/create_navbar.html' with name_active_element="course" %}
+{% endblock %}
+

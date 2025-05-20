@@ -1,0 +1,21 @@
+{% extends 'lessonActions.html' %}
+
+{% block button_form %}
+{% endblock %}
+
+{% block link_buttons %}
+
+    {% include 'components/lesson_action_link.html' with name="Изменить Конференцию" %}
+    {% include 'components/lesson_action_link.html' with name="Изменить тестТест" %}
+
+    {% url 'content' course_id as content_url %}
+    {% include 'components/lesson_action_link.html' with name="Изменить Задание" href=content_url %}
+
+{% endblock %}
+
+{% block choose_date_modal_button %}
+
+{% endblock %}
+
+{% block choose_date_modal %}
+{% endblock %}

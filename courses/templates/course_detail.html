@@ -1,0 +1,27 @@
+{% extends 'lessons.html' %}
+
+{% block content %}
+
+    <div
+    class="d-flex-column bg-white justify-content-center align-items-center w-50 p-3 my-1 mx-auto rounded-5"
+    style="height: 75vh; padding-right: 1rem; scrollbar-width: thin; scrollbar-color: #605BCD #BAB8D7;">
+    <div class="px-2 h-100 overflow-y-auto">
+      {%for lesson in lessons%}
+        <a
+            href = "{% url 'lessons-detail' lesson.pk %}"
+            class="container lessonBox h-25 mb-4 p-3 rounded-4 appThemeColorBackground text-white d-flex flex-column text-decoration-none justify-content-between">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <strong>{{ lesson.name }}</strong>
+            <span class="date">{{ lesson.lesson_date }}</span>
+          </div>
+          <div class="d-flex flex-grow-1 align-items-stretch bg-light-subtle rounded-3 p-2">
+            <div class="flex-grow-1 text-dark px-2 d-flex">
+              <strong class="fs-4">{{ lesson.description }}</strong>
+            </div>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+
+{% endblock %}
