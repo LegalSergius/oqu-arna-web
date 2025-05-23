@@ -15,6 +15,9 @@ urlpatterns = [
 
     path('send_code', views.SendCodeToEmailView.as_view(), name='send-code'),
 
+    path('login/', views.LoginView.as_view(), name='login'),
+    path('logout/', views.LogoutView.as_view(), name='logout'),
+
     # профиль, аватар и документы
     path("profile/",               views.ProfileView.as_view(),     name="profile"),
     path("profile/avatar/",        views.UpdateAvatarView.as_view(), name="update-avatar"),
