@@ -6,7 +6,7 @@
             name: 'personal_account',
             title : 'Личный кабинет',
             icon: '{% static "icons/personal_account.svg" %}',
-            href: ""
+            href: "{% url 'users:profile' %}"
         },
         {
             name: 'author_works',
@@ -21,10 +21,10 @@
             href: "{% url 'courses-categories' %}"
         },
         {
-            name: 'create_entry',
-            title : 'Создать запись',
+            name: 'schedule',
+            title : 'Расписание',
             icon: '{% static "icons/create_entry.svg" %}',
-            href: ""
+            href: "{% url 'schedule' %}"
         }
     ];
 </script>

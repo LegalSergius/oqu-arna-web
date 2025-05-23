@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import gettext_lazy as _
-
+from .models import Document
 from .models import CustomUser
 from .forms  import CustomUserCreationForm, CustomUserChangeForm, CustomPasswordResetForm
 
@@ -73,3 +73,9 @@ class CustomUserAdmin(UserAdmin):
                     email_template_name='registration/invite_email.txt',
                     subject_template_name='registration/invite_subject.txt',
                 )
+
+@admin.register(Document)
+class DocumentAdmin(admin.ModelAdmin):
+    list_display  = ('title', 'user', 'uploaded_at')
+    search_fields = ('title', 'user__email')
+    autocomplete_fields = ('user',)

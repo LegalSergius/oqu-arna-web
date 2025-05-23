@@ -4,6 +4,7 @@ from collections import OrderedDict
 from multiprocessing.reduction import send_handle
 
 from django.contrib.auth import get_user_model
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse, Http404, HttpResponseRedirect, FileResponse
 from django.conf import settings
 from django.contrib import messages
@@ -160,11 +161,11 @@ def lesson_add_files(request, lesson, form, course, template_name):
 
 #--------------------------------------------------------------------
 
-class CoursesCategoriesView(CategoriesView):
+class CoursesCategoriesView(LoginRequiredMixin, CategoriesView):
     template_name = 'course_category.html'
 
 
-class CoursesListView(EntitiesListView):
+class CoursesListView(LoginRequiredMixin, EntitiesListView):
     model = Course
     template_name = 'courses.html'
     context_object_name = 'courses'
@@ -204,7 +205,7 @@ class CoursesListView(EntitiesListView):
 
 
     
-class CourseCreateView(CreateView):
+class CourseCreateView(LoginRequiredMixin, CreateView):
     model = Course
     form_class = CourseForm
     template_name = 'components/create-modal.html'
@@ -235,7 +236,7 @@ class CourseCreateView(CreateView):
         return HttpResponseRedirect(self.get_success_url())
     
 
-class CourseDetailView(DetailView):
+class CourseDetailView(LoginRequiredMixin, DetailView):
     model = Course
     template_name = 'components/modal.html'
     context_object_name = 'course'
@@ -272,7 +273,7 @@ class CourseDetailView(DetailView):
         return context
     
 
-class DownloadCourseView(View):
+class DownloadCourseView(LoginRequiredMixin, View):
     def get(self, request, content_id):
         try:
             course_content = Content.objects.get(pk=content_id)
@@ -281,7 +282,7 @@ class DownloadCourseView(View):
         
         return file_response(course_content)
 
-class DownloadTaskView(View):
+class DownloadTaskView(LoginRequiredMixin, View):
     def get(self, request, lesson_id):
         lesson = Lesson.objects.get(pk=lesson_id)
         if lesson.course.participants.filter(pk=self.request.user.pk).exists():
@@ -292,7 +293,7 @@ class DownloadTaskView(View):
 
         return redirect('lessons-student-list', course_id=lesson.course.id)
 
-class LessonsListView(ListView):
+class LessonsListView(LoginRequiredMixin, ListView):
     model = Lesson
     template_name = 'lessons.html'
     context_object_name = 'lessons'
@@ -318,7 +319,7 @@ class LessonsListView(ListView):
 class LessonsStudentListView(LessonsListView):
     template_name = 'course_detail.html'
 
-class LessonCreateView(CreateView):
+class LessonCreateView(LoginRequiredMixin, CreateView):
     model = Lesson
     form_class = LessonForm
     template_name = 'lessonActions.html'
@@ -375,7 +376,7 @@ class LessonCreateView(CreateView):
         return reverse_lazy('lessons', kwargs={'course_id': self.kwargs['course_id']})
 
 
-class LessonUpdateView(UpdateView):
+class LessonUpdateView(LoginRequiredMixin, UpdateView):
     model = Lesson
     form_class = LessonForm
     template_name = 'edit_lesson.html'
@@ -428,7 +429,7 @@ class LessonUpdateView(UpdateView):
 
         return reverse_lazy('lessons', kwargs={'course_id': lesson.course.id})
 
-class LessonStatisticView(TemplateView):
+class LessonStatisticView(LoginRequiredMixin, TemplateView):
     template_name = 'lessonStats.html'
 
     def get_context_data(self, **kwargs):
@@ -506,7 +507,7 @@ class LessonStatisticView(TemplateView):
         return self.render_to_response(self.get_context_data(**kwargs))
 
 
-class LessonDetailView(DetailView):
+class LessonDetailView(LoginRequiredMixin, DetailView):
     model = Lesson
     template_name = 'lessons_detail.html'
     context_object_name = 'lesson'
@@ -514,7 +515,7 @@ class LessonDetailView(DetailView):
 
 
 
-class ScheduleView(TemplateView):
+class ScheduleView(LoginRequiredMixin, TemplateView):
     template_name = 'schedule.html'   # ваш готовый шаблон
 
     def get_context_data(self, **kwargs):
