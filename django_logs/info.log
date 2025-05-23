@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 2025-05-08 01:57:18,320 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
 2025-05-08 01:57:21,254 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
 2025-05-08 02:02:50,462 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\authors_works\models.py changed, reloading.
@@ -7632,3 +7633,12 @@ django.db.utils.OperationalError: no such column: users_customuser.avatar
 2025-05-24 00:16:46,781 [WARNING] django.request: Not Found: /
 2025-05-24 00:17:38,591 [INFO] django.utils.autoreload: D:\code\oquArna\oqu-arna-web\oquArnaWeb\urls.py changed, reloading.
 2025-05-24 00:17:39,027 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+=======
+2025-04-15 18:49:50,827 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-04-15 18:49:53,792 [WARNING] django.request: Not Found: /
+2025-04-15 18:49:53,796 [WARNING] django.request: Not Found: /
+2025-04-15 18:49:53,885 [WARNING] django.request: Not Found: /favicon.ico
+2025-04-15 19:05:51,787 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-04-15 19:05:53,734 [WARNING] django.request: Not Found: /
+2025-04-15 19:05:53,751 [WARNING] django.request: Not Found: /
+>>>>>>> Stashed changes

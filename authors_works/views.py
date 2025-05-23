@@ -8,6 +8,7 @@ from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 
 from django.views import View
+<<<<<<< Updated upstream
 from django.views.generic import ListView, DetailView, CreateView
 
 from common.views import SearchView, CategoriesView
@@ -18,6 +19,12 @@ from . import models, forms
 
 import common.models
 from .models import Status
+=======
+from django.views.generic import ListView, DetailView
+
+from authors_works.models import AuthorWorks
+from common.models import Category
+>>>>>>> Stashed changes
 
 
 #---------------------------------------
@@ -51,6 +58,7 @@ class TestView(LoginRequiredMixin, View):
     def get(self, request):
         return render(request, 'category.html')
 
+<<<<<<< Updated upstream
 class CategoriesAuthorWorksView(LoginRequiredMixin, CategoriesView):
     template_name = 'category.html'
 
@@ -165,3 +173,26 @@ class AuthorWorkCreateView(LoginRequiredMixin, CreateView):
         return super().form_invalid(form)
 
 
+=======
+class CategoryListView(ListView):
+    model = Category
+    template_name = 'category.html'
+    context_object_name = 'categories'
+
+
+class AuthorWorksListView(ListView):
+    model = AuthorWorks
+    template_name = 'author_works.html'
+    context_object_name = 'works'
+
+    def get_queryset(self):
+        category_id = self.kwargs.get('category')
+
+        queryset = AuthorWorks.objects.filter(category_id=category_id)
+        return queryset
+
+class AuthorWorkDetailView(DetailView):
+    model = AuthorWorks
+    template_name = 'author_work_detail.html'
+    context_object_name = 'work'
+>>>>>>> Stashed changes

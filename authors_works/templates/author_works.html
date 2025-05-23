@@ -1,5 +1,6 @@
 {% extends 'works_base.html' %}
 
+<<<<<<< Updated upstream
 {% load static %}
 
 {% block header %}
@@ -20,3 +21,26 @@
 
 {% endblock %}
 
+=======
+{% block content %}
+
+<div class="container mt-4">
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+        {% for work in works %}
+
+        <div class="col">
+            <a href="{% url 'author-work-detail' work.pk %}" class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{work.name}}</h5>
+                </div>
+            </a>
+        </div>
+
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}
+>>>>>>> Stashed changes

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {% extends "entry_email.html" %}
 
 
@@ -6,3 +7,18 @@
 {% include "components/registration_title.html" %}
 
 {% endblock %}
+=======
+{% extends "reset_password_base.html" %}
+
+{% block head %}
+<title>OQU ARNA - регистрация</title>
+{% endblock %}
+
+{% block log_form_content %}
+<label for="email" class="fs-5 align-self-stretch">Почта</label>
+<input type="text" name="email" id="email" class="log-input mt-2 ">
+
+{{ block.super }}
+
+{% endblock %}
+>>>>>>> Stashed changes

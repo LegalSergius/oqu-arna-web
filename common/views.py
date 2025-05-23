@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect, render
@@ -155,3 +156,7 @@ def file_response(content):
         as_attachment=True,
         filename=content.file_name
     )
+=======
+from django.shortcuts import render
+
+>>>>>>> Stashed changes

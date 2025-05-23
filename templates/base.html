@@ -4,7 +4,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
 
     <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}" />
     <link type="text/css" href="{% static 'css/style.css' %}" rel="stylesheet"/>
@@ -24,7 +23,16 @@
     <div class="content-layout">
         {% block content  %}
 
+<<<<<<< Updated upstream
         {% endblock %}
+=======
+    {% endblock %}
+
+
+
+    <div class="navbar-container" id="navbar">
+        {% include 'navbar.html' %}
+>>>>>>> Stashed changes
     </div>
 
 

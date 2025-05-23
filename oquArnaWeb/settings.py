@@ -38,11 +38,17 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+<<<<<<< Updated upstream
     "widget_tweaks",
     "users",
     "authors_works",
     "common",
     "courses"
+=======
+    "users",
+    "authors_works",
+    "common",
+>>>>>>> Stashed changes
 ]
 
 MIDDLEWARE = [
@@ -156,6 +162,7 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
 
+<<<<<<< Updated upstream
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
@@ -163,12 +170,19 @@ STATICFILES_DIRS = [
 MEDIA_URL = "/media/"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+=======
+#MEDIA
+
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL  = '/media/'
+>>>>>>> Stashed changes
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+<<<<<<< Updated upstream
 # Настройки логов
 LOG_DIR = os.path.join(BASE_DIR, 'django_logs')
 os.makedirs(LOG_DIR, exist_ok=True)
@@ -283,6 +297,13 @@ LOGGING = {
 #User
 
 AUTH_USER_MODEL = "users.CustomUser"
+=======
+#User
+
+AUTH_USER_MODEL = 'users.CustomUser'
+DEFAULT_FROM_EMAIL = 'noreply@example.com'
+
+>>>>>>> Stashed changes
 
 # SMTP
 

@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 {% extends "reset_password_base.html" %}
+=======
+{% extends "log_base.html" %}
+>>>>>>> Stashed changes
 
 {% block head %}
 
@@ -9,9 +13,27 @@
 {% block log_content %}
 
 <div class="d-flex flex-column justify-content-center align-items-center mt-5">
+<<<<<<< Updated upstream
   <h1 class="fs-60px fw-bold mb-2">Добро пожаловать!</h1>
   <p>Зарегестрируйтесь, чтобы продолжить</p>
+=======
+  <h1 class="fs-60px fw-bold mb-2">Забыли пароль?</h1>
+  <p>Введите чтобы продолжить!</p>
+>>>>>>> Stashed changes
 </div>
 
 {% endblock %}
 
+<<<<<<< Updated upstream
+=======
+{% block log_form_content %}
+
+<button type="submit" class="btn btn-base py-2" id="register-button">Продолжить</button>
+{% endblock %}
+
+{% block log_post_content %}
+
+<p class="mt-3">Уже есть аккаунт? <a href="{% url 'users:login' %}" class="log-link fw-bold">Вход!</a></p>
+
+{% endblock %}
+>>>>>>> Stashed changes

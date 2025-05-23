@@ -1,10 +1,33 @@
 {% extends 'works_base.html' %}
 
+<<<<<<< Updated upstream
 {% load static %}
 
 {% block content %}
 
 {% include 'categories/categories.html' with categories=categories href='author-works' %}
 {{ block.super }}
+=======
+{% block content %}
+
+<div class="container mt-4">
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+        {% for category in categories %}
+
+        <div class="col">
+            <a href="{% url 'author-works' category=category.pk %}" class="card h-100">
+                <img src="{{ category.image.file.url }}" class="card-img-top card-image-custom"/>
+                <div class="card-body">
+                    <h5 class="card-title">{{category.name}}</h5>
+                </div>
+            </a>
+        </div>
+
+        {% endfor %}
+    </div>
+
+</div>
+>>>>>>> Stashed changes
 
 {% endblock %}

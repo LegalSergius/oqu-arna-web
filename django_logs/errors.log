@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 2025-05-08 02:03:57,086 [WARNING] django.request D:\code\oquArna\.venv\Lib\site-packages\django\utils\log.py:248
 Not Found: /.well-known/appspecific/com.chrome.devtools.json
 2025-05-08 02:06:40,314 [WARNING] django.request D:\code\oquArna\.venv\Lib\site-packages\django\utils\log.py:248
@@ -7975,4 +7976,15 @@ Not Found: /favicon.ico
 2025-05-24 00:16:46,766 [WARNING] django.request D:\code\oquArna\.venv\Lib\site-packages\django\utils\log.py:248
 Not Found: /
 2025-05-24 00:16:46,781 [WARNING] django.request D:\code\oquArna\.venv\Lib\site-packages\django\utils\log.py:248
+=======
+2025-04-15 18:49:53,792 [WARNING] django.request D:\code\oquArna\.venv\Lib\site-packages\django\utils\log.py:248
+Not Found: /
+2025-04-15 18:49:53,796 [WARNING] django.request D:\code\oquArna\.venv\Lib\site-packages\django\utils\log.py:248
+Not Found: /
+2025-04-15 18:49:53,885 [WARNING] django.request D:\code\oquArna\.venv\Lib\site-packages\django\utils\log.py:248
+Not Found: /favicon.ico
+2025-04-15 19:05:53,734 [WARNING] django.request D:\code\oquArna\.venv\Lib\site-packages\django\utils\log.py:248
+Not Found: /
+2025-04-15 19:05:53,751 [WARNING] django.request D:\code\oquArna\.venv\Lib\site-packages\django\utils\log.py:248
+>>>>>>> Stashed changes
 Not Found: /

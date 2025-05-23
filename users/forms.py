@@ -1,7 +1,10 @@
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordResetForm
 from .models import CustomUser
+<<<<<<< Updated upstream
 from django import forms
 from .models import Document
+=======
+>>>>>>> Stashed changes
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -26,6 +29,7 @@ class CustomUserChangeForm(UserChangeForm):
 
 class CustomPasswordResetForm(PasswordResetForm):
     def get_users(self, email):
+<<<<<<< Updated upstream
         return CustomUser.objects.filter(email=email)
 
 
@@ -49,3 +53,6 @@ class DocumentUploadForm(forms.ModelForm):
         if f.size > 5 * 1024 * 1024:          # 5 MB
             raise forms.ValidationError('Файл превышает 5 МБ.')
         return f
+=======
+        return CustomUser.objects.filter(email=email)
+>>>>>>> Stashed changes

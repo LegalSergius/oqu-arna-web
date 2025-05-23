@@ -1,5 +1,11 @@
+<<<<<<< Updated upstream
 from django.contrib.auth.views import PasswordResetConfirmView
 from django.urls import reverse_lazy
+=======
+from django.shortcuts import render
+
+from smtplib import SMTPRecipientsRefused
+>>>>>>> Stashed changes
 
 from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.contrib import messages
@@ -7,6 +13,7 @@ from django.core.mail import send_mail
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views import View
+<<<<<<< Updated upstream
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponseForbidden
@@ -35,6 +42,14 @@ class ActivateUserPasswordResetConfirmView(PasswordResetConfirmView):
         return response
 
 
+=======
+
+from .register_code import generate_code, save_code, get_code, delete_code
+from oquArnaWeb import settings
+
+User = get_user_model()
+
+>>>>>>> Stashed changes
 class SendCodeToEmailView(View):
     def get(self, request):
 
@@ -53,11 +68,18 @@ class SendCodeToEmailView(View):
 
         send_mail(title, message, from_email, recipient_list, fail_silently=False)
 
+<<<<<<< Updated upstream
         after_url = request.session.get('page_to_go_after_sending', 'users:verification-code')
 
         return redirect(after_url)
 
 class HomeView(LoginRequiredMixin, View):
+=======
+        return redirect('verification-code')
+
+
+class HomeView(View):
+>>>>>>> Stashed changes
     def get(self, request):
         return render(request, 'index.html')
 
@@ -70,17 +92,25 @@ class LoginView(View):
         password = request.POST.get('password')
 
         user = authenticate(request, email=email, password=password)
+<<<<<<< Updated upstream
 
         if user is not None:
 
             login(request, user)
             return redirect('users:home')
+=======
+        if user is not None:
+
+            login(request, user)
+            return redirect('home')
+>>>>>>> Stashed changes
         else:
 
             messages.error(request, "Неверный email или пароль")
 
         return render(request, 'login.html')
 
+<<<<<<< Updated upstream
 class LogoutView(LoginRequiredMixin, View):
     def get(self, request):
         logout(request)
@@ -103,6 +133,16 @@ class EntryEmailView(View):
 
     def get(self, request):
         return render(request, self.template_name)
+=======
+class LogoutView(View):
+    def get(self, request):
+        logout(request)
+        return redirect('login')
+
+class RegistrationView(View):
+    def get(self, request):
+        return render(request, 'registration_email.html')
+>>>>>>> Stashed changes
 
     def post(self, request):
         email = request.POST.get('email')
@@ -113,6 +153,7 @@ class EntryEmailView(View):
             users_list = list(users)
             user = users_list[0]
 
+<<<<<<< Updated upstream
             user = users.first()
 
             response = self.successful(request, email, user)
@@ -135,10 +176,45 @@ class VerificationCodeView(View):
 
     def get(self, request):
         return render(request, self.template_name)
+=======
+            request.session['email'] = email
+            #
+            # code = generate_code()
+            # save_code(f"register-code:{user_email}", code)
+            #
+            #
+            #
+            # #email
+            # title = "Oqu Arna код :)"
+            # message = f"Ваш код - {code} Никому его не говорите."
+            # from_email = settings.EMAIL_HOST_USER
+            # recipient_list = [email]
+            #
+            # number_of_email_sent = send_mail(title, message, from_email, recipient_list, fail_silently=False)
+            #
+            # print(number_of_email_sent)
+
+            # if number_of_email_sent < 1:
+            #     messages.error(request, "Введенный email не существует")
+            # else:
+
+            request.session['page_to_go_after_confirmation'] = 'register-set-password'
+
+            return redirect('send-code')
+        else:
+            messages.error(request, "Пользователь с данным email не зарегистрирован")
+
+        return render(request, 'registration_email.html')
+
+class VerificationCodeView(View):
+    def get(self, request):
+        return render(request, 'registration_code.html')
+>>>>>>> Stashed changes
 
     def post(self, request):
         code = request.POST.get('code')
 
+<<<<<<< Updated upstream
         email = request.session.get('email')
 
 
@@ -176,17 +252,52 @@ class ResetPasswordView(View):
 
     def get(self, request):
         return render(request, self.template_name)
+=======
+        user_email = request.session.get('email')
+
+
+        if user_email:
+            key = f"register-code:{user_email}"
+            code_in_cache = get_code(key)
+
+            page_to_after_confirmation = request.session.get('page_to_go_after_confirmation')
+
+            print(page_to_after_confirmation)
+
+            if code_in_cache:
+                if code != code_in_cache:
+                    messages.error(request, "Неверный код")
+                else:
+                    delete_code(key)
+                    del request.session['email']
+
+                    request.session['verified_email'] = user_email
+                    return redirect(page_to_after_confirmation)
+
+
+        return render(request, 'registration_code.html')
+
+class RegistrationSetPasswordView(View):
+    def get(self, request):
+        return render(request, 'registration_password.html')
+>>>>>>> Stashed changes
 
     def post(self, request):
 
         email = request.session.get('verified_email')
 
+<<<<<<< Updated upstream
         if not email and self.unsuccessful_url:
             return redirect(self.unsuccessful_url)
+=======
+        if not email:
+            return redirect('registration')
+>>>>>>> Stashed changes
 
         password = request.POST.get('password')
         password_repeat = request.POST.get('password_repeat')
 
+<<<<<<< Updated upstream
         if password != password_repeat:
             if self.unsuccessful_url:
                 return redirect(self.unsuccessful_url)
@@ -309,3 +420,18 @@ class DocumentsView(View):
             document.save()
 
         return render(request, 'my_documents.html', {'docs': docs})
+=======
+        print(password + " " + password_repeat)
+
+        if password != password_repeat:
+            messages.error(request, "Пароли не совпадают")
+        else:
+            del request.session['verified_email']
+            user = User.objects.get(email=email)
+            user.set_password(password)
+            user.save()
+
+            return redirect('login')
+
+        return render(request, 'registration_password.html')
+>>>>>>> Stashed changes
