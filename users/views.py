@@ -74,7 +74,7 @@ class LoginView(View):
         if user is not None:
 
             login(request, user)
-            return redirect('users:home')
+            return redirect('home')
         else:
 
             messages.error(request, "Неверный email или пароль")

@@ -22,6 +22,8 @@ var/
 wheels/
 share/python-wheels/
 *.egg-info/
+django_logs/
+media/
 .installed.cfg
 *.egg
 MANIFEST
