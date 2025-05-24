@@ -14,9 +14,6 @@ import os, uuid
 
 User = get_user_model()
 
-
-
-
 class SearchView(ListView):
     field_for_filtering = ''
 
@@ -41,7 +38,7 @@ class CategoriesView(SearchView):
     field_for_filtering = 'name'
 
 
-class EntitiesListView(LoginRequiredMixin, SearchView):
+class EntitiesListView(SearchView):
     field_for_filtering = 'name'
 
     def get_personal_entities(self):
@@ -85,7 +82,7 @@ class EntitiesListView(LoginRequiredMixin, SearchView):
         return context
 
 
-class LessonContentView(LoginRequiredMixin, View):
+class LessonContentView(View):
     template_name = 'content.html'
 
     def get(self, request, course_id):

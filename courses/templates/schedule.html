@@ -11,6 +11,7 @@
             src: url("{% static 'fonts/Inter.ttf' %}") format('truetype');
             font-display: swap;
         }
+
         :root{
             --bg-gray:#EAEAEA;
             --violet:#605BCD;
@@ -27,6 +28,7 @@
             padding:.8rem 1.5rem 1.2rem;
             position:relative;
         }
+
         .page-header h1{margin:0;font-weight:700;font-size:2rem;text-align:center;}
         .back-btn{
             width:42px;height:42px;
@@ -34,6 +36,7 @@
             display:flex;align-items:center;justify-content:center;
             position:absolute;left:1rem;top:1rem;
         }
+
         /* ---------- RANGE TAGS ---------- */
         .period-badge{
             background:var(--violet);
@@ -50,12 +53,14 @@
             padding:.20rem .75rem;font-size:1rem;font-weight:500;
             margin-left:.45rem;
         }
+
         /* ---------- CARDS ---------- */
         .schedule-grid{
             flex:1;
-            overflow-y:auto;
+            overflow-y:hidden;
             padding:1.5rem 1.25rem 6rem; /* снизу запас под bottom-nav */
         }
+
         .schedule-grid::-webkit-scrollbar{width:8px;}
         .schedule-grid::-webkit-scrollbar-track{background:var(--scroll-track);border-radius:5px;}
         .schedule-grid::-webkit-scrollbar-thumb{background:var(--scroll-thumb);border-radius:5px;}
@@ -67,7 +72,9 @@
             overflow:hidden;
             background:#fff;
         }
+
         .schedule-card.selected{border-color:#179CFF;} /* активный день */
+
         .schedule-card thead th{
             background:var(--violet);
             color:#fff;
@@ -75,11 +82,13 @@
             font-weight:700;
             font-size:1.05rem;
         }
+
         .schedule-card td{
             border-color:var(--violet);
             vertical-align:middle;
             font-size:.9rem;
         }
+
         /* ---------- BOTTOM NAV ---------- */
         .bottom-nav{
             position:fixed;
@@ -93,6 +102,7 @@
             color:#fff;
             z-index:10;
         }
+
         .bottom-nav a{
             text-decoration:none;
             color:#fff;
@@ -102,6 +112,7 @@
             align-items:center;
             gap:.3rem;
         }
+
         .bottom-nav .active{
             background:#fff;
             color:var(--violet);
@@ -156,3 +167,6 @@
 
 {% endblock  %}
 
+{% block scripts %}
+{% include 'components/create_navbar.html' with name_active_element="schedule" %}
+{% endblock %}
