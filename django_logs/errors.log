@@ -9253,3 +9253,59 @@ Traceback (most recent call last):
 AttributeError: 'Content' object has no attribute 'name'
 2025-05-20 09:26:03,350 [WARNING] django.security.csrf D:\code\oquArna\.venv\Lib\site-packages\django\utils\log.py:248
 Forbidden (CSRF token from POST incorrect.): /users/login/
+2025-05-20 18:08:16,726 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /
+2025-05-20 18:08:16,871 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /favicon.ico
+2025-05-20 18:08:16,965 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /
+2025-05-20 18:34:51,218 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /courses/4/lessons
+2025-05-20 18:35:09,649 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 18:37:48,353 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 18:37:49,117 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 18:38:43,405 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 18:38:44,052 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 18:38:44,291 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 18:48:32,830 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 18:49:01,962 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 18:49:23,419 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 18:49:31,184 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 18:49:32,366 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 18:49:32,542 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 18:49:32,670 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 18:50:01,641 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 18:50:13,447 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 18:50:13,815 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 18:50:14,058 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 19:06:03,635 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 19:06:03,942 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 19:06:04,171 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 19:06:04,337 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 19:06:23,626 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 19:06:43,186 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-20 19:10:06,091 [WARNING] django.request C:\Projects\OquArnaWeb\.venv\lib\site-packages\django\utils\log.py:248
+Not Found: /.well-known/appspecific/com.chrome.devtools.json

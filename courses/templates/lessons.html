@@ -22,7 +22,8 @@
           </div>
           <div class="d-flex flex-grow-1 align-items-stretch bg-light-subtle rounded-3 p-2">
             <div class="flex-grow-1 text-dark px-2 d-flex">
-              <strong class="fs-4">{{ lesson.description }}</strong>
+              {% comment %} <strong class="fs-md-4 fs-xl-1">{{ lesson.description }}</strong> {% endcomment %}
+              <p class="fw-bold fs-6 fs-md-4 fs-lg-2">{{ lesson.description }}</p>
             </div>
             <div
               class="edit-btn d-flex justify-content-center align-items-center rounded-3 ms-2 p-1"
