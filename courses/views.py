@@ -78,6 +78,8 @@ def _fill_to_seven(day_date: datetime, day_items: list[dict]) -> list[dict]:
     while len(day_items) < 7:
         if day_items:
             last_end = day_items[-1]['end']
+            if last_end.hour >= 23:
+                last_end = time(0, 0)
             next_start = time(last_end.hour + 1, 0)
         else:
             next_start = time(8, 0)           # первая пара, если день пуст

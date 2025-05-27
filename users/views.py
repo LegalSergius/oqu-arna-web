@@ -35,7 +35,7 @@ class ActivateUserPasswordResetConfirmView(PasswordResetConfirmView):
         return response
 
 
-class SendCodeToEmailView(LoginRequiredMixin, View):
+class SendCodeToEmailView(View):
     def get(self, request):
 
         email=request.session.get('email')
@@ -57,12 +57,11 @@ class SendCodeToEmailView(LoginRequiredMixin, View):
 
         return redirect(after_url)
 
-
 class HomeView(LoginRequiredMixin, View):
     def get(self, request):
         return render(request, 'index.html')
 
-class LoginView(LoginRequiredMixin, View):
+class LoginView(View):
     def get(self, request):
         return render(request, 'login.html')
 
@@ -75,7 +74,7 @@ class LoginView(LoginRequiredMixin, View):
         if user is not None:
 
             login(request, user)
-            return redirect('users:home')
+            return redirect('home')
         else:
 
             messages.error(request, "Неверный email или пароль")
@@ -87,7 +86,7 @@ class LogoutView(LoginRequiredMixin, View):
         logout(request)
         return redirect('users:login')
 
-class EntryEmailView(LoginRequiredMixin, View):
+class EntryEmailView(View):
     template_name = 'entry_email.html'
     success_url = 'users:send-code'
     page_to_go_after_sending = 'users:verification-code'
@@ -125,7 +124,7 @@ class EntryEmailView(LoginRequiredMixin, View):
 
         return render(request, self.template_name)
 
-class VerificationCodeView(LoginRequiredMixin, View):
+class VerificationCodeView(View):
     template_name = 'verification_code.html'
     unsuccessful_url = None
 
@@ -159,7 +158,7 @@ class VerificationCodeView(LoginRequiredMixin, View):
 
         return render(request, self.template_name)
 
-class ResetPasswordView(LoginRequiredMixin, View):
+class ResetPasswordView(View):
     template_name = 'reset_password.html'
     success_url = 'users:login'
     unsuccessful_url = 'users:login'
