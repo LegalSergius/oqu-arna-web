@@ -16,7 +16,8 @@ from django.urls import reverse_lazy
 from django.utils import timezone
 from django.db.models import Min, Max
 from courses import models
-from courses.models import Course, Lesson
+from courses.models import Course, Lesson, Conference
+from courses.utils import get_zoom_access_token 
 from common.models import Category, Content
 from common.views import CategoriesView, EntitiesListView, file_response
 from courses.forms import CourseForm, LessonForm
@@ -25,6 +26,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.core.files import File
 from pathlib import Path
 from datetime import datetime, time, timedelta
+from json import loads
 import os, requests
 import tempfile, zipfile
 
@@ -326,7 +328,9 @@ class LessonCreateView(LoginRequiredMixin, CreateView):
 
     def get_initial(self):
         initial = super().get_initial()
+
         session_data = self.request.session.get('lesson_form_temp')
+        print('Session data: ', session_data)
 
         if session_data:
             initial.update(session_data)
@@ -360,8 +364,6 @@ class LessonCreateView(LoginRequiredMixin, CreateView):
         return super().form_invalid(form)
     
     def form_valid(self, form):
-        print('Cleaned data - ', form.cleaned_data)
-
         course_id = self.kwargs.get('course_id')
         try:
             course = Course.objects.get(pk=course_id)
@@ -373,9 +375,13 @@ class LessonCreateView(LoginRequiredMixin, CreateView):
         lesson = form.save()
 
         response = lesson_add_files(self.request, lesson, form, course, self.template_name)
-
         if response:
             return response
+        
+        conference_url = form.cleaned_data.get('conference_url')
+        if conference_url:
+            lesson_conference = Conference(zoom_id=conference_url, lesson=lesson)
+            lesson_conference.save()
 
         self.request.session['temp_files'] = []
         return super().form_valid(form)
@@ -602,6 +608,10 @@ def save_lesson_temporary(request):
     return JsonResponse({'status': 'ok'})
 
 
+def save_session(request, form_data):
+    request.session['lesson_form_temp'] = form_data
+
+
 def zoom_oauth_start(request):
     token_url = "https://zoom.us/oauth/token"
     
@@ -616,8 +626,6 @@ def zoom_oauth_start(request):
         },
         auth=(settings.ZOOM_CLIENT_ID, settings.ZOOM_CLIENT_SECRET)
     )
-
-    print('response - ', response.json()['access_token'])
     
     if response.status_code == 200:
         return response.json()
@@ -625,35 +633,17 @@ def zoom_oauth_start(request):
         raise Exception(f'Error getting token: {response.text}')
     
 
-def get_zoom_access_token(request):
-    url = "https://zoom.us/oauth/token"
-    response = requests.post(
-        url,
-        params={
-            "grant_type": "account_credentials",
-            "account_id": settings.ZOOM_ACCOUNT_ID,
-        },
-        auth=(settings.ZOOM_CLIENT_ID, settings.ZOOM_CLIENT_SECRET)
-    )
-
-    if response.status_code == 200:
-        return response.json()["access_token"]
-    else:
-        raise Exception(f"Zoom token error: {response.text}")
-
-
-def create_zoom_meeting(topic, start_time, duration_minutes):
-    token = get_zoom_access_token()
+def create_zoom_meeting(access_token, lesson_name, lesson_date):
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Bearer {access_token}",
         "Content-Type": "application/json"
     }
 
     body = {
-        "topic": topic,
-        "type": 2,  # Запланированная встреча
-        "start_time": start_time,  # в формате "2025-05-13T15:00:00Z"
-        "duration": duration_minutes,
+        "topic": lesson_name,
+        "type": 2,
+        "start_time": lesson_date,
+        "duration": 60,
         "timezone": "Europe/Moscow",
         "settings": {
             "join_before_host": True,
@@ -669,14 +659,44 @@ def create_zoom_meeting(topic, start_time, duration_minutes):
     if response.status_code == 201:
         return response.json()
     else:
-        raise Exception(f"Zoom meeting creation error: {response.text}")
+        return JsonResponse({'error': 'Проблема при обработке создания '})
 
 
 class CreateZoomMeetingView(View):
-    def get(self, request):
+    def post(self, request, *args, **kwargs):
         if not request.user.is_authenticated or not request.user.is_educator:
-            return HttpResponseForbidden('Нет прав')
+            raise Http404('Нет прав на создание конференций для занятий')
 
-        access_token = request.GET.get('access_token')
-        meeting_info = create_zoom_meeting(access_token)
-        return JsonResponse(meeting_info)
+        try:
+            data = loads(request.body)
+        except Exception as e:
+            print('Body - ', request.body)
+            print('Exception - ', e)
+            return JsonResponse({'error': 'Произошла ошибка при обработке входных данных для запроса'}, status=400)
+
+        
+        lesson_name = data['lesson_name']
+        lesson_date = data['lesson_date']
+
+        if not lesson_name or not lesson_date:
+            return JsonResponse({'error': 'Недостаточно входных данных'}, status=400)
+
+        try:
+            access_token = get_zoom_access_token()
+        except:
+            return JsonResponse({'error': 'Произошла ошибка при проверке токена для запроса конференций'}, status=400)
+        
+        try:
+            meeting_info = create_zoom_meeting(access_token, lesson_name, lesson_date)
+
+            print('meeting info: ', meeting_info)
+
+            meeting_join_url = meeting_info['join_url']
+
+            print('Meeting join url: ', meeting_join_url)
+        except Exception as e:
+            print('Exception - ', e)
+
+            return JsonResponse({'error': 'Произошла ошибка при обработке входных данных для запроса конференций'}, status=400)
+            
+        return JsonResponse({'meeting_url': meeting_join_url, 'success': 'Конференция была успешно добавлена!'})

@@ -57,8 +57,9 @@ class Lesson(models.Model):
 
 
 class Conference(models.Model):
-    zoom_id = models.CharField(_('Zoom ID'), max_length=64, unique=True)
-    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name='conferences', verbose_name=_('Занятие'))
+    zoom_id = models.URLField(_('Zoom ID'), max_length=512, unique=True)
+    # lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name='conferences', verbose_name=_('Занятие'))
+    lesson = models.OneToOneField(Lesson, on_delete=models.CASCADE, related_name='conference', verbose_name=_('Занятие'))
     created_at = models.DateField(_('Дата создания'), auto_now_add=True)
 
     class Meta:

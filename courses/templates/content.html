@@ -5,13 +5,6 @@
     {% include 'components/name_page.html' with name=course_name href="javascript:history.back()" %}
 {% endblock %}
 {% block content %}
-    {%if messages%}
-        <script>
-        {% for message in messages %}
-            alert('{{message|escapejs }}');
-        {% endfor %}
-        </script>
-    {%endif%}
     <form
         id="lessonContentCreationForm"
         class="text-center"

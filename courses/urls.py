@@ -29,7 +29,6 @@ lesson_creation_urlpatterns = [
 
 zoom_urlpatterns = [
     path('oauth/', views.zoom_oauth_start, name='zoom_oauth_start'),
-    # path('oauth/callback/', views.zoom_oauth_callback, name='zoom_oauth_callback'),
     path('meeting', views.CreateZoomMeetingView.as_view(), name='meeting')
 ]
 

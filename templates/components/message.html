@@ -1,18 +1,24 @@
-
-{% if messages %}
-{% for message in messages %}
-<div class="message {% if 'error' in message.tags %} error {% elif 'success' in message.tags %} success {% endif %}  d-flex flex-column align-items-center" id="message">
-
-
-        <span class="error-text">{{ message }}</span>
-
-</div>
-{% endfor %}
-
 <script>
-    const error = document.getElementById("message");
-    setTimeout(() => {
-        error.remove();
-    }, 10000);
+    function showMessage() {
+        const error = document.getElementById("message");
+        setTimeout(() => {
+            error.remove();
+        }, 10000);
+    }
 </script>
-{% endif %}
+<div id="messageContainer">
+    {% if messages %}
+        {% for message in messages %}
+        <div
+            id="message"
+            class="message {% if 'error' in message.tags %} error {% elif 'success' in message.tags %} success {% endif %}  d-flex flex-column align-items-center">
+            <span class="error-text">
+                {{ message }}
+            </span>
+        </div>
+        {% endfor %}
+    <script>
+        showMessage();
+    </script>
+    {% endif %}
+</div>
