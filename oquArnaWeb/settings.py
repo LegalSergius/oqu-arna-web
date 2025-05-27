@@ -292,3 +292,12 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'eco.almaty.noreply@gmail.com'
 EMAIL_HOST_PASSWORD = 'xkoukrglexkowmbh'
+
+
+ZOOM_CLIENT_ID = 'Vdp0sGgvRWebEcVPdC_UDw'
+
+ZOOM_ACCOUNT_ID = 'qb5kKc0ISuuZnCs1CPZ30A'
+
+ZOOM_CLIENT_SECRET = 'mXrsyP7ymfg9Ny3htSeXuggXDpUCGDX4'
+
+ZOOM_REDIRECT_URI = 'http://localhost:8000/courses/zoom/oauth/callback/'

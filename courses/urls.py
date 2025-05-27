@@ -27,6 +27,11 @@ lesson_creation_urlpatterns = [
     path('content/', common_views.LessonContentView.as_view(), name='content'),
 ]
 
+zoom_urlpatterns = [
+    path('oauth/', views.zoom_oauth_start, name='zoom_oauth_start'),
+    path('meeting', views.CreateZoomMeetingView.as_view(), name='meeting')
+]
+
 urlpatterns = [
     path('', views.CoursesCategoriesView.as_view(), name='courses-categories'),
     path('<int:category>', views.CoursesListView.as_view(), name='courses'),
@@ -37,12 +42,13 @@ urlpatterns = [
     path('<int:lesson_id>/lesson_detail/', views.LessonDetailView.as_view(), name='lessons-detail'),
     path('<int:course_id>/lessons', views.LessonsListView.as_view(), name='lessons'),
     path('<int:course_id>/lessons_student', views.LessonsStudentListView.as_view(), name='lessons-student-list'),
+    path('lessonTemporarySave', views.save_lesson_temporary, name='save-lesson-temporary'),
     path('<int:course_id>/createLesson/', include(lesson_creation_urlpatterns)),
+    path('zoom/', include(zoom_urlpatterns)),
     path('<int:lesson_id>/lessons_edit/', views.LessonUpdateView.as_view(), name='lessons-update'),
     path('<int:lesson_id>/lessonStats/', LessonStatisticView.as_view(), name='lesson_stats'),
     path('schedule/', views.ScheduleView.as_view(), name='schedule'),
     path('', TemplateView.as_view(template_name='courses/../templates/categories/categories.html'), name='courses_categories'),
     path('entities/', TemplateView.as_view(template_name='courses/../authors_works/templates/entities.html'), name='entities')
 ]
-
 

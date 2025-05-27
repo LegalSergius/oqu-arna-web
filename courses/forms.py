@@ -86,9 +86,18 @@ class CourseForm(forms.ModelForm):
     
 
 class LessonForm(forms.ModelForm):
+    conference_url = forms.URLField(
+        required=False,
+        widget=forms.URLInput(attrs={
+            'id': 'conferenceURL',
+            'type': 'hidden',
+            'required': False
+        })
+    )
+
     class Meta:
         model = Lesson
-        fields = ['name', 'description', 'lesson_date']  # course и assignments зададим во view
+        fields = ['name', 'description', 'lesson_date']
         widgets = {
             'name': forms.TextInput(attrs={
                 'id': 'lessonNameInput',
@@ -107,5 +116,5 @@ class LessonForm(forms.ModelForm):
                 'id': 'datetimeInput',
                 'type': 'hidden',
                 'required': True
-            }),
+            })
         }
