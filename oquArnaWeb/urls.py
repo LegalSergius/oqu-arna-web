@@ -24,6 +24,9 @@ from oquArnaWeb import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("staff/", views.custom_admin_home_view, name="custom_admin_home"),
+    path("staff/actions/", views.actions_history_view, name="actions_history"),
+    path("staff/report/", views.users_report_download, name="users_report_download"),
     path("users/", include("users.urls")),
     path("works/", include("authors_works.urls")),
 
