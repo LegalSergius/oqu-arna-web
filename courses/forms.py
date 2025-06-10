@@ -118,3 +118,13 @@ class LessonForm(forms.ModelForm):
                 'required': True
             })
         }
+        from django.forms import inlineformset_factory
+        from .models import Question, Answer
+
+        QuestionFormSet = inlineformset_factory(
+            Lesson, Question, fields=['text'], extra=1, can_delete=True
+        )
+
+        AnswerFormSet = inlineformset_factory(
+            Question, Answer, fields=['text', 'is_correct'], extra=2, can_delete=True
+        )
