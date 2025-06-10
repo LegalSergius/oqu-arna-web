@@ -215,6 +215,48 @@
 			</form>
 		</div>
     </div>
+    
+    <hr class="my-5">
+
+    <div class="mb-4 mt-5">
+        <div class="table-header mb-1">Сертификаты участников курсов</div>
+        <div class="table-responsive">
+            <table class="table table-bordered custom-table mb-0">
+                <thead>
+                    <tr>
+                        <th>Курс</th>
+                        <th>Период</th>
+                        <th>Создатель</th>
+                        <th>Кол-во участников</th>
+                        <th>Действие</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for course in courses %}
+                    <tr>
+                        <td>{{ course.name }}</td>
+                        <td>{{ course.start_date }} – {{ course.end_date }}</td>
+                        <td>{{ course.creator.get_full_name|default:course.creator.username }}</td>
+                        <td>{{ course.participants.count }}</td>
+                        <td>
+                            {% if course.participants.count %}
+                            <a href="{% url 'download_course_certificates' course.id %}" class="btn btn-outline-success btn-sm">
+                                <i class="fa fa-file-download"></i> Скачать сертификаты
+                            </a>
+                            {% else %}
+                            <span class="text-secondary">Нет участников</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="5" class="text-center">Курсы не найдены</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 </body>
 </html>
