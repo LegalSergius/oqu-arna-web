@@ -92,7 +92,7 @@
         background-color: #d4923a;
         max-width: 72px;
         max-height: 64px;
-    }  s
+    }
     .edit-icon {
         width: 70%;
         height: 70%;
@@ -187,20 +187,17 @@
                     {% else %}
                         <td>--</td>
                     {% endif %}
-                    {% if stat.test is True %}
-                    	<td><img width="20" height="20" src="{% static 'icons/check_mark.svg' %}" alt=""></td>
-                    {% elif stat.test is False %}
-                        <td><img width="20" height="20" src="{% static 'icons/cross.svg' %}" alt=""></td>
+
+                    {% if stat.test is None %}
+                    	<td>--</td>
                     {% else %}
-                        <td>--</td>
+                        <td>{{ stat.test }}</td>
                     {% endif %}
 
-                    {% if stat.task is True %}
-                    	<td><img width="20" height="20" src="{% static 'icons/check_mark.svg' %}" alt=""></td>
-                    {% elif stat.task is False %}
-                        <td><img width="20" height="20" src="{% static 'icons/cross.svg' %}" alt=""></td>
+                    {% if stat.task is None %}
+                    	<td>--</td>
                     {% else %}
-                        <td>--</td>
+                        <td>{{ stat.task }}</td>
                     {% endif %}
                 </tr>
                 {% endfor %}
@@ -248,11 +245,11 @@
                   </div>
                   <div class="d-flex justify-content-between align-items-center p-2 rounded" style="background-color: #c0bfe6;">
                     <span class="fw-bold">Тест</span>
-                    <input type="checkbox" id="check-test" name="test" class="bg-success rounded-circle" style="width: 20px; height: 20px;"></span>
+                    <input type="number" id="input-test" name="test" class="rounded form-control" style="width: 70px; height: 20px;">
                   </div>
                   <div class="d-flex justify-content-between align-items-center p-2 rounded" style="background-color: #c0bfe6;">
                     <span class="fw-bold">Задание</span>
-                    <input type="checkbox" id="check-task" name="task" class="bg-success rounded-circle" style="width: 20px; height: 20px;"></span>
+                    <input type="number" id="input-task" name="task" class="rounded form-control" style="width: 70px; height: 20px;">
                   </div>
                     <input type="hidden" name="lesson-pk" id="lesson-pk" value="">
                     <input type="hidden" name="user-pk" id="user-pk" value="">
@@ -311,8 +308,8 @@
         statsModal.querySelector('#lesson-pk').value = lessonPk;
 
         const checkConference = statsModal.querySelector('#check-conference');
-        const checkTest = statsModal.querySelector('#check-test');
-        const checkTask = statsModal.querySelector('#check-task');
+        const inputTest = statsModal.querySelector('#input-test');
+        const inputTask = statsModal.querySelector('#input-task');
 
         if(conference === "True") {
             checkConference.checked = true
@@ -320,17 +317,9 @@
             checkConference.checked = false
         }
 
-        if(test === "True") {
-            checkTest.checked = true
-        } else {
-            checkTest.checked = false
-        }
+        inputTest.value = test;
 
-        if(task === "True") {
-            checkTask.checked = true
-        } else {
-            checkTask.checked = false
-        }
+        inputTask.value = task;
 
         // --- при желании здесь же можно сделать AJAX-запрос
         // fetch(`/api/user/${userId}/stats/`)

@@ -41,6 +41,14 @@ urlpatterns = [
     path('<int:lesson_id>/lessons_edit/', views.LessonUpdateView.as_view(), name='lessons-update'),
     path('<int:lesson_id>/lessonStats/', LessonStatisticView.as_view(), name='lesson_stats'),
     path('schedule/', views.ScheduleView.as_view(), name='schedule'),
+
+    path('<int:lesson_id>/redirect_test', views.get_test_lesson, name='test-redirect'),
+
+    path('<int:test_id>/test/', views.TestView.as_view(), name='test'),
+    path('<int:test_id>/test_edit/', views.TestEditView.as_view(), name='test-edit'),
+    path('<int:test_id>/add_question/', views.QuestionCreateView.as_view(), name='question-create'),
+    path('<int:question_id>/edit_question/', views.QuestionEditView.as_view(), name='question-edit'),
+    path('<int:question_id>/remove_question/', views.RemoveQuestionView.as_view(), name='question-remove'),
     path('', TemplateView.as_view(template_name='courses/../templates/categories/categories.html'), name='courses_categories'),
     path('entities/', TemplateView.as_view(template_name='courses/../authors_works/templates/entities.html'), name='entities')
 ]
