@@ -30,8 +30,8 @@ class Course(models.Model):
 class LessonStatistics(models.Model):
     user            = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_statistic')
     conference      = models.BooleanField(default=False)
-    test            = models.BooleanField(default=False)
-    task            = models.BooleanField(default=False)
+    test            = models.IntegerField(default=None, null=True)
+    task            = models.IntegerField(default=None, null=True)
 
     comment         = models.TextField(blank=True, null=True)
 
@@ -68,3 +68,21 @@ class Conference(models.Model):
 
     def __str__(self):
         return f"Conference {self.zoom_id} — {self.lesson.name}"
+
+class Test(models.Model):
+    name = models.CharField(max_length=128)
+    creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='tests')
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name='tests')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+class Question(models.Model):
+    test = models.ForeignKey('Test', related_name='questions', on_delete=models.CASCADE)
+    text = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+
+class Answer(models.Model):
+    Question = models.ForeignKey(Question, related_name='answers', on_delete=models.CASCADE)
+    text = models.CharField(max_length=255)
+    is_correct = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)

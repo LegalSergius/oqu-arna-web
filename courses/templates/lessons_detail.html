@@ -16,8 +16,10 @@
 
 {% block link_buttons %}
 
+    {% url 'test-redirect' lesson.id as test_redirect %}
+
     {% include 'components/lesson_action_link.html' with name="Конференция" %}
-    {% include 'components/lesson_action_link.html' with name="Тест" %}
+    {% include 'components/lesson_action_link.html' with href=test_redirect name="Тест" %}
 
     {% url 'download-task' lesson.pk as content_url %}
     {% include 'components/lesson_action_link.html' with name="Задание" href=content_url %}

@@ -5,8 +5,10 @@
 
 {% block link_buttons %}
 
+    {% url 'test-redirect' lesson.id as test_redirect %}
+
     {% include 'components/lesson_action_link.html' with name="Изменить Конференцию" %}
-    {% include 'components/lesson_action_link.html' with name="Изменить Тест" %}
+    {% include 'components/lesson_action_link.html' with href=test_redirect name="Изменить тест" %}
 
     {% url 'content' course_id as content_url %}
     {% include 'components/lesson_action_link.html' with name="Изменить Задание" href=content_url %}

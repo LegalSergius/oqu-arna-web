@@ -4,6 +4,7 @@ from collections import OrderedDict
 from multiprocessing.reduction import send_handle
 
 from django.contrib.auth import get_user_model
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse, Http404, HttpResponseRedirect, HttpResponseForbidden, FileResponse
 from django.conf import settings
@@ -469,7 +470,7 @@ class LessonStatisticView(LoginRequiredMixin, TemplateView):
                 stat = add_lesson_stat(lesson_statistic.conference, lesson_statistic.test, lesson_statistic.task, lesson_statistic.comment)
                 statistics[i].update(stat)
             else:
-                stat = add_lesson_stat('-', '-', '-', '')
+                stat = add_lesson_stat('-', None, None, '')
                 statistics[i].update(stat)
 
         context = {'lesson': lesson, 'statistics': statistics, 'course': course}
@@ -495,26 +496,30 @@ class LessonStatisticView(LoginRequiredMixin, TemplateView):
         user = User.objects.get(pk=user_id)
 
         conference = bool(request.POST.get('conference'))
-        test = bool(request.POST.get('test'))
-        task = bool(request.POST.get('task'))
+        test = request.POST.get('test')
+        task = request.POST.get('task')
+
+        test = int(test if test else -1)
+        task = int(task if task else -1)
 
         comment = request.POST.get('comment')
 
         lesson_stat = lesson.lesson_statics.filter(user=user)
 
         if lesson_stat.exists():
+
             lesson_stat = lesson_stat.first()
             lesson_stat.conference = conference
-            lesson_stat.test = test
-            lesson_stat.task = task
+            lesson_stat.test = None if test > 100 or test < 0 else test
+            lesson_stat.task = None if task > 100 or task < 0 else task
             lesson_stat.comment = comment
             lesson_stat.save()
         else:
             new_lesson_stat = models.LessonStatistics()
             new_lesson_stat.user = user
             new_lesson_stat.conference = conference
-            new_lesson_stat.test = test
-            new_lesson_stat.task = task
+            new_lesson_stat.test = None if test > 100 or test < 0 else test
+            new_lesson_stat.task = None if task > 100 or task < 0 else task
             new_lesson_stat.comment = comment
             new_lesson_stat.save()
             lesson.lesson_statics.add(new_lesson_stat)
@@ -600,6 +605,192 @@ class ScheduleView(LoginRequiredMixin, TemplateView):
 
         return self.render_to_response(context)
 
+
+class TestView(LoginRequiredMixin, View):
+    template_name = 'test.html'
+
+    def get_context_data(self, test_id):
+        ctx = {}
+        test = models.Test.objects.get(pk=test_id)
+
+        questions = models.Question.objects.filter(test=test)
+
+        questions_answers = []
+
+        if questions.exists():
+            for question in questions:
+                answers = models.Answer.objects.filter(Question=question)
+                questions_answers.append({'question' : question, 'answers' : answers})
+
+        ctx['test'] = test
+        ctx['questions'] = questions_answers
+
+        return ctx
+
+    def get(self, request, test_id, *args, **kwargs):
+
+        context = self.get_context_data(test_id)
+
+        return render(request=request, template_name=self.template_name, context=context)
+
+    def post(self, request, test_id, *args, **kwargs):
+
+        selected_answers = request.POST.getlist('select-answer')
+
+        print(selected_answers)
+
+        test = models.Test.objects.get(pk=test_id)
+
+        questions = models.Question.objects.filter(test=test)
+
+        rating_for_one_question = 100.0 / questions.count()
+
+        rating = 0.0
+
+        if selected_answers:
+            for selected_answer in selected_answers:
+
+                answer_true = models.Answer.objects.get(pk=selected_answer)
+
+                if answer_true.is_correct:
+                    rating += rating_for_one_question
+
+
+            print(rating)
+
+            rating = float(rating) if rating <= 100.0 else 100.0
+            rating = float(rating) if rating >= 0.0 else 0.0
+
+
+            lesson_stat = test.lesson.lesson_statics.filter(user=request.user)
+
+            if lesson_stat.exists():
+                lesson_stat_s = lesson_stat.first()
+                lesson_stat_s.test = int(rating)
+                lesson_stat_s.save()
+            else:
+                lesson_stat = models.LessonStatistics.objects.create(user=request.user, conference=False, test=rating, task=None, comment="")
+                test.lesson.lesson_statics.add(lesson_stat)
+
+        return redirect('lessons-detail', test.lesson.pk)
+
+class TestEditView(LoginRequiredMixin, View):
+    template_name = 'test_edit.html'
+
+    def get_context_data(self, test_id):
+        ctx = {}
+        test = models.Test.objects.get(pk=test_id)
+
+        questions = models.Question.objects.filter(test=test)
+
+        questions_answers = []
+
+        if questions.exists():
+            for question in questions:
+                answers = models.Answer.objects.filter(Question=question)
+                questions_answers.append({'question' : question, 'answers' : answers})
+
+        ctx['test'] = test
+        ctx['questions'] = questions_answers
+
+        return ctx
+
+    def get(self, request, test_id, *args, **kwargs):
+
+        context = self.get_context_data(test_id)
+
+        return render(request=request, template_name=self.template_name, context=context)
+
+    def post(self, request, test_id, *args, **kwargs):
+
+        context = self.get_context_data(test_id)
+
+        new_questions = request.POST.getlist('new-question')
+        id_questions = request.POST.getlist('id-question')
+        selected_answers = request.POST.getlist('select-answer')
+
+        if new_questions:
+            for question in new_questions:
+                models.Question.objects.create(test_id=test_id, text=question)
+
+        if id_questions and selected_answers:
+            for question_id, selected_answer in zip(id_questions, selected_answers):
+                question = models.Question.objects.get(pk=question_id)
+
+                answers = models.Answer.objects.filter(Question=question)
+
+                for answer in answers:
+                    answer.is_correct = False
+                    answer.save()
+
+                checked_answer = models.Answer.objects.get(pk=selected_answer)
+
+                checked_answer.is_correct = True
+                checked_answer.save()
+
+        return redirect('test-edit', test_id)
+
+class QuestionEditView(LoginRequiredMixin, View):
+    template_name = 'question_edit.html'
+
+    def get_context_data(self, question_id):
+        ctx = {}
+
+        answers = models.Answer.objects.filter(Question_id=question_id)
+
+        ctx['answers'] = answers
+        ctx['question'] = models.Question.objects.get(pk=question_id)
+
+        return ctx
+
+    def get(self, request, question_id, *args, **kwargs):
+        context = self.get_context_data(question_id)
+        return render(request=request, template_name=self.template_name, context=context)
+
+    def post(self, request, question_id, *args, **kwargs):
+        context = self.get_context_data(question_id)
+
+        answers = request.POST.getlist('answer')
+
+        question = models.Question.objects.get(pk=question_id)
+
+        for answer in answers:
+            models.Answer.objects.create(Question_id=question_id, text=answer, is_correct=False)
+
+        return redirect('test-edit', question.test.pk)
+
+class QuestionCreateView(LoginRequiredMixin, View):
+    def get(self, request, test_id):
+        models.Question.objects.create(test_id=test_id, text="")
+        return redirect('test-edit', test_id=test_id)
+
+
+class RemoveQuestionView(LoginRequiredMixin, View):
+    def get(self, request, question_id):
+        test = models.Question.objects.get(pk=question_id).test
+        models.Question.objects.get(pk=question_id).delete()
+        return redirect('test-edit', test.pk)
+
+
+@login_required
+def get_test_lesson(request, lesson_id):
+    lesson = models.Lesson.objects.get(pk=lesson_id)
+    test = models.Test.objects.filter(lesson=lesson)
+
+    if test.exists():
+        if request.user.is_educator:
+            return redirect('test-edit', test.first().pk)
+        else:
+            return redirect('test', test.first().pk)
+
+    else:
+        if request.user.is_educator:
+            new_test = models.Test.objects.create(creator=request.user, lesson=lesson, name=lesson.name)
+            return redirect('test-edit', new_test.pk)
+
+
+    return redirect('courses', lesson.course.id)
+=======
 
 @require_POST
 def save_lesson_temporary(request):

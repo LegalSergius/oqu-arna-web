@@ -1,0 +1,108 @@
+{% extends "courses_base.html" %}
+
+{% block header %}
+    {% url 'courses' course.category.pk as course_url %}
+    {% include 'components/name_page.html' with name=course.name href=course_url %}
+{% endblock %}
+
+
+{% block content %}
+
+    <style>
+        .content-tests {
+            border-radius: 20px;
+            overflow:hidden;
+
+
+            width: 80%;
+        }
+
+        .content-tests thead .text-header {
+            color: white;
+            background-color: var(--primary-color);
+        }
+
+        .buttons {
+
+            padding-top: 20px;
+            width: 100%;
+            display: flex;
+
+            gap: 100px;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .test-font {
+            width: 300px;
+            font-size: 16px;
+        }
+
+        .question-input-text {
+
+            height: 100%;
+            width: 100%;
+
+            background-color: white;
+            border: 0 solid white;
+
+            padding: 5px;
+
+            text-align: center;
+        }
+
+        .question-input-text:focus {
+
+            outline: none;
+
+        }
+    </style>
+
+<div class="d-flex flex-column align-items-center">
+
+    <div class="content-tests">
+
+        <form id="test-form" method="post">
+
+            {% csrf_token %}
+
+            <table class="table table-bordered mb-0 text-center align-middle">
+                <thead>
+                    <tr>
+                        <th colspan="4" class="text-header">{{ test.name }}</th>
+                    </tr>
+                    <tr>
+                        <th colspan="1" >Вопрос</th>
+                        <th colspan="1" >Ответ</th>
+                    </tr>
+                </thead>
+                <tbody id="question-list">
+                    {% for question in questions %}
+                    <tr>
+                        <td class="fw-semibold" style="width: 40%">{{ question.question.text }}</td>
+                        <td>
+                            <select id="question-select" name="select-answer" class="question-input-text">
+                                {% for answer in question.answers %}
+                                    <option value="{{ answer.id }}">{{ answer.text }}</option>
+                                {% endfor %}
+                            </select>
+                        </td>
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </form>
+
+    </div>
+
+    <div class="buttons">
+        <button form="test-form" type="submit" class="btn btn-base-2 btn-outline-base test-font">Отправить</button>
+    </div>
+
+</div>
+
+
+{% endblock %}
