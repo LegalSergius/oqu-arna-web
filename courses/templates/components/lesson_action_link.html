@@ -1,3 +1,5 @@
-<a class="d-block btn btn-success my-2 p-2 fs-5 fw-bold" href="{{ href }}">
+<a
+    {%if href%}id="downloadContentHref"{% endif %}
+    class="d-block btn btn-success my-2 p-2 fs-5 fw-bold" href="{{ href }}">
     {{ name }}
 </a>
