@@ -9,6 +9,17 @@ from django.utils.timesince import timesince
 from django.utils import timezone
 import csv
 from django.http import HttpResponse
+import io
+import os
+import zipfile
+from courses.models import Course
+from pathlib import Path
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import letter
+from reportlab.lib.units import inch
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+from PIL import Image
 
 @login_required
 def home_view(request):
@@ -68,11 +79,14 @@ def custom_admin_home_view(request):
             "action_text": action_text,
             "action_flag": action_type,
         })
+    
+    courses = Course.objects.all().order_by('-start_date')
 
     return render(request, "custom_admin/home.html", {
         "users": user_data,
         "filter": filter_type,
         "title": title,
+        "courses": courses,
     })
 
 @staff_member_required
@@ -153,4 +167,52 @@ def users_report_download(request):
     ])
     for row in report_data:
         writer.writerow(row)
+    return response
+
+@staff_member_required
+def download_course_certificates(request, course_id):
+    import os  # добавь импорт если его ещё нет
+    course = Course.objects.get(pk=course_id)
+    org_name = "OquArna"
+    background_path = Path("assets/bg.png")
+    # logo_path = Path("assets/logo.png")  # если нужен логотип
+
+    buffer = io.BytesIO()
+    with zipfile.ZipFile(buffer, "w") as zf:
+        for idx, participant in enumerate(course.participants.all(), start=1):
+            pdf_buffer = io.BytesIO()
+            pdfmetrics.registerFont(TTFont("DejaVu", str(Path("fonts/DejaVuSans.ttf"))))
+            c = canvas.Canvas(pdf_buffer, pagesize=letter)
+
+            # Добавление фона (опционально)
+            if background_path.exists():
+                bg_img = Image.open(background_path)
+                bg_img.thumbnail((letter[0], letter[1]))
+                temp_bg_path = "temp_bg_for_reportlab.png"
+                bg_img.save(temp_bg_path)
+                c.drawImage(temp_bg_path, 0, 0, width=letter[0], height=letter[1])
+                os.remove(temp_bg_path)
+
+            x = 2 * inch
+            c.setFont("DejaVu", 24)
+            c.drawString(x, 10 * inch, "СЕРТИФИКАТ")
+            c.setFont("DejaVu", 18)
+            c.drawString(x, 9 * inch, org_name)
+            c.setFont("DejaVu", 16)
+            c.drawString(x, 8 * inch, f"Настоящий сертификат выдан {participant.get_full_name()}")
+            c.setFont("DejaVu", 12)
+            c.drawString(x, 7.5 * inch, f"за успешное завершение курса «{course.name}».")
+            c.drawString(x, 7 * inch, f"с {course.start_date} по {course.end_date}.")
+            c.setFont("DejaVu", 10)
+            c.drawString(x, 1.5 * inch, "Выдано организацией OquArna")
+            c.save()
+
+            pdf_buffer.seek(0)
+            # Добавляем порядковый номер после нижнего подчеркивания
+            filename = f"certificate_{idx}_{participant.get_full_name().replace(' ', '_')}.pdf"
+            zf.writestr(filename, pdf_buffer.read())
+
+    buffer.seek(0)
+    response = HttpResponse(buffer, content_type='application/zip')
+    response['Content-Disposition'] = f'attachment; filename=certificates_{course_id}.zip'
     return response
