@@ -790,7 +790,7 @@ def get_test_lesson(request, lesson_id):
 
 
     return redirect('courses', lesson.course.id)
-=======
+
 
 @require_POST
 def save_lesson_temporary(request):

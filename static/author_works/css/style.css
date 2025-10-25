@@ -10,6 +10,21 @@
     width: 655px;
 }
 
+/* Responsive author work content */
+@media (max-width: 768px) {
+    .author-work-content {
+        width: 90%;
+        max-width: 655px;
+    }
+}
+
+@media (max-width: 576px) {
+    .author-work-content {
+        width: 95%;
+        padding: 0 10px;
+    }
+}
+
 .description {
     width: 100%;
 
@@ -39,6 +54,22 @@
     row-gap: 10px;
 }
 
+/* Responsive info grid */
+@media (max-width: 768px) {
+    .info-grid {
+        column-gap: 40px;
+        row-gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 15px;
+    }
+}
+
 
 .info {
     padding: 10px 10px;
@@ -56,11 +87,39 @@
     padding: 10px 20px 10px 20px;
 }
 
+/* Responsive info price */
+@media (max-width: 768px) {
+    .info-price {
+        width: 40%;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .info-price {
+        width: 50%;
+        padding: 6px 12px;
+    }
+}
+
 .info-price-text {
     font-weight: bold;
     font-size: 20px;
 
     color: var(--primary-color);
+}
+
+/* Responsive info price text */
+@media (max-width: 768px) {
+    .info-price-text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .info-price-text {
+        font-size: 16px;
+    }
 }
 
 .status-title {
@@ -78,6 +137,22 @@
     padding: 7px 95px
 }
 
+/* Responsive status */
+@media (max-width: 768px) {
+    .status {
+        padding: 6px 60px;
+        border-radius: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .status {
+        padding: 5px 40px;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+}
+
 .file {
     display: flex;
 
@@ -92,6 +167,22 @@
     width: 45%;
 }
 
+/* Responsive file */
+@media (max-width: 768px) {
+    .file {
+        width: 60%;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .file {
+        width: 80%;
+        padding: 6px;
+        font-size: 14px;
+    }
+}
+
 .of {
 
     display: flex;
@@ -104,6 +195,21 @@
     padding: 20px 60px;
 }
 
+/* Responsive of */
+@media (max-width: 768px) {
+    .of {
+        padding: 15px 40px;
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .of {
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+}
+
 .download-btn {
     background-color: var(--dark-green);
 
@@ -114,6 +220,22 @@
     text-align: center;
 
     text-decoration: none;
+}
+
+/* Responsive download button */
+@media (max-width: 768px) {
+    .download-btn {
+        font-size: 18px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .download-btn {
+        font-size: 16px;
+        border-radius: 8px;
+        padding: 8px 16px;
+    }
 }
 
 
@@ -254,4 +376,64 @@
 .radio-works-toggle input[type="radio"]:checked + span {
     background-color: var(--primary-color);
     color: white;
+}
+
+/* Additional mobile optimizations for author works */
+@media (max-width: 480px) {
+    .author-work-content {
+        width: 98%;
+        padding: 0 5px;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
+    
+    .info-price {
+        width: 60%;
+        padding: 5px 10px;
+    }
+    
+    .info-price-text {
+        font-size: 14px;
+    }
+    
+    .status {
+        padding: 4px 30px;
+        border-radius: 15px;
+        font-size: 12px;
+    }
+    
+    .file {
+        width: 90%;
+        padding: 4px;
+        font-size: 12px;
+    }
+    
+    .of {
+        padding: 8px 15px;
+        border-radius: 8px;
+    }
+    
+    .download-btn {
+        font-size: 14px;
+        border-radius: 6px;
+        padding: 6px 12px;
+    }
+    
+    .form-work {
+        padding: 15px 20px;
+        border-radius: 20px;
+    }
+    
+    .info-container {
+        width: 90%;
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
+    
+    .price-container {
+        width: 60%;
+    }
 }
