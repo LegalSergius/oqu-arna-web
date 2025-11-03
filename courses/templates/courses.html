@@ -2,8 +2,12 @@
 
 {% load static %}
 
+{% block header %}
+    {% include 'components/author_works_search.html' with href_back="javascript:history.back()" request=request %}
+{% endblock %}
+
 {% block head %}
-<link type="text/css" href="{% static 'author_works/css/style.css' %}" rel="stylesheet"/>
+    <link type="text/css" href="{% static 'author_works/css/style.css' %}" rel="stylesheet"/>
 {% endblock %}
 
 {% block content %}

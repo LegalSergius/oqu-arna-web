@@ -2,7 +2,7 @@
     class="container-fluid cardContainer fw-bold"
     style="width: 85%;">
     <div class="row row-cols-4 g-4">
-    {% if request.user.is_educator and not is_category %}
+    {% if request.user.is_educator and not is_category and request.GET.personal_works %}
         <div class="col">
             {%include 'components/card_add.html' with href_card_add=href_card_add %}
         </div>

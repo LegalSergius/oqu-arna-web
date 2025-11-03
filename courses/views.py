@@ -325,18 +325,7 @@ class LessonCreateView(LoginRequiredMixin, CreateView):
     model = Lesson
     form_class = LessonForm
     template_name = 'lessonActions.html'
-
-    def get_initial(self):
-        initial = super().get_initial()
-
-        session_data = self.request.session.get('lesson_form_temp')
-        print('Session data: ', session_data)
-
-        if session_data:
-            initial.update(session_data)
-        
-        return initial
-
+    
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         course_id = self.kwargs.get('course_id')
@@ -349,6 +338,8 @@ class LessonCreateView(LoginRequiredMixin, CreateView):
         
         context['course_id'] = course.id
         context['course_name'] = course.name
+
+        print('context', context)
         return context
 
     def dispatch(self, request, *args, **kwargs):

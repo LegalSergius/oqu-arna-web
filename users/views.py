@@ -1,6 +1,6 @@
 from django.contrib.auth.views import PasswordResetConfirmView
 from django.urls import reverse_lazy
-
+from django.conf import settings
 from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.contrib import messages
 from django.core.mail import send_mail

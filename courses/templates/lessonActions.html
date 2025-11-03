@@ -19,6 +19,7 @@
             <div class="w-50 h-100 m-auto pb-3 px-4 pt-5 appThemeColorBackground rounded-5">
                     <div class="d-flex-column bg-white h-100 p-4 rounded-5 text-center ">
                         {% block description %}
+                            
                             {{ form.name }}
                             {{ form.description }}
                         {% endblock %}
@@ -71,7 +72,6 @@
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content appThemeColorBackground fw-bold rounded-5">
                 <div class="modal-header d-flex w-100 align-items-center position-relative px-5 border-0">
-                    {%include 'components/back_button.html' with href="javascript:history.back()" is_modal=True%}
                     {%include 'components/back_button.html' with href="javascript:history.back()" is_modal=True%}
                     <p class="d-inline-block bg-white position-absolute top-50 start-50 translate-middle py-2 px-4 fs-4 rounded-3">
                         Выберите время и дату

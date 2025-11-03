@@ -24,6 +24,13 @@ share/python-wheels/
 *.egg-info/
 django_logs/
 
+# Папка с медиа-файлами - пусть отдельно добавляются
+media/
+
+# База данных для макетного проекта. Накатится миграциями
+*.sqlite3
+
+
 .installed.cfg
 *.egg
 MANIFEST
