@@ -3,7 +3,8 @@
 {% load static %}
 
 {% block header %}
-    {% include 'components/author_works_search.html' with href_back="javascript:history.back()" request=request %}
+    {% url 'courses-categories' as categories_list %}
+    {% include 'components/author_works_search.html' with href_back=categories_list request=request %}
 {% endblock %}
 
 {% block head %}

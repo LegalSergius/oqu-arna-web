@@ -34,7 +34,7 @@ zoom_urlpatterns = [
 
 urlpatterns = [
     path('', views.CoursesCategoriesView.as_view(), name='courses-categories'),
-    path('<int:category>', views.CoursesListView.as_view(), name='courses'),
+    path('category/<int:category>', views.CoursesListView.as_view(), name='courses'),
     path('<int:course_id>/details', views.CourseDetailView.as_view(), name='course-details'),
     path('create/', views.CourseCreateView.as_view(), name='course-create'),
     path('download/<int:content_id>', views.DownloadCourseView.as_view(), name='download-guideline'),
