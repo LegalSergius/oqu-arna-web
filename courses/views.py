@@ -493,7 +493,9 @@ class LessonStatisticView(LoginRequiredMixin, TemplateView):
         return self.render_to_response(self.get_context_data(**kwargs))
 
     def post(self, request, *args, **kwargs):
-
+        return self.render_to_response(self.get_context_data(**kwargs))
+        
+        print(request.POST)
         lesson_id = self.kwargs.get('lesson_id')
         lesson = Lesson.objects.get(pk=lesson_id)
 
