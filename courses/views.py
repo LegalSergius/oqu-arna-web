@@ -91,31 +91,38 @@ def _fill_to_seven(day_date: datetime, day_items: list[dict]) -> list[dict]:
 
 
 def build_week_schedule(*, week_index: int | None = None, first_date, last_date, filters=dict()) -> list[dict]:
-
-    # номер запрашиваемой недели
-
-    total_weeks = ((last_date - first_date).days // 7) + 1
-    if week_index is None:
-        week_index = total_weeks
-
-    # понедельник нужной недели
-    week0_monday = first_date - timedelta(days=first_date.weekday())
+    """
+    Строит расписание для указанной недели.
+    
+    Args:
+        week_index: индекс недели относительно first_date (0 - первая неделя, где находится first_date)
+        first_date: дата начала периода (используется как базовая для вычисления недель)
+        last_date: дата окончания периода
+        filters: фильтры для запроса уроков
+    """
+    
+    # Вычисляем понедельник недели, в которой находится first_date
+    week0_monday = first_date.replace(hour=0, minute=0, second=0, microsecond=0) - timedelta(days=first_date.weekday())
+    
+    # Вычисляем понедельник нужной недели
     monday = week0_monday + timedelta(weeks=week_index)
+    
+    # Вычисляем воскресенье (конец дня)
     sunday = monday + timedelta(days=6)
+    sunday_end = sunday.replace(hour=23, minute=59, second=59, microsecond=999999)
 
-    # все занятия этой недели
-    filters['lesson_date__range'] = (monday, sunday)
+    # Все занятия этой недели (с правильным диапазоном времени)
+    week_filters = filters.copy()
+    week_filters['lesson_date__gte'] = monday
+    week_filters['lesson_date__lte'] = sunday_end
 
-    print("create sh:", week0_monday, monday, sunday, week_index)
+    week_lessons = Lesson.objects.filter(**week_filters).order_by('lesson_date')
 
-    week_lessons = (Lesson.objects.filter(**filters).order_by('lesson_date') )
-
-    #print(week_lessons, filters['lesson_date__range'])
-
-    # распределяем по дням
+    # Распределяем по дням
     schedule: list[dict] = []
     for i, day_ru in enumerate(DAYS_RU):
         day_date = monday + timedelta(days=i)
+        # Фильтруем уроки по дню недели (0=понедельник, 6=воскресенье)
         day_qs = [l for l in week_lessons if l.lesson_date.weekday() == i]
 
         day_items: list[dict] = []
@@ -124,7 +131,6 @@ def build_week_schedule(*, week_index: int | None = None, first_date, last_date,
             end_at = (les.lesson_date + les.duration).time()
             day_items.append({'start': start_at, 'end': end_at, 'title': les.course.name})
 
-        #print(day_items)
         schedule.append({day_ru: _fill_to_seven(day_date, day_items)})
 
     return schedule
@@ -559,32 +565,53 @@ class ScheduleView(LoginRequiredMixin, TemplateView):
 
         now = timezone.now()
 
-        if first_date.date() >= now.date():
-            print("true",)
-            first_date = now
-        print("sfadsfadsfadsfads:", first_date.date(), now.date())
+        # Сохраняем оригинальную first_date для определения базового понедельника
+        original_first_date = first_date
+        
+        # Если первая дата в будущем, используем текущую дату для определения текущей недели
+        use_now_for_base = first_date.date() >= now.date()
+        
+        # Вычисляем понедельник недели, в которой находится first_date (или now, если нужно)
+        # Это будет базовый понедельник (week0_monday) для всех вычислений
+        base_date = now if use_now_for_base else first_date
+        base_monday = base_date.replace(hour=0, minute=0, second=0, microsecond=0) - timedelta(days=base_date.weekday())
+        
+        # Генерируем опции для выбора недель (начинаем с понедельника недели, где находится первая дата урока)
+        original_base_monday = original_first_date.replace(hour=0, minute=0, second=0, microsecond=0) - timedelta(days=original_first_date.weekday())
+        
         options = []
-
-        d = first_date - timedelta(days=first_date.weekday())
-        print('d:', d)
+        d = original_base_monday
+        week_counter = 0
+        
         while d <= last_date:
-
             next_day = d + timedelta(days=6)
-
-            week_index = ((d - first_date).days // 7)
-            options.append((f"{d.day}.{d.month:02d} - {next_day.day}.{next_day.month:02d}", week_index))
+            options.append((f"{d.day}.{d.month:02d} - {next_day.day}.{next_day.month:02d}", week_counter))
             d += timedelta(days=7)
+            week_counter += 1
 
-        now_week_index = ((last_date - first_date).days // 7)
+        # Определяем текущую неделю для выбора по умолчанию
+        # Используем текущую дату, если она в диапазоне, иначе - последнюю неделю
+        if now.date() <= last_date.date():
+            now_week_monday = now.replace(hour=0, minute=0, second=0, microsecond=0) - timedelta(days=now.weekday())
+            now_week_index = ((now_week_monday - original_base_monday).days // 7)
+        else:
+            # Если текущая дата после последней даты, показываем последнюю неделю
+            last_week_monday = last_date.replace(hour=0, minute=0, second=0, microsecond=0) - timedelta(days=last_date.weekday())
+            now_week_index = ((last_week_monday - original_base_monday).days // 7)
 
-        week_index = kwargs.pop('week')
+        week_index = kwargs.pop('week', None)
 
         if week_index is None:
             week_index = now_week_index
         else:
             week_index = int(week_index)
+            # Проверяем, что индекс недели в допустимых пределах
+            if week_index < 0:
+                week_index = 0
+            elif week_index >= len(options):
+                week_index = len(options) - 1
 
-        schedule = build_week_schedule(week_index=week_index, first_date=first_date, last_date=last_date, filters=filters)
+        schedule = build_week_schedule(week_index=week_index, first_date=original_first_date, last_date=last_date, filters=filters)
 
         sd = []
 
