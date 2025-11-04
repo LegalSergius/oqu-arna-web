@@ -1,0 +1,79 @@
+{%load widget_tweaks%}
+<div 
+    id="courseCreateModal"
+    class="modal fade"
+    tabindex="-1"
+    aria-labelledby="courseCreateModal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content appThemeBorderColor rounded-4">
+          <form 
+            id="createCourseForm"
+            method="POST"
+            action="{%url 'course-create' %}"
+            enctype="multipart/form-data">  
+            {% csrf_token %}
+            <div class="modal-header appThemeBorderColor position-relative rounded-3">
+                {{ form.name }}
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div 
+                class="modal-body appGrayColorBackground p-5 fw-bold"
+                style="background-color: #BAB8D7">
+                {{ form.description|add_class:"appThemeBorderColor" }}
+                <div class="container my-4 p-0 text-center">
+                    <div class="row gx-5">
+                        <div class="col-md-6">
+                          <div class="d-flex flex-column gap-3 h-100">
+                            <div class="modalBodyCell appThemeColorBackground text-light fs-5 d-flex justify-content-center align-items-center rounded-2">
+                                Категория курса:
+                            </div>
+                            <div class="modalBodyCell appThemeColorBackground text-light fs-5 d-flex justify-content-center align-items-center rounded-2">
+                              Дата начала:
+                            </div>
+                            <div class="modalBodyCell appThemeColorBackground text-light fs-5 d-flex justify-content-center align-items-center rounded-2">
+                              Дата окончания:
+                            </div>
+                            <div class="modalBodyCell appThemeColorBackground text-light fs-5 d-flex justify-content-center align-items-center rounded-2">
+                              Кол-во участников:
+                            </div>
+                            <div class="modalBodyCell appThemeColorBackground text-light fs-5 d-flex justify-content-center align-items-center rounded-2">
+                              Автор курса:
+                            </div>
+                            <div class="modalBodyCell appThemeColorBackground text-light fs-5 d-flex justify-content-center align-items-center rounded-2">
+                              Темы курса:
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="d-flex flex-column gap-3 h-100">
+                            {{ form.category }}
+                            {{ form.start_date }}
+                            {{ form.end_date }}
+                            {{ form.participants_count }}
+                            <div class="modalBodyCell modalBodyCellValue bg-light fs-5 d-flex justify-content-center align-items-center rounded-4">
+                              {{ form.creator.first_name }} {{ form.creator.last_name }}
+                            </div>
+                            <div class="position-relative">
+                              {{ form.guideline_upload|add_class:"d-none" }}
+                              <label
+                                id="fileNameLabel"
+                                for="{{ form.guideline_upload.id_for_label }}"
+                                class="modalBodyCell modalBodyCellValue btn btn-light fs-5 text-center fw-bold d-flex justify-content-center align-items-center rounded-4 border-0">
+                                  Добавить файл
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div> 
+                </div>
+                <button 
+                  class="btn btn-success d-block w-50 m-auto fs-4 fw-bold p-3"
+                  type="submit">
+                  Сохранить
+                </button>
+            </div>
+          </form>  
+        </div>
+    </div>
+</div>

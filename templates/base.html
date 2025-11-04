@@ -1,0 +1,44 @@
+{% load static  %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}" />
+    <link type="text/css" href="{% static 'css/style.css' %}" rel="stylesheet"/>
+    <link type="text/css" href="{% static 'css/responsive.css' %}" rel="stylesheet"/>
+    {% block head %}
+    {% endblock %}
+
+</head>
+<body>
+
+    {% include 'components/message.html' with messages=messages %}
+
+    <div class="header">
+        {% block header %}
+        {% endblock %}
+    </div>
+
+    <div class="content-layout">
+        {% block content  %}
+
+        {% endblock %}
+    </div>
+
+
+    <div class="navbar-container overflow-y" id="navbar">
+        {% include 'components/navbar.html' %}
+    </div>
+
+
+    <script src="{%static 'js/bootstrap.min.js' %}"></script>
+
+    {% block scripts %}
+
+    {% endblock %}
+</body>
+</html>

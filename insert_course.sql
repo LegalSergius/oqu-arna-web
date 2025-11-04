@@ -1,0 +1,1 @@
+INSERT INTO courses_course (name, description, start_date, end_date, created_at, updated_at, guideline_id, category_id, creator_id, participants_count) VALUES ('Английский язык (Intermediate)', 'Курс направлен для людей с уровнем Intermediate', '2025-05-13', '2025-05-20', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 5, 2, 2, 15);

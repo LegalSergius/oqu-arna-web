@@ -1,0 +1,5 @@
+{% extends 'components/search.html' %}
+
+{% block search_form %}
+    <input type="hidden" name="personal_works" value="{{ request.GET.personal_works|default:'' }}">
+{% endblock %}

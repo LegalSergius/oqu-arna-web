@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+  <link href="{% static 'users/css/style.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+<div class="docs-page">
+  <!-- Заголовок -->
+  <header class="docs-header">
+    <a href="{% url 'users:profile' %}" class="docs-back">←</a>
+    <h1 class="docs-title">Мои документы</h1>
+  </header>
+
+  <!-- Карточка со списком -->
+  <div class="docs-card">
+    <!-- Если есть ошибки формы -->
+    {{ form.non_field_errors }}
+    <form method="post" enctype="multipart/form-data" class="docs-form">
+      {% csrf_token %}
+      <div class="docs-form__row">
+        {{ form.title }}
+      </div>
+      <div class="docs-form__row">
+        {{ form.file }}
+      </div>
+      <button type="submit" class="btn docs-form__submit">
+        сохранить
+      </button>
+    </form>
+
+    {% if docs %}
+    <ul class="docs-list">
+      {% for doc in docs %}
+      <li class="docs-item">
+        <a href="{{ doc.file.url }}" target="_blank" class="docs-item__link">
+          {{ doc.title }}
+        </a>
+        a
+          <button type="submit" class="docs-item__del">✕</button>
+        </form>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p class="docs-empty">Документы отсутствуют.</p>
+    {% endif %}
+  </div>
+
+
+  <div class="docs-footer">
+    <label for="id_file" class="btn docs-footer__btn">
+      Загрузить документ…
+    </label>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+  {% include "create_navbar.html" with name_active_element="documents" %}
+{% endblock %}
