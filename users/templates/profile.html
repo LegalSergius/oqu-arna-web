@@ -36,21 +36,31 @@
             <h4>Фото профиля</h4>
 
                 <!-- Загрузка фото -->
-                <form method="post" action="{% url 'users:update-avatar' %}" enctype="multipart/form-data">
+                <!-- <form method="post" action="{% url 'users:update-avatar' %}" enctype="multipart/form-data">
                     {% csrf_token %}
                     <label class="btn green-btn">
                         Загрузить из проводника
                         <input type="file" name="avatar" accept="image/*" style="display: none"
                                onchange="this.form.submit()">
                     </label>
-                </form>
+                </form> -->
 
                 <!-- Удаление фото -->
-
+<!-- 
                 <form method="post" action="{% url 'users:delete-avatar' %}">
                     {% csrf_token %}
                     <button type="submit" class="btn white-btn">Удалить фото</button>
-                </form>
+                </form> -->
+
+                <!-- заглушки-->
+                <div class="btn green-btn">
+                    Загрузить из проводника
+                </div>
+
+                <!-- Удаление фото -->
+                <div class="btn white-btn">
+                    Удалить фото
+                </div>
 
 
             <!-- Отмена -->
@@ -66,14 +76,14 @@
             <div class="profile-info">
                 <div class="input-group profile-input ">
                     <span class="input-group-text input-title pe-2">ФИО:</span>
-                    <input type="text" name="full_name" value="{{ request.user.full_name }}"
-                           class="form-control input-g" required>
+                    <div type="text" name="full_name" value="{{ request.user.full_name }}"
+                           class="form-control input-g" required></div>
                 </div>
 
                 <div class="input-group profile-input">
                     <span class="input-group-text input-title pe-2">Телефон:</span>
-                    <input type="text" name="phone_number" value="{{ request.user.phone_number }}"
-                           class="form-control input-g">
+                    <div type="text" name="phone_number" value="{{ request.user.phone_number }}"
+                           class="form-control input-g"></div>
                 </div>
 
                 <div class="profile-input ">
@@ -101,7 +111,7 @@
 
             <div class="d-flex justify-content-between py-5 px-5">
                 <a href="{% url 'users:documents' %}" class="btn btn-base-2 btn-outline-base">Мои документы</a>
-                <button type="submit" class="btn btn-base-2 btn-outline-base ">Сохранить изменения</button>
+                <div type="submit" class="btn btn-base-2 btn-outline-base ">Сохранить изменения</div>
             </div>
         </form>
     </div>

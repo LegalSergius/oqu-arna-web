@@ -4,17 +4,18 @@
 {% block head %}
     {{ block.super }}
     <style>
-
         .navbar-header-my-doc {
-            /* Указываем путь от static/: */
             background-image: url("{% static 'icons/Vector.svg' %}");
             background-size: cover;
             background-position: center;
         }
 
-        /* ваш остальной CSS */
         .content-layout {
             --content-layout-top-padding: 170px;
+        }
+
+        .doc-content {
+            padding: 0 12px;
         }
 
         .doc-wrapper {
@@ -32,18 +33,56 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 10px;
+            gap: 8px;
         }
 
         .doc-name {
             color: white;
+            word-break: break-word;
         }
 
         .doc-remove svg {
             cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .no-documents {
+            margin: 8px 0;
+        }
+
+        /* Адаптивка */
+        @media (max-width: 768px) {
+            .content-layout {
+                --content-layout-top-padding: 120px;
+            }
+            .doc-wrapper {
+                max-height: none;
+                padding-right: 0;
+            }
+            .doc-element {
+                padding: 12px;
+            }
+            .doc-remove svg {
+                width: 32px;
+                height: 32px;
+            }
+            .d-flex.justify-content-between.align-items-center.mt-4 {
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+            .btn.btn-doc-1 {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .doc-name {
+                font-size: 14px;
+            }
         }
     </style>
 {% endblock %}
-
 
 {% block header %}
     <div class="header navbar-header-my-doc">
@@ -52,10 +91,10 @@
     </div>
 {% endblock %}
 
-
 {% block content %}
     <div class="doc-content mt-3">
-        <form method="post" enctype="multipart/form-data" class="doc-form">
+        <!-- Перехватываем submit на фронте, чтобы НИЧЕГО не отправлялось -->
+        <form method="post" enctype="multipart/form-data" class="doc-form" id="mvp-doc-form">
             {% csrf_token %}
             <div class="doc-wrapper">
                 <div class="doc" id="doc-id">
@@ -63,7 +102,16 @@
                         {% for doc in docs %}
                             <div class="doc-element">
                                 <span class="doc-name">{{ doc.title }}</span>
-                                <a href="{% url 'users:document-delete' doc.pk %}" class="doc-remove" title="Удалить">
+
+                                {# Оригинальная ссылка удаления — комментим, чтобы не дергать бэкенд #}
+                                {# <a href="{% url 'users:document-delete' doc.pk %}" class="doc-remove" title="Удалить"> #}
+
+                                <!-- Заглушка: кликается, но действий нет -->
+                                <a href="#"
+                                   class="doc-remove"
+                                   title="Удалить (MVP: недоступно)"
+                                   data-noop="true"
+                                   aria-disabled="true">
                                     <svg width="42" height="43" viewBox="0 0 42 43" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_175_947)">
@@ -79,7 +127,6 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-
                                 </a>
                             </div>
                         {% endfor %}
@@ -90,11 +137,14 @@
             </div>
 
             <div class="d-flex justify-content-between align-items-center mt-4">
+                <!-- Сам input оставляем, но сабмита не будет -->
                 <input type="file" id="files" name="files" multiple hidden>
-                <label for="files" class="btn btn-doc-1 btn-profile-base">
+                <label for="files" class="btn btn-doc-1 btn-profile-base" data-noop="true" title="Загрузить (MVP: недоступно)">
                     Загрузить документы…
                 </label>
-                <button type="submit" class="btn btn-doc-1 btn-outline-base">
+
+                <!-- Кнопка сабмита кликается, но фронт блокирует -->
+                <button type="submit" class="btn btn-doc-1 btn-outline-base" id="btn-save" data-noop="true" title="Сохранить (MVP: недоступно)">
                     Сохранить
                 </button>
             </div>
@@ -105,9 +155,10 @@
     <template id="doc-element-id">
         <div class="doc-element d-flex align-items-center justify-content-between">
             <span class="doc-name flex-grow-1">Имя_документа.pdf</span>
-            <a href="#" class="doc-remove ms-3" title="Удалить">
 
-
+            <!-- Оригинал закомментирован; заглушка ниже -->
+            {# <a href="#" class="doc-remove ms-3" title="Удалить"> #}
+            <a href="#" class="doc-remove ms-3" title="Удалить (MVP: недоступно)" data-noop="true" aria-disabled="true">
                 <svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_175_947)">
                         <path d="M36.085 4.92395H5.1549C3.73138 4.92395 2.57739 6.11641 2.57739 7.58737V8.91909C2.57739 10.3901 3.73138 11.5825 5.1549 11.5825H36.085C37.5085 11.5825 38.6625 10.3901 38.6625 8.91909V7.58737C38.6625 6.11641 37.5085 4.92395 36.085 4.92395Z"
@@ -121,38 +172,58 @@
                         </clipPath>
                     </defs>
                 </svg>
-
-
             </a>
-        </div>
-        </a>
         </div>
     </template>
 
     <script>
-        document.getElementById('files').addEventListener('change', e => {
+        // Перехватываем submit: кнопка "Сохранить" кликается, но формы не улетают
+        document.getElementById('mvp-doc-form')?.addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Визуальный отклик
+            if (window?.navigator?.vibrate) navigator.vibrate(30);
+            console.info('MVP mode: submit blocked');
+        });
+
+        // Превью добавляем локально, но это никуда не загрузится
+        const fileInput = document.getElementById('files');
+        fileInput?.addEventListener('change', e => {
             const tpl = document.getElementById('doc-element-id').content;
             const container = document.getElementById('doc-id');
 
-            Array.from(e.target.files).forEach(file => {
+            Array.from(e.target.files || []).forEach(file => {
                 const clone = tpl.cloneNode(true);
                 clone.querySelector('.doc-name').textContent = file.name;
                 container.appendChild(clone);
             });
+
+            // Визуальная обратная связь
+            if (window?.navigator?.vibrate) navigator.vibrate(10);
+            console.info('MVP mode: files selected (no upload)');
         });
 
-        document.getElementById('doc-id').addEventListener('click', e => {
+        // Удаление: кликабельно, но реальных действий нет
+        document.getElementById('doc-id')?.addEventListener('click', e => {
             const btn = e.target.closest('.doc-remove');
             if (!btn) return;
 
-            const href = btn.getAttribute('href') || '';
+            e.preventDefault();
 
-            if (href === '#') {
-                e.preventDefault();
-                const parent = btn.closest('.doc-element');
-                if (parent) parent.remove();
-            }
+            const isTemplateItem = btn.closest('[data-from-template]') || btn.closest('[aria-disabled="true"]');
+            // Можно дать микро-эффект, но ничего не удаляем из БД
+            btn.style.opacity = '0.8';
+            setTimeout(() => btn.style.opacity = '', 120);
+
+            console.info('MVP mode: delete blocked');
         });
 
+        // Любая кнопка-заглушка: просто отдаём отклик
+        document.addEventListener('click', e => {
+            const node = e.target.closest('[data-noop="true"]');
+            if (!node) return;
+            e.preventDefault();
+            if (window?.navigator?.vibrate) navigator.vibrate(8);
+            console.info('MVP mode: noop click');
+        });
     </script>
 {% endblock %}

@@ -54,7 +54,6 @@ class EntitiesListView(SearchView):
     def get_filter_parameter(self):
             kwargs = super().get_filter_parameter()
             category = self.kwargs.get('category')
-
             try:
                 selected_category = Category.objects.get(pk=category)
             except Category.DoesNotExist:

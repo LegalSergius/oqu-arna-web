@@ -13,6 +13,34 @@
     --content-layout-top-padding: 50px;
 }
 
+/* Responsive breakpoints */
+@media (max-width: 576px) {
+    :root {
+        --content-layout-bottom-padding: 80px;
+        --content-layout-top-padding: 30px;
+    }
+}
+
+/* Responsive content layout margins to avoid header overlap */
+@media (max-width: 768px) {
+    .content-layout {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .content-layout {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-layout {
+        margin-top: 0;
+    }
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -32,8 +60,7 @@ body {
     flex-direction: column;
 
     padding-bottom: var(--content-layout-bottom-padding);
-    padding-top: var(--content-layout-top-padding);
-
+    /* padding-top: var(--content-layout-top-padding); */
 
 }
 
@@ -62,13 +89,21 @@ body {
 
     padding: 5px;
 
-    position: fixed;
+    position: static;
 
     left: 0;
     top: 0;
     width: 100%;
 
     z-index: 1000;
+}
+
+/* Responsive header */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 5px;
+        border-radius: 0 0 20px 20px;
+    }
 }
 
 
@@ -80,17 +115,44 @@ body {
 
 .navbar-container {
     display: flex;
+
     gap: 40px;
+
     align-items: center;
     justify-content: center;
+
     background-color: var(--primary-color);
-    border-radius: 32px 32px 0 0;
+    border-radius: 64px 64px 0 0;
+
     flex-shrink: 0;
+
+
+
     position: fixed;
+
     left: 0;
     bottom: 0;
     width: 100%;
+
+
     padding: 5px;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+    .navbar-container {
+        gap: 20px;
+        border-radius: 30px 30px 0 0;
+        padding: 10px 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-container {
+        gap: 15px;
+        border-radius: 20px 20px 0 0;
+        padding: 8px 5px;
+    }
 }
 
 .navbar-element {
@@ -113,6 +175,24 @@ body {
                 opacity   0.3s ease-in-out 0s;
 }
 
+/* Responsive navbar elements */
+@media (max-width: 768px) {
+    .navbar-element {
+        width: 65px;
+        height: 65px;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-element {
+        width: 55px;
+        height: 55px;
+        border-radius: 10px;
+        padding: 3px 1px;
+    }
+}
+
 .navbar-element:hover {
     background-color: var(--secondary-color);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
@@ -131,6 +211,20 @@ body {
 
     white-space: normal;
     word-wrap: break-word;
+}
+
+/* Responsive navbar text */
+@media (max-width: 768px) {
+    .navbar-element p {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-element p {
+        font-size: 10px;
+        margin-top: 1px;
+    }
 }
 
 .navbar-element-active {
@@ -155,6 +249,23 @@ body {
     padding: 5px 0 5px 15px ;
 }
 
+/* Responsive search */
+@media (max-width: 768px) {
+    .search {
+        width: 60%;
+        border-radius: 25px;
+        padding: 8px 0 8px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .search {
+        width: 80%;
+        border-radius: 20px;
+        padding: 10px 0 10px 15px;
+    }
+}
+
 /*-------------------------Cards----------------------*/
 
 .appThemeBorderColor {
@@ -173,6 +284,28 @@ body {
     text-decoration: none;
 }
 
+/* Responsive cards */
+@media (max-width: 992px) {
+    .card {
+        height: 220px;
+        border: 4px solid var(--primary-color);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        height: 200px;
+        border: 3px solid var(--primary-color);
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        height: 180px;
+        border: 2px solid var(--primary-color);
+    }
+}
+
 .cardContainer {
     max-height: 80%;
     width: 85%;
@@ -180,6 +313,21 @@ body {
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--primary-color) var(--secondary-color);
+}
+
+/* Responsive card container */
+@media (max-width: 768px) {
+    .cardContainer {
+        width: 90%;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cardContainer {
+        width: 95%;
+        padding-bottom: 15px;
+    }
 }
 
 .cardShadow {
@@ -190,6 +338,19 @@ body {
     font-size: 1.25em;
 }
 
+/* Responsive category name */
+@media (max-width: 768px) {
+    .categoryName {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 576px) {
+    .categoryName {
+        font-size: 1em;
+    }
+}
+
 .imageContainer {
     height: 85%;
 }
@@ -198,11 +359,52 @@ body {
     font-size: 1em;
 }
 
+/* Responsive course period badge */
+@media (max-width: 768px) {
+    .coursePeriodBadge {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 576px) {
+    .coursePeriodBadge {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .coursePeriodBadge {
+        font-size: 0.7em;
+    }
+}
+
 .coursePeriodDate {
     font-size: 0.8em;
 
     margin-top: 7em;
     align-self: end;
+}
+
+/* Responsive course period date */
+@media (max-width: 768px) {
+    .coursePeriodDate {
+        font-size: 0.7em;
+        margin-top: 5em;
+    }
+}
+
+@media (max-width: 576px) {
+    .coursePeriodDate {
+        font-size: 0.6em;
+        margin-top: 3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .coursePeriodDate {
+        font-size: 0.5em;
+        margin-top: 2em;
+    }
 }
 
 .cardIconContainer {
@@ -225,8 +427,217 @@ body {
     font-size: 1.5rem;
 }
 
+/* Responsive page header */
+@media (max-width: 768px) {
+    .pageHeader {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .pageHeader {
+        font-size: 1.1rem;
+    }
+}
+
+/* Page header spacing */
+.pageHeader {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .pageHeader {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .pageHeader {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Responsive tab buttons */
+@media (max-width: 768px) {
+    .pageHeader {
+        font-size: 1.1rem;
+        padding: 8px 12px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .pageHeader {
+        font-size: 1rem;
+        padding: 6px 8px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .pageHeader {
+        font-size: 0.9rem;
+        padding: 4px 6px !important;
+    }
+}
+
+/* Tab container responsive styles */
+.d-flex.flex-row {
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 10; /* Ensure tabs are above other content */
+}
+
+@media (max-width: 768px) {
+    .d-flex.flex-row {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .d-flex.flex-row {
+        gap: 8px;
+    }
+    
+    .d-flex.flex-row .pageHeader {
+        flex: 1;
+        min-width: 120px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .d-flex.flex-row {
+        gap: 5px;
+    }
+    
+    .d-flex.flex-row .pageHeader {
+        flex: 1;
+        min-width: 100px;
+        text-align: center;
+    }
+}
+
 .text-body {
     font-size: 0.8em;
+}
+
+/* Responsive text body */
+@media (max-width: 768px) {
+    .text-body {
+        font-size: 0.75em;
+    }
+}
+
+@media (max-width: 576px) {
+    .text-body {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-body {
+        font-size: 0.65em;
+    }
+}
+
+/* Course card text improvements */
+@media (max-width: 768px) {
+    .card .fs-6 {
+        font-size: 0.9rem !important;
+        line-height: 1.3;
+        padding: 0 5px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .card .text-truncate {
+        font-size: 0.8rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .card .coursePeriodBadge {
+        font-size: 0.8em;
+        line-height: 1.2;
+        word-wrap: break-word;
+    }
+    
+    .card .coursePeriodDate {
+        font-size: 0.7em;
+        line-height: 1.1;
+    }
+    
+    /* Prevent text overflow in course cards */
+    .card .container {
+        overflow: hidden;
+    }
+    
+    .card .d-grid {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 576px) {
+    .card .fs-6 {
+        font-size: 0.8rem !important;
+        line-height: 1.2;
+        padding: 0 3px;
+    }
+    
+    .card .text-truncate {
+        font-size: 0.7rem;
+    }
+    
+    .card .coursePeriodBadge {
+        font-size: 0.7em;
+    }
+    
+    .card .coursePeriodDate {
+        font-size: 0.6em;
+    }
+    
+    /* Improve grid layout for small screens */
+    .card .d-grid {
+        gap: 2px !important;
+    }
+    
+    .card .px-2 {
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .card .fs-6 {
+        font-size: 0.7rem !important;
+        line-height: 1.1;
+        padding: 0 2px;
+    }
+    
+    .card .text-truncate {
+        font-size: 0.6rem;
+    }
+    
+    .card .coursePeriodBadge {
+        font-size: 0.6em;
+    }
+    
+    .card .coursePeriodDate {
+        font-size: 0.5em;
+    }
+    
+    /* Further improve grid layout for very small screens */
+    .card .d-grid {
+        gap: 1px !important;
+    }
+    
+    .card .px-2 {
+        padding-left: 2px !important;
+        padding-right: 2px !important;
+    }
 }
 
 /*----------------------radio toggle-----------------*/
@@ -299,4 +710,98 @@ body {
 
 .success {
     background-color: var(--success-message);
+}
+
+.btn-outline-base {
+  transition: background-color .2s, color .2s, box-shadow .2s;
+  border: 4px solid var(--primary-color);
+  background-color: #fff;
+  color: var(--primary-color);
+}
+
+.btn-outline-base:hover {
+  background-color: var(--primary-color); /* чуть светлее первичного */
+  color: #fff;
+  transform: translateY(-2px);                 /* лёгкий подъём */
+}
+
+/* Убрать стандартную обводку браузера и добавить «фокусный» ореол */
+.btn-outline-base:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(96, 91, 205, 0.3);
+}
+
+
+
+.btn-base-2 {
+    padding: 10px 0px;
+    border-radius: 17px;
+    width: 33%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Responsive button base 2 */
+@media (max-width: 768px) {
+    .btn-base-2 {
+        padding: 8px 0px;
+        border-radius: 15px;
+        width: 40%;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-base-2 {
+        padding: 6px 0px;
+        border-radius: 12px;
+        width: 50%;
+        font-size: 18px;
+    }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+    .content-layout {
+        padding-top: 20px;
+        padding-bottom: 70px;
+    }
+    
+    .cardContainer {
+        width: 98%;
+        padding-bottom: 20px;
+    }
+    
+    .card {
+        height: 160px;
+        border: 1px solid var(--primary-color);
+    }
+    
+    .navbar-container {
+        gap: 10px;
+        padding: 5px;
+    }
+    
+    .navbar-element {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .navbar-element p {
+        font-size: 9px;
+    }
+    
+    /* Course card content adjustments for very small screens */
+    .card .container {
+        padding: 0 5px;
+    }
+    
+    .card .d-grid {
+        gap: 2px !important;
+    }
+    
+    .card .px-2 {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
 }

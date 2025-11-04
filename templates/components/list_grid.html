@@ -1,14 +1,14 @@
 <div 
     class="container-fluid cardContainer fw-bold"
     style="width: 85%;">
-    <div class="d-flex flex-wrap justify-content-center gap-3">
-    {% if request.user.is_educator and not is_category and request.GET.personal_works %}
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+    {% if request.user.is_educator and not is_category %}
         <div class="col">
             {%include 'components/card_add.html' with href_card_add=href_card_add %}
         </div>
     {% endif %}
         {% for item in items %}
-            <div style="flex: 1 1 250px; max-width: 300px;">
+        <div class="col">
             {%include template_name with item=item href=href %}
         </div>
         {% endfor %}

@@ -1,0 +1,190 @@
+/* Additional responsive styles for mobile devices */
+
+/* Touch-friendly improvements */
+@media (max-width: 768px) {
+    .btn, .btn-base, .btn-base-2 {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .navbar-element {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Improved spacing for mobile */
+@media (max-width: 576px) {
+    .content-layout {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .cardContainer {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+/* Landscape orientation optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+    .navbar-container {
+        gap: 15px;
+        padding: 5px;
+    }
+    
+    .navbar-element {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .card {
+        height: 150px;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .card {
+        border-width: 0.5px;
+    }
+    
+    .appThemeBorderColor {
+        border-width: 2px;
+    }
+}
+
+/* Dark mode support (if needed in future) */
+@media (prefers-color-scheme: dark) {
+    /* Future dark mode styles can be added here */
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .navbar-element,
+    .btn,
+    .card {
+        transition: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar-container,
+    .header {
+        display: none;
+    }
+    
+    .content-layout {
+        padding: 0;
+    }
+    
+    .card {
+        break-inside: avoid;
+        border: 1px solid #000;
+    }
+}
+
+/* Fix for category labels and course cards */
+@media (max-width: 576px) {
+    /* Ensure proper spacing for category headers */
+    .pageHeader {
+        position: relative;
+        z-index: 1;
+    }
+    
+    /* Improve course card text wrapping */
+    .card .d-flex {
+        flex-wrap: wrap;
+    }
+    
+    .card .text-truncate {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: unset;
+    }
+}
+
+/* Tab buttons responsive improvements */
+@media (max-width: 576px) {
+    /* Keep tab buttons horizontal but make them responsive */
+    .d-flex.flex-row {
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    .d-flex.flex-row .pageHeader {
+        flex: 1;
+        min-width: 120px;
+        max-width: 200px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .d-flex.flex-row {
+        gap: 5px;
+    }
+    
+    .d-flex.flex-row .pageHeader {
+        flex: 1;
+        min-width: 100px;
+        max-width: 150px;
+        text-align: center;
+    }
+    
+    .pageHeader {
+        font-size: 0.8rem !important;
+        padding: 3px 5px !important;
+    }
+}
+
+/* Very small screens - optimize everything */
+@media (max-width: 400px) {
+    .content-layout {
+        padding-top: 10px;
+        margin-top: 0; /* Additional margin for very small screens */
+    }
+    
+    .card {
+        height: 140px;
+    }
+    
+    .card .fs-6 {
+        font-size: 0.6rem !important;
+        line-height: 1.1;
+        padding: 0 1px;
+    }
+    
+    .card .text-truncate {
+        font-size: 0.5rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .card .coursePeriodBadge {
+        font-size: 0.5em;
+        line-height: 1.1;
+    }
+    
+    .card .coursePeriodDate {
+        font-size: 0.4em;
+        line-height: 1;
+    }
+    
+    /* Optimize grid layout for very small screens */
+    .card .d-grid {
+        gap: 0.5px !important;
+    }
+    
+    .card .px-2 {
+        padding-left: 1px !important;
+        padding-right: 1px !important;
+    }
+    
+    /* Ensure text doesn't overflow */
+    .card .container {
+        padding: 0 2px;
+    }
+}

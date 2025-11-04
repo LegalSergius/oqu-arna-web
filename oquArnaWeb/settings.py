@@ -53,6 +53,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "middleware.staff_redirect.StaffRedirectMiddleware",
 ]
 
 LOGIN_URL = 'users:login'
@@ -84,7 +85,7 @@ WSGI_APPLICATION = "oquArnaWeb.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db_sergius.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 

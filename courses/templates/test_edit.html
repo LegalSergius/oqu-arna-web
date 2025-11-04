@@ -1,0 +1,137 @@
+{% extends "courses_base.html" %}
+
+{% block header %}
+    {% url 'courses' course.category.pk as course_url %}
+    {% include 'components/name_page.html' with name=course.name href=course_url %}
+{% endblock %}
+
+
+{% block content %}
+
+    <style>
+        .content-tests {
+            border-radius: 20px;
+            overflow:hidden;
+
+
+            width: 80%;
+        }
+
+        .content-tests thead .text-header {
+            color: white;
+            background-color: var(--primary-color);
+        }
+
+        .buttons {
+
+            padding-top: 20px;
+            width: 100%;
+            display: flex;
+
+            gap: 100px;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .test-font {
+            width: 300px;
+            font-size: 16px;
+        }
+
+        .question-input-text {
+
+            height: 100%;
+            width: 100%;
+
+            background-color: white;
+            border: 0 solid white;
+
+            padding: 5px;
+
+            text-align: center;
+        }
+
+        .question-input-text:focus {
+
+            outline: none;
+
+        }
+    </style>
+
+<div class="d-flex flex-column align-items-center">
+
+    <div class="content-tests">
+
+        <form id="test-form" method="post" action="{% url 'test-edit' test.pk %}">
+
+            {% csrf_token %}
+
+            <table class="table table-bordered mb-0 text-center align-middle">
+                <thead>
+                    <tr>
+                        <th colspan="4" class="text-header">{{ test.name }}</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2" >Вопрос</th>
+                        <th colspan="2" >Ответ</th>
+                    </tr>
+                </thead>
+                <tbody id="question-list">
+                    {% for question in questions %}
+                    <tr>
+                        <td class="fw-semibold" style="width: 50px">
+                            <a href="{% url 'question-remove' question.question.pk %}">X</a>
+                        </td>
+                        <td class="fw-semibold" style="width: 40%">{{ question.question.text }}</td>
+                        <td>
+                            <input type="hidden" name="id-question" value="{{ question.question.pk }}">
+                            <select id="question-select" name="select-answer" class="question-input-text">
+                                {% for answer in question.answers %}
+                                    <option value="{{ answer.id }}" {% if answer.is_correct %} selected {% endif %}>{{ answer.text }}</option>
+                                {% endfor %}
+                            </select>
+                        </td>
+                        <td class="fw-semibold" style="width: 50px">
+                            <a href="{% url 'question-edit' question.question.pk %}">Edit</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </form>
+
+    </div>
+
+    <div class="buttons">
+        <button id="add_question_button" class="btn btn-base-2 btn-outline-base test-font">Добавить вопрос</button>
+        <button form="test-form" type="submit" class="btn btn-base-2 btn-outline-base test-font">Сохранить изменения</button>
+    </div>
+
+</div>
+
+<template id="question-template">
+    <tr>
+        <td class="fw-semibold" style="width: 50px">
+
+        </td>
+        <td class="fw-semibold" style="width: 40%">
+            <input type="text" name="new-question" class="question-input-text">
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+</template>
+
+<script>
+    const items = document.getElementById('question-list');
+    const questionTemplate = document.getElementById('question-template').content;
+    const btnAdd = document.getElementById('add_question_button');
+
+    btnAdd.addEventListener('click', (event) => {
+       items.appendChild(questionTemplate.cloneNode(true));
+    });
+</script>
+
+{% endblock %}
