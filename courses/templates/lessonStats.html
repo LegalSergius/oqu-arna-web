@@ -125,8 +125,46 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
+    /* Prevent header labels from wrapping; provide short labels for xs */
+    .customTable thead th{ white-space: nowrap; }
+    .header-full{ display: inline; }
+    .header-short{ display: none; }
+    @media (max-width: 575.98px){
+        .header-full{ display: none; }
+        .header-short{ display: inline; }
+    }
+
     .size-lesson-window {
         height: 600px;
+    }
+
+    /* Responsive helpers */
+    .lesson-page { width: 100%; }
+    .author-box { width: 100%; }
+    .modal-form-width { width: 100%; }
+    .modal-left { width: 100%; }
+
+    @media (min-width: 768px){
+        .author-box { width: 70%; }
+    }
+    @media (min-width: 992px){
+        .lesson-page { width: 75%; }
+        .author-box { width: 50%; }
+        .modal-form-width { width: 60%; }
+        .modal-left { width: 40%; }
+    }
+    @media (max-width: 991.98px){
+        .size-lesson-window{ height: auto; }
+    }
+    @media (max-width: 575.98px){
+        .pageHeader{ font-size: 1.25rem; }
+        .date{ font-size: 0.8rem; }
+    }
+
+    /* Comment section responsive */
+    .commentSection { width: 100%; }
+    @media (min-width: 992px){
+        .commentSection { width: 33%; }
     }
 </style>
 {% endblock %}
@@ -139,11 +177,11 @@
 
 {% block content %}
 <div class="d-flex flex-column justify-content-center align-items-center h-100 p-2 fw-bold overflow-hidden">
-  <div class="w-75 size-lesson-window overflow-auto appThemeColorBackground rounded-5">
+  <div class="lesson-page size-lesson-window overflow-auto appThemeColorBackground rounded-5">
     <p class="fs-3 text-center bg-white contentAppThemeColor rounded-5">
         {{ lesson.name }}
     </p>
-    <div class="w-50 px-5 my-2 bg-light rounded-3">
+    <div class="author-box px-5 my-2 bg-light rounded-3">
         <p class="fs-6 contentAppThemeColor">
             {{ course.creator.full_name }}
         </p>
@@ -155,9 +193,9 @@
                 <tr>
                   <th>#</th>
                   <th>ФИО</th>
-                  <th>К</th>
-                  <th>Т</th>
-                  <th>З</th>
+                  <th><span class="header-full">Был</span><span class="header-short">Б</span></th>
+                  <th><span class="header-full">Тест</span><span class="header-short">Т</span></th>
+                  <th><span class="header-full">Задание</span><span class="header-short">З</span></th>
                 </tr>
               </thead>
               <tbody>
@@ -215,13 +253,12 @@
           </div>
           <form
             method="post"
-            class="mx-auto d-flex"
-            style="width: 60%; height: 90%;">
+            class="mx-auto d-flex flex-wrap modal-form-width"
+            style="height: 90%;">
             {% csrf_token %}
-            <div class="d-flex flex-grow-1 rounded me-3" style="color: white;">
+            <div class="d-flex flex-grow-1 rounded me-0 me-lg-3 mb-3 mb-lg-0" style="color: white;">
               <div
-                class="d-flex flex-column justify-content-around align-items-center text-center appThemeColorBackground rounded-start-4 rounded-bottom-4"
-                style="width: 40%">
+                class="modal-left d-flex flex-column justify-content-around align-items-center text-center appThemeColorBackground rounded-start-4 rounded-bottom-4">
                 <p class="fw-bold fs-1" id="user-name">
                 </p>
                 <div class="rounded-circle overflow-hidden" style="aspect-ratio: 1 / 1; width: 60%;">
@@ -253,13 +290,13 @@
                   </div>
                     <input type="hidden" name="lesson-pk" id="lesson-pk" value="">
                     <input type="hidden" name="user-pk" id="user-pk" value="">
-                <button type="submit" class="btn btn-success p-2 fs-4 d-block w-100 my-auto">
+                <button type="submit" class="btn btn-success p-2 fs-4 d-block w-100 my-auto" disabled aria-disabled="true">
                     Отправить
                 </button>
                 </div>
               </div>
             </div>
-            <div class="commentSection ms-3">
+            <div class="commentSection ms-0 ms-lg-3 mt-3 mt-lg-0">
               <textarea
                 name = "comment"
                 id = "comment"

@@ -24,19 +24,19 @@
 /* Responsive content layout margins to avoid header overlap */
 @media (max-width: 768px) {
     .content-layout {
-        margin-top: 0;
+        margin-top: 70px;
     }
 }
 
 @media (max-width: 576px) {
     .content-layout {
-        margin-top: 0;
+        margin-top: 60px;
     }
 }
 
 @media (max-width: 480px) {
     .content-layout {
-        margin-top: 0;
+        margin-top: 50px;
     }
 }
 

@@ -119,6 +119,26 @@
             border-radius:14px;
             padding:.35rem .75rem;
         }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 991.98px){
+            .schedule-card{height:auto;}
+        }
+
+        @media (max-width: 767.98px){
+            .page-header h1{font-size:1.6rem;}
+            .schedule-grid{padding:1rem .75rem 6rem;}
+            .period-badge{font-size:.95rem;}
+            .period-badge-span{font-size:.95rem;}
+            .schedule-card td{font-size:.85rem;}
+        }
+
+        @media (max-width: 575.98px){
+            .period-badge{padding:.3rem .8rem;}
+            .period-badge-span{padding:.2rem .6rem;}
+            .schedule-card{border-radius:14px;}
+            .schedule-card thead th{font-size:1rem;}
+        }
     </style>
 {% endblock %}
 
@@ -128,11 +148,11 @@
 
 {% block content %}
 
-<section class="d-flex gap-4 justify-content-center py-3">
+<section class="d-flex gap-4 justify-content-center py-3 flex-wrap">
     <span class="period-badge">Год <span class="period-badge-span">2024-2025</span></span>
 
 
-    <form method="get" class="d-flex gap-2 period-badge">
+    <form method="get" class="d-flex gap-2 period-badge flex-wrap">
         <span>Неделя</span>
         <select name="weeks" id="weeks" class="period-badge-span" onchange="this.form.submit()">
             {% for label, value in options %}
@@ -143,12 +163,13 @@
 </section>
 
 <main class="schedule-grid container-fluid" style="width: 90%;">
-    <div class="row row-cols-1 row-cols-md-3 g-5">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 g-lg-5">
 
 
         {% for day, lessons in schedule %}
             <div class="col">
                 <div class="schedule-card">
+                    <div class="table-responsive">
                     <table class="table table-bordered mb-0 text-center align-middle">
                         <thead><tr><th colspan="2" style="width: 20px">{{ day }}</th></tr></thead>
                         <tbody>
@@ -159,6 +180,7 @@
 
                         </tbody>
                     </table>
+                    </div>
                 </div>
             </div>
         {% endfor %}
