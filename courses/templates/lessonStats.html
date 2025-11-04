@@ -125,6 +125,15 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
+    /* Prevent header labels from wrapping; provide short labels for xs */
+    .customTable thead th{ white-space: nowrap; }
+    .header-full{ display: inline; }
+    .header-short{ display: none; }
+    @media (max-width: 575.98px){
+        .header-full{ display: none; }
+        .header-short{ display: inline; }
+    }
+
     .size-lesson-window {
         height: 600px;
     }
@@ -184,9 +193,9 @@
                 <tr>
                   <th>#</th>
                   <th>ФИО</th>
-                  <th>К</th>
-                  <th>Т</th>
-                  <th>З</th>
+                  <th><span class="header-full">Был</span><span class="header-short">Б</span></th>
+                  <th><span class="header-full">Тест</span><span class="header-short">Т</span></th>
+                  <th><span class="header-full">Задание</span><span class="header-short">З</span></th>
                 </tr>
               </thead>
               <tbody>
