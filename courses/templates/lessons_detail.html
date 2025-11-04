@@ -1,5 +1,9 @@
 {% extends 'lessonActions.html' %}
 
+{% block title %}
+    Занятие "{{ lesson.name }}"
+{% endblock %}
+
 {% block description %}
 
     <span class="form-control fs-3 mb-2 text-center border-0 contentAppThemeColor" style="color: var(--primary-color); background: var(--background-page-color);">

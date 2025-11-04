@@ -10,7 +10,8 @@
           <form 
             id="createCourseForm"
             method="POST"
-            action="{%url 'course-create' %}"
+            action=""
+            onsubmit="event.preventDefault(); return false;"
             enctype="multipart/form-data">  
             {% csrf_token %}
             <div class="modal-header appThemeBorderColor position-relative rounded-3">

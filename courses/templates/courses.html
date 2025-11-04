@@ -2,6 +2,14 @@
 
 {% load static %}
 
+{% block title %}
+    {% if request.GET.personal_works %}
+        Мои курсы
+    {% else %}
+        Все курсы
+    {% endif %}
+{% endblock title %}
+
 {% block header %}
     {% url 'courses-categories' as categories_list %}
     {% include 'components/author_works_search.html' with href_back=categories_list request=request %}
@@ -14,6 +22,7 @@
 {% block content %}
 
 <div class="overflow-hidden">
+    
     {% url 'courses' category as courses_category %}
     {%include "components/entities_tabs.html" with tab_name_one="Все курсы" tab_name_two="Мои курсы" active_table_name=active_table_name url_one=courses_category|add:"?personal_works=" url_two=courses_category|add:"?personal_works=True"%}
     {%include "components/list_grid.html" with template_name="components/courseCard.html" href='course-detail' items=courses include_js=True %}

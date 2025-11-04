@@ -1,4 +1,4 @@
--- Вставка картинок для категорий в ЬЛ
+-- Вставка картинок для категорий в БД
 
 INSERT INTO common_content (file, created_at, updated_at, file_name) VALUES ('D:\Projects\INTS\oqu-arna\oqu-arna-web\media\category1.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'category1');
 INSERT INTO common_content (file, created_at, updated_at, file_name) VALUES ('D:\Projects\INTS\oqu-arna\oqu-arna-web\media\category2.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'category2');

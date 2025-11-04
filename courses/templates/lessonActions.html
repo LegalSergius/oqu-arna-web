@@ -1,5 +1,10 @@
 {% extends 'courses_base.html' %}
 {%load static%}
+
+{% block title %}
+    Добавление занятия для курса "{{ course_name }}"
+{% endblock %}
+
 {%get_media_prefix as MEDIA_PREFIX%}
 {% block head %}
     {{ block.super }}
@@ -10,13 +15,14 @@
     {% include 'components/name_page.html' with name=course_name href="javascript:history.back()" %}
 {% endblock %}
 {% block content %}
-    <div class="d-flex-column justify-content-center align-items-center w-75 h-100 m-auto p-5 fw-bold">
+    <div class="d-flex-column justify-content-center align-items-center w-lg-75 w-md-100 h-100 m-auto p-5 fw-bold">
         <form
             id="lessonForm"
             method="POST"
-            action="{%url 'create-lesson' course_id %}">
+            action=""
+            onsubmit="event.preventDefault(); return false;">
             {% csrf_token %}
-            <div class="w-50 h-100 m-auto pb-3 px-4 pt-5 appThemeColorBackground rounded-5">
+            <div class="w-100 h-100 m-auto pb-3 px-4 pt-5 appThemeColorBackground rounded-5">
                     <div class="d-flex-column bg-white h-100 p-4 rounded-5 text-center ">
                         {% block description %}
                             

@@ -1,4 +1,9 @@
 {% extends 'courses_base.html' %}
+
+{% block title %}
+    Занятия курса "{{ course.name }}"
+{% endblock %}
+
 {%load static%}
 {%get_media_prefix as MEDIA_PREFIX%}
 {% block header %}
@@ -7,12 +12,12 @@
 {% endblock %}
 {% block content %}
   <div
-    class="d-flex-column bg-white justify-content-center align-items-center w-50 p-3 my-1 mx-auto rounded-5"
+    class="d-flex-column bg-white justify-content-center align-items-center w-lg-50 w-md-75 w-sm-100 p-3 my-1 mx-auto rounded-5"
     style="height: 75vh; padding-right: 1rem; scrollbar-width: thin; scrollbar-color: #605BCD #BAB8D7;">
     <div class="px-2 h-100 overflow-y-auto">
       {%for lesson in lessons%}
         <div 
-          class="container lessonBox h-25 mb-4 p-3 rounded-4 appThemeColorBackground text-white d-flex flex-column justify-content-between"
+          class="container lessonBox h-lg-25 h-md-50 h-sm-75 mb-4 p-3 rounded-4 appThemeColorBackground text-white d-flex flex-column justify-content-between"
           >
           <div class="d-flex justify-content-between align-items-start mb-2">
             <a

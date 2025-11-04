@@ -1,4 +1,9 @@
 {% extends 'courses_base.html' %}
+
+{% block title %}
+    Категории курсов
+{% endblock %}
+
 {% load static %}
 {% block content %}
 {% include 'categories/categories.html' with categories=categories href='courses' %}
